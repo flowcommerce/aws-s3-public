@@ -22,3 +22,6 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
 Example:
 
     http://io.flow.aws-s3-public.s3-website-us-east-1.amazonaws.com/splashpage-www/videos/19083883.mp4
+
+    https://s3.amazonaws.com/io.flow.aws-s3-public/splashpage-www/videos/19083883.mp4
+    
