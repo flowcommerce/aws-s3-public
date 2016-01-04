@@ -15,8 +15,8 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
 
 # Upload files
 
-    aws s3 sync splashpage-www s3://io.flow.aws-s3-public/splashpage-www
-    aws s3 sync util s3://io.flow.aws-s3-public/util
+    aws s3 sync splashpage-www s3://io.flow.aws-s3-public/splashpage-www --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+    aws s3 sync util s3://io.flow.aws-s3-public/util --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 
 # View files online
 
