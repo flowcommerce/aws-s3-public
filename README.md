@@ -21,6 +21,11 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
 
 # View files online
 
+
+    https://s3.amazonaws.com/io.flow.aws-s3-public/util/environment-provider/environment-provider.jar
+
+    https://s3.amazonaws.com/io.flow.aws-s3-public/util/similarweb/similarweb
+
 Example:
 
     http://io.flow.aws-s3-public.s3-website-us-east-1.amazonaws.com/www/videos/19083883.mp4
