@@ -16,6 +16,7 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
 # Upload files
 
     aws s3 sync www s3://io.flow.aws-s3-public/www --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+    aws s3 sync docs s3://io.flow.aws-s3-public/docs --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
     aws s3 sync util s3://io.flow.aws-s3-public/util --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
     aws s3 sync email s3://io.flow.aws-s3-public/email --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 
@@ -26,8 +27,10 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
 
     https://s3.amazonaws.com/io.flow.aws-s3-public/util/similarweb/similarweb
 
-Example:
+Example URLs:
 
     http://io.flow.aws-s3-public.s3-website-us-east-1.amazonaws.com/www/videos/19083883.mp4
+
+    http://io.flow.aws-s3-public.s3-website-us-east-1.amazonaws.com/docs/implementation/overview.png
 
     https://s3.amazonaws.com/io.flow.aws-s3-public/www/videos/19083883.mp4
