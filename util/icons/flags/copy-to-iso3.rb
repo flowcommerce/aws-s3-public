@@ -18,7 +18,7 @@ end
 
 `find . -type f -name "*.png"`.strip.split("\n").each do |p|
   name, ext = File.basename(p).split(".")
-  if iso3 = countries[name]
+  if iso3 = countries.delete(name)
     dir = File.dirname(p)
     target = File.join(dir, "#{iso3}.#{ext}")
     cmd = "cp #{p} #{target}"
@@ -26,5 +26,12 @@ end
     if !system(cmd)
       puts "Command[%s] failed" %cmd
     end
+  end
+end
+
+if countries.size > 0
+  puts "MISSING FLAGS FOR:"
+  countries.keys.sort.each do |c|
+    puts " - #{c}"
   end
 end
