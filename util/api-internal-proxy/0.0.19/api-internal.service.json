@@ -10,7 +10,7 @@
     "key": "api-internal"
   },
   "namespace": "io.flow.internal.v0",
-  "version": "0.0.19",
+  "version": "0.0.20",
   "base_url": null,
   "description": null,
   "info": {
