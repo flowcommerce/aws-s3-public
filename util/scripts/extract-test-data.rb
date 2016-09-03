@@ -34,7 +34,7 @@ class DatabaseConfig
 
   def initialize(name, opts={})
     defaults = DatabaseConfig.read_pgpass[name] || GLOBAL_DEFAULTS
-    merged = opts.merge(defaults)
+    merged = defaults.merge(opts)
 
     @name = name
     @user = merged.delete(:user)

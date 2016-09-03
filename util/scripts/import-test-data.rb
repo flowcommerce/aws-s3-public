@@ -21,7 +21,7 @@ class DatabaseConfig
   }
 
   def initialize(name, opts={})
-    merged = opts.merge(GLOBAL_DEFAULTS)
+    merged = GLOBAL_DEFAULTS.merge(opts)
 
     @name = name
     @user = merged.delete(:user)
