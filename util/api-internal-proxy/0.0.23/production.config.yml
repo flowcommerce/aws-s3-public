@@ -1,14 +1,14 @@
-version: 0.0.24
+version: 0.0.23
 
 servers:
   - name: currency-internal
-    host: http://172.17.0.1:6321
+    host: https://currency.api.flow.io
+  - name: export
+    host: https://export.api.flow.io
   - name: fulfillment-internal
-    host: http://172.17.0.1:6061
+    host: https://fulfillment.api.flow.io
   - name: ratecard
-    host: http://172.17.0.1:7021
-  - name: search-internal
-    host: http://172.17.0.1:6331
+    host: https://ratecard.api.flow.io
 
 operations:
   - method: GET
@@ -32,6 +32,18 @@ operations:
   - method: PUT
     path: /internal/currency/settings/:id
     server: currency-internal
+  - method: GET
+    path: /:organization/exports
+    server: export
+  - method: GET
+    path: /:organization/exports/versions
+    server: export
+  - method: GET
+    path: /:organization/exports/:id
+    server: export
+  - method: POST
+    path: /:organization/exports
+    server: export
   - method: GET
     path: /carriers/versions
     server: fulfillment-internal
@@ -104,15 +116,3 @@ operations:
   - method: PUT
     path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id
     server: ratecard
-  - method: GET
-    path: /:organization/exports
-    server: search-internal
-  - method: GET
-    path: /:organization/exports/versions
-    server: search-internal
-  - method: GET
-    path: /:organization/exports/:id
-    server: search-internal
-  - method: POST
-    path: /:organization/exports
-    server: search-internal
