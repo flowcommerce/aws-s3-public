@@ -19,6 +19,7 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
     aws s3 sync docs s3://io.flow.aws-s3-public/docs --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
     aws s3 sync util s3://io.flow.aws-s3-public/util --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
     aws s3 sync email s3://io.flow.aws-s3-public/email --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
+    aws s3 sync policies s3://io.flow.aws-s3-public/policies --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers
 
 # View files online
 
