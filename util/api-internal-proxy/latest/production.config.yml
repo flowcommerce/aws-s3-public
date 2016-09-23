@@ -7,6 +7,8 @@ servers:
     host: https://fulfillment.api.flow.io
   - name: ratecard
     host: https://ratecard.api.flow.io
+  - name: search-internal
+    host: https://search.api.flow.io
 
 operations:
   - method: GET
@@ -102,3 +104,15 @@ operations:
   - method: PUT
     path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id
     server: ratecard
+  - method: GET
+    path: /:organization/customers
+    server: search-internal
+  - method: GET
+    path: /:organization/customers/:number
+    server: search-internal
+  - method: GET
+    path: /:organization/order-details
+    server: search-internal
+  - method: GET
+    path: /:organization/order-details/:number
+    server: search-internal
