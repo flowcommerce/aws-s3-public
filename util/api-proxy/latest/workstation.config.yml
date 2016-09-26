@@ -611,6 +611,9 @@ operations:
   - method: DELETE
     path: /:organization/cards/:token
     server: payment
+  - method: POST
+    path: /:organization/cards/nonces
+    server: payment
   - method: GET
     path: /:organization/encryption/keys
     server: payment
