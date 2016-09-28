@@ -95,6 +95,9 @@ operations:
   - method: DELETE
     path: /:organization/item-functions/:key
     server: catalog
+  - method: POST
+    path: /:organization/query/validations
+    server: catalog
   - method: GET
     path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions
     server: catalog
