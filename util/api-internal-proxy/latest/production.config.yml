@@ -121,8 +121,8 @@ operations:
   - method: PUT
     path: /internal/users/:id/status
     server: user-internal
-  - method: GET
-    path: /users/tokens/:token/user
+  - method: POST
+    path: /users/tokens/redeem
     server: user-internal
   - method: POST
     path: /users/tokens
