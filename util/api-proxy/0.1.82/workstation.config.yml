@@ -722,6 +722,9 @@ operations:
   - method: GET
     path: /:organization/suggestion/harmonization
     server: search
+  - method: POST
+    path: /:organization/uploads/:name
+    server: search
   - method: GET
     path: /tokens
     server: token
