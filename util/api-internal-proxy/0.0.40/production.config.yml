@@ -59,6 +59,21 @@ operations:
     path: /services/:id
     server: fulfillment-internal
   - method: GET
+    path: /:organization/dimension-estimates/versions
+    server: ratecard
+  - method: GET
+    path: /:organization/dimension-estimates
+    server: ratecard
+  - method: GET
+    path: /:organization/dimension-estimates/:id
+    server: ratecard
+  - method: POST
+    path: /:organization/dimension-estimates
+    server: ratecard
+  - method: DELETE
+    path: /:organization/dimension-estimates/:id
+    server: ratecard
+  - method: GET
     path: /:organization/ratecards/versions
     server: ratecard
   - method: GET
