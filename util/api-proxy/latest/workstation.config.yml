@@ -324,10 +324,7 @@ operations:
     path: /:organization/orders/:number
     server: experience
   - method: PUT
-    path: /:organization/orders/:number/bookings
-    server: experience
-  - method: GET
-    path: /:organization/orders/:number/bookings
+    path: /:organization/orders/:number/submissions
     server: experience
   - method: POST
     path: /:organization/order-estimates
