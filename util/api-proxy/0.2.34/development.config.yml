@@ -338,8 +338,14 @@ operations:
   - method: PUT
     path: /:organization/orders/:number/submissions
     server: experience
+  - method: GET
+    path: /:organization/order-estimates/:id
+    server: experience
   - method: POST
     path: /:organization/order-estimates
+    server: experience
+  - method: PUT
+    path: /:organization/order-estimates/:id
     server: experience
   - method: GET
     path: /carriers
@@ -376,9 +382,6 @@ operations:
     server: fulfillment
   - method: POST
     path: /:organization/quotes
-    server: fulfillment
-  - method: POST
-    path: /:organization/quote-estimates
     server: fulfillment
   - method: GET
     path: /services
