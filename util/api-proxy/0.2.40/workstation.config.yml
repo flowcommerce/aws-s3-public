@@ -726,21 +726,6 @@ operations:
     path: /:organization/search/harmonization
     server: search
   - method: GET
-    path: /:organization/harmonization/countries
-    server: search
-  - method: GET
-    path: /:organization/harmonization/statistics
-    server: search
-  - method: GET
-    path: /:organization/harmonization/summaries
-    server: search
-  - method: GET
-    path: /:organization/harmonization/codes/hs10
-    server: search
-  - method: GET
-    path: /:organization/harmonization/codes/hs6
-    server: search
-  - method: GET
     path: /:organization/exports
     server: search
   - method: GET
