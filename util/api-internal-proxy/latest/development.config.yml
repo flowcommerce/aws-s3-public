@@ -187,6 +187,21 @@ operations:
     path: /screens/:key
     server: screen
   - method: GET
+    path: /:organization/harmonization/countries
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/statistics
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/summaries
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/codes/hs10
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/codes/hs6
+    server: search-internal
+  - method: GET
     path: /:organization/customers
     server: search-internal
   - method: GET
