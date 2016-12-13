@@ -51,6 +51,9 @@ operations:
   - method: GET
     path: /:organization/payments/:reference
     server: billing
+  - method: POST
+    path: /:organization/payments/:reference/email
+    server: billing
   - method: GET
     path: /:organization/payments/:payment_reference/entries
     server: billing
