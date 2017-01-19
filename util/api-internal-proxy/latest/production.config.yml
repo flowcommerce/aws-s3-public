@@ -234,13 +234,13 @@ operations:
     path: /:organization/consume
     server: shopify-internal
   - method: GET
-    path: /:shop
+    path: /shops/:shop
     server: shopify-internal
   - method: POST
-    path: /:shop/install
+    path: /shops/:shop/install
     server: shopify-internal
   - method: PUT
-    path: /:shop
+    path: /shops/:shop
     server: shopify-internal
   - method: GET
     path: /:organization
