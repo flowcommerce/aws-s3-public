@@ -265,6 +265,9 @@ operations:
     path: /sessions
     server: session-internal
   - method: GET
+    path: /carts/:id.html
+    server: shopify-internal
+  - method: GET
     path: /carts/:id
     server: shopify-internal
   - method: POST
