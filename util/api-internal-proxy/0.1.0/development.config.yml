@@ -2,29 +2,27 @@ version: 0.0.85
 
 servers:
   - name: billing-internal
-    host: https://billing.api.flow.io
+    host: http://localhost:7121
   - name: billing
-    host: https://billing.api.flow.io
+    host: http://localhost:7121
   - name: currency-internal
-    host: https://currency.api.flow.io
+    host: http://localhost:6321
   - name: experience-internal
-    host: https://experience.api.flow.io
+    host: http://localhost:6251
   - name: fulfillment-internal
-    host: https://fulfillment.api.flow.io
+    host: http://localhost:6061
   - name: onboarding-internal
-    host: https://onboarding.api.flow.io
+    host: http://localhost:7141
   - name: ratecard
-    host: https://ratecard.api.flow.io
+    host: http://localhost:7021
   - name: screen
-    host: https://screen.api.flow.io
+    host: http://localhost:7081
   - name: search-internal
-    host: https://search.api.flow.io
-  - name: session-internal
-    host: https://session.api.flow.io
+    host: http://localhost:6331
   - name: shopify-internal
-    host: https://shopify.api.flow.io
+    host: http://localhost:7131
   - name: user-internal
-    host: https://user.api.flow.io
+    host: http://localhost:6021
 
 operations:
   - method: PUT
@@ -259,37 +257,37 @@ operations:
     path: /:organization/reports/revenue/timeline
     server: search-internal
   - method: GET
-    path: /sessions/:session
-    server: session-internal
-  - method: POST
-    path: /sessions
-    server: session-internal
-  - method: GET
-    path: /carts/:id
+    path: /cart/:id
     server: shopify-internal
   - method: POST
-    path: /carts/add/:id
+    path: /cart/add/:id
     server: shopify-internal
   - method: POST
-    path: /carts/change/:id
+    path: /cart/change/:id
     server: shopify-internal
   - method: POST
-    path: /:organization/consume/:myshopify_domain/product/upserted
+    path: /:organization/consume/:shop/product/upserted
     server: shopify-internal
   - method: POST
-    path: /:organization/consume/:myshopify_domain/product/deleted
+    path: /:organization/consume/:shop/product/deleted
     server: shopify-internal
   - method: GET
-    path: /shops/:myshopify_domain
+    path: /session/:session_id
     server: shopify-internal
   - method: POST
-    path: /shops/:myshopify_domain/install
+    path: /session
+    server: shopify-internal
+  - method: GET
+    path: /shops/:shop
+    server: shopify-internal
+  - method: POST
+    path: /shops/:shop/install
     server: shopify-internal
   - method: PUT
-    path: /shops/:myshopify_domain
+    path: /shops/:shop
     server: shopify-internal
   - method: DELETE
-    path: /shops/:myshopify_domain
+    path: /shops/:shop
     server: shopify-internal
   - method: GET
     path: /:organization
