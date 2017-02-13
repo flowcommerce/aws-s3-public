@@ -13,6 +13,8 @@ servers:
     host: http://172.17.0.1:6061
   - name: onboarding-internal
     host: http://172.17.0.1:7141
+  - name: partner-internal
+    host: http://172.17.0.1:7061
   - name: payment-internal
     host: http://172.17.0.1:6281
   - name: ratecard
@@ -158,6 +160,51 @@ operations:
   - method: GET
     path: /:organization/onboarding-tasks/:id
     server: onboarding-internal
+  - method: GET
+    path: /internal/partners/:id
+    server: partner-internal
+  - method: POST
+    path: /internal/partners
+    server: partner-internal
+  - method: DELETE
+    path: /internal/partners/:id
+    server: partner-internal
+  - method: POST
+    path: /partner-authorizations
+    server: partner-internal
+  - method: GET
+    path: /partner-authorizations/:partner
+    server: partner-internal
+  - method: GET
+    path: /partners/:partner/memberships
+    server: partner-internal
+  - method: GET
+    path: /partners/:partner/memberships/versions
+    server: partner-internal
+  - method: GET
+    path: /partners/:partner/memberships/:id
+    server: partner-internal
+  - method: POST
+    path: /partners/:partner/memberships
+    server: partner-internal
+  - method: PUT
+    path: /partners/:partner/memberships/:id
+    server: partner-internal
+  - method: DELETE
+    path: /partners/:partner/memberships/:id
+    server: partner-internal
+  - method: GET
+    path: /:organization/partner-organization-authorizations
+    server: partner-internal
+  - method: GET
+    path: /:organization/partner-organization-authorizations/:id
+    server: partner-internal
+  - method: POST
+    path: /:organization/partner-organization-authorizations
+    server: partner-internal
+  - method: DELETE
+    path: /:organization/partner-organization-authorizations/:id
+    server: partner-internal
   - method: POST
     path: /:organization/refunds/:processor
     server: payment-internal
