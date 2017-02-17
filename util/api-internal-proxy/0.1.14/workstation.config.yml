@@ -5,8 +5,6 @@ servers:
     host: http://172.17.0.1:7121
   - name: billing
     host: http://172.17.0.1:7121
-  - name: catalog-internal
-    host: http://172.17.0.1:6071
   - name: currency-internal
     host: http://172.17.0.1:6321
   - name: experience-internal
@@ -75,24 +73,6 @@ operations:
   - method: GET
     path: /:organization/account/transaction/summaries/:id
     server: billing
-  - method: GET
-    path: /:organization/item-restrictions
-    server: catalog-internal
-  - method: POST
-    path: /:organization/item-restrictions
-    server: catalog-internal
-  - method: PUT
-    path: /:organization/item-restrictions/:id
-    server: catalog-internal
-  - method: PUT
-    path: /:organization/item-restrictions/item/:number
-    server: catalog-internal
-  - method: DELETE
-    path: /:organization/item-restrictions/:id
-    server: catalog-internal
-  - method: DELETE
-    path: /:organization/item-restrictions/item/:number
-    server: catalog-internal
   - method: GET
     path: /internal/currency/settings
     server: currency-internal
@@ -341,6 +321,24 @@ operations:
     server: search-internal
   - method: GET
     path: /:organization/reports/destinations/countries
+    server: search-internal
+  - method: GET
+    path: /:organization/item-restrictions
+    server: search-internal
+  - method: POST
+    path: /:organization/item-restrictions
+    server: search-internal
+  - method: PUT
+    path: /:organization/item-restrictions/:id
+    server: search-internal
+  - method: PUT
+    path: /:organization/item-restrictions/item/:number
+    server: search-internal
+  - method: DELETE
+    path: /:organization/item-restrictions/:id
+    server: search-internal
+  - method: DELETE
+    path: /:organization/item-restrictions/item/:number
     server: search-internal
   - method: GET
     path: /:organization/order-details
