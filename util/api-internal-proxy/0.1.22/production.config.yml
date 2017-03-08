@@ -390,6 +390,9 @@ operations:
   - method: GET
     path: /experience-countries/:myshopify_domain
     server: shopify-internal
+  - method: POST
+    path: /sessions/shopify/:shop
+    server: shopify-internal
   - method: GET
     path: /shops/:myshopify_domain
     server: shopify-internal
