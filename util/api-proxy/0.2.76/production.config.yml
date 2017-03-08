@@ -27,6 +27,8 @@ servers:
     host: https://return.api.flow.io
   - name: search
     host: https://search.api.flow.io
+  - name: session
+    host: https://session.api.flow.io
   - name: token
     host: https://token.api.flow.io
   - name: tracking
@@ -805,6 +807,21 @@ operations:
   - method: POST
     path: /:organization/uploads/:name
     server: search
+  - method: GET
+    path: /sessions/:session
+    server: session
+  - method: POST
+    path: /sessions/organizations/:organization
+    server: session
+  - method: PUT
+    path: /sessions/:session
+    server: session
+  - method: PUT
+    path: /sessions/:session/reset
+    server: session
+  - method: POST
+    path: /authorizations/sessions
+    server: session
   - method: GET
     path: /:organization/tokens
     server: token

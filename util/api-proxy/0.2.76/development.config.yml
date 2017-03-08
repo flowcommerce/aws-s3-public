@@ -27,6 +27,8 @@ servers:
     host: http://localhost:7111
   - name: search
     host: http://localhost:6331
+  - name: session
+    host: http://localhost:7161
   - name: token
     host: http://localhost:6151
   - name: tracking
@@ -805,6 +807,21 @@ operations:
   - method: POST
     path: /:organization/uploads/:name
     server: search
+  - method: GET
+    path: /sessions/:session
+    server: session
+  - method: POST
+    path: /sessions/organizations/:organization
+    server: session
+  - method: PUT
+    path: /sessions/:session
+    server: session
+  - method: PUT
+    path: /sessions/:session/reset
+    server: session
+  - method: POST
+    path: /authorizations/sessions
+    server: session
   - method: GET
     path: /:organization/tokens
     server: token
