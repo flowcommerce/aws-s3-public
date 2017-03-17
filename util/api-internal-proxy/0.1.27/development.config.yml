@@ -364,52 +364,52 @@ operations:
     path: /:organization/reports/revenue/timeline
     server: search-internal
   - method: GET
-    path: /carts/:id.html
+    path: /shopify/carts/:id.html
     server: shopify-internal
   - method: GET
-    path: /carts/:id
+    path: /shopify/carts/:id
     server: shopify-internal
   - method: POST
-    path: /carts/:id/add
+    path: /shopify/carts/:id/add
     server: shopify-internal
   - method: POST
-    path: /carts/:id/change
+    path: /shopify/carts/:id/change
     server: shopify-internal
   - method: POST
-    path: /carts/:id/clear
+    path: /shopify/carts/:id/clear
     server: shopify-internal
   - method: POST
-    path: /carts/:id/orders
-    server: shopify-internal
-  - method: POST
-    path: /:organization/consume/:myshopify_domain/product/upserted
-    server: shopify-internal
-  - method: POST
-    path: /:organization/consume/:myshopify_domain/product/deleted
+    path: /shopify/carts/:id/orders
     server: shopify-internal
   - method: POST
     path: /sessions/shopify/:shop
     server: shopify-internal
   - method: GET
-    path: /shops/:myshopify_domain
+    path: /shopify/shops/:shop_id
     server: shopify-internal
   - method: POST
-    path: /shops/:myshopify_domain/install
+    path: /shopify/shops/:shop_id/install
     server: shopify-internal
   - method: PUT
-    path: /shops/:myshopify_domain
+    path: /shopify/shops/:shop_id
     server: shopify-internal
   - method: DELETE
-    path: /shops/:myshopify_domain
+    path: /shopify/shops/:shop_id
+    server: shopify-internal
+  - method: POST
+    path: /shopify/webhook/events/shops/:shop_id/product/upserted
+    server: shopify-internal
+  - method: POST
+    path: /shopify/webhook/events/shops/:shop_id/product/deleted
     server: shopify-internal
   - method: GET
-    path: /variants/:myshopify_domain/prices
+    path: /shopify/variants/:myshopify_domain/prices
     server: shopify-internal
   - method: GET
-    path: /variants/:myshopify_domain/prices/:variant_id
+    path: /shopify/variants/:myshopify_domain/prices/:variant_id
     server: shopify-internal
   - method: GET
-    path: /variants/:myshopify_domain/prices/:id/experience/:key
+    path: /shopify/variants/:myshopify_domain/prices/:id/experience/:key
     server: shopify-internal
   - method: PUT
     path: /internal/users/:id/status
