@@ -1,0 +1,52 @@
+{
+  "customer_service": {
+    "title": "Customer Service",
+    "content": [
+      {
+        "discriminator": "html",
+        "title": "Phone",
+        "contents": "1-800-999-5555"
+      },
+      {
+        "discriminator": "html",
+        "title": "Email",
+        "contents": "support@mvmt-watches.com"
+      }
+    ]
+  },
+
+  "checkout": {
+    "logo": {
+      "url": "https://cdn.shopify.com/s/files/1/0377/2037/t/37/assets/mvmt-logo.svg?6741713624772055173"
+    },
+    "privacy_policy": {
+      "discriminator": "load",
+      "title": "Privacy Policy",
+      "type": "html",
+      "url": "https://www.flow.io/policies/privacy"
+    },
+    "terms": {
+      "discriminator": "href",
+      "title": "Terms of Use",
+      "url": "https://www.flow.io/policies/privacy"
+    }
+  },
+
+  "footer": [
+    {
+      "discriminator": "load",
+      "title": "Privacy Policy",
+      "type": "html",
+      "url": "https://www.flow.io/policies/privacy"
+    },
+    {
+      "discriminator": "label",
+      "title": "Copyright 2007 Mmvt Watches"
+    },
+    {
+      "discriminator": "href",
+      "title": "Terms of Use",
+      "url": "https://www.flow.io/policies/privacy"
+    }
+  ]
+}
