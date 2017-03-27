@@ -4,12 +4,12 @@
     "content": [
       {
         "discriminator": "html",
-        "title": "Phone",
+        "label": "Phone",
         "contents": "1-800-999-5555"
       },
       {
         "discriminator": "html",
-        "title": "Email",
+        "label": "Email",
         "contents": "support@mvmt-watches.com"
       }
     ]
@@ -21,13 +21,13 @@
     },
     "privacy_policy": {
       "discriminator": "load",
-      "title": "Privacy Policy",
+      "label": "Privacy Policy",
       "type": "html",
       "url": "https://www.flow.io/policies/privacy"
     },
     "terms": {
       "discriminator": "href",
-      "title": "Terms of Use",
+      "label": "Terms of Use",
       "url": "https://www.flow.io/policies/privacy"
     }
   },
@@ -35,17 +35,17 @@
   "footer": [
     {
       "discriminator": "load",
-      "title": "Privacy Policy",
+      "label": "Privacy Policy",
       "type": "html",
       "url": "https://www.flow.io/policies/privacy"
     },
     {
       "discriminator": "label",
-      "title": "Copyright 2007 Mmvt Watches"
+      "label": "Copyright 2007 Mmvt Watches"
     },
     {
       "discriminator": "href",
-      "title": "Terms of Use",
+      "label": "Terms of Use",
       "url": "https://www.flow.io/policies/privacy"
     }
   ]
