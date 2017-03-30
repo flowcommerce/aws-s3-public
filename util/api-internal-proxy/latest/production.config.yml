@@ -7,6 +7,8 @@ servers:
     host: https://billing.api.flow.io
   - name: catalog-internal
     host: https://catalog.api.flow.io
+  - name: content-internal
+    host: https://content.api.flow.io
   - name: currency-internal
     host: https://currency.api.flow.io
   - name: experience-internal
@@ -93,6 +95,9 @@ operations:
   - method: DELETE
     path: /:organization/item-restrictions/item/:number
     server: catalog-internal
+  - method: GET
+    path: /:organization/content/checkout
+    server: content-internal
   - method: GET
     path: /internal/currency/settings
     server: currency-internal

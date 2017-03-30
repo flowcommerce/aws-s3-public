@@ -7,6 +7,8 @@ servers:
     host: http://172.17.0.1:7121
   - name: catalog-internal
     host: http://172.17.0.1:6071
+  - name: content-internal
+    host: http://172.17.0.1:7191
   - name: currency-internal
     host: http://172.17.0.1:6321
   - name: experience-internal
@@ -93,6 +95,9 @@ operations:
   - method: DELETE
     path: /:organization/item-restrictions/item/:number
     server: catalog-internal
+  - method: GET
+    path: /:organization/content/checkout
+    server: content-internal
   - method: GET
     path: /internal/currency/settings
     server: currency-internal
