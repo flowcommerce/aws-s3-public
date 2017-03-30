@@ -69,10 +69,8 @@
     },
     {
       "discriminator": "label",
-      "label": {
-        "format": "text",
-        "value": "Copyright 2007 Mmvt Watches"
-      }
+      "format": "text",
+      "value": "Copyright 2007 Mmvt Watches"
     },
     {
       "discriminator": "href",
