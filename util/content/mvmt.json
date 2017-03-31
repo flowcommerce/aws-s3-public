@@ -42,7 +42,7 @@
       },
       "location": {
         "type": "html",
-        "url": "https://www.flow.io/policies/privacy"
+        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt-privacy-policy.html"
       }
     },
     "terms": {
@@ -51,7 +51,7 @@
         "format": "text",
         "value": "Terms of Use"
       },
-      "url": "https://www.flow.io/policies/privacy"
+      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt-consumer-terms.html"
     }
   },
 
@@ -64,13 +64,13 @@
       },
       "location": {
         "type": "html",
-        "url": "https://www.flow.io/policies/privacy"
+        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt-privacy-policy.html"
       }
     },
     {
       "discriminator": "label",
       "format": "text",
-      "value": "Copyright 2007 Mmvt Watches"
+      "value": "Copyright 2017 MVMT Watches, Inc."
     },
     {
       "discriminator": "href",
@@ -78,7 +78,7 @@
         "format": "text",
         "value": "Terms of Use"
       },
-      "url": "https://www.flow.io/policies/privacy"
+      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt-consumer-terms.html"
     }
   ]
 }
