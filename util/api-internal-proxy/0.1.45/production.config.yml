@@ -99,6 +99,9 @@ operations:
     path: /:organization/content/checkout
     server: content-internal
   - method: GET
+    path: /:organization/content/:key/url
+    server: content-internal
+  - method: GET
     path: /internal/currency/settings
     server: currency-internal
   - method: GET
