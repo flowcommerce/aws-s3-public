@@ -32,7 +32,7 @@
 
   "checkout": {
     "logo": {
-      "url": "https://cdn.shopify.com/s/files/1/0377/2037/t/37/assets/mvmt-logo.svg?6741713624772055173"
+      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/icons/logos/mvmt-logo-white.svg"
     },
     "privacy_policy": {
       "discriminator": "load",
