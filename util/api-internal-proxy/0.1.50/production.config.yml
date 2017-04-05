@@ -1,0 +1,466 @@
+version: 0.1.46
+
+servers:
+  - name: billing-internal
+    host: https://billing.api.flow.io
+  - name: billing
+    host: https://billing.api.flow.io
+  - name: catalog-internal
+    host: https://catalog.api.flow.io
+  - name: content-internal
+    host: https://content.api.flow.io
+  - name: currency-internal
+    host: https://currency.api.flow.io
+  - name: experience-internal
+    host: https://experience.api.flow.io
+  - name: fulfillment-internal
+    host: https://fulfillment.api.flow.io
+  - name: label-internal
+    host: https://label.api.flow.io
+  - name: onboarding-internal
+    host: https://onboarding.api.flow.io
+  - name: partner-internal
+    host: https://partner.api.flow.io
+  - name: payment-internal
+    host: https://payment.api.flow.io
+  - name: ratecard
+    host: https://ratecard.api.flow.io
+  - name: screen
+    host: https://screen.api.flow.io
+  - name: search-internal
+    host: https://search.api.flow.io
+  - name: shopify-internal
+    host: https://shopify.api.flow.io
+  - name: user-internal
+    host: https://user.api.flow.io
+
+operations:
+  - method: PUT
+    path: /internal/accounts/:organization_id/:currency
+    server: billing-internal
+  - method: DELETE
+    path: /internal/:organization/payments/:reference
+    server: billing-internal
+  - method: POST
+    path: /internal/:organization/payments/:reference/close
+    server: billing-internal
+  - method: GET
+    path: /:organization/accounts
+    server: billing
+  - method: GET
+    path: /:organization/accounts/:currency
+    server: billing
+  - method: GET
+    path: /:organization/accounts/:currency/statistics
+    server: billing
+  - method: GET
+    path: /:organization/accounts/:currency/entries
+    server: billing
+  - method: POST
+    path: /:organization/accounts/:currency/email
+    server: billing
+  - method: GET
+    path: /:organization/payments
+    server: billing
+  - method: GET
+    path: /:organization/payments/:reference
+    server: billing
+  - method: POST
+    path: /:organization/payments/:reference/email
+    server: billing
+  - method: GET
+    path: /:organization/payments/:payment_reference/entries
+    server: billing
+  - method: GET
+    path: /:organization/account/transaction/summaries
+    server: billing
+  - method: GET
+    path: /:organization/account/transaction/summaries/:id
+    server: billing
+  - method: GET
+    path: /:organization/item-restrictions
+    server: catalog-internal
+  - method: POST
+    path: /:organization/item-restrictions
+    server: catalog-internal
+  - method: PUT
+    path: /:organization/item-restrictions/:id
+    server: catalog-internal
+  - method: PUT
+    path: /:organization/item-restrictions/item/:number
+    server: catalog-internal
+  - method: DELETE
+    path: /:organization/item-restrictions/:id
+    server: catalog-internal
+  - method: DELETE
+    path: /:organization/item-restrictions/item/:number
+    server: catalog-internal
+  - method: GET
+    path: /:organization/content/checkout
+    server: content-internal
+  - method: GET
+    path: /:organization/content/:key/url
+    server: content-internal
+  - method: GET
+    path: /internal/currency/settings
+    server: currency-internal
+  - method: GET
+    path: /internal/currency/settings/versions
+    server: currency-internal
+  - method: GET
+    path: /internal/currency/settings/:id
+    server: currency-internal
+  - method: POST
+    path: /internal/currency/settings
+    server: currency-internal
+  - method: PUT
+    path: /internal/currency/settings/:id
+    server: currency-internal
+  - method: GET
+    path: /internal/currency/spot-rates
+    server: currency-internal
+  - method: GET
+    path: /internal/currency/spot-rates/versions
+    server: currency-internal
+  - method: PUT
+    path: /:organization/experiences/:key/formatting/options
+    server: experience-internal
+  - method: GET
+    path: /:organization/experiences/:key/formatting/options/:currency/:amount
+    server: experience-internal
+  - method: GET
+    path: /:organization/experiences/:key/formatting
+    server: experience-internal
+  - method: GET
+    path: /:organization/experiences/:experience_key/sales-margins
+    server: experience-internal
+  - method: GET
+    path: /:organization/experiences/:experience_key/sales-margins/versions
+    server: experience-internal
+  - method: GET
+    path: /:organization/experiences/:experience_key/sales-margins/:key
+    server: experience-internal
+  - method: POST
+    path: /:organization/experiences/:experience_key/sales-margins
+    server: experience-internal
+  - method: PUT
+    path: /:organization/experiences/:experience_key/sales-margins/:key
+    server: experience-internal
+  - method: DELETE
+    path: /:organization/experiences/:experience_key/sales-margins/:key
+    server: experience-internal
+  - method: GET
+    path: /carriers
+    server: fulfillment-internal
+  - method: GET
+    path: /carriers/:id
+    server: fulfillment-internal
+  - method: GET
+    path: /carriers/versions
+    server: fulfillment-internal
+  - method: POST
+    path: /carriers
+    server: fulfillment-internal
+  - method: PUT
+    path: /carriers/:id
+    server: fulfillment-internal
+  - method: DELETE
+    path: /carriers/:id
+    server: fulfillment-internal
+  - method: GET
+    path: /services
+    server: fulfillment-internal
+  - method: GET
+    path: /services/:id
+    server: fulfillment-internal
+  - method: GET
+    path: /services/versions
+    server: fulfillment-internal
+  - method: POST
+    path: /services
+    server: fulfillment-internal
+  - method: PUT
+    path: /services/:id
+    server: fulfillment-internal
+  - method: DELETE
+    path: /services/:id
+    server: fulfillment-internal
+  - method: GET
+    path: /internal/label/settings/:id
+    server: label-internal
+  - method: POST
+    path: /internal/label/settings
+    server: label-internal
+  - method: PUT
+    path: /internal/label/settings/:id
+    server: label-internal
+  - method: PUT
+    path: /:organization/onboardings
+    server: onboarding-internal
+  - method: GET
+    path: /:organization/onboardings
+    server: onboarding-internal
+  - method: GET
+    path: /:organization/onboarding-tasks
+    server: onboarding-internal
+  - method: GET
+    path: /:organization/onboarding-tasks/summaries
+    server: onboarding-internal
+  - method: PUT
+    path: /:organization/onboarding-tasks/:id/start
+    server: onboarding-internal
+  - method: PUT
+    path: /:organization/onboarding-tasks/:id/complete
+    server: onboarding-internal
+  - method: GET
+    path: /:organization/onboarding-tasks/:id
+    server: onboarding-internal
+  - method: GET
+    path: /internal/partners/:id
+    server: partner-internal
+  - method: POST
+    path: /internal/partners
+    server: partner-internal
+  - method: DELETE
+    path: /internal/partners/:id
+    server: partner-internal
+  - method: POST
+    path: /partner-authorizations
+    server: partner-internal
+  - method: GET
+    path: /partner-authorizations/:partner
+    server: partner-internal
+  - method: GET
+    path: /partners/:partner/memberships
+    server: partner-internal
+  - method: GET
+    path: /partners/:partner/memberships/versions
+    server: partner-internal
+  - method: GET
+    path: /partners/:partner/memberships/:id
+    server: partner-internal
+  - method: POST
+    path: /partners/:partner/memberships
+    server: partner-internal
+  - method: PUT
+    path: /partners/:partner/memberships/:id
+    server: partner-internal
+  - method: DELETE
+    path: /partners/:partner/memberships/:id
+    server: partner-internal
+  - method: GET
+    path: /:organization/partner-organization-authorizations
+    server: partner-internal
+  - method: GET
+    path: /:organization/partner-organization-authorizations/:id
+    server: partner-internal
+  - method: POST
+    path: /:organization/partner-organization-authorizations
+    server: partner-internal
+  - method: DELETE
+    path: /:organization/partner-organization-authorizations/:id
+    server: partner-internal
+  - method: POST
+    path: /:organization/refunds/:processor
+    server: payment-internal
+  - method: GET
+    path: /:organization/keys
+    server: payment-internal
+  - method: POST
+    path: /:organization/keys
+    server: payment-internal
+  - method: GET
+    path: /:organization/passphrases
+    server: payment-internal
+  - method: GET
+    path: /:organization/passphrases/:id
+    server: payment-internal
+  - method: POST
+    path: /:organization/passphrases
+    server: payment-internal
+  - method: POST
+    path: /:organization/passphrases/:id/authentications
+    server: payment-internal
+  - method: GET
+    path: /:organization/tribes
+    server: payment-internal
+  - method: GET
+    path: /:organization/tribes/:id
+    server: payment-internal
+  - method: GET
+    path: /:organization/dimension-estimates/versions
+    server: ratecard
+  - method: GET
+    path: /:organization/dimension-estimates
+    server: ratecard
+  - method: GET
+    path: /:organization/dimension-estimates/:id
+    server: ratecard
+  - method: POST
+    path: /:organization/dimension-estimates
+    server: ratecard
+  - method: DELETE
+    path: /:organization/dimension-estimates/:id
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecards/versions
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecards
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecards/:id
+    server: ratecard
+  - method: POST
+    path: /:organization/ratecards
+    server: ratecard
+  - method: PUT
+    path: /:organization/ratecards/:id/publish
+    server: ratecard
+  - method: POST
+    path: /:organization/ratecard_estimates
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecard-lanes/versions
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecard-lanes
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecard-lanes/:id
+    server: ratecard
+  - method: POST
+    path: /:organization/ratecard-lanes
+    server: ratecard
+  - method: PUT
+    path: /:organization/ratecard-lanes/:id
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/versions
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates
+    server: ratecard
+  - method: GET
+    path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id
+    server: ratecard
+  - method: POST
+    path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates
+    server: ratecard
+  - method: PUT
+    path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id
+    server: ratecard
+  - method: PUT
+    path: /screens/:key
+    server: screen
+  - method: GET
+    path: /:organization/harmonization/countries
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/statistics
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/summaries
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/codes/hs10
+    server: search-internal
+  - method: GET
+    path: /:organization/harmonization/codes/hs6
+    server: search-internal
+  - method: GET
+    path: /:organization/customers
+    server: search-internal
+  - method: GET
+    path: /:organization/customers/:number
+    server: search-internal
+  - method: GET
+    path: /:organization/reports/destinations/countries
+    server: search-internal
+  - method: GET
+    path: /:organization/order-details
+    server: search-internal
+  - method: GET
+    path: /:organization/order-details/:number
+    server: search-internal
+  - method: GET
+    path: /:organization/reports/revenue/regions
+    server: search-internal
+  - method: GET
+    path: /:organization/reports/revenue/timeline
+    server: search-internal
+  - method: GET
+    path: /shopify/orders
+    server: shopify-internal
+  - method: POST
+    path: /sessions/shopify/:shop
+    server: shopify-internal
+  - method: GET
+    path: /shopify/shops/:myshopify_domain
+    server: shopify-internal
+  - method: POST
+    path: /shopify/shops/:myshopify_domain/install
+    server: shopify-internal
+  - method: PUT
+    path: /shopify/shops/:myshopify_domain
+    server: shopify-internal
+  - method: DELETE
+    path: /shopify/shops/:myshopify_domain
+    server: shopify-internal
+  - method: GET
+    path: /shopify/carts/:id.html
+    server: shopify-internal
+  - method: GET
+    path: /shopify/carts/:id
+    server: shopify-internal
+  - method: PUT
+    path: /shopify/carts/:id/geo
+    server: shopify-internal
+  - method: PUT
+    path: /shopify/carts/:id/promotion
+    server: shopify-internal
+  - method: DELETE
+    path: /shopify/carts/:id/promotion
+    server: shopify-internal
+  - method: POST
+    path: /shopify/carts/:id/add
+    server: shopify-internal
+  - method: POST
+    path: /shopify/carts/:id/change
+    server: shopify-internal
+  - method: POST
+    path: /shopify/carts/:id/clear
+    server: shopify-internal
+  - method: POST
+    path: /shopify/carts/:id/orders
+    server: shopify-internal
+  - method: GET
+    path: /:organization/shopify/localized/variants/experience/:experience_key/map
+    server: shopify-internal
+  - method: POST
+    path: /:organization/shopify/orders/:number/authorizations
+    server: shopify-internal
+  - method: GET
+    path: /:organization/shopify/orders/:number/contents
+    server: shopify-internal
+  - method: PUT
+    path: /:organization/shopify/orders/:number/promotion
+    server: shopify-internal
+  - method: DELETE
+    path: /:organization/shopify/orders/:number/promotion
+    server: shopify-internal
+  - method: POST
+    path: /shopify/webhook/events/shops/:flow_shop_id/product/upserted
+    server: shopify-internal
+  - method: POST
+    path: /shopify/webhook/events/shops/:flow_shop_id/product/deleted
+    server: shopify-internal
+  - method: PUT
+    path: /internal/users/:id/status
+    server: user-internal
+  - method: POST
+    path: /users/tokens/redeem
+    server: user-internal
+  - method: POST
+    path: /users/tokens
+    server: user-internal
