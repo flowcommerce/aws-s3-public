@@ -52,6 +52,22 @@
         "value": "Terms of Use"
       },
       "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt-consumer-terms.html"
+    },
+    "payments": {
+      "default": {
+        "processor_description": {
+          "discriminator": "label",
+          "format": "text",
+          "value": "Your transaction will be completed by our global partner, Flow Commerce Ltd."
+        }
+      },
+      "paypal": {
+        "processor_description": {
+          "discriminator": "label",
+          "format": "text",
+          "value": "PayPal transaction will be completed by our global partner, Flow Commerce Ltd."
+        }
+      }
     }
   },
 
