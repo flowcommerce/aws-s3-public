@@ -32,7 +32,7 @@
 
   "checkout": {
     "logo": {
-      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/icons/logos/mvmt-logo-white.svg"
+      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/icons/logos/mvmt-white.png"
     },
     "privacy_policy": {
       "discriminator": "load",
