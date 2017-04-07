@@ -46,12 +46,15 @@
       }
     },
     "terms": {
-      "discriminator": "href",
+      "discriminator": "load",
       "label": {
         "format": "text",
         "value": "Terms of Use"
       },
-      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
+      "location": {
+        "type": "html",
+        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
+      }
     }
   },
 
@@ -75,7 +78,7 @@
   "footer": [
     {
       "discriminator": "load",
-       "label": {
+      "label": {
         "format": "text",
         "value": "Privacy Policy"
       },
@@ -90,12 +93,15 @@
       "value": "Copyright 2017 MVMT Watches, Inc."
     },
     {
-      "discriminator": "href",
+      "discriminator": "load",
       "label": {
         "format": "text",
         "value": "Terms of Use"
       },
-      "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
+      "location": {
+        "type": "html",
+        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
+      }
     }
   ]
 }
