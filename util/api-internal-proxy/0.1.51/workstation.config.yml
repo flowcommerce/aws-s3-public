@@ -39,10 +39,10 @@ operations:
     path: /internal/accounts/:organization_id/:currency
     server: billing-internal
   - method: DELETE
-    path: /internal/:organization/payments/:reference
+    path: /internal/:organization/account/payments/:reference
     server: billing-internal
   - method: POST
-    path: /internal/:organization/payments/:reference/close
+    path: /internal/:organization/account/payments/:reference/close
     server: billing-internal
   - method: GET
     path: /:organization/accounts
@@ -60,16 +60,16 @@ operations:
     path: /:organization/accounts/:currency/email
     server: billing
   - method: GET
-    path: /:organization/payments
+    path: /:organization/account/payments
     server: billing
   - method: GET
-    path: /:organization/payments/:reference
+    path: /:organization/account/payments/:reference
     server: billing
   - method: POST
-    path: /:organization/payments/:reference/email
+    path: /:organization/account/payments/:reference/email
     server: billing
   - method: GET
-    path: /:organization/payments/:payment_reference/entries
+    path: /:organization/account/payments/:payment_reference/entries
     server: billing
   - method: GET
     path: /:organization/account/transaction/summaries
