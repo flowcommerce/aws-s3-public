@@ -55,6 +55,23 @@
     }
   },
 
+  "payments": {
+    "default": {
+      "processor_description": {
+        "discriminator": "label",
+        "format": "text",
+        "value": "Your transaction will be completed by our global partner, Flow Commerce Ltd."
+      }
+    },
+    "paypal": {
+      "processor_description": {
+        "discriminator": "label",
+        "format": "text",
+        "value": "PayPal transaction will be completed by our global partner, Flow Commerce Ltd."
+      }
+    }
+  },
+
   "footer": [
     {
       "discriminator": "load",
