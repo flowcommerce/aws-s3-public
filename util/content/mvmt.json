@@ -55,6 +55,14 @@
         "type": "html",
         "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
       }
+    },
+    "contact_us": {
+      "discriminator": "href",
+      "label": {
+        "format": "text",
+        "value": "Contact Us"
+      },
+      "url": "https://www.mvmtwatches.com/pages/contact"
     }
   },
 
