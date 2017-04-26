@@ -31,8 +31,6 @@ servers:
     host: https://screen.api.flow.io
   - name: search-internal
     host: https://search.api.flow.io
-  - name: session-internal
-    host: https://session.api.flow.io
   - name: shopify-internal
     host: https://shopify.api.flow.io
   - name: user-internal
@@ -393,9 +391,6 @@ operations:
   - method: GET
     path: /:organization/reports/revenue/timeline
     server: search-internal
-  - method: POST
-    path: /sessions/shopify/:shop
-    server: session-internal
   - method: GET
     path: /shopify/shops/:myshopify_domain
     server: shopify-internal

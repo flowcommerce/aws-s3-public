@@ -31,8 +31,6 @@ servers:
     host: http://172.17.0.1:7081
   - name: search-internal
     host: http://172.17.0.1:6331
-  - name: session-internal
-    host: http://172.17.0.1:7161
   - name: shopify-internal
     host: http://172.17.0.1:7131
   - name: user-internal
@@ -393,9 +391,6 @@ operations:
   - method: GET
     path: /:organization/reports/revenue/timeline
     server: search-internal
-  - method: POST
-    path: /sessions/shopify/:shop
-    server: session-internal
   - method: GET
     path: /shopify/shops/:myshopify_domain
     server: shopify-internal
