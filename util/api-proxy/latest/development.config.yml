@@ -7,6 +7,8 @@ servers:
     host: http://localhost:6321
   - name: experience
     host: http://localhost:6251
+  - name: feed
+    host: http://localhost:7221
   - name: fulfillment
     host: http://localhost:6061
   - name: harmonization
@@ -363,6 +365,18 @@ operations:
   - method: DELETE
     path: /:organization/order-identifiers/:number
     server: experience
+  - method: GET
+    path: /:organization/feeds
+    server: feed
+  - method: POST
+    path: /:organization/feeds/catalog
+    server: feed
+  - method: PUT
+    path: /:organization/feeds/catalog/:id
+    server: feed
+  - method: DELETE
+    path: /:organization/feeds/:id
+    server: feed
   - method: GET
     path: /:organization/centers/versions
     server: fulfillment

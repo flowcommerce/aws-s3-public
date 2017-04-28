@@ -7,6 +7,8 @@ servers:
     host: https://currency.api.flow.io
   - name: experience
     host: https://experience.api.flow.io
+  - name: feed
+    host: https://feed.api.flow.io
   - name: fulfillment
     host: https://fulfillment.api.flow.io
   - name: harmonization
@@ -363,6 +365,18 @@ operations:
   - method: DELETE
     path: /:organization/order-identifiers/:number
     server: experience
+  - method: GET
+    path: /:organization/feeds
+    server: feed
+  - method: POST
+    path: /:organization/feeds/catalog
+    server: feed
+  - method: PUT
+    path: /:organization/feeds/catalog/:id
+    server: feed
+  - method: DELETE
+    path: /:organization/feeds/:id
+    server: feed
   - method: GET
     path: /:organization/centers/versions
     server: fulfillment
