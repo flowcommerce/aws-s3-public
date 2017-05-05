@@ -1,0 +1,6 @@
+version: 0.0.1
+
+operations:
+  - method: POST
+    path: /sessions/shopify/:shop
+    server: shopify
