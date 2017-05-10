@@ -1,4 +1,4 @@
-version: 0.1.71
+version: 0.1.66
 
 servers:
   - name: billing-internal
@@ -396,9 +396,6 @@ operations:
     server: shopify-internal
   - method: POST
     path: /shopify/shops/:myshopify_domain/install
-    server: shopify-internal
-  - method: POST
-    path: /shopify/shops/:myshopify_domain/sessions
     server: shopify-internal
   - method: PUT
     path: /shopify/shops/:myshopify_domain

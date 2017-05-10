@@ -1,44 +1,44 @@
-version: 0.3.28
+version: 0.3.26
 
 servers:
   - name: catalog
-    host: http://localhost:6071
+    host: https://catalog.api.flow.io
   - name: currency
-    host: http://localhost:6321
+    host: https://currency.api.flow.io
   - name: experience
-    host: http://localhost:6251
+    host: https://experience.api.flow.io
   - name: feed
-    host: http://localhost:7221
+    host: https://feed.api.flow.io
   - name: fulfillment
-    host: http://localhost:6061
+    host: https://fulfillment.api.flow.io
   - name: harmonization
-    host: http://localhost:6161
+    host: https://harmonization.api.flow.io
   - name: inventory
-    host: http://localhost:6341
+    host: https://inventory.api.flow.io
   - name: label
-    host: http://localhost:7041
+    host: https://label.api.flow.io
   - name: location
-    host: http://localhost:6191
+    host: https://location.api.flow.io
   - name: organization
-    host: http://localhost:6081
+    host: https://organization.api.flow.io
   - name: payment
-    host: http://localhost:6281
+    host: https://payment.api.flow.io
   - name: reference
-    host: http://localhost:6121
+    host: https://reference.api.flow.io
   - name: return
-    host: http://localhost:7111
+    host: https://return.api.flow.io
   - name: search
-    host: http://localhost:6331
+    host: https://search.api.flow.io
   - name: session
-    host: http://localhost:7161
+    host: https://session.api.flow.io
   - name: token
-    host: http://localhost:6151
+    host: https://token.api.flow.io
   - name: tracking
-    host: http://localhost:6221
+    host: https://tracking.api.flow.io
   - name: user
-    host: http://localhost:6021
+    host: https://user.api.flow.io
   - name: webhook
-    host: http://localhost:7011
+    host: https://webhook.api.flow.io
 
 operations:
   - method: GET

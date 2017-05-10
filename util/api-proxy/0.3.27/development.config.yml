@@ -1,4 +1,4 @@
-version: 0.3.28
+version: 0.3.26
 
 servers:
   - name: catalog

@@ -1,4 +1,4 @@
-version: 0.3.28
+version: 0.3.17
 
 servers:
   - name: catalog
@@ -313,9 +313,6 @@ operations:
     server: experience
   - method: GET
     path: /:organization/countries
-    server: experience
-  - method: GET
-    path: /:organization/countries/destinations
     server: experience
   - method: GET
     path: /:organization/orders/versions

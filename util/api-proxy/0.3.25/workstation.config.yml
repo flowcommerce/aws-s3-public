@@ -1,44 +1,44 @@
-version: 0.3.28
+version: 0.3.17
 
 servers:
   - name: catalog
-    host: http://localhost:6071
+    host: http://172.17.0.1:6071
   - name: currency
-    host: http://localhost:6321
+    host: http://172.17.0.1:6321
   - name: experience
-    host: http://localhost:6251
+    host: http://172.17.0.1:6251
   - name: feed
-    host: http://localhost:7221
+    host: http://172.17.0.1:7221
   - name: fulfillment
-    host: http://localhost:6061
+    host: http://172.17.0.1:6061
   - name: harmonization
-    host: http://localhost:6161
+    host: http://172.17.0.1:6161
   - name: inventory
-    host: http://localhost:6341
+    host: http://172.17.0.1:6341
   - name: label
-    host: http://localhost:7041
+    host: http://172.17.0.1:7041
   - name: location
-    host: http://localhost:6191
+    host: http://172.17.0.1:6191
   - name: organization
-    host: http://localhost:6081
+    host: http://172.17.0.1:6081
   - name: payment
-    host: http://localhost:6281
+    host: http://172.17.0.1:6281
   - name: reference
-    host: http://localhost:6121
+    host: http://172.17.0.1:6121
   - name: return
-    host: http://localhost:7111
+    host: http://172.17.0.1:7111
   - name: search
-    host: http://localhost:6331
+    host: http://172.17.0.1:6331
   - name: session
-    host: http://localhost:7161
+    host: http://172.17.0.1:7161
   - name: token
-    host: http://localhost:6151
+    host: http://172.17.0.1:6151
   - name: tracking
-    host: http://localhost:6221
+    host: http://172.17.0.1:6221
   - name: user
-    host: http://localhost:6021
+    host: http://172.17.0.1:6021
   - name: webhook
-    host: http://localhost:7011
+    host: http://172.17.0.1:7011
 
 operations:
   - method: GET
