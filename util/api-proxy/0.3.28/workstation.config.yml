@@ -309,6 +309,15 @@ operations:
     path: /:organization/experiences/:experience_key/margins/:key
     server: experience
   - method: GET
+    path: /:organization/experiences/:experience_key/payment-method-rules
+    server: experience
+  - method: PUT
+    path: /:organization/experiences/:experience_key/payment-method-rules
+    server: experience
+  - method: GET
+    path: /:organization/experiences/:experience_key/payment-method-types
+    server: experience
+  - method: GET
     path: /:organization/experience/defaults
     server: experience
   - method: GET
@@ -757,6 +766,9 @@ operations:
     server: reference
   - method: GET
     path: /reference/locales/:id
+    server: reference
+  - method: GET
+    path: /reference/payment-methods
     server: reference
   - method: GET
     path: /reference/provinces
