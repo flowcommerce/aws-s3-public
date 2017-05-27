@@ -19,8 +19,6 @@ servers:
     host: http://172.17.0.1:6061
   - name: label-internal
     host: http://172.17.0.1:7041
-  - name: onboarding-internal
-    host: http://172.17.0.1:7141
   - name: partner-internal
     host: http://172.17.0.1:7061
   - name: payment-internal
@@ -193,27 +191,6 @@ operations:
   - method: PUT
     path: /internal/label/settings/:id
     server: label-internal
-  - method: PUT
-    path: /:organization/onboardings
-    server: onboarding-internal
-  - method: GET
-    path: /:organization/onboardings
-    server: onboarding-internal
-  - method: GET
-    path: /:organization/onboarding-tasks
-    server: onboarding-internal
-  - method: GET
-    path: /:organization/onboarding-tasks/summaries
-    server: onboarding-internal
-  - method: PUT
-    path: /:organization/onboarding-tasks/:id/start
-    server: onboarding-internal
-  - method: PUT
-    path: /:organization/onboarding-tasks/:id/complete
-    server: onboarding-internal
-  - method: GET
-    path: /:organization/onboarding-tasks/:id
-    server: onboarding-internal
   - method: GET
     path: /internal/partners/:id
     server: partner-internal
@@ -444,6 +421,9 @@ operations:
     server: shopify-internal
   - method: POST
     path: /:organization/shopify/orders/:number/authorizations
+    server: shopify-internal
+  - method: POST
+    path: /:organization/shopify/orders/:number/submissions
     server: shopify-internal
   - method: GET
     path: /:organization/shopify/orders/:number/contents
