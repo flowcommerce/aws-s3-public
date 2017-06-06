@@ -17,6 +17,8 @@ servers:
     host: https://experience.api.flow.io
   - name: fulfillment-internal
     host: https://fulfillment.api.flow.io
+  - name: jean-onboarding
+    host: https://jean-onboarding.api.flow.io
   - name: label-internal
     host: https://label.api.flow.io
   - name: partner-internal
@@ -182,6 +184,21 @@ operations:
   - method: DELETE
     path: /services/:id
     server: fulfillment-internal
+  - method: POST
+    path: /:organization/jean-onboarding/items
+    server: jean-onboarding
+  - method: GET
+    path: /:organization/jean-onboarding/items/:id
+    server: jean-onboarding
+  - method: GET
+    path: /:organization/jean-onboarding/items
+    server: jean-onboarding
+  - method: PUT
+    path: /:organization/jean-onboarding/items/:id
+    server: jean-onboarding
+  - method: DELETE
+    path: /:organization/jean-onboarding/items/:id
+    server: jean-onboarding
   - method: GET
     path: /internal/label/settings/:id
     server: label-internal

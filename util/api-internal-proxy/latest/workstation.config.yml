@@ -17,6 +17,8 @@ servers:
     host: http://172.17.0.1:6251
   - name: fulfillment-internal
     host: http://172.17.0.1:6061
+  - name: jean-onboarding
+    host: http://172.17.0.1:7311
   - name: label-internal
     host: http://172.17.0.1:7041
   - name: partner-internal
@@ -182,6 +184,21 @@ operations:
   - method: DELETE
     path: /services/:id
     server: fulfillment-internal
+  - method: POST
+    path: /:organization/jean-onboarding/items
+    server: jean-onboarding
+  - method: GET
+    path: /:organization/jean-onboarding/items/:id
+    server: jean-onboarding
+  - method: GET
+    path: /:organization/jean-onboarding/items
+    server: jean-onboarding
+  - method: PUT
+    path: /:organization/jean-onboarding/items/:id
+    server: jean-onboarding
+  - method: DELETE
+    path: /:organization/jean-onboarding/items/:id
+    server: jean-onboarding
   - method: GET
     path: /internal/label/settings/:id
     server: label-internal
