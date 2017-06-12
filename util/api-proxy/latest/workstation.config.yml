@@ -563,6 +563,18 @@ operations:
     path: /:organization/inventory_updates
     server: inventory
   - method: GET
+    path: /:organization/manifests/type/all
+    server: label
+  - method: POST
+    path: /:organization/manifests/type/list
+    server: label
+  - method: GET
+    path: /:organization/manifests
+    server: label
+  - method: GET
+    path: /:organization/manifests/:id
+    server: label
+  - method: GET
     path: /:organization/shipping_labels/versions
     server: label
   - method: GET
