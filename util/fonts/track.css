@@ -66,6 +66,6 @@
 
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/31fa17");
-@font-face {font-family: 'FreightSansProBook-Italic';src: url('../fonts/31FA17_0_0.eot');src: url('../fonts/31FA17_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/31FA17_0_0.woff2') format('woff2'),url('../fonts/31FA17_0_0.woff') format('woff'),url('../fonts/31FA17_0_0.ttf') format('truetype'),url('../fonts/31FA17_0_0.svg#wf') format('svg');}
+@font-face {font-family: 'FreightSansProBook-Italic';src: url('../fonts/31FA17_0_0.eot');src: url('../fonts/31FA17_0_0.eot?#iefix') format('embedded-opentype'),url('../fonts/31FA17_0_0.ttf') format('truetype'),url('../fonts/31FA17_0_0.svg#wf') format('svg');}
 @font-face {font-family: 'FreightSansProMedium-Regular';src: url('31FA17_A_0.eot');src: url('31FA17_A_0.eot?#iefix') format('embedded-opentype'),url('31FA17_A_0.woff2') format('woff2'),url('31FA17_A_0.woff') format('woff'),url('31FA17_A_0.ttf') format('truetype'),url('31FA17_A_0.svg#wf') format('svg');}
-@font-face {font-family: 'FreightSansProBook-Regular';src: url('31FA17_B_0.eot');src: url('31FA17_B_0.eot?#iefix') format('embedded-opentype'),url('31FA17_B_0.woff2') format('woff2'),url('31FA17_B_0.woff') format('woff'),url('31FA17_B_0.ttf') format('truetype'),url('31FA17_B_0.svg#wf') format('svg');}
+@font-face {font-family: 'FreightSansProBook-Regular';src: url('31FA17_B_0.eot');src: url('31FA17_B_0.eot?#iefix') format('embedded-opentype'),url('31FA17_B_0.woff') format('woff'),url('31FA17_B_0.ttf') format('truetype'),url('31FA17_B_0.svg#wf') format('svg');}
