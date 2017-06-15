@@ -17,6 +17,8 @@ servers:
     host: http://172.17.0.1:6251
   - name: fulfillment-internal
     host: http://172.17.0.1:6061
+  - name: harmonization-internal
+    host: http://172.17.0.1:6161
   - name: jean-onboarding
     host: http://172.17.0.1:7311
   - name: label-internal
@@ -184,6 +186,36 @@ operations:
   - method: DELETE
     path: /services/:id
     server: fulfillment-internal
+  - method: GET
+    path: /:organization/harmonization/classifications
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/classifications/:id
+    server: harmonization-internal
+  - method: POST
+    path: /:organization/harmonization/classifications
+    server: harmonization-internal
+  - method: DELETE
+    path: /:organization/harmonization/classifications/:id
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/details
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/details/:id
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/lanes
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/lanes/:id
+    server: harmonization-internal
+  - method: POST
+    path: /:organization/harmonization/lanes
+    server: harmonization-internal
+  - method: DELETE
+    path: /:organization/harmonization/lanes/:id
+    server: harmonization-internal
   - method: POST
     path: /:organization/jean-onboarding/items
     server: jean-onboarding
