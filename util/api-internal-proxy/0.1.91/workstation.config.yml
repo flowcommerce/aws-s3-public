@@ -202,8 +202,11 @@ operations:
   - method: GET
     path: /:organization/harmonization/details/:id
     server: harmonization-internal
+  - method: POST
+    path: /harmonization/hints
+    server: harmonization-internal
   - method: PUT
-    path: /hs10_codes/harmonization/hints/phrase
+    path: /harmonization/hints/phrase
     server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/lanes
