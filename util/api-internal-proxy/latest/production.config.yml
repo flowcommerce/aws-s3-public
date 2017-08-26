@@ -13,10 +13,6 @@ servers:
     host: https://currency.api.flow.io
   - name: demandware-internal
     host: https://demandware.api.flow.io
-  - name: duty-internal
-    host: https://duty.api.flow.io
-  - name: duty-threece-internal
-    host: https://duty-threece.api.flow.io
   - name: experience-internal
     host: https://experience.api.flow.io
   - name: fulfillment-internal
@@ -125,15 +121,6 @@ operations:
   - method: DELETE
     path: /:organization_id/demandware/ftp-settings/:id
     server: demandware-internal
-  - method: GET
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
-  - method: POST
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
-  - method: GET
-    path: /:hs/:destination/:origin
-    server: duty-threece-internal
   - method: PUT
     path: /:organization/experiences/:key/formatting/options
     server: experience-internal

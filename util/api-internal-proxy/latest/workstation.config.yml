@@ -13,10 +13,6 @@ servers:
     host: http://172.17.0.1:6321
   - name: demandware-internal
     host: http://172.17.0.1:7211
-  - name: duty-internal
-    host: http://172.17.0.1:7371
-  - name: duty-threece-internal
-    host: http://172.17.0.1:7391
   - name: experience-internal
     host: http://172.17.0.1:6251
   - name: fulfillment-internal
@@ -125,15 +121,6 @@ operations:
   - method: DELETE
     path: /:organization_id/demandware/ftp-settings/:id
     server: demandware-internal
-  - method: GET
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
-  - method: POST
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
-  - method: GET
-    path: /:hs/:destination/:origin
-    server: duty-threece-internal
   - method: PUT
     path: /:organization/experiences/:key/formatting/options
     server: experience-internal
