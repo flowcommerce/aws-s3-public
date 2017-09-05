@@ -15,8 +15,6 @@ servers:
     host: http://localhost:7211
   - name: duty-internal
     host: http://localhost:7371
-  - name: duty-threece-internal
-    host: http://localhost:7391
   - name: experience-internal
     host: http://localhost:6251
   - name: fulfillment-internal
@@ -146,9 +144,6 @@ operations:
   - method: POST
     path: /duty/:destination/:origin/:code/raw
     server: duty-internal
-  - method: GET
-    path: /:hs/:destination/:origin
-    server: duty-threece-internal
   - method: PUT
     path: /:organization/experiences/:key/formatting/options
     server: experience-internal

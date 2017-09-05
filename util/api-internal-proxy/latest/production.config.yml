@@ -15,8 +15,6 @@ servers:
     host: https://demandware.api.flow.io
   - name: duty-internal
     host: https://duty.api.flow.io
-  - name: duty-threece-internal
-    host: https://duty-threece.api.flow.io
   - name: experience-internal
     host: https://experience.api.flow.io
   - name: fulfillment-internal
@@ -146,9 +144,6 @@ operations:
   - method: POST
     path: /duty/:destination/:origin/:code/raw
     server: duty-internal
-  - method: GET
-    path: /:hs/:destination/:origin
-    server: duty-threece-internal
   - method: PUT
     path: /:organization/experiences/:key/formatting/options
     server: experience-internal
