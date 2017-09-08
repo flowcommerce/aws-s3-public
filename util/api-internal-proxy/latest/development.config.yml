@@ -143,6 +143,9 @@ operations:
     path: /:organization_id/demandware/ftp-settings/:id
     server: demandware-internal
   - method: GET
+    path: /duty/:destination/:origin/:code
+    server: duty-internal
+  - method: GET
     path: /duty/:destination/:origin/:code/raw
     server: duty-internal
   - method: POST
