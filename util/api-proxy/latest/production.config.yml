@@ -2,45 +2,45 @@ version: 0.3.65
 
 servers:
   - name: catalog
-    host: https://catalog.api.flow.io
+    host: http://catalog-ecs-lb-519666120.us-east-1.elb.amazonaws.com
   - name: currency
-    host: https://currency.api.flow.io
+    host: http://currency-ecs-lb-1301586341.us-east-1.elb.amazonaws.com
   - name: experience
-    host: https://experience.api.flow.io
+    host: http://experience-ecs-lb-1425116727.us-east-1.elb.amazonaws.com
   - name: feed
-    host: https://feed.api.flow.io
+    host: http://feed-ecs-lb-1719812647.us-east-1.elb.amazonaws.com
   - name: fulfillment
-    host: https://fulfillment.api.flow.io
+    host: http://fulfillment-ecs-lb-1642242699.us-east-1.elb.amazonaws.com
   - name: harmonization
-    host: https://harmonization.api.flow.io
+    host: http://harmonization-ecs-lb-1352523357.us-east-1.elb.amazonaws.com
   - name: inventory
-    host: https://inventory.api.flow.io
+    host: http://inventory-ecs-lb-1682339944.us-east-1.elb.amazonaws.com
   - name: label
-    host: https://label.api.flow.io
+    host: http://label-ecs-lb-597579401.us-east-1.elb.amazonaws.com
   - name: link
-    host: https://link.api.flow.io
+    host: http://link-ecs-lb-1695921088.us-east-1.elb.amazonaws.com
   - name: location
-    host: https://location.api.flow.io
+    host: http://location-ecs-lb-2135010142.us-east-1.elb.amazonaws.com
   - name: organization
-    host: https://organization.api.flow.io
+    host: http://organization-ecs-lb-1913224564.us-east-1.elb.amazonaws.com
   - name: payment
     host: https://payment.api.flow.io
   - name: reference
-    host: https://reference.api.flow.io
+    host: http://reference-ecs-lb-201984511.us-east-1.elb.amazonaws.com
   - name: return
-    host: https://return.api.flow.io
+    host: http://return-ecs-lb-1138236127.us-east-1.elb.amazonaws.com
   - name: search
-    host: https://search.api.flow.io
+    host: http://search-ecs-lb-352649111.us-east-1.elb.amazonaws.com
   - name: session
-    host: https://session.api.flow.io
+    host: http://session-ecs-lb-434518215.us-east-1.elb.amazonaws.com
   - name: token
-    host: https://token.api.flow.io
+    host: http://token-ecs-lb-1749478475.us-east-1.elb.amazonaws.com
   - name: tracking
-    host: https://tracking.api.flow.io
+    host: http://tracking-ecs-lb-435314595.us-east-1.elb.amazonaws.com
   - name: user
     host: https://user.api.flow.io
   - name: webhook
-    host: https://webhook.api.flow.io
+    host: http://webhook-ecs-lb-1423393803.us-east-1.elb.amazonaws.com
 
 operations:
   - method: GET
