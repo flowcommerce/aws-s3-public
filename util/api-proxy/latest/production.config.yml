@@ -34,7 +34,7 @@ servers:
   - name: session
     host: http://session-ecs-lb-434518215.us-east-1.elb.amazonaws.com
   - name: token
-    host: http://token-ecs-lb-1749478475.us-east-1.elb.amazonaws.com
+    host: https://token.api.flow.io
   - name: tracking
     host: http://tracking-ecs-lb-435314595.us-east-1.elb.amazonaws.com
   - name: user
