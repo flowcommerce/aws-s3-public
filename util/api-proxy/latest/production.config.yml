@@ -745,6 +745,9 @@ operations:
   - method: POST
     path: /:organization/authorizations
     server: payment
+  - method: PUT
+    path: /:organization/authorizations/:key/value
+    server: payment
   - method: POST
     path: /:organization/authorizations/card
     server: payment
