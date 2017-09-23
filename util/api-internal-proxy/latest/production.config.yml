@@ -17,6 +17,8 @@ servers:
     host: https://duty.api.flow.io
   - name: experience-internal
     host: https://experience.api.flow.io
+  - name: experiment-internal
+    host: https://experiment.api.flow.io
   - name: fraud-internal
     host: https://fraud.api.flow.io
   - name: fulfillment-internal
@@ -181,6 +183,24 @@ operations:
   - method: DELETE
     path: /:organization/experiences/:experience_key/sales-margins/:key
     server: experience-internal
+  - method: GET
+    path: /:organization/experiments
+    server: experiment-internal
+  - method: GET
+    path: /:organization/experiments/:key
+    server: experiment-internal
+  - method: POST
+    path: /:organization/experiments
+    server: experiment-internal
+  - method: PUT
+    path: /:organization/experiments/:key
+    server: experiment-internal
+  - method: POST
+    path: /:organization/experiments/:key/start
+    server: experiment-internal
+  - method: POST
+    path: /:organization/experiments/:key/end
+    server: experiment-internal
   - method: GET
     path: /:organization/fraud/reviews
     server: fraud-internal
