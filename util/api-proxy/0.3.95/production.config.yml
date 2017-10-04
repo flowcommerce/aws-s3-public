@@ -599,10 +599,10 @@ operations:
     path: /:organization/inventory_updates
     server: inventory
   - method: GET
-    path: /:organization/manifests/type/all
+    path: /:organization/manifests/services/:service/outstanding
     server: label
   - method: POST
-    path: /:organization/manifests/type/list
+    path: /:organization/manifests
     server: label
   - method: GET
     path: /:organization/manifests
