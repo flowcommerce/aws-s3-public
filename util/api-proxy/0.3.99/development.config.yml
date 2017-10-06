@@ -694,7 +694,7 @@ operations:
     path: /organizations/versions
     server: organization
   - method: GET
-    path: /organizations/:id
+    path: /organizations/:organization_id
     server: organization
   - method: GET
     path: /organizations/:organization_id/settings/currencies
@@ -709,16 +709,16 @@ operations:
     path: /organizations/:organization_id/settings/regions/:region
     server: organization
   - method: DELETE
-    path: /organizations/:organization_id/settings/regions/:id
+    path: /organizations/:organization_id/settings/regions/:region
     server: organization
   - method: POST
     path: /organizations
     server: organization
   - method: PUT
-    path: /organizations/:id
+    path: /organizations/:organization_id
     server: organization
   - method: DELETE
-    path: /organizations/:id
+    path: /organizations/:organization_id
     server: organization
   - method: GET
     path: /memberships
