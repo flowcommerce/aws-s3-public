@@ -612,6 +612,9 @@ operations:
   - method: POST
     path: /:organization/inventory_updates
     server: inventory
+  - method: POST
+    path: /:organization/orders/:number/labels
+    server: label
   - method: GET
     path: /:organization/manifests/services/:service/outstanding
     server: label
