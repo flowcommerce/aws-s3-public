@@ -6,6 +6,15 @@ servers:
 
 operations:
   - method: GET
+    path: /partners/:partner/orders/:organization/:number/fulfillments
+    server: partner
+  - method: PUT
+    path: /partners/:partner/orders/:organization/:number/fulfillments/cancellations
+    server: partner
+  - method: PUT
+    path: /partners/:partner/orders/:organization/:number/fulfillments/complete/cancellations
+    server: partner
+  - method: GET
     path: /partners/:partner/labels
     server: partner
   - method: GET
