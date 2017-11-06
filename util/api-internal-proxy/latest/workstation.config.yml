@@ -25,6 +25,8 @@ servers:
     host: http://172.17.0.1:6061
   - name: harmonization-internal
     host: http://172.17.0.1:6161
+  - name: installment
+    host: http://172.17.0.1:7491
   - name: label-internal
     host: http://172.17.0.1:7041
   - name: partner-internal
@@ -280,6 +282,39 @@ operations:
   - method: GET
     path: /harmonization/export/unphrased
     server: harmonization-internal
+  - method: GET
+    path: /:organization/installment/plans
+    server: installment
+  - method: GET
+    path: /:organization/installment/plans/:key
+    server: installment
+  - method: POST
+    path: /:organization/installment/plans
+    server: installment
+  - method: PUT
+    path: /:organization/installment/plans/:key
+    server: installment
+  - method: DELETE
+    path: /:organization/installment/plans/:key
+    server: installment
+  - method: GET
+    path: /:organization/installment/programs
+    server: installment
+  - method: GET
+    path: /:organization/installment/programs/:id
+    server: installment
+  - method: POST
+    path: /:organization/installment/programs
+    server: installment
+  - method: PUT
+    path: /:organization/installment/programs/:id
+    server: installment
+  - method: PUT
+    path: /:organization/installment/programs/:id/status
+    server: installment
+  - method: DELETE
+    path: /:organization/installment/programs/:id
+    server: installment
   - method: GET
     path: /internal/label/settings/:id
     server: label-internal
