@@ -24,16 +24,16 @@ operations:
     path: /partners/:partner/labels
     server: partner
   - method: GET
-    path: /partners/:partner/manifests/services/:service/outstanding
+    path: /partners/:partner/organizations/:organization_id/manifests/services/:service/outstanding
     server: partner
   - method: POST
-    path: /partners/:partner/manifests
+    path: /partners/:partner/organizations/:organization_id/manifests
     server: partner
   - method: GET
-    path: /partners/:partner/manifests
+    path: /partners/:partner/organizations/:organization_id/manifests
     server: partner
   - method: GET
-    path: /partners/:partner/manifests/:id
+    path: /partners/:partner/organizations/:organization_id/manifests/:id
     server: partner
   - method: GET
     path: /partners/:partner/organizations/:organization/order-identifiers
