@@ -872,6 +872,9 @@ operations:
   - method: PUT
     path: /:organization/reversals/:key
     server: payment
+  - method: PUT
+    path: /:organization/virtual/cards/:key/authorizations/:authorization_key
+    server: payment
   - method: GET
     path: /reference/countries
     server: reference
