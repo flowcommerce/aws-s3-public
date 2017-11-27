@@ -1,8 +1,5 @@
 flow.checkout.onPageView('all', function handlePageView(order) {
     console.log('*****EVERY', order);
-    ga('send', {
-        hitType: 'pageview'
-    });
 });
 flow.checkout.onPageView('cart', function handlePageView(order) {
     console.log('*****CART', order);
