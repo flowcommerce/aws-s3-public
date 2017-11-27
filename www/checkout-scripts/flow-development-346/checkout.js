@@ -10,7 +10,7 @@ flow.checkout.onPageView('confirmation', function handlePageView(order) {
 flow.checkout.onPageView('contactInfo', function handlePageView(order) {
     console.log('*****CONTACT', order);
 });
-flow.checkout.onPageView('shippingInfo', function handlePageView(order) {
+flow.checkout.onPageView('shippingMethod', function handlePageView(order) {
     console.log('*****SHIPPING', order);
 });
 flow.checkout.onPageView('paymentInfo', function handlePageView(order) {
