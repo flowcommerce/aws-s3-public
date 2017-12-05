@@ -1,4 +1,4 @@
-version: 0.4.42
+version: 0.4.46
 
 servers:
   - name: session
@@ -543,13 +543,13 @@ operations:
     path: /:organization/orders/:number/promotions/:key/free_shipping
     server: experience
   - method: GET
-    path: /:organization/order-estimates/:id
+    path: /:organization/order-estimates/:number
     server: experience
   - method: POST
     path: /:organization/order-estimates
     server: experience
   - method: PUT
-    path: /:organization/order-estimates/:id
+    path: /:organization/order-estimates/:number
     server: experience
   - method: GET
     path: /:organization/order-identifiers/versions
@@ -954,16 +954,16 @@ operations:
     path: /:organization/price/books/:key/items
     server: catalog
   - method: GET
-    path: /:organization/price/books/:key/items/:item_number
+    path: /:organization/price/books/:key/items/:id
     server: catalog
   - method: POST
     path: /:organization/price/books/:key/items
     server: catalog
   - method: PUT
-    path: /:organization/price/books/:key/items/:item_number
+    path: /:organization/price/books/:key/items/:id
     server: catalog
   - method: DELETE
-    path: /:organization/price/books/:key/items/:item_number
+    path: /:organization/price/books/:key/items/:id
     server: catalog
   - method: GET
     path: /:organization/catalog/items/versions
