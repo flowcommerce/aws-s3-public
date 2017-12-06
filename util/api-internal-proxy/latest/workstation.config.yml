@@ -5,6 +5,8 @@ servers:
     host: http://172.17.0.1:7211
   - name: screen
     host: http://172.17.0.1:7081
+  - name: inventory-internal
+    host: http://172.17.0.1:6341
   - name: content-internal
     host: http://172.17.0.1:7191
   - name: shopify-internal
@@ -65,6 +67,12 @@ operations:
   - method: PUT
     path: /screens/:key
     server: screen
+  - method: PUT
+    path: /:organization/inventory_management/decrement
+    server: inventory-internal
+  - method: PUT
+    path: /:organization/inventory_management/check
+    server: inventory-internal
   - method: GET
     path: /:organization/content/checkout
     server: content-internal
@@ -164,9 +172,6 @@ operations:
   - method: PUT
     path: /:organization/orders/:number/modifications/email
     server: experience-internal
-  - method: POST
-    path: /:organization/order/payments/authorization
-    server: experience-internal
   - method: PUT
     path: /:organization/experiences/:key/formatting/options
     server: experience-internal
@@ -199,6 +204,9 @@ operations:
     server: experience-internal
   - method: GET
     path: /:organization/order/number/generator
+    server: experience-internal
+  - method: POST
+    path: /:organization/order/payments/authorization
     server: experience-internal
   - method: GET
     path: /internal/partners/:id
@@ -253,6 +261,9 @@ operations:
     server: payment-internal
   - method: POST
     path: /:organization/refunds/:processor
+    server: payment-internal
+  - method: GET
+    path: /:organization/authorizations/:key/metadata
     server: payment-internal
   - method: GET
     path: /:organization/keys
