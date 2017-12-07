@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script>
+    (function (b, e, a, c, o, n, j, s) {
+      b[o] = b[o] || {};
+      b[o]['beacon'] = b[o]['beacon'] || function () {
+        (b[o]['beacon'].q = b[o]['beacon'].q || []).push(arguments);
+      };
+      b[o]['beacon']('set', 'organization', n);
+      b[o]['beacon']('init');
+      j = e.createElement(a);
+      j.src = c;
+      j.async = 1;
+      j.defer = 1;
+      s = e.getElementsByTagName(a)[0];
+      s.parentNode.insertBefore(j, s);
+    })(window, document, 'script', 'https://flowcdn.io/beacon/js/v0/beacon.min.js', 'flow', 'carbon38-sandbox');
+
+    updateSession = function(countryCode) {
+      flow.beacon('set', 'session', { country: countryCode });
+      flow.beacon('syncSession', {
+        onSuccess: function() {
+          document.querySelector('#info').innerHTML = JSON.stringify(JSON.parse(localStorage.getItem('_f60_session')), null, 2);
+        }
+      });
+    }
+
+    flow.beacon('on', 'ready', function() {
+      updateSession('USA');
+    });    
+    </script>
+  </head>
+  <body>
+    <h1>Flow Session Example</h1>
+    <h2>Session Info:</h2>
+
+    <a href="https://docs.flow.io/beacon/beacon">View beacon documentation</a>
+
+    <p><a href="#" onClick="updateSession('CAN');">Update Session to Canada</a><p>
+
+    <pre id="info"></pre>
+  </body>
+</html>
