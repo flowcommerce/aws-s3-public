@@ -212,6 +212,15 @@ operations:
     path: /:organization/order/payments/authorization
     server: experience-internal
   - method: GET
+    path: /:organization/experience/settings
+    server: experience-internal
+  - method: PUT
+    path: /:organization/experience/settings
+    server: experience-internal
+  - method: PUT
+    path: /:organization/experience/settings/enable_inventory_reservations/:value
+    server: experience-internal
+  - method: GET
     path: /internal/partners/:id
     server: partner-internal
   - method: POST
