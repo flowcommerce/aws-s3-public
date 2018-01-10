@@ -45,6 +45,8 @@ servers:
     host: https://catalog.api.flow.io
   - name: harmonization-internal
     host: https://harmonization.api.flow.io
+  - name: ftp
+    host: https://ftp.api.flow.io
   - name: installment
     host: https://installment.api.flow.io
 
@@ -174,15 +176,6 @@ operations:
     server: shopify-internal
   - method: PUT
     path: /:organization/orders/:number/modifications/email
-    server: experience-internal
-  - method: PUT
-    path: /:organization/experiences/:key/formatting/options
-    server: experience-internal
-  - method: GET
-    path: /:organization/experiences/:key/formatting/options/:currency/:amount
-    server: experience-internal
-  - method: GET
-    path: /:organization/experiences/:key/formatting
     server: experience-internal
   - method: GET
     path: /:organization/experiences/:experience_key/sales-margins
@@ -607,6 +600,21 @@ operations:
   - method: GET
     path: /harmonization/export/unphrased
     server: harmonization-internal
+  - method: GET
+    path: /ftp/webhook/events/brickftp
+    server: ftp
+  - method: GET
+    path: /:organization/ftp/folders
+    server: ftp
+  - method: GET
+    path: /:organization/ftp/folders/:name
+    server: ftp
+  - method: PUT
+    path: /:organization/ftp/folders/:name
+    server: ftp
+  - method: DELETE
+    path: /:organization/ftp/folders/:name
+    server: ftp
   - method: GET
     path: /:organization/installment/plans
     server: installment

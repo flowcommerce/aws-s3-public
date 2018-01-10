@@ -2,51 +2,53 @@ version: 0.2.86
 
 servers:
   - name: demandware-internal
-    host: https://demandware.api.flow.io
+    host: http://172.17.0.1:7211
   - name: screen
-    host: https://screen.api.flow.io
+    host: http://172.17.0.1:7081
   - name: inventory-internal
-    host: https://inventory.api.flow.io
+    host: http://172.17.0.1:6341
   - name: content-internal
-    host: https://content.api.flow.io
+    host: http://172.17.0.1:7191
   - name: shopify-internal
-    host: https://shopify.api.flow.io
+    host: http://172.17.0.1:7131
   - name: experience-internal
-    host: https://experience.api.flow.io
+    host: http://172.17.0.1:6251
   - name: partner-internal
-    host: https://partner.api.flow.io
+    host: http://172.17.0.1:7061
   - name: payment-internal
-    host: https://payment.api.flow.io
+    host: http://172.17.0.1:6281
   - name: fulfillment-internal
-    host: https://fulfillment.api.flow.io
+    host: http://172.17.0.1:6061
   - name: fraud-internal
-    host: https://fraud.api.flow.io
+    host: http://172.17.0.1:7431
   - name: experiment-internal
-    host: https://experiment.api.flow.io
+    host: http://172.17.0.1:7461
   - name: billing-internal
-    host: https://billing.api.flow.io
+    host: http://172.17.0.1:7121
   - name: ratecard-internal
-    host: https://ratecard.api.flow.io
+    host: http://172.17.0.1:7021
   - name: order-management-internal
-    host: https://order-management.api.flow.io
+    host: http://172.17.0.1:7341
   - name: currency-internal
-    host: https://currency.api.flow.io
+    host: http://172.17.0.1:6321
   - name: user-internal
-    host: https://user.api.flow.io
+    host: http://172.17.0.1:6021
   - name: label-internal
-    host: https://label.api.flow.io
+    host: http://172.17.0.1:7041
   - name: search-internal
-    host: https://search.api.flow.io
+    host: http://172.17.0.1:6331
   - name: duty-internal
-    host: https://duty.api.flow.io
+    host: http://172.17.0.1:7371
   - name: billing
-    host: https://billing.api.flow.io
+    host: http://172.17.0.1:7121
   - name: catalog-internal
-    host: https://catalog.api.flow.io
+    host: http://172.17.0.1:6071
   - name: harmonization-internal
-    host: https://harmonization.api.flow.io
+    host: http://172.17.0.1:6161
+  - name: ftp
+    host: http://172.17.0.1:7511
   - name: installment
-    host: https://installment.api.flow.io
+    host: http://172.17.0.1:7491
 
 operations:
   - method: GET
@@ -174,15 +176,6 @@ operations:
     server: shopify-internal
   - method: PUT
     path: /:organization/orders/:number/modifications/email
-    server: experience-internal
-  - method: PUT
-    path: /:organization/experiences/:key/formatting/options
-    server: experience-internal
-  - method: GET
-    path: /:organization/experiences/:key/formatting/options/:currency/:amount
-    server: experience-internal
-  - method: GET
-    path: /:organization/experiences/:key/formatting
     server: experience-internal
   - method: GET
     path: /:organization/experiences/:experience_key/sales-margins
@@ -607,6 +600,21 @@ operations:
   - method: GET
     path: /harmonization/export/unphrased
     server: harmonization-internal
+  - method: GET
+    path: /ftp/webhook/events/brickftp
+    server: ftp
+  - method: GET
+    path: /:organization/ftp/folders
+    server: ftp
+  - method: GET
+    path: /:organization/ftp/folders/:name
+    server: ftp
+  - method: PUT
+    path: /:organization/ftp/folders/:name
+    server: ftp
+  - method: DELETE
+    path: /:organization/ftp/folders/:name
+    server: ftp
   - method: GET
     path: /:organization/installment/plans
     server: installment

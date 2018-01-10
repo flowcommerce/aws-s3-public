@@ -175,15 +175,6 @@ operations:
   - method: PUT
     path: /:organization/orders/:number/modifications/email
     server: experience-internal
-  - method: PUT
-    path: /:organization/experiences/:key/formatting/options
-    server: experience-internal
-  - method: GET
-    path: /:organization/experiences/:key/formatting/options/:currency/:amount
-    server: experience-internal
-  - method: GET
-    path: /:organization/experiences/:key/formatting
-    server: experience-internal
   - method: GET
     path: /:organization/experiences/:experience_key/sales-margins
     server: experience-internal
