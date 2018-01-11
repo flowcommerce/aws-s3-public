@@ -24,10 +24,10 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
   dataLayer.push({
     pageTitle: 'Checkout: Order Confirmation',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
-    customerOrders: 'CGUS_00067042,CGUS_00067043,CGUS_00124792,CGUS_00124794,CGUS_00124795,CGUS_00124902,CGUS_00124904,CGUS_00124927,CGUS_00170182',
-    customerValue: '5964',
+    customerOrders: null,
+    customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
     event: 'transaction',
@@ -70,10 +70,10 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
   dataLayer.push({
     pageTitle: 'Checkout: Shipping and Billing Address',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
-    customerOrders: 'CGUS_00067042,CGUS_00067043,CGUS_00124792,CGUS_00124794,CGUS_00124795,CGUS_00124902,CGUS_00124904,CGUS_00124927,CGUS_00170182',
-    customerValue: '5964',
+    customerOrders: null,
+    customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
     event: 'checkout',
@@ -116,16 +116,17 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
   dataLayer.push({
     pageTitle: 'Checkout: Shipping method',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
-    customerOrders: 'CGUS_00067042,CGUS_00067043,CGUS_00124792,CGUS_00124794,CGUS_00124795,CGUS_00124902,CGUS_00124904,CGUS_00124927,CGUS_00170182',
-    customerValue: '5964',
+    customerOrders: null,
+    customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
     event: 'checkout',
     ecommerce: {
       checkout: {
         actionField: {
+          action: 'checkout',
           step: 3
         },
         products: items
@@ -159,16 +160,17 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
   dataLayer.push({
     pageTitle: 'Checkout: Payment',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
-    customerOrders: 'CGUS_00067042,CGUS_00067043,CGUS_00124792,CGUS_00124794,CGUS_00124795,CGUS_00124902,CGUS_00124904,CGUS_00124927,CGUS_00170182',
-    customerValue: '5964',
+    customerOrders: null,
+    customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
     event: 'checkout',
     ecommerce: {
       checkout: {
         actionField: {
+          action: 'checkout',
           step: 4
         },
         products: items
