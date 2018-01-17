@@ -19,8 +19,6 @@ servers:
     host: http://localhost:6281
   - name: fulfillment-internal
     host: http://localhost:6061
-  - name: ftp-internal
-    host: http://localhost:7511
   - name: fraud-internal
     host: http://localhost:7431
   - name: experiment-internal
@@ -336,9 +334,6 @@ operations:
     path: /services/:id
     server: fulfillment-internal
   - method: GET
-    path: /ftp/webhook/events/brickftp/:ftp_folder_id
-    server: ftp-internal
-  - method: GET
     path: /:organization/fraud/reviews
     server: fraud-internal
   - method: GET
@@ -606,16 +601,7 @@ operations:
     path: /harmonization/export/unphrased
     server: harmonization-internal
   - method: GET
-    path: /:organization/ftp/files
-    server: ftp
-  - method: GET
-    path: /:organization/ftp/files/:id
-    server: ftp
-  - method: POST
-    path: /:organization/ftp/files
-    server: ftp
-  - method: DELETE
-    path: /:organization/ftp/files/:id
+    path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp
   - method: GET
     path: /:organization/ftp/folders

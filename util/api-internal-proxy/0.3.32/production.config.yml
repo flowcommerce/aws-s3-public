@@ -2,55 +2,53 @@ version: 0.2.86
 
 servers:
   - name: demandware-internal
-    host: http://localhost:7211
+    host: https://demandware.api.flow.io
   - name: screen
-    host: http://localhost:7081
+    host: https://screen.api.flow.io
   - name: inventory-internal
-    host: http://localhost:6341
+    host: https://inventory.api.flow.io
   - name: content-internal
-    host: http://localhost:7191
+    host: https://content.api.flow.io
   - name: shopify-internal
-    host: http://localhost:7131
+    host: https://shopify.api.flow.io
   - name: experience-internal
-    host: http://localhost:6251
+    host: https://experience.api.flow.io
   - name: partner-internal
-    host: http://localhost:7061
+    host: https://partner.api.flow.io
   - name: payment-internal
-    host: http://localhost:6281
+    host: https://payment.api.flow.io
   - name: fulfillment-internal
-    host: http://localhost:6061
-  - name: ftp-internal
-    host: http://localhost:7511
+    host: https://fulfillment.api.flow.io
   - name: fraud-internal
-    host: http://localhost:7431
+    host: https://fraud.api.flow.io
   - name: experiment-internal
-    host: http://localhost:7461
+    host: https://experiment.api.flow.io
   - name: billing-internal
-    host: http://localhost:7121
+    host: https://billing.api.flow.io
   - name: ratecard-internal
-    host: http://localhost:7021
+    host: https://ratecard.api.flow.io
   - name: order-management-internal
-    host: http://localhost:7341
+    host: https://order-management.api.flow.io
   - name: currency-internal
-    host: http://localhost:6321
+    host: https://currency.api.flow.io
   - name: user-internal
-    host: http://localhost:6021
+    host: https://user.api.flow.io
   - name: label-internal
-    host: http://localhost:7041
+    host: https://label.api.flow.io
   - name: search-internal
-    host: http://localhost:6331
+    host: https://search.api.flow.io
   - name: duty-internal
-    host: http://localhost:7371
+    host: https://duty.api.flow.io
   - name: billing
-    host: http://localhost:7121
+    host: https://billing.api.flow.io
   - name: catalog-internal
-    host: http://localhost:6071
+    host: https://catalog.api.flow.io
   - name: harmonization-internal
-    host: http://localhost:6161
+    host: https://harmonization.api.flow.io
   - name: ftp
-    host: http://localhost:7511
+    host: https://ftp.api.flow.io
   - name: installment
-    host: http://localhost:7491
+    host: https://installment.api.flow.io
 
 operations:
   - method: GET
@@ -336,9 +334,6 @@ operations:
     path: /services/:id
     server: fulfillment-internal
   - method: GET
-    path: /ftp/webhook/events/brickftp/:ftp_folder_id
-    server: ftp-internal
-  - method: GET
     path: /:organization/fraud/reviews
     server: fraud-internal
   - method: GET
@@ -606,16 +601,7 @@ operations:
     path: /harmonization/export/unphrased
     server: harmonization-internal
   - method: GET
-    path: /:organization/ftp/files
-    server: ftp
-  - method: GET
-    path: /:organization/ftp/files/:id
-    server: ftp
-  - method: POST
-    path: /:organization/ftp/files
-    server: ftp
-  - method: DELETE
-    path: /:organization/ftp/files/:id
+    path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp
   - method: GET
     path: /:organization/ftp/folders

@@ -1,50 +1,50 @@
-version: 0.4.51
+version: 0.4.50
 
 servers:
   - name: session
-    host: https://session.api.flow.io
+    host: http://localhost:7161
   - name: harmonization
-    host: https://harmonization.api.flow.io
+    host: http://localhost:6161
   - name: fulfillment
-    host: https://fulfillment.api.flow.io
+    host: http://localhost:6061
   - name: return
-    host: https://return.api.flow.io
+    host: http://localhost:7111
   - name: token
-    host: https://token.api.flow.io
+    host: http://localhost:6151
   - name: search
-    host: https://search.api.flow.io
+    host: http://localhost:6331
   - name: webhook
-    host: https://webhook.api.flow.io
+    host: http://localhost:7011
   - name: order-management
-    host: https://order-management.api.flow.io
+    host: http://localhost:7341
   - name: location
-    host: https://location.api.flow.io
+    host: http://localhost:6191
   - name: currency
-    host: https://currency.api.flow.io
+    host: http://localhost:6321
   - name: experience
-    host: https://experience.api.flow.io
+    host: http://localhost:6251
   - name: reference
-    host: https://reference.api.flow.io
+    host: http://localhost:6121
   - name: user
-    host: https://user.api.flow.io
+    host: http://localhost:6021
   - name: organization
-    host: https://organization.api.flow.io
+    host: http://localhost:6081
   - name: payment
-    host: https://payment.api.flow.io
+    host: http://localhost:6281
   - name: inventory
-    host: https://inventory.api.flow.io
+    host: http://localhost:6341
   - name: tracking
-    host: https://tracking.api.flow.io
+    host: http://localhost:6221
   - name: fraud
-    host: https://fraud.api.flow.io
+    host: http://localhost:7431
   - name: catalog
-    host: https://catalog.api.flow.io
+    host: http://localhost:6071
   - name: link
-    host: https://link.api.flow.io
+    host: http://localhost:7271
   - name: label
-    host: https://label.api.flow.io
+    host: http://localhost:7041
   - name: feed
-    host: https://feed.api.flow.io
+    host: http://localhost:7221
 
 operations:
   - method: GET

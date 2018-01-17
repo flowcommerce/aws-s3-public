@@ -1,8 +1,8 @@
-version: 0.0.39
+version: 0.0.38
 
 servers:
   - name: partner
-    host: https://partner.api.flow.io
+    host: http://localhost:7061
 
 operations:
   - method: POST

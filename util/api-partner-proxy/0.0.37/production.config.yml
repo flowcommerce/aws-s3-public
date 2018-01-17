@@ -1,21 +1,21 @@
-version: 0.0.39
+version: 0.0.37
 
 servers:
   - name: partner
     host: https://partner.api.flow.io
 
 operations:
-  - method: POST
-    path: /partners/:partner/organizations/:organization_id/labels
+  - method: GET
+    path: /labels/partners/:partner/labels
     server: partner
   - method: GET
-    path: /partners/:partner/labels
-    server: partner
-  - method: GET
-    path: /partners/:partner/labels/:id
+    path: /labels/partners/:partner/labels/:id
     server: partner
   - method: POST
-    path: /partners/:partner/labels
+    path: /labels/partners/:partner/labels
+    server: partner
+  - method: POST
+    path: /labels/partners/:partner/organizations/:organization_id/labels
     server: partner
   - method: GET
     path: /partners/:partner/organizations/:organization/orders/:number/fulfillments

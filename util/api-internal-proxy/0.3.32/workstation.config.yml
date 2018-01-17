@@ -2,55 +2,53 @@ version: 0.2.86
 
 servers:
   - name: demandware-internal
-    host: http://localhost:7211
+    host: http://172.17.0.1:7211
   - name: screen
-    host: http://localhost:7081
+    host: http://172.17.0.1:7081
   - name: inventory-internal
-    host: http://localhost:6341
+    host: http://172.17.0.1:6341
   - name: content-internal
-    host: http://localhost:7191
+    host: http://172.17.0.1:7191
   - name: shopify-internal
-    host: http://localhost:7131
+    host: http://172.17.0.1:7131
   - name: experience-internal
-    host: http://localhost:6251
+    host: http://172.17.0.1:6251
   - name: partner-internal
-    host: http://localhost:7061
+    host: http://172.17.0.1:7061
   - name: payment-internal
-    host: http://localhost:6281
+    host: http://172.17.0.1:6281
   - name: fulfillment-internal
-    host: http://localhost:6061
-  - name: ftp-internal
-    host: http://localhost:7511
+    host: http://172.17.0.1:6061
   - name: fraud-internal
-    host: http://localhost:7431
+    host: http://172.17.0.1:7431
   - name: experiment-internal
-    host: http://localhost:7461
+    host: http://172.17.0.1:7461
   - name: billing-internal
-    host: http://localhost:7121
+    host: http://172.17.0.1:7121
   - name: ratecard-internal
-    host: http://localhost:7021
+    host: http://172.17.0.1:7021
   - name: order-management-internal
-    host: http://localhost:7341
+    host: http://172.17.0.1:7341
   - name: currency-internal
-    host: http://localhost:6321
+    host: http://172.17.0.1:6321
   - name: user-internal
-    host: http://localhost:6021
+    host: http://172.17.0.1:6021
   - name: label-internal
-    host: http://localhost:7041
+    host: http://172.17.0.1:7041
   - name: search-internal
-    host: http://localhost:6331
+    host: http://172.17.0.1:6331
   - name: duty-internal
-    host: http://localhost:7371
+    host: http://172.17.0.1:7371
   - name: billing
-    host: http://localhost:7121
+    host: http://172.17.0.1:7121
   - name: catalog-internal
-    host: http://localhost:6071
+    host: http://172.17.0.1:6071
   - name: harmonization-internal
-    host: http://localhost:6161
+    host: http://172.17.0.1:6161
   - name: ftp
-    host: http://localhost:7511
+    host: http://172.17.0.1:7511
   - name: installment
-    host: http://localhost:7491
+    host: http://172.17.0.1:7491
 
 operations:
   - method: GET
@@ -336,9 +334,6 @@ operations:
     path: /services/:id
     server: fulfillment-internal
   - method: GET
-    path: /ftp/webhook/events/brickftp/:ftp_folder_id
-    server: ftp-internal
-  - method: GET
     path: /:organization/fraud/reviews
     server: fraud-internal
   - method: GET
@@ -606,16 +601,7 @@ operations:
     path: /harmonization/export/unphrased
     server: harmonization-internal
   - method: GET
-    path: /:organization/ftp/files
-    server: ftp
-  - method: GET
-    path: /:organization/ftp/files/:id
-    server: ftp
-  - method: POST
-    path: /:organization/ftp/files
-    server: ftp
-  - method: DELETE
-    path: /:organization/ftp/files/:id
+    path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp
   - method: GET
     path: /:organization/ftp/folders
