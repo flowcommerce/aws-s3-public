@@ -34,9 +34,9 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
       purchase: {
         actionField: {
           id: data.order.number,
-          revenue: prices.subtotal ? prices.subtotal.base.amount : 0,
-          shipping: prices.shipping ? prices.shipping.base.amount : 0,
-          tax: prices.duty ? prices.duty.base.amount : 0
+          revenue: prices.subtotal ? prices.subtotal.base.amount : -1,
+          shipping: prices.shipping ? prices.shipping.base.amount : -1,
+          tax: prices.duty ? prices.duty.base.amount : -1
         },
         products: items
       },
