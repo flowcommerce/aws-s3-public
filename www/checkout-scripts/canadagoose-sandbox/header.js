@@ -1,15 +1,3 @@
-dataLayer = [{
-  'eventTrigger': '',
-  'pageTitle': '',
-  'pageCategory': '',
-  'visitorLoginState': 'Guest',
-  'customerEmail': 'null',
-  'customerOrders': 'null',
-  'customerValue': '0',
-  'Country': 'US',
-  'State': 'NJ'
-}];
-
 (function (w, d, s, l, i) {
   w[l] = w[l] || []; w[l].push({
     'gtm.start': new Date().getTime(), event: 'gtm.js'
