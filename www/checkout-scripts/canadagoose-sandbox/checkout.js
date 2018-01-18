@@ -11,11 +11,11 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
         dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
-        id: contentItem.number,
+        id: contentItem.attributes['product_id'],
         name: contentItem.name,
         price: contentItem.price.amount,
         quantity: orderItem.quantity,
-        variant: contentItem.attributes['colorName-x-default']
+        variant: contentItem.attributes['colorName-en-CA']
       });
     }
   });
@@ -23,7 +23,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
   dataLayer.push({
     pageTitle: 'Checkout: Order Confirmation',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -49,7 +49,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
       elementClasses: '',
       elementId: '',
       elementTarget: '',
-      elementUrlk: ''
+      elementUrl: ''
     }
   });
 });
@@ -66,11 +66,11 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
         dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
-        id: contentItem.number,
+        id: contentItem.attributes['product_id'],
         name: contentItem.name,
         price: contentItem.price.amount,
         quantity: orderItem.quantity,
-        variant: contentItem.attributes['colorName-x-default']
+        variant: contentItem.attributes['colorName-en-CA']
       });
     }
   });
@@ -78,7 +78,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
   dataLayer.push({
     pageTitle: 'Checkout: Shipping and Billing Address',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -99,7 +99,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
       elementClasses: '',
       elementId: '',
       elementTarget: '',
-      elementUrlk: ''
+      elementUrl: ''
     }
   });
 });
@@ -116,11 +116,11 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
         dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
-        id: contentItem.number,
+        id: contentItem.attributes['product_id'],
         name: contentItem.name,
         price: contentItem.price.amount,
         quantity: orderItem.quantity,
-        variant: contentItem.attributes['colorName-x-default']
+        variant: contentItem.attributes['colorName-en-CA']
       });
     }
   });
@@ -128,7 +128,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
   dataLayer.push({
     pageTitle: 'Checkout: Shipping method',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -149,7 +149,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
       elementClasses: '',
       elementId: '',
       elementTarget: '',
-      elementUrlk: ''
+      elementUrl: ''
     }
   });
 });
@@ -166,11 +166,11 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
         dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
-        id: contentItem.number,
+        id: contentItem.attributes['product_id'],
         name: contentItem.name,
         price: contentItem.price.amount,
         quantity: orderItem.quantity,
-        variant: contentItem.attributes['colorName-x-default']
+        variant: contentItem.attributes['colorName-en-CA']
       });
     }
   });
@@ -178,7 +178,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
   dataLayer.push({
     pageTitle: 'Checkout: Payment',
     pageCategory: 'checkout',
-    visitorLoginState: 'Guest',
+    visitorLoginState: 'flow',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -199,7 +199,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
       elementClasses: '',
       elementId: '',
       elementTarget: '',
-      elementUrlk: ''
+      elementUrl: ''
     }
   });
 });
