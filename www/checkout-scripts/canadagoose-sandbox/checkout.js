@@ -10,7 +10,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         brand: 'Canada Goose',
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
-        dimension7: `${contentItem.attributes['product_id']}-${contentItem.attributes['modelSize-x-default']}`,
+        dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
         id: contentItem.number,
         name: contentItem.name,
         price: contentItem.price.amount,
@@ -19,7 +19,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
       });
     }
   });
-  items.push({ length: data.order.items.length });
 
   dataLayer.push({
     pageTitle: 'Checkout: Order Confirmation',
@@ -45,6 +44,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     }
   });
 });
+
 flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function handlePageView(data) {
   var items = [];
 
@@ -56,7 +56,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         brand: 'Canada Goose',
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
-        dimension7: `${contentItem.attributes['product_id']}-${contentItem.attributes['modelSize-x-default']}`,
+        dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
         id: contentItem.number,
         name: contentItem.name,
         price: contentItem.price.amount,
@@ -65,7 +65,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
       });
     }
   });
-  items.push({ length: data.order.items.length });
 
   dataLayer.push({
     pageTitle: 'Checkout: Shipping and Billing Address',
@@ -79,17 +78,13 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
     event: 'checkout',
     ecommerce: {
       checkout: {
-        actionField: {
-          action: 'checkout',
-          step: 2
-        },
+        actionField: { step: 2 },
         products: items
       },
       currencyCode: data.order.total.base.currency
     }
   });
 });
-
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function handlePageView(data) {
   var items = [];
@@ -102,7 +97,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         brand: 'Canada Goose',
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
-        dimension7: `${contentItem.attributes['product_id']}-${contentItem.attributes['modelSize-x-default']}`,
+        dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
         id: contentItem.number,
         name: contentItem.name,
         price: contentItem.price.amount,
@@ -111,7 +106,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
       });
     }
   });
-  items.push({ length: data.order.items.length });
 
   dataLayer.push({
     pageTitle: 'Checkout: Shipping method',
@@ -125,16 +119,14 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
     event: 'checkout',
     ecommerce: {
       checkout: {
-        actionField: {
-          action: 'checkout',
-          step: 3
-        },
+        actionField: { step: 3 },
         products: items
       },
       currencyCode: data.order.total.base.currency
     }
   });
 });
+
 flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function handlePageView(data) {
   var items = [];
 
@@ -146,7 +138,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         brand: 'Canada Goose',
         category: contentItem.categories.join(),
         dimension6: contentItem.attributes['modelSize-x-default'],
-        dimension7: `${contentItem.attributes['product_id']}-${contentItem.attributes['modelSize-x-default']}`,
+        dimension7: `${contentItem.attributes['product_id']}${contentItem.attributes['color']}-${contentItem.attributes['modelSize-x-default']}`,
         id: contentItem.number,
         name: contentItem.name,
         price: contentItem.price.amount,
@@ -155,7 +147,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
       });
     }
   });
-  items.push({ length: data.order.items.length });
 
   dataLayer.push({
     pageTitle: 'Checkout: Payment',
@@ -169,10 +160,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
     event: 'checkout',
     ecommerce: {
       checkout: {
-        actionField: {
-          action: 'checkout',
-          step: 4
-        },
+        actionField: { step: 4 },
         products: items
       },
       currencyCode: data.order.total.base.currency
