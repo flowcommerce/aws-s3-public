@@ -29,7 +29,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'transaction',
+    event: 'gtm.click',
     ecommerce: {
       purchase: {
         actionField: {
@@ -41,6 +41,15 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         products: items
       },
       currencyCode: data.order.total.base.currency
+    },
+    gtm: {
+      uniqueEventId: 257,
+      start: Date.now(),
+      element: '',
+      elementClasses: '',
+      elementId: '',
+      elementTarget: '',
+      elementUrlk: ''
     }
   });
 });
@@ -75,13 +84,22 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'checkout',
+    event: 'gtm.click',
     ecommerce: {
       checkout: {
         actionField: { step: 2 },
         products: items
       },
       currencyCode: data.order.total.base.currency
+    },
+    gtm: {
+      uniqueEventId: 111,
+      start: Date.now(),
+      element: '',
+      elementClasses: '',
+      elementId: '',
+      elementTarget: '',
+      elementUrlk: ''
     }
   });
 });
@@ -116,13 +134,22 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'checkout',
+    event: 'gtm.click',
     ecommerce: {
       checkout: {
         actionField: { step: 3 },
         products: items
       },
       currencyCode: data.order.total.base.currency
+    },
+    gtm: {
+      uniqueEventId: 165,
+      start: Date.now(),
+      element: '',
+      elementClasses: '',
+      elementId: '',
+      elementTarget: '',
+      elementUrlk: ''
     }
   });
 });
@@ -157,13 +184,22 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'checkout',
+    event: 'gtm.click',
     ecommerce: {
       checkout: {
         actionField: { step: 4 },
         products: items
       },
       currencyCode: data.order.total.base.currency
+    },
+    gtm: {
+      uniqueEventId: 250,
+      start: Date.now(),
+      element: '',
+      elementClasses: '',
+      elementId: '',
+      elementTarget: '',
+      elementUrlk: ''
     }
   });
 });
