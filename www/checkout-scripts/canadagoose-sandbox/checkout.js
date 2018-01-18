@@ -45,7 +45,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     gtm: {
       uniqueEventId: 257,
       start: Date.now(),
-      element: '',
+      element: document.createElement('div'),
       elementClasses: '',
       elementId: '',
       elementTarget: '',
@@ -95,7 +95,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
     gtm: {
       uniqueEventId: 111,
       start: Date.now(),
-      element: '',
+      element: document.createElement('div'),
       elementClasses: '',
       elementId: '',
       elementTarget: '',
@@ -145,7 +145,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
     gtm: {
       uniqueEventId: 165,
       start: Date.now(),
-      element: '',
+      element: document.createElement('div'),
       elementClasses: '',
       elementId: '',
       elementTarget: '',
@@ -195,7 +195,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
     gtm: {
       uniqueEventId: 250,
       start: Date.now(),
-      element: '',
+      element: document.createElement('div'),
       elementClasses: '',
       elementId: '',
       elementTarget: '',
