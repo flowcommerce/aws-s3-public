@@ -29,7 +29,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'gtm.click',
+    event: 'transaction',
     ecommerce: {
       purchase: {
         actionField: {
@@ -84,7 +84,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'gtm.click',
+    event: 'checkout',
     ecommerce: {
       checkout: {
         actionField: { step: 2 },
@@ -134,7 +134,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'gtm.click',
+    event: 'checkout',
     ecommerce: {
       checkout: {
         actionField: { step: 3 },
@@ -184,7 +184,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
     customerValue: 0,
     Country: data.order.destination.country,
     State: data.order.destination.province,
-    event: 'gtm.click',
+    event: 'checkout',
     ecommerce: {
       checkout: {
         actionField: { step: 4 },
