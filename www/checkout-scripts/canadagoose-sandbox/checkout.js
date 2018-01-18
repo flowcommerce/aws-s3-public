@@ -23,7 +23,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
   dataLayer.push({
     pageTitle: 'Checkout: Order Confirmation',
     pageCategory: 'checkout',
-    visitorLoginState: 'flow',
+    visitorLoginState: 'Guest',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -78,7 +78,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
   dataLayer.push({
     pageTitle: 'Checkout: Shipping and Billing Address',
     pageCategory: 'checkout',
-    visitorLoginState: 'flow',
+    visitorLoginState: 'Guest',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -128,7 +128,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
   dataLayer.push({
     pageTitle: 'Checkout: Shipping method',
     pageCategory: 'checkout',
-    visitorLoginState: 'flow',
+    visitorLoginState: 'Guest',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
@@ -178,7 +178,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
   dataLayer.push({
     pageTitle: 'Checkout: Payment',
     pageCategory: 'checkout',
-    visitorLoginState: 'flow',
+    visitorLoginState: 'Guest',
     customerEmail: data.order.customer.email,
     customerOrders: null,
     customerValue: 0,
