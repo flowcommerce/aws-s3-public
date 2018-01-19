@@ -20,7 +20,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     }
   });
 
-  dataLayer.push({
+  dataLayer = [{
     'pageTitle': 'Checkout: Order Confirmation',
     'pageCategory': 'Checkout',
     'visitorLoginState': 'flow',
@@ -41,17 +41,8 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         'products': items
       },
       'currencyCode': data.order.total.base.currency
-    },
-    'gtm': {
-      'uniqueEventId': 257,
-      'start': Date.now(),
-      'element': document.createElement('div'),
-      'elementClasses': '',
-      'elementId': '',
-      'elementTarget': '',
-      'elementUrl': ''
     }
-  });
+  }];
 });
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function handlePageView(data) {
@@ -91,15 +82,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         'products': items
       },
       'currencyCode': data.order.total.base.currency
-    },
-    'gtm': {
-      'uniqueEventId': 111,
-      'start': Date.now(),
-      'element': document.createElement('div'),
-      'elementClasses': '',
-      'elementId': '',
-      'elementTarget': '',
-      'elementUrl': ''
     }
   });
 });
@@ -141,15 +123,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         'products': items
       },
       'currencyCode': data.order.total.base.currency
-    },
-    'gtm': {
-      'uniqueEventId': 165,
-      'start': Date.now(),
-      'element': document.createElement('div'),
-      'elementClasses': '',
-      'elementId': '',
-      'elementTarget': '',
-      'elementUrl': ''
     }
   });
 });
@@ -191,15 +164,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'products': items
       },
       'currencyCode': data.order.total.base.currency
-    },
-    'gtm': {
-      'uniqueEventId': 250,
-      'start': Date.now(),
-      'element': document.createElement('div'),
-      'elementClasses': '',
-      'elementId': '',
-      'elementTarget': '',
-      'elementUrl': ''
     }
   });
 });
