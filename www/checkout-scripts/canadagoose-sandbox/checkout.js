@@ -31,10 +31,12 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'State': data.order.destination.province,
     'event': 'transaction',
     'ecommerce': {
-      'checkout': {
+      'checkout': {},
+      'detail': {
         'products': items
       },
       'purchase': {
+        'products': items,
         'actionField': {
           'id': data.order.number,
           'revenue': prices.subtotal ? prices.subtotal.base.amount : -1,
