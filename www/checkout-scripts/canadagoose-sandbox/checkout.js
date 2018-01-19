@@ -20,7 +20,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     }
   });
 
-  dataLayer = [{
+  dataLayer.push({
     'pageTitle': 'Checkout: Order Confirmation',
     'pageCategory': 'Checkout',
     'visitorLoginState': 'flow',
@@ -31,6 +31,9 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'State': data.order.destination.province,
     'event': 'transaction',
     'ecommerce': {
+      'checkout': {
+        'products': items
+      },
       'purchase': {
         'actionField': {
           'id': data.order.number,
@@ -38,11 +41,10 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
           'shipping': prices.shipping ? prices.shipping.base.amount : -1,
           'tax': prices.duty ? prices.duty.base.amount : -1
         },
-        'products': items
       },
       'currencyCode': data.order.total.base.currency
     }
-  }];
+  });
 });
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function handlePageView(data) {
