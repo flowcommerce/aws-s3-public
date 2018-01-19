@@ -133,6 +133,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function handlePageView(data) {
   var items = [];
+  var prices = data.getOrderPrices();
 
   data.order.items.forEach((orderItem) => {
     var contentItem = data.content.getItem(orderItem.number);
