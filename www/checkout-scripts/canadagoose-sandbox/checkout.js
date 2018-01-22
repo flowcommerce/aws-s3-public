@@ -20,7 +20,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     }
   });
 
-  dataLayer.push({
+  dataLayer.set({
     'pageTitle': 'Checkout: Order Confirmation',
     'pageCategory': 'Checkout',
     'visitorLoginState': 'flow',
@@ -31,7 +31,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'State': data.order.destination.province,
     'event': 'transaction',
     'ecommerce': {
-      'checkout': {},
       'purchase': {
         'products': items,
         'actionField': {
@@ -169,6 +168,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
   });
 
   dataLayer.push({
-    'event': 'transaction'
+    ecommerce: {}
   });
 });
