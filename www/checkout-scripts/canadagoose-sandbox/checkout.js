@@ -2,8 +2,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
   var items = [];
   var prices = data.getOrderPrices();
 
-  google_tag_manager['GTM-K9SGVB'].dataLayer.set('event', 'transaction');
-
   data.order.items.forEach((orderItem) => {
     var contentItem = data.content.getItem(orderItem.number);
 
