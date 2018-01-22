@@ -15,7 +15,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         'name': contentItem.name,
         'price': contentItem.price.amount,
         'quantity': orderItem.quantity,
-        'variant': contentItem.attributes['colorName-en-CA']
+        'variant': contentItem.attributes['colorName-x-default']
       });
     }
   });
@@ -32,19 +32,16 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'event': 'transaction',
     'ecommerce': {
       'checkout': {},
-      'detail': {
-        'products': items
-      },
       'purchase': {
         'products': items,
         'actionField': {
           'id': data.order.number,
-          'revenue': prices.subtotal ? prices.subtotal.base.amount : -1,
-          'shipping': prices.shipping ? prices.shipping.base.amount : -1,
-          'tax': prices.duty ? prices.duty.base.amount : -1
+          'revenue': prices.subtotal ? prices.subtotal.amount : -1,
+          'shipping': prices.shipping ? prices.shipping.amount : -1,
+          'tax': prices.duty ? prices.duty.amount : -1
         },
       },
-      'currencyCode': data.order.total.base.currency
+      'currencyCode': data.order.total.currency
     }
   });
 });
@@ -65,7 +62,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         'name': contentItem.name,
         'price': contentItem.price.amount,
         'quantity': orderItem.quantity,
-        'variant': contentItem.attributes['colorName-en-CA']
+        'variant': contentItem.attributes['colorName-x-default']
       });
     }
   });
@@ -85,7 +82,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         'actionField': { step: 2 },
         'products': items
       },
-      'currencyCode': data.order.total.base.currency
+      'currencyCode': data.order.total.currency
     }
   });
 });
@@ -106,7 +103,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         'name': contentItem.name,
         'price': contentItem.price.amount,
         'quantity': orderItem.quantity,
-        'variant': contentItem.attributes['colorName-en-CA']
+        'variant': contentItem.attributes['colorName-x-default']
       });
     }
   });
@@ -126,14 +123,13 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         'actionField': { step: 3 },
         'products': items
       },
-      'currencyCode': data.order.total.base.currency
+      'currencyCode': data.order.total.currency
     }
   });
 });
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function handlePageView(data) {
   var items = [];
-  var prices = data.getOrderPrices();
 
   data.order.items.forEach((orderItem) => {
     var contentItem = data.content.getItem(orderItem.number);
@@ -148,7 +144,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'name': contentItem.name,
         'price': contentItem.price.amount,
         'quantity': orderItem.quantity,
-        'variant': contentItem.attributes['colorName-en-CA']
+        'variant': contentItem.attributes['colorName-x-default']
       });
     }
   });
@@ -168,19 +164,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'actionField': { step: 4 },
         'products': items
       },
-      'detail': {
-        'products': items
-      },
-      'purchase': {
-        'products': items,
-        'actionField': {
-          'id': data.order.number,
-          'revenue': prices.subtotal ? prices.subtotal.base.amount : -1,
-          'shipping': prices.shipping ? prices.shipping.base.amount : -1,
-          'tax': prices.duty ? prices.duty.base.amount : -1
-        },
-      },
-      'currencyCode': data.order.total.base.currency
+      'currencyCode': data.order.total.currency
     }
   });
 });
