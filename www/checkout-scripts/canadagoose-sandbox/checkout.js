@@ -20,6 +20,19 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     }
   });
 
+  google_tag_manager['GTM-K9SGVB'].dataLayer.set('ecommerce', {
+    'purchase': {
+      'products': items,
+      'actionField': {
+        'id': data.order.number,
+        'revenue': prices.subtotal ? prices.subtotal.amount : -1,
+        'shipping': prices.shipping ? prices.shipping.amount : -1,
+        'tax': prices.duty ? prices.duty.amount : -1
+      },
+    },
+    'currencyCode': data.order.total.currency
+  });
+
   dataLayer.push({
     'pageTitle': 'Checkout: Order Confirmation',
     'pageCategory': 'Checkout',
@@ -165,21 +178,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'products': items
       },
       'currencyCode': data.order.total.currency
-    }
-  });
-
-  dataLayer.push({
-    'ecommerce': {
-      'checkout': {},
-      'purchase': {
-        'products': items,
-        'actionField': {
-          'id': data.order.number,
-          'revenue': prices.subtotal ? prices.subtotal.amount : -1,
-          'shipping': prices.shipping ? prices.shipping.amount : -1,
-          'tax': prices.duty ? prices.duty.amount : -1
-        },
-      },
     }
   });
 });
