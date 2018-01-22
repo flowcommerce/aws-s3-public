@@ -167,4 +167,8 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
       'currencyCode': data.order.total.currency
     }
   });
+
+  dataLayer.push({
+    'event': 'transaction'
+  });
 });
