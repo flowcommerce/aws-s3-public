@@ -168,8 +168,17 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
   });
 
   dataLayer.push({
-    ecommerce: {
-      checkout: {}
+    'ecommerce': {
+      'checkout': {},
+      'purchase': {
+        'products': items,
+        'actionField': {
+          'id': data.order.number,
+          'revenue': prices.subtotal ? prices.subtotal.amount : -1,
+          'shipping': prices.shipping ? prices.shipping.amount : -1,
+          'tax': prices.duty ? prices.duty.amount : -1
+        },
+      },
     }
   });
 });
