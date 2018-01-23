@@ -18,7 +18,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         'variant': contentItem.attributes['colorName-x-default']
       });
     }
-  }); flowOrderConfirmation
+  });
 
   var dataLayerObj = {
     'pageTitle': 'Checkout: Order Confirmation',
