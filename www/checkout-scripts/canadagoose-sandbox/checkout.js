@@ -41,12 +41,12 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         'products': items,
         'actionField': {
           'id': data.order.number,
-          'revenue': prices.subtotal ? prices.subtotal.amount : -1,
-          'shipping': prices.shipping ? prices.shipping.amount : -1,
-          'tax': prices.duty ? prices.duty.amount : -1
+          'revenue': prices.subtotal ? prices.subtotal.base.amount : -1,
+          'shipping': prices.shipping ? prices.shipping.base.amount : -1,
+          'tax': prices.duty ? prices.duty.base.amount : -1
         },
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
   };
 
@@ -93,7 +93,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         'actionField': { step: 2 },
         'products': items
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
   });
 });
@@ -134,7 +134,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         'actionField': { step: 3 },
         'products': items
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
   });
 });
@@ -176,7 +176,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'actionField': { step: 4 },
         'products': items
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
   });
 });
