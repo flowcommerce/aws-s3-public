@@ -176,7 +176,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
 
   dataLayer.push({
     'ecommerce': {
-      'checkout': null
+      'checkout': undefined
     }
   });
 });
