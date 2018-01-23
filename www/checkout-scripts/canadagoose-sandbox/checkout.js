@@ -2,6 +2,12 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
   var items = [];
   var prices = data.getOrderPrices();
 
+  dataLayer.push({
+    'ecommerce': {
+      'checkout': undefined
+    }
+  });
+
   data.order.items.forEach((orderItem) => {
     var contentItem = data.content.getItem(orderItem.number);
 
@@ -20,7 +26,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     }
   });
 
-  dataLayer.push({
+  var dataLayerObj = {
     'pageTitle': 'Checkout: Order Confirmation',
     'pageCategory': 'Checkout',
     'visitorLoginState': 'flow',
@@ -29,20 +35,26 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'customerValue': 0,
     'Country': data.order.destination.country,
     'State': data.order.destination.province,
-    'event': 'transaction',
+    'event': 'flowOrderConfirmation',
     'ecommerce': {
       'purchase': {
         'products': items,
         'actionField': {
           'id': data.order.number,
-          'revenue': prices.subtotal ? prices.subtotal.amount : -1,
-          'shipping': prices.shipping ? prices.shipping.amount : -1,
-          'tax': prices.duty ? prices.duty.amount : -1
+          'revenue': prices.subtotal ? prices.subtotal.base.amount : -1,
+          'shipping': prices.shipping ? prices.shipping.base.amount : -1,
+          'tax': prices.duty ? prices.duty.base.amount : -1
         },
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
-  });
+  };
+
+  dataLayer.push(dataLayerObj);
+
+  dataLayerObj.event = 'transaction';
+
+  dataLayer.push(dataLayerObj);
 });
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function handlePageView(data) {
@@ -81,7 +93,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function han
         'actionField': { step: 2 },
         'products': items
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
   });
 });
@@ -122,13 +134,14 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.SHIPPING_METHOD, function 
         'actionField': { step: 3 },
         'products': items
       },
-      'currencyCode': data.order.total.currency
+      'currencyCode': data.order.total.base.currency
     }
   });
 });
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function handlePageView(data) {
   var items = [];
+  var prices = data.getOrderPrices();
 
   data.order.items.forEach((orderItem) => {
     var contentItem = data.content.getItem(orderItem.number);
@@ -163,22 +176,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'actionField': { step: 4 },
         'products': items
       },
-      'currencyCode': data.order.total.currency
-    }
-  });
-
-  dataLayer.push({
-    'ecommerce': {
-      'checkout': {},
-      'purchase': {
-        'products': items,
-        'actionField': {
-          'id': data.order.number,
-          'revenue': prices.subtotal ? prices.subtotal.amount : -1,
-          'shipping': prices.shipping ? prices.shipping.amount : -1,
-          'tax': prices.duty ? prices.duty.amount : -1
-        },
-      },
+      'currencyCode': data.order.total.base.currency
     }
   });
 });
