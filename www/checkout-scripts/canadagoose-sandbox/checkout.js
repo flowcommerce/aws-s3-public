@@ -31,6 +31,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'State': data.order.destination.province,
     'event': 'flowOrderConfirmation',
     'ecommerce': {
+      'checkout': {},
       'purchase': {
         'products': items,
         'actionField': {
