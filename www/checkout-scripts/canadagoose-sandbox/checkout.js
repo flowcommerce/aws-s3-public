@@ -18,22 +18,9 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
         'variant': contentItem.attributes['colorName-x-default']
       });
     }
-  });
+  }); flowOrderConfirmation
 
-  google_tag_manager['GTM-K9SGVB'].dataLayer.set('ecommerce', {
-    'purchase': {
-      'products': items,
-      'actionField': {
-        'id': data.order.number,
-        'revenue': prices.subtotal ? prices.subtotal.amount : -1,
-        'shipping': prices.shipping ? prices.shipping.amount : -1,
-        'tax': prices.duty ? prices.duty.amount : -1
-      },
-    },
-    'currencyCode': data.order.total.currency
-  });
-
-  dataLayer.push({
+  var dataLayerObj = {
     'pageTitle': 'Checkout: Order Confirmation',
     'pageCategory': 'Checkout',
     'visitorLoginState': 'flow',
@@ -42,7 +29,7 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
     'customerValue': 0,
     'Country': data.order.destination.country,
     'State': data.order.destination.province,
-    'event': 'transaction',
+    'event': 'flowOrderConfirmation',
     'ecommerce': {
       'purchase': {
         'products': items,
@@ -55,7 +42,13 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
       },
       'currencyCode': data.order.total.currency
     }
-  });
+  };
+
+  dataLayer.push(dataLayerObj);
+
+  dataLayerObj.event = 'transaction';
+
+  dataLayer.push(dataLayerObj);
 });
 
 flow.checkout.onPageView(flow.checkout.enums.pageView.CONTACT_INFO, function handlePageView(data) {
