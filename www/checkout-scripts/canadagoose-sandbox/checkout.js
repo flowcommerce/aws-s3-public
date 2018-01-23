@@ -2,6 +2,12 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.CONFIRMATION, function han
   var items = [];
   var prices = data.getOrderPrices();
 
+  dataLayer.push({
+    'ecommerce': {
+      'checkout': undefined
+    }
+  });
+
   data.order.items.forEach((orderItem) => {
     var contentItem = data.content.getItem(orderItem.number);
 
@@ -171,12 +177,6 @@ flow.checkout.onPageView(flow.checkout.enums.pageView.PAYMENT_INFO, function han
         'products': items
       },
       'currencyCode': data.order.total.currency
-    }
-  });
-
-  dataLayer.push({
-    'ecommerce': {
-      'checkout': undefined
     }
   });
 });
