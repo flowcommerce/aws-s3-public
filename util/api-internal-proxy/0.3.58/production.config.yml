@@ -180,6 +180,9 @@ operations:
   - method: POST
     path: /shopify/webhook/events/shops/:shopify_shop_id/:topic/:action
     server: shopify-internal
+  - method: GET
+    path: /:organization/experiences/items/filters/:filter
+    server: experience-internal
   - method: PUT
     path: /:organization/orders/:number/modifications/email
     server: experience-internal
