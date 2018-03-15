@@ -349,6 +349,9 @@ operations:
     path: /:organization/experiments/:key/end
     server: experiment-internal
   - method: GET
+    path: /:organization/experiment/:key/results
+    server: experiment-internal
+  - method: GET
     path: /internal/bank/payments
     server: billing-internal
   - method: POST
