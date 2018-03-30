@@ -70,6 +70,9 @@ operations:
   - method: DELETE
     path: /:organization_id/demandware/ftp-settings/:id
     server: demandware-internal
+  - method: POST
+    path: /organization_sessions/:organization/sfcc/sessions
+    server: demandware-internal
   - method: PUT
     path: /screens/:key
     server: screen
