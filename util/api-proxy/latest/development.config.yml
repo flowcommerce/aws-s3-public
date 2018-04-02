@@ -323,6 +323,9 @@ operations:
     path: /:organization/import/templates
     server: search
   - method: GET
+    path: /:organization/search/item/query/suggestions
+    server: search
+  - method: GET
     path: /:organization/suggestion/catalog
     server: search
   - method: POST
