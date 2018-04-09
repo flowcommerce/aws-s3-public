@@ -941,6 +941,24 @@ operations:
     path: /:organization/inventory/reservation/:key
     server: inventory
   - method: GET
+    path: /:organization/inventory/serials/versions
+    server: inventory
+  - method: GET
+    path: /:organization/inventory/serials
+    server: inventory
+  - method: GET
+    path: /:organization/inventory/serials/:number
+    server: inventory
+  - method: POST
+    path: /:organization/inventory/serials
+    server: inventory
+  - method: PUT
+    path: /:organization/inventory/serials/:number
+    server: inventory
+  - method: DELETE
+    path: /:organization/inventory/serials/:number
+    server: inventory
+  - method: GET
     path: /trackings/:id
     server: tracking
   - method: GET
