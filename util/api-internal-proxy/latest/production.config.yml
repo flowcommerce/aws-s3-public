@@ -51,6 +51,8 @@ servers:
     host: https://ftp.api.flow.io
   - name: magento-internal
     host: https://magento.api.flow.io
+  - name: tracking-internal
+    host: https://tracking.api.flow.io
   - name: installment
     host: https://installment.api.flow.io
 
@@ -685,6 +687,9 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
+  - method: POST
+    path: /flexe/webhook
+    server: tracking-internal
   - method: GET
     path: /:organization/installment/plans
     server: installment

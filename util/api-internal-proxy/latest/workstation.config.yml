@@ -51,6 +51,8 @@ servers:
     host: http://172.17.0.1:7511
   - name: magento-internal
     host: http://172.17.0.1:7551
+  - name: tracking-internal
+    host: http://172.17.0.1:6221
   - name: installment
     host: http://172.17.0.1:7491
 
@@ -685,6 +687,9 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
+  - method: POST
+    path: /flexe/webhook
+    server: tracking-internal
   - method: GET
     path: /:organization/installment/plans
     server: installment
