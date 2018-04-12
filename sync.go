@@ -24,7 +24,7 @@ func syncCommand(name string) string {
 
 func addCommand(commands executor.Deployment, selection string, dir string) executor.Deployment {
 	if (selection == "all" || selection == dir) {
-		return commands.Add(syncCommand("www"))
+		return commands.Add(syncCommand(dir))
 	} else {
 		return commands
 	}
