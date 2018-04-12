@@ -17,6 +17,10 @@ http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-with-pip
 
     go run sync.go
 
+or to sync a single folder:
+
+    go run sync.go www
+
 # View files online
 
 

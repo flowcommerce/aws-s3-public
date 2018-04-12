@@ -22,7 +22,20 @@ func syncCommand(name string) string {
 	return fmt.Sprintf("aws s3 sync %s s3://io.flow.aws-s3-public/%s --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers", name, name);
 }
 
+func addCommand(commands executor.Deployment, selection string, dir string) executor.Deployment {
+	if (selection == "all" || selection == dir) {
+		return commands.Add(syncCommand("www"))
+	} else {
+		return commands
+	}
+}
+
 func main() {
+	selection := "all";
+	if (len(os.Args) > 1) {
+		selection = os.Args[1]
+	}
+
 	name := "cdn.flow.io"
 	tmp := fmt.Sprintf("/tmp/%s.tmp", name)
 
@@ -39,11 +52,11 @@ func main() {
 
 	commands = executor.Create(name + "-2")
 	commands = commands.Add("dev tag")
-	commands = commands.Add(syncCommand("www"))
-	commands = commands.Add(syncCommand("docs"))
-	commands = commands.Add(syncCommand("util"))
-	commands = commands.Add(syncCommand("email"))
-	commands = commands.Add(syncCommand("policies"))
+	commands = addCommand(commands, selection, "www")
+	commands = addCommand(commands, selection, "docs")
+	commands = addCommand(commands, selection, "util")
+	commands = addCommand(commands, selection, "email")
+	commands = addCommand(commands, selection, "policies")
 
 	commands.Run()
 }
