@@ -19,7 +19,7 @@ func isEmpty(path string) bool {
 }
 
 func syncCommand(bucket string, name string) string {
-	return fmt.Sprintf("aws s3 sync %s s3://%s/%s --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers", bucket, name, name);
+	return fmt.Sprintf("aws s3 sync %s s3://%s/%s --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers", name, bucket, name);
 }
 
 func addCommand(commands executor.Deployment, selection string, dir string) executor.Deployment {
