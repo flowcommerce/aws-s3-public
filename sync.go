@@ -18,16 +18,16 @@ func isEmpty(path string) bool {
 	return (fi.Size() == 0)
 }
 
-func syncCommand(name string) string {
-	return fmt.Sprintf("aws s3 sync %s s3://io.flow.aws-s3-public/%s --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers", name, name);
+func syncCommand(bucket string, name string) string {
+	return fmt.Sprintf("aws s3 sync %s s3://%s/%s --grants read=uri=http://acs.amazonaws.com/groups/global/AllUsers", name, name);
 }
 
 func addCommand(commands executor.Deployment, selection string, dir string) executor.Deployment {
 	if (selection == "all" || selection == dir) {
-		return commands.Add(syncCommand(dir))
-	} else {
-		return commands
+		commands = commands.Add(syncCommand("io.flow.aws-s3-public", dir))
+		commands = commands.Add(syncCommand("cdn.flow.io", dir))
 	}
+	return commands
 }
 
 func main() {
