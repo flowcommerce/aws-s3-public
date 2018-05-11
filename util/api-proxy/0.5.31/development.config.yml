@@ -1,4 +1,4 @@
-version: 0.5.31
+version: 0.5.32
 
 servers:
   - name: session
@@ -936,18 +936,6 @@ operations:
     server: inventory
   - method: POST
     path: /:organization/inventory_updates
-    server: inventory
-  - method: POST
-    path: /:organization/inventory/reservation
-    server: inventory
-  - method: PUT
-    path: /:organization/inventory/reservation/:key
-    server: inventory
-  - method: GET
-    path: /:organization/inventory/reservation/:key
-    server: inventory
-  - method: DELETE
-    path: /:organization/inventory/reservation/:key
     server: inventory
   - method: GET
     path: /:organization/inventory/serials/versions
