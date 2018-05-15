@@ -161,6 +161,9 @@ operations:
     path: /shopify/carts/:id
     server: shopify-internal
   - method: PUT
+    path: /shopify/carts/:id/attributes
+    server: shopify-internal
+  - method: PUT
     path: /shopify/carts/:id/geo
     server: shopify-internal
   - method: PUT
