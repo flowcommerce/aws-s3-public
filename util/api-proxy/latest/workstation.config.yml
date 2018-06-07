@@ -950,6 +950,18 @@ operations:
     path: /:organization/virtual/cards/:key
     server: payment
   - method: GET
+    path: /:organization/virtual/card/captures
+    server: payment
+  - method: GET
+    path: /:organization/virtual/card/captures/:virtual_card_id
+    server: payment
+  - method: GET
+    path: /:organization/virtual/card/refunds
+    server: payment
+  - method: GET
+    path: /:organization/virtual/card/refunds/:virtual_card_id
+    server: payment
+  - method: GET
     path: /:organization/shopify/private/apps
     server: shopify
   - method: GET
