@@ -3,6 +3,8 @@ version: 0.3.63
 servers:
   - name: demandware-internal
     host: http://localhost:7211
+  - name: feature
+    host: http://localhost:7621
   - name: screen
     host: http://localhost:7081
   - name: inventory-internal
@@ -96,6 +98,24 @@ operations:
   - method: DELETE
     path: /sfcc/sessions/:session
     server: demandware-internal
+  - method: GET
+    path: /:organization/features
+    server: feature
+  - method: POST
+    path: /:organization/features
+    server: feature
+  - method: GET
+    path: /:organization/features/:key
+    server: feature
+  - method: PUT
+    path: /:organization/features/:key
+    server: feature
+  - method: PUT
+    path: /:organization/features/:key/status
+    server: feature
+  - method: DELETE
+    path: /:organization/features/:key
+    server: feature
   - method: PUT
     path: /screens/:key
     server: screen
