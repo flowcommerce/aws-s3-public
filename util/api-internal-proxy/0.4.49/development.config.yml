@@ -113,6 +113,9 @@ operations:
   - method: PUT
     path: /:organization/features/:key/status
     server: feature
+  - method: PUT
+    path: /:organization/features/:key/release
+    server: feature
   - method: DELETE
     path: /:organization/features/:key
     server: feature
