@@ -168,6 +168,9 @@ operations:
     path: /:organization/shopify/complete-price-rule
     server: shopify-internal
   - method: GET
+    path: /:organization/shopify/localized/variants/experience/:experience_key/map
+    server: shopify-internal
+  - method: GET
     path: /shopify/shops/:myshopify_domain
     server: shopify-internal
   - method: GET
@@ -217,9 +220,6 @@ operations:
     server: shopify-internal
   - method: GET
     path: /shopify/grants/check.html
-    server: shopify-internal
-  - method: GET
-    path: /:organization/shopify/localized/variants/experience/:experience_key/map
     server: shopify-internal
   - method: POST
     path: /:organization/shopify/orders/:number/authorizations
