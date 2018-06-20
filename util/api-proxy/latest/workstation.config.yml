@@ -601,13 +601,10 @@ operations:
     path: /:organization/experiences/:experience_key/price/books/:key
     server: experience
   - method: GET
-    path: /:organization/experience/defaults
+    path: /:organization/experiences/:experience_key/logistics/summary
     server: experience
   - method: GET
-    path: /:organization/experiences/:exp_key/logistics-settings
-    server: experience
-  - method: PUT
-    path: /:organization/experiences/:exp_key/logistics-settings
+    path: /:organization/experience/defaults
     server: experience
   - method: GET
     path: /:organization/countries
