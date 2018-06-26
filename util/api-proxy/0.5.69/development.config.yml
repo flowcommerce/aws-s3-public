@@ -607,6 +607,12 @@ operations:
     path: /:organization/experience/defaults
     server: experience
   - method: GET
+    path: /:organization/experiences/:experience_key/settings/logistics
+    server: experience
+  - method: PUT
+    path: /:organization/experiences/:experience_key/settings/logistics
+    server: experience
+  - method: GET
     path: /:organization/countries
     server: experience
   - method: GET
