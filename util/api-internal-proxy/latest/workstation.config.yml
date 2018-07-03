@@ -171,6 +171,12 @@ operations:
     path: /:organization/contents/:id
     server: content-internal
   - method: POST
+    path: /shopify/bundles/checkout/cart/:id
+    server: shopify-internal
+  - method: GET
+    path: /shopify/bundles/checkout/order/:number
+    server: shopify-internal
+  - method: POST
     path: /:organization/shopify/complete-price-rule
     server: shopify-internal
   - method: PUT
