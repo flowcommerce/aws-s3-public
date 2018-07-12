@@ -68,6 +68,15 @@ operations:
   - method: DELETE
     path: /:organization/consumer/invoices/:key
     server: consumer-invoice
+  - method: POST
+    path: /:organization/consumer/invoices/:invoice_key/credit/memos
+    server: consumer-invoice
+  - method: PUT
+    path: /:organization/consumer/invoices/:invoice_key/credit/memos/:key
+    server: consumer-invoice
+  - method: DELETE
+    path: /:organization/consumer/invoices/:invoice_key/credit/memos/:key
+    server: consumer-invoice
   - method: GET
     path: /consumer/invoice/document/tokens/:token/type/:type
     server: consumer-invoice
