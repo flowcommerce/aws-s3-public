@@ -1,4 +1,4 @@
-version: 0.5.84
+version: 0.5.93
 
 servers:
   - name: consumer-invoice
