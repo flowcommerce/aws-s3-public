@@ -656,6 +656,15 @@ operations:
   - method: GET
     path: /:organization/countries/destinations
     server: experience
+  - method: GET
+    path: /:organization/loyalty/:number
+    server: experience
+  - method: POST
+    path: /:organization/loyalty/:number
+    server: experience
+  - method: DELETE
+    path: /:organization/loyalty/:number/:id
+    server: experience
   - method: PUT
     path: /:organization/orders/:number/inventory/reservations
     server: experience
