@@ -234,9 +234,6 @@ operations:
     path: /:organization/quotes
     server: fulfillment
   - method: GET
-    path: /:organization/shipping/configuration/versions
-    server: fulfillment
-  - method: GET
     path: /:organization/shipping/configuration
     server: fulfillment
   - method: GET
@@ -250,9 +247,6 @@ operations:
     server: fulfillment
   - method: DELETE
     path: /:organization/shipping/configuration/:key
-    server: fulfillment
-  - method: GET
-    path: /:organization/shipping/configuration/:key/lanes/versions
     server: fulfillment
   - method: GET
     path: /:organization/shipping/configuration/:key/lanes
