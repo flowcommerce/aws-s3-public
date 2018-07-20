@@ -265,6 +265,15 @@ operations:
   - method: PUT
     path: /:organization/experiences/:key/preference/display/shipping/duty
     server: experience-internal
+  - method: GET
+    path: /:organization/orders/:number/gift_cards
+    server: experience-internal
+  - method: POST
+    path: /:organization/orders/:number/gift_cards
+    server: experience-internal
+  - method: DELETE
+    path: /:organization/orders/:number/gift_cards/:id
+    server: experience-internal
   - method: POST
     path: /:organization/experiences/items/filters/:filter
     server: experience-internal
@@ -291,6 +300,15 @@ operations:
     server: experience-internal
   - method: DELETE
     path: /:organization/experiences/:experience_key/sales-margins/:key
+    server: experience-internal
+  - method: GET
+    path: /:organization/loyalty/:number
+    server: experience-internal
+  - method: POST
+    path: /:organization/loyalty/:number
+    server: experience-internal
+  - method: DELETE
+    path: /:organization/loyalty/:number/:id
     server: experience-internal
   - method: GET
     path: /:organization/order/number/generator/:suggested_order_number
