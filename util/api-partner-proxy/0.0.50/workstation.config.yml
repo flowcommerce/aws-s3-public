@@ -1,0 +1,64 @@
+version: 0.0.50
+
+servers:
+  - name: partner
+    host: http://172.17.0.1:7061
+
+operations:
+  - method: POST
+    path: /partners/:partner/organizations/:organization_id/labels
+    server: partner
+  - method: PUT
+    path: /partners/:partner/organizations/:organization_id/shipping-notifications/:key
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization_id/returns/:id
+    server: partner
+  - method: POST
+    path: /partners/:partner/organizations/:organization_id/returns
+    server: partner
+  - method: GET
+    path: /partners/:partner/labels
+    server: partner
+  - method: GET
+    path: /partners/:partner/labels/:id
+    server: partner
+  - method: POST
+    path: /partners/:partner/labels
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization/orders/:number/fulfillments
+    server: partner
+  - method: PUT
+    path: /partners/:partner/organizations/:organization/orders/:number/fulfillments/cancellations
+    server: partner
+  - method: PUT
+    path: /partners/:partner/organizations/:organization/orders/:number/fulfillments/complete/cancellations
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization_id/manifests/services/:service/outstanding
+    server: partner
+  - method: POST
+    path: /partners/:partner/organizations/:organization_id/manifests
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization_id/manifests
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization_id/manifests/:id
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization/order-identifiers
+    server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization/order-identifiers/:number
+    server: partner
+  - method: POST
+    path: /partners/:partner/organizations/:organization/order-identifiers
+    server: partner
+  - method: PUT
+    path: /partners/:partner/organizations/:organization/order-identifiers/:number
+    server: partner
+  - method: DELETE
+    path: /partners/:partner/organizations/:organization/order-identifiers/:number
+    server: partner
