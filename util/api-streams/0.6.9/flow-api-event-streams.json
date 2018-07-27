@@ -1,0 +1,1314 @@
+[ {
+  "streamName" : "development_workstation.consumer.invoice.event.v0.consumer_invoice_event.json",
+  "shortName" : "consumer_invoice_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "consumer_invoice",
+    "modelType" : {
+      "name" : "consumer_invoice",
+      "plural" : "consumer_invoices",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "consumer_invoice_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "date",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "order",
+        "type" : "consumer_invoice_order_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "entity",
+        "type" : "io.flow.common.v0.models.merchant_of_record_entity",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "payments",
+        "type" : "[consumer_invoice_payment]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "consumer_invoice_center_reference",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The originating fulfillment center. Will be empty for digital goods."
+      }, {
+        "name" : "destination",
+        "type" : "io.flow.experience.v0.models.order_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "billing_address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "lines",
+        "type" : "[consumer_invoice_line]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "documents",
+        "type" : "[consumer_invoice_document]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "tax_registration",
+        "type" : "io.flow.harmonization.v0.models.tax_registration",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The consumer invoice represents the details of a set of items from a given order. This may represent either the full order or a partial fulfillment."
+    },
+    "upsertedDiscriminator" : "consumer_invoice_upserted",
+    "deletedDiscriminator" : "consumer_invoice_deleted",
+    "deletedHasModel" : true
+  }, {
+    "fieldName" : "credit_memo",
+    "modelType" : {
+      "name" : "credit_memo",
+      "plural" : "credit_memoes",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "consumer_invoice_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "date",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "invoice",
+        "type" : "consumer_invoice_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The invoice against which the refund was issued"
+      }, {
+        "name" : "entity",
+        "type" : "io.flow.common.v0.models.merchant_of_record_entity",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "payments",
+        "type" : "[consumer_invoice_payment]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "lines",
+        "type" : "[consumer_invoice_line]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "documents",
+        "type" : "[consumer_invoice_document]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "tax_registration",
+        "type" : "io.flow.harmonization.v0.models.tax_registration",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The credit memo represents the details of a refund and the reasons for the issuance of the refund."
+    },
+    "upsertedDiscriminator" : "credit_memo_upserted",
+    "deletedDiscriminator" : "credit_memo_deleted",
+    "deletedHasModel" : true
+  } ]
+}, {
+  "streamName" : "development_workstation.fulfillment.event.v0.fulfillment_event.json",
+  "shortName" : "fulfillment_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "shipping_configuration",
+    "modelType" : {
+      "name" : "shipping_configuration",
+      "plural" : "shipping_configurations",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "shipping_configuration_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_lanes",
+        "type" : "[shipping_lane]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    },
+    "upsertedDiscriminator" : "shipping_configuration_upserted",
+    "deletedDiscriminator" : "shipping_configuration_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "tier",
+    "modelType" : {
+      "name" : "tier",
+      "plural" : "tiers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "direction",
+        "type" : "tier_direction",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "outbound"
+      }, {
+        "name" : "integration",
+        "type" : "shipment_integration_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Type of shipping integration used for this tier."
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "rules",
+        "type" : "[tier_rule]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Ordered set of rules for this tier"
+      }, {
+        "name" : "services",
+        "type" : "[io.flow.reference.v0.models.carrier_service]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Services associated with this tier"
+      }, {
+        "name" : "strategy",
+        "type" : "tier_strategy",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If multiple available return outcomes for a single tier, strategy picks the top one based on cost or timing."
+      }, {
+        "name" : "visibility",
+        "type" : "io.flow.common.v0.enums.visibility",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Public or Private. Private ones appear as inactive/disabled to the public"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Currency to be used for the tier. May be different from the experience currency, but enforce all rules use this currency. ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "USD"
+      }, {
+        "name" : "description",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Description of the tier intended for internal description of return tiers or could be used for caption/tooltips on a checkout page."
+      }, {
+        "name" : "display",
+        "type" : "tier_display",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "fulfillment_experience_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_lane",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If this tier belongs to the shipping lane this is the corresponding shipping lane id"
+      } ],
+      "attributes" : [ ],
+      "description" : "Service shipping tier available in this tier group. e.g. Standard tier, Express tier, Economy tier"
+    },
+    "upsertedDiscriminator" : "tier_upserted_v2",
+    "deletedDiscriminator" : "tier_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "shipping_lane",
+    "modelType" : {
+      "name" : "shipping_lane",
+      "plural" : "shipping_lanes",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration",
+        "type" : "shipping_configuration_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The shipping configuration reference this lane belongs to"
+      }, {
+        "name" : "region",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The destination region for this shipping lane"
+      }, {
+        "name" : "centers",
+        "type" : "[center_reference]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The origin centers this lane can ship from"
+      }, {
+        "name" : "tiers",
+        "type" : "[tier]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    },
+    "upsertedDiscriminator" : "shipping_lane_upserted",
+    "deletedDiscriminator" : "shipping_lane_deleted",
+    "deletedHasModel" : true
+  } ]
+}, {
+  "streamName" : "development_workstation.catalog.event.v0.catalog_event.json",
+  "shortName" : "catalog_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "attribute",
+    "modelType" : {
+      "name" : "attribute",
+      "plural" : "attributes",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The unique identifier for the attribute."
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The key of the attribute that identifies it within a map of attributes."
+      }, {
+        "name" : "options",
+        "type" : "options",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Defines special rules for handling this attribute."
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A human-readable label used for display purposes."
+      }, {
+        "name" : "intent",
+        "type" : "attribute_intent",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify the meaning of this attribute to ensure accurate processing, such as marking a price that should be localized. Note that specifying an intent may restrict what data types are legal -- for example, a price must also be of type decimal.",
+        "example" : "price"
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.attribute_data_type",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally tag attributes with their data type so they are properly validated. If omitted, we will default to string",
+        "example" : "string"
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      } ],
+      "attributes" : [ ],
+      "description" : "An attribute can be configured to be used in different ways throughout Flow. A common example is to identify a meaningful attribute (e.g. brand) that can then be displayed throughout the Flow console."
+    },
+    "upsertedDiscriminator" : "attribute_upserted_v2",
+    "deletedDiscriminator" : "attribute_deleted_v2",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "development_workstation.local.item.event.v0.local_item_event.json",
+  "shortName" : "local_item_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "local_item",
+    "modelType" : {
+      "name" : "local_item",
+      "plural" : "local_items",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.common.v0.models.catalog_item_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "pricing",
+        "type" : "local_item_pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "io.flow.catalog.v0.enums.subcatalog_item_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The Local Item represents all of the data for a given item that is localized to a given experience."
+    },
+    "upsertedDiscriminator" : "local_item_upserted",
+    "deletedDiscriminator" : "local_item_deleted",
+    "deletedHasModel" : true
+  } ]
+}, {
+  "streamName" : "development_workstation.price.event.v0.price_event.json",
+  "shortName" : "price_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "price_book",
+    "modelType" : {
+      "name" : "price_book",
+      "plural" : "price_books",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A unique string that identifies a price book within Flow."
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The currency for which the price book is valid."
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A display name for the price book."
+      }, {
+        "name" : "includes",
+        "type" : "io.flow.common.v0.models.included_levies",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Describes which levies are included in the price book item prices."
+      }, {
+        "name" : "status",
+        "type" : "io.flow.common.v0.enums.price_book_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents the status of a price book within Flow."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a list of target prices in a specific currency that can override any subset of item prices within an experience."
+    },
+    "upsertedDiscriminator" : "price_book_upserted",
+    "deletedDiscriminator" : "price_book_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "price_book_item",
+    "modelType" : {
+      "name" : "price_book_item",
+      "plural" : "price_book_items",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price_book",
+        "type" : "price_book_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the product id from the ingested price book."
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the price of a single item within a price book."
+    },
+    "upsertedDiscriminator" : "price_book_item_upserted",
+    "deletedDiscriminator" : "price_book_item_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "development_workstation.payment.event.v0.payment_event.json",
+  "shortName" : "payment_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "capture",
+    "modelType" : {
+      "name" : "capture",
+      "plural" : "captures",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authorization",
+        "type" : "authorization_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount to capture in the currency of the associated authorization. If not specified, defaults to the full amount of the authorization (minus any prior captures).",
+        "example" : "120.38"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Required if amount is specified. The ISO 4217-3 code for the currency. Case insensitive. See https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "requested",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The requested amount/currency of the capture when created. We record this value as it will be converted to the currency of the authorization automatically if it does not match."
+      }, {
+        "name" : "created_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to a capture object"
+      }, {
+        "name" : "status",
+        "type" : "capture_status",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Indicates the status of the capture.",
+        "default" : "succeeded"
+      } ],
+      "attributes" : [ ],
+      "description" : "Capture actually transfers funds. You can capture as many times as you'd like up until the total amount of the authorization has been captured or the authorization otherwise becomes unavailable (e.g. expires)."
+    },
+    "upsertedDiscriminator" : "capture_upserted_v2",
+    "deletedDiscriminator" : "capture_deleted",
+    "deletedHasModel" : true
+  }, {
+    "fieldName" : "card",
+    "modelType" : {
+      "name" : "card",
+      "plural" : "cards",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "token",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Unique, cryptographically secure token by which this card can be identified in the future. This value should be kept secure in your system's as payment authorizations are created against this token."
+      }, {
+        "name" : "type",
+        "type" : "card_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      }, {
+        "name" : "expiration",
+        "type" : "expiration",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "iin",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "The issuer identification number (IIN) (formerly known as the Bank Identification Number) which are the leading digits of the card number."
+      }, {
+        "name" : "last4",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Cleartext last 4 numbers of the card"
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Cardholder name"
+      }, {
+        "name" : "address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Cardholder billing address"
+      } ],
+      "attributes" : [ ],
+      "description" : "Card represents the metadata about a secure, tokenized card. The card 'token' is a unique, cryptographically secure token by which this card can be identified in the future. The card token itself will either be a permanent card token (denoted by a prefix of F96) or a one time nonce (denoted by a prefix of F17). Nonces represent cards that were encrypted from public channels (like the user's browser via JavaScript) and can be used once only. If you have a nonce you can exchange it for a permanent card token via the operation POST /:organization/cards/nonces"
+    },
+    "upsertedDiscriminator" : "card_upserted_v2",
+    "deletedDiscriminator" : "card_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "reversal",
+    "modelType" : {
+      "name" : "reversal",
+      "plural" : "reversals",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authorization",
+        "type" : "authorization_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The authorization that this reversal undoes"
+      }, {
+        "name" : "status",
+        "type" : "reversal_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount reversed",
+        "example" : "120.38"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 4217-3 code for the currency. Case insensitive. See https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "requested",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The requested amount/currency of the capture when created. We record this value as it will be converted to the currency of the authorization automatically if it does not match."
+      }, {
+        "name" : "created_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to a reversal object"
+      } ],
+      "attributes" : [ ],
+      "description" : "A reversal is used to clear an authorization (full or partial)."
+    },
+    "upsertedDiscriminator" : "reversal_upserted",
+    "deletedDiscriminator" : "reversal_deleted",
+    "deletedHasModel" : true
+  } ]
+}, {
+  "streamName" : "development_workstation.organization.event.v0.organization_event.json",
+  "shortName" : "organization_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "membership",
+    "modelType" : {
+      "name" : "membership",
+      "plural" : "memberships",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "io.flow.common.v0.unions.expandable_organization",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "user",
+        "type" : "io.flow.common.v0.unions.expandable_user",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "role",
+        "type" : "io.flow.common.v0.enums.role",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the users that are part of this organization. Primary purpose is to manage which users have access to the organization's data and to provide a simple user interface to assign roles and permissions to each member of the organization"
+    },
+    "upsertedDiscriminator" : "membership_upserted_v2",
+    "deletedDiscriminator" : "membership_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "organization",
+    "modelType" : {
+      "name" : "organization",
+      "plural" : "organizations",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "environment",
+        "type" : "environment",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "parent",
+        "type" : "organization_reference",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "When creating an organization in the test environment, it is linked to your production organization. This allows you to have as many test organizations as you like."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a single organization in the system, and what environment it is currently operating in."
+    },
+    "upsertedDiscriminator" : "organization_upserted_v2",
+    "deletedDiscriminator" : "organization_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "organization_short_id",
+    "modelType" : {
+      "name" : "organization_short_id",
+      "plural" : "organization_short_ids",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "io.flow.common.v0.models.organization_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "short_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A short identifier for an organization that is used to setup account IDs, invoice Prefixes, etc."
+    },
+    "upsertedDiscriminator" : "organization_short_id_upserted",
+    "deletedDiscriminator" : "organization_short_id_deleted",
+    "deletedHasModel" : true
+  } ]
+}, {
+  "streamName" : "development_workstation.experience.event.v0.experience_event.json",
+  "shortName" : "experience_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "allocation",
+    "modelType" : {
+      "name" : "allocation_v2",
+      "plural" : "allocation_v2s",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "order",
+        "type" : "allocation_order_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "details",
+        "type" : "[allocation_detail]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "total",
+        "type" : "io.flow.catalog.v0.models.localized_total",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    },
+    "upsertedDiscriminator" : "allocation_upserted_v2",
+    "deletedDiscriminator" : "allocation_deleted_v2",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "experience",
+    "modelType" : {
+      "name" : "experience",
+      "plural" : "experiences",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "delivered_duty",
+        "type" : "io.flow.common.v0.enums.delivered_duty",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Determines if a given experience should be DDP, DDU, or customer choice. If DDP, note that in some cases if a customer is shipping to a country where DDP is not available, information may still come back as DDU"
+      }, {
+        "name" : "region",
+        "type" : "region_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Reference to region as defined in https://api.flow.io/reference/regions",
+        "example" : "can or eurozone"
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "When otherwise not known, the default country to use for this experience. One example would be an experience setup for Europe - when you request landed cost, if there is no geolocation information available, we will use this country as the basis for landed cost. ISO 3166 3 currency code as defined in https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This currency defines the base currency for all pricing related features - e.g. pricing functions. ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "language",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The default language to use for when displaying products, e.g. to display product information in this language by default. ISO 639 2 language code as defined in https://api.flow.io/reference/languages",
+        "example" : "en"
+      }, {
+        "name" : "measurement_system",
+        "type" : "io.flow.common.v0.enums.measurement_system",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "subcatalog",
+        "type" : "io.flow.catalog.v0.models.subcatalog_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Position of this experience relative to other experiences. Lower position indicates experience should be considered first. Main use is to resolve incoming geolocation data (e.g. ip, country) to pick an experience. We do this by walking through the list of experiences to find the first one that matches the user's geography.",
+        "minimum" : 0
+      }, {
+        "name" : "settings",
+        "type" : "experience_settings",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "experience_status",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Will always be present (optional for backwards compatibility)."
+      } ],
+      "attributes" : [ ],
+      "description" : "Experiences define a local experience for a given geographic region"
+    },
+    "upsertedDiscriminator" : "experience_upserted_v2",
+    "deletedDiscriminator" : "experience_deleted_v2",
+    "deletedHasModel" : true
+  }, {
+    "fieldName" : "experience_price_book_mapping",
+    "modelType" : {
+      "name" : "experience_price_book_mapping",
+      "plural" : "experience_price_book_mappings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "experience_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price_book",
+        "type" : "io.flow.price.v0.models.price_book_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Position of this experience price book mapping. Lower position indicates experience price book mapping should be considered first.",
+        "minimum" : 0
+      } ],
+      "attributes" : [ ]
+    },
+    "upsertedDiscriminator" : "experience_price_book_mapping_upserted",
+    "deletedDiscriminator" : "experience_price_book_mapping_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "order",
+    "modelType" : {
+      "name" : "order",
+      "plural" : "orders",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_of_record",
+        "type" : "io.flow.common.v0.enums.order_merchant_of_record",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "flow"
+      }, {
+        "name" : "experience",
+        "type" : "expandable_experience",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains information on the experience on which this order was submitted."
+      }, {
+        "name" : "customer",
+        "type" : "io.flow.common.v0.models.customer",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "The customer who is actually making the purchase"
+      }, {
+        "name" : "delivered_duty",
+        "type" : "io.flow.common.v0.enums.delivered_duty",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Options returned will only use tiers with the matching delivered duty. This would also affect whether duties are included in the total or not. If not specified, defaults based on the experience default setting."
+      }, {
+        "name" : "destination",
+        "type" : "order_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      }, {
+        "name" : "expires_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The date and time on which this order will expire unless submitted. Used only when the order status is 'open'. New orders will expire 1 hour after creation."
+      }, {
+        "name" : "items",
+        "type" : "[localized_line_item]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "deliveries",
+        "type" : "[io.flow.fulfillment.v0.unions.delivery]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 1
+      }, {
+        "name" : "selections",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The currently selected delivery option ids. These IDs represent the shipping tiers that the customer has chosen (e.g. standard or express) for each delivery. The shipping price is then based on these selections (and included in the prices array). You can update an order before it has been submitted to change the delivery options, getting back accurate pricing for the order.",
+        "minimum" : 1
+      }, {
+        "name" : "prices",
+        "type" : "[order_price_detail]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "total",
+        "type" : "io.flow.catalog.v0.models.localized_total",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to the order. It can be useful for storing additional information about the charge in a structured format."
+      }, {
+        "name" : "submitted_at",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The timestamp on which the order is submitted. Once submitted, production orders can no longer be deleted as they represent transactions in the real world"
+      }, {
+        "name" : "lines",
+        "type" : "[line]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Provides display data for each of the line items belonging to this order."
+      }, {
+        "name" : "identifiers",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Other identifiers which are used to identify this order, if available."
+      }, {
+        "name" : "promotions",
+        "type" : "promotions",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The current available and applied promotions for this order"
+      }, {
+        "name" : "payments",
+        "type" : "[order_payment]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents the list of payments on an order. Each payment will be typed - supporting options like a $25 account credit applied to an order plus a balance paid by a card, paypal, cash on delivery, etc. The list of payments here is summary information only for display back to the user; each individual payment will have varying levels of detail based on the actual type of the payment"
+      }, {
+        "name" : "balance",
+        "type" : "io.flow.catalog.v0.models.localized_total",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The remaining balance on this order. Will be marked required in a future version of the Flow API"
+      }, {
+        "name" : "rules",
+        "type" : "order_rules_summary",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents a summary of the rules related to this order."
+      }, {
+        "name" : "tax_registration",
+        "type" : "io.flow.harmonization.v0.models.tax_registration",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents the tax registration on an order, if applicable."
+      } ],
+      "attributes" : [ ],
+      "description" : "An order represents all of the information about a particular set of line items, including pricing, currency rates, delivery options, etc. All information in an order is guaranteed by Flow - if an order is submitted before its expiration. The intended use case is to create an order as a consumer enters checkout, then to submit that order as part of the user submitting their order. Note that Flow will automatically mark an order submitted if we see payment authorization(s) covering the full balance of an order."
+    },
+    "upsertedDiscriminator" : "order_upserted_v2",
+    "deletedDiscriminator" : "order_deleted_v2",
+    "deletedHasModel" : true
+  } ]
+}, {
+  "streamName" : "development_workstation.inventory.event.v0.inventory_event.json",
+  "shortName" : "inventory_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "serial",
+    "modelType" : {
+      "name" : "serial",
+      "plural" : "serials",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item number associated to the number."
+      }, {
+        "name" : "item_price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "serial_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "io.flow.fulfillment.v0.models.center_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Indicates the Flow center where the item exists."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "{}"
+      } ],
+      "attributes" : [ ],
+      "description" : "A unique identifier assigned to an individual item."
+    },
+    "upsertedDiscriminator" : "serial_upserted",
+    "deletedDiscriminator" : "serial_deleted",
+    "deletedHasModel" : false
+  } ]
+} ]
