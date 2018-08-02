@@ -1,0 +1,569 @@
+[ {
+  "streamName" : "production.installment.event.v0.installment_event.json",
+  "shortName" : "installment_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "next_installment",
+    "modelType" : {
+      "name" : "next_installment",
+      "plural" : "next_installments",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "plan",
+        "type" : "installment_plan_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The installment plan instance"
+      }, {
+        "name" : "requested",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The requested value of the next installment. This is computed by taking the value of the next installment, limited to the total value of the plan as needed."
+      }, {
+        "name" : "trigger",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A human readable description of when this installment will be triggered",
+        "example" : "upon shipment or on Nov 5, 2019"
+      } ],
+      "attributes" : [ ],
+      "description" : "The next installment is a summary of the next scheduled installment"
+    },
+    "upsertedDiscriminator" : "next_installment_upserted",
+    "deletedDiscriminator" : "next_installment_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "installment",
+    "modelType" : {
+      "name" : "installment",
+      "plural" : "installments",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_of_record",
+        "type" : "io.flow.common.v0.enums.merchant_of_record",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "installment_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "date",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents the schedule transaction date for this installment (e.g. the date on which we will authorize additional card funds)"
+      }, {
+        "name" : "plan",
+        "type" : "installment_plan_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "requested",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount of this installment that was requested"
+      }, {
+        "name" : "value",
+        "type" : "io.flow.common.v0.models.price_with_base",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The value of this installment in local and base currency"
+      }, {
+        "name" : "authorizations",
+        "type" : "[io.flow.payment.v0.unions.authorization]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A list of actual payment authorizations attempted for this installment"
+      } ],
+      "attributes" : [ ],
+      "description" : "An installment represents a single payment that is due for a given installment plan. The installment will create and process payment information"
+    },
+    "upsertedDiscriminator" : "installment_upserted",
+    "deletedDiscriminator" : "installment_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "production.experiment.internal.event.v0.experiment_event.json",
+  "shortName" : "experiment_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "experiment",
+    "modelType" : {
+      "name" : "experiment",
+      "plural" : "experiments",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "started_at",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "ended_at",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "variants",
+        "type" : "[variant]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Top-level model object for an experiment. start_date and end_date are not editable via the api, instead they are set when status progresses from draft to live and live to ended"
+    },
+    "upsertedDiscriminator" : "experiment_upserted",
+    "deletedDiscriminator" : "experiment_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "production.ftp.event.v0.ftp_event.json",
+  "shortName" : "ftp_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "ftp_file",
+    "modelType" : {
+      "name" : "ftp_file",
+      "plural" : "ftp_files",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "source",
+        "type" : "ftp_file_source",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The name of the file"
+      }, {
+        "name" : "directory",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The name of the directory in which the file was uploaded"
+      }, {
+        "name" : "url",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "URL of the file contents"
+      }, {
+        "name" : "created_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The FTP File represents a file uploaded to the FTP Server"
+    },
+    "upsertedDiscriminator" : "ftp_file_upserted",
+    "deletedDiscriminator" : "ftp_file_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "production.fulfillment.internal.event.v0.fulfillment_internal_event.json",
+  "shortName" : "fulfillment_internal_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "center",
+    "modelType" : {
+      "name" : "center",
+      "plural" : "centers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The key to use. If not provided, we will generate a unique key based on the name."
+      }, {
+        "name" : "address",
+        "type" : "shipping_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Shipping address used for the 'from' field in generating carrier labels and customs-related documentation such as the CN22 or commercial invoice."
+      }, {
+        "name" : "packaging",
+        "type" : "[packaging]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Available types of packaging for shipment at this center"
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Long name of the facility. ex: Fosdick CT, Quiet Logistics Andover"
+      }, {
+        "name" : "services",
+        "type" : "[available_service]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "List of carrier service levels available at this center"
+      }, {
+        "name" : "schedule",
+        "type" : "io.flow.common.v0.models.schedule",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Schedule of the origin center where shipment is originating. Contains normal operating hours, holiday periods, and cutoff."
+      }, {
+        "name" : "timezone",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The timezone name. Case insensitive. See https://api.flow.io/reference/timezones"
+      }, {
+        "name" : "capabilities",
+        "type" : "[center_capability]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "partner_center",
+        "type" : "partner_center",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If a center operates as a crossdock this contains information about the crossdock"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a facility capable of fulfilling a shipment"
+    },
+    "upsertedDiscriminator" : "center_upserted_v2",
+    "deletedDiscriminator" : "center_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "production.currency.internal.event.v0.currency_internal_event.json",
+  "shortName" : "currency_internal_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "spot_rate",
+    "modelType" : {
+      "name" : "spot_rate",
+      "plural" : "spot_rates",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "effective_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The base currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "target",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The target currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The value of the mid market (interbank) rate."
+      } ],
+      "attributes" : [ ]
+    },
+    "upsertedDiscriminator" : "spot_rate_upserted",
+    "deletedDiscriminator" : "spot_rate_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "production.optin.internal.event.v0.optin_event.json",
+  "shortName" : "optin_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "optin_prompt",
+    "modelType" : {
+      "name" : "optin_prompt",
+      "plural" : "optin_prompts",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "optin_attribute",
+        "type" : "optin_attribute",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "region",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ID of a region that this prompt"
+      }, {
+        "name" : "options",
+        "type" : "[prompt_options]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "content",
+        "type" : "io.flow.content.internal.v0.unions.localizable_content",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Controls the order in which prompts appear when two or more prompts apply to the same target. Use a higher number to increase position and a lower number to decrease it.",
+        "default" : "0"
+      }, {
+        "name" : "enforce_on",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Setting an enforce_on date will require all users -- even ones that have already consented to a policy -- to view the policy and re-accept it."
+      } ],
+      "attributes" : [ ],
+      "description" : "A prompt that should be shown to a consumer of an organization within a region."
+    },
+    "upsertedDiscriminator" : "optin_prompt_upserted",
+    "deletedDiscriminator" : "optin_prompt_deleted",
+    "deletedHasModel" : false
+  } ]
+}, {
+  "streamName" : "production.fraud.internal.event.v0.fraud_internal_event.json",
+  "shortName" : "fraud_internal_event_v0",
+  "capturedEvents" : [ {
+    "fieldName" : "fraud_review",
+    "modelType" : {
+      "name" : "fraud_review",
+      "plural" : "fraud_reviews",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "order",
+        "type" : "io.flow.experience.v0.models.order_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "io.flow.fraud.v0.enums.fraud_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "description",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "liability",
+        "type" : "io.flow.fraud.v0.enums.fraud_liability",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "flow"
+      }, {
+        "name" : "status_updated_at",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Timestamp indicating when the fraud review status was last updated."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional attributes associated with the review, eg. reprocessing time or provider risk level.",
+        "default" : "{}"
+      } ],
+      "attributes" : [ ],
+      "description" : "The result status of the fraud decision"
+    },
+    "upsertedDiscriminator" : "fraud_review_upserted",
+    "deletedDiscriminator" : "fraud_review_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "fraud_pending_review",
+    "modelType" : {
+      "name" : "fraud_pending_review",
+      "plural" : "fraud_pending_reviews",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "fraud_review_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "order",
+        "type" : "io.flow.experience.v0.models.order_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "recommended_status",
+        "type" : "io.flow.fraud.v0.enums.fraud_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "apply_at",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Fraud check pending review"
+    },
+    "upsertedDiscriminator" : "fraud_pending_review_upserted",
+    "deletedDiscriminator" : "fraud_pending_review_deleted",
+    "deletedHasModel" : false
+  }, {
+    "fieldName" : "fraud_review_decision",
+    "modelType" : {
+      "name" : "fraud_review_decision",
+      "plural" : "fraud_review_decisions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "fraud_review_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "order",
+        "type" : "io.flow.experience.v0.models.order_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "io.flow.fraud.v0.enums.fraud_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "created_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Timestamp indicating when the fraud review decision was made."
+      } ],
+      "attributes" : [ ],
+      "description" : "Decision made on a fraud review"
+    },
+    "upsertedDiscriminator" : "fraud_review_decision_upserted",
+    "deletedDiscriminator" : "fraud_review_decision_deleted",
+    "deletedHasModel" : false
+  } ]
+} ]
