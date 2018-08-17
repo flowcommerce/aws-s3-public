@@ -290,6 +290,9 @@ operations:
   - method: PUT
     path: /:organization/orders/:number/modifications/email
     server: experience-internal
+  - method: POST
+    path: /:organization/orders/:number/gift_cards/authorize
+    server: experience-internal
   - method: GET
     path: /:organization/experiences/:experience_key/sales-margins
     server: experience-internal
