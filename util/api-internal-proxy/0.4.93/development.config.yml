@@ -45,6 +45,8 @@ servers:
     host: http://localhost:6021
   - name: organization-internal
     host: http://localhost:6081
+  - name: bundle-internal
+    host: http://localhost:7671
   - name: label-internal
     host: http://localhost:7041
   - name: search-internal
@@ -179,12 +181,6 @@ operations:
   - method: PUT
     path: /:organization/contents/:id
     server: content-internal
-  - method: POST
-    path: /shopify/bundles/checkout/cart/:id
-    server: shopify-internal
-  - method: GET
-    path: /shopify/bundles/checkout/:org/order/:number
-    server: shopify-internal
   - method: POST
     path: /:organization/shopify/complete-price-rule
     server: shopify-internal
@@ -671,6 +667,18 @@ operations:
   - method: POST
     path: /internal/organization/membership/copies
     server: organization-internal
+  - method: POST
+    path: /bundles/checkout/cart/:id
+    server: bundle-internal
+  - method: GET
+    path: /bundles/checkout/:org/order/:number
+    server: bundle-internal
+  - method: POST
+    path: /shopify/bundles/checkout/cart/:id
+    server: bundle-internal
+  - method: GET
+    path: /shopify/bundles/checkout/:org/order/:number
+    server: bundle-internal
   - method: GET
     path: /internal/label/settings/:id
     server: label-internal
