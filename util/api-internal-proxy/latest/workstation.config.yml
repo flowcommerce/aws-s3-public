@@ -131,7 +131,13 @@ operations:
     path: /:organization/features/:key
     server: feature
   - method: POST
+    path: /:organization/features/rule/query/builders
+    server: feature
+  - method: POST
     path: /:organization/features/:key/rules
+    server: feature
+  - method: DELETE
+    path: /:organization/features/:key/rules/:id
     server: feature
   - method: POST
     path: /:organization/feature/values
