@@ -420,12 +420,6 @@ operations:
     path: /:organization/uploads/:name
     server: search
   - method: GET
-    path: /:organization/webhooks/settings
-    server: webhook
-  - method: PUT
-    path: /:organization/webhooks/settings
-    server: webhook
-  - method: GET
     path: /:organization/webhooks
     server: webhook
   - method: GET
@@ -448,6 +442,12 @@ operations:
     server: webhook
   - method: POST
     path: /:organization/webhook/deliveries/:id/requests
+    server: webhook
+  - method: GET
+    path: /:organization/webhook/settings
+    server: webhook
+  - method: PUT
+    path: /:organization/webhook/settings
     server: webhook
   - method: GET
     path: /:organization/orders/:number/fulfillments
