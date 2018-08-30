@@ -445,6 +445,9 @@ operations:
   - method: POST
     path: /:organization/center/query/builders
     server: fulfillment-internal
+  - method: GET
+    path: /:organization/marketing/:platform/:account
+    server: marketing-gateway
   - method: POST
     path: /:organization/marketing/connections
     server: marketing-gateway
