@@ -11,6 +11,9 @@ operations:
   - method: PUT
     path: /partners/:partner/organizations/:organization_id/shipping-notifications/:key
     server: partner
+  - method: POST
+    path: /partners/:partner/organizations/:organization_id/shipping-notifications
+    server: partner
   - method: GET
     path: /partners/:partner/organizations/:organization_id/returns/:id
     server: partner
