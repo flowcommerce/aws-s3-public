@@ -406,6 +406,9 @@ operations:
   - method: GET
     path: /:organization/authorizations/:key/metadata
     server: payment-internal
+  - method: PUT
+    path: /:organization/authorizations/:key/payload
+    server: payment-internal
   - method: POST
     path: /payment/callbacks/stripe
     server: payment-internal
