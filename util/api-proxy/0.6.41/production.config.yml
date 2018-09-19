@@ -25,6 +25,8 @@ servers:
     host: https://location.api.flow.io
   - name: currency
     host: https://currency.api.flow.io
+  - name: permission
+    host: https://organization.api.flow.io
   - name: checkout
     host: https://experience.api.flow.io
   - name: experience
@@ -499,6 +501,18 @@ operations:
   - method: GET
     path: /:organization/currency/rates/versions
     server: currency
+  - method: GET
+    path: /permission/organization/:organization/roles
+    server: permission
+  - method: GET
+    path: /permission/partners/:partner/roles
+    server: permission
+  - method: GET
+    path: /permission/audits
+    server: permission
+  - method: GET
+    path: /permission/checks/all
+    server: permission
   - method: GET
     path: /checkout/tokens/:id
     server: checkout

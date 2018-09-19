@@ -25,6 +25,8 @@ servers:
     host: http://172.17.0.1:6191
   - name: currency
     host: http://172.17.0.1:6321
+  - name: permission
+    host: http://172.17.0.1:6081
   - name: checkout
     host: http://172.17.0.1:6251
   - name: experience
@@ -499,6 +501,18 @@ operations:
   - method: GET
     path: /:organization/currency/rates/versions
     server: currency
+  - method: GET
+    path: /permission/organization/:organization/roles
+    server: permission
+  - method: GET
+    path: /permission/partners/:partner/roles
+    server: permission
+  - method: GET
+    path: /permission/audits
+    server: permission
+  - method: GET
+    path: /permission/checks/all
+    server: permission
   - method: GET
     path: /checkout/tokens/:id
     server: checkout
