@@ -31,6 +31,8 @@ servers:
     host: https://fraud.api.flow.io
   - name: experiment-internal
     host: https://experiment.api.flow.io
+  - name: permission-internal
+    host: https://organization.api.flow.io
   - name: billing-internal
     host: https://billing.api.flow.io
   - name: ratecard-internal
@@ -499,6 +501,9 @@ operations:
   - method: GET
     path: /:organization/experiment/:key/results/cumulative
     server: experiment-internal
+  - method: GET
+    path: /permission/checks
+    server: permission-internal
   - method: GET
     path: /internal/bank/payments
     server: billing-internal

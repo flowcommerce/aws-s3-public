@@ -31,6 +31,8 @@ servers:
     host: http://localhost:7431
   - name: experiment-internal
     host: http://localhost:7461
+  - name: permission-internal
+    host: http://localhost:6081
   - name: billing-internal
     host: http://localhost:7121
   - name: ratecard-internal
@@ -499,6 +501,9 @@ operations:
   - method: GET
     path: /:organization/experiment/:key/results/cumulative
     server: experiment-internal
+  - method: GET
+    path: /permission/checks
+    server: permission-internal
   - method: GET
     path: /internal/bank/payments
     server: billing-internal
