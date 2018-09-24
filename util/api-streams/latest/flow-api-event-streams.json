@@ -8965,6 +8965,12 @@
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -9011,6 +9017,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
@@ -26516,6 +26529,12 @@
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -26562,6 +26581,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
@@ -31176,6 +31202,12 @@
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -31222,6 +31254,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
@@ -32670,6 +32709,12 @@
           "attributes" : [ ],
           "annotations" : [ ]
         }, {
+          "name" : "attributes",
+          "type" : "map[string]",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
           "name" : "item_number",
           "type" : "string",
           "required" : true,
@@ -33076,6 +33121,12 @@
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -33122,6 +33173,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
@@ -33717,6 +33775,12 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "Customer email address. Useful for fraud."
+      }, {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
@@ -34223,6 +34287,57 @@
       } ],
       "attributes" : [ ],
       "description" : "Money represents an amount in a given currency"
+    }, {
+      "name" : "money_with_base",
+      "plural" : "money_with_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "money_with_optional_base",
+      "plural" : "money_with_optional_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to migrate older models to have a base value, without breaking compatibility"
     }, {
       "name" : "name",
       "plural" : "names",
@@ -35207,7 +35322,7 @@
       }, {
         "name" : "inch",
         "attributes" : [ ],
-        "description" : "A unit of length equal to 0.01004 m (standard name in)."
+        "description" : "A unit of length equal to 0.0254 m (standard name in)."
       }, {
         "name" : "foot",
         "attributes" : [ ],
@@ -56558,6 +56673,12 @@
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -56604,6 +56725,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
