@@ -699,6 +699,9 @@ operations:
   - method: GET
     path: /bundles/checkout/:org/order/:number
     server: bundle-internal
+  - method: PUT
+    path: /:organization_id/checkout/bundles/orders/:number/submit
+    server: bundle-internal
   - method: POST
     path: /shopify/bundles/checkout/cart/:id
     server: bundle-internal
