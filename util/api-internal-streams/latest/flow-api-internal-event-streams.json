@@ -1,7 +1,7 @@
 {
   "streams" : [ {
     "streamName" : "production.installment.event.v0.installment_event.json",
-    "shortName" : "installment_event__v0",
+    "shortName" : "installment_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "next_installment",
       "modelType" : {
@@ -6716,7 +6716,7 @@
     } ]
   }, {
     "streamName" : "production.experiment.internal.event.v0.experiment_event.json",
-    "shortName" : "experiment_event_internal__v0",
+    "shortName" : "experiment_event_internal_v0",
     "capturedEvents" : [ {
       "fieldName" : "experiment",
       "modelType" : {
@@ -22563,7 +22563,7 @@
     } ]
   }, {
     "streamName" : "production.experience.internal.event.v0.experience_event.json",
-    "shortName" : "experience_event_internal__v0",
+    "shortName" : "experience_event_internal_v0",
     "capturedEvents" : [ {
       "fieldName" : "attribute",
       "modelType" : {
@@ -39210,7 +39210,7 @@
     } ]
   }, {
     "streamName" : "production.ftp.event.v0.ftp_event.json",
-    "shortName" : "ftp_event__v0",
+    "shortName" : "ftp_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "ftp_file",
       "modelType" : {
@@ -41108,7 +41108,7 @@
     } ]
   }, {
     "streamName" : "production.shopify.internal.event.v0.shopify_internal_event.json",
-    "shortName" : "shopify_internal_event__v0",
+    "shortName" : "shopify_internal_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "short_id",
       "modelType" : {
@@ -64277,7 +64277,7 @@
     } ]
   }, {
     "streamName" : "production.currency.internal.event.v0.currency_internal_event.json",
-    "shortName" : "currency_internal_event__v0",
+    "shortName" : "currency_internal_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "spot_rate",
       "modelType" : {
@@ -66679,7 +66679,7 @@
     } ]
   }, {
     "streamName" : "production.optin.internal.event.v0.optin_event.json",
-    "shortName" : "optin_event_internal__v0",
+    "shortName" : "optin_event_internal_v0",
     "capturedEvents" : [ {
       "fieldName" : "optin_prompt",
       "modelType" : {
@@ -67834,7 +67834,7 @@
     } ]
   }, {
     "streamName" : "production.fraud.internal.event.v0.fraud_internal_event.json",
-    "shortName" : "fraud_internal_event__v0",
+    "shortName" : "fraud_internal_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "fraud_review",
       "modelType" : {
