@@ -40942,9 +40942,17 @@
         "attributes" : [ ],
         "discriminator_value" : "card_authorization_upserted_v2"
       }, {
+        "type" : "card_authorization_deleted_v2",
+        "attributes" : [ ],
+        "discriminator_value" : "card_authorization_deleted_v2"
+      }, {
         "type" : "online_authorization_upserted_v2",
         "attributes" : [ ],
         "discriminator_value" : "online_authorization_upserted_v2"
+      }, {
+        "type" : "online_authorization_deleted_v2",
+        "attributes" : [ ],
+        "discriminator_value" : "online_authorization_deleted_v2"
       }, {
         "type" : "capture_upserted_v2",
         "attributes" : [ ],
