@@ -35491,6 +35491,13 @@
           "annotations" : [ ],
           "description" : "Indicates the status of the capture.",
           "default" : "succeeded"
+        }, {
+          "name" : "base",
+          "type" : "io.flow.common.v0.models.money",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The amount/currency of the capture in base currency. Added in Summer 2018 and always present since then."
         } ],
         "attributes" : [ ],
         "description" : "Capture actually transfers funds. You can capture as many times as you'd like up until the total amount of the authorization has been captured or the authorization otherwise becomes unavailable (e.g. expires)."
@@ -35629,6 +35636,13 @@
           "attributes" : [ ],
           "annotations" : [ ],
           "description" : "A set of key/value pairs that you can attach to a reversal object"
+        }, {
+          "name" : "base",
+          "type" : "io.flow.common.v0.models.money",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The amount/currency of the reversal in base currency. Added in Summer 2018 and always present since then."
         } ],
         "attributes" : [ ],
         "description" : "A reversal is used to clear an authorization (full or partial)."
@@ -36536,6 +36550,18 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "authorization_payload",
+      "plural" : "authorization_payloads",
+      "fields" : [ {
+        "name" : "parameters",
+        "type" : "authorization_payload_parameters",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to complete an inline authorization like Google Pay or Apple Pay."
+    }, {
       "name" : "authorization_reference",
       "plural" : "authorization_references",
       "fields" : [ {
@@ -36613,7 +36639,7 @@
       }, {
         "name" : "url",
         "type" : "string",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       } ],
@@ -36752,6 +36778,13 @@
         "annotations" : [ ],
         "description" : "Indicates the status of the capture.",
         "default" : "succeeded"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount/currency of the capture in base currency. Added in Summer 2018 and always present since then."
       } ],
       "attributes" : [ ],
       "description" : "Capture actually transfers funds. You can capture as many times as you'd like up until the total amount of the authorization has been captured or the authorization otherwise becomes unavailable (e.g. expires)."
@@ -37079,6 +37112,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The time at which this authorization expires, if any."
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount/currency of the authorization in base currency. Added in Summer 2018 and always present since then."
       } ],
       "attributes" : [ ],
       "description" : "An authorization is used to check and reserve funds w/ a given payment method. No funds are actually transferred; once you have you an authorization, you can capture up to the amount of the authorization."
@@ -37460,6 +37500,26 @@
       "attributes" : [ ],
       "description" : "Creates an authorization for a transaction in which you remain the merchant of record. An authorization is used to check and reserve funds w/ a given payment method. No funds are actually transferred; once you have you an authorization, you can capture up to the amount of the authorization."
     }, {
+      "name" : "direct_debit",
+      "plural" : "direct_debits",
+      "fields" : [ {
+        "name" : "routing_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Routing information for the customers bank"
+      }, {
+        "name" : "last4",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The last 4 digits of the customers account number in cleartext"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents an online direct debit payment."
+    }, {
       "name" : "expiration",
       "plural" : "expirations",
       "fields" : [ {
@@ -37483,6 +37543,18 @@
       } ],
       "attributes" : [ ],
       "description" : "The month and year at which a card expires"
+    }, {
+      "name" : "google_pay_authorization_payload",
+      "plural" : "google_pay_authorization_payloads",
+      "fields" : [ {
+        "name" : "payload",
+        "type" : "object",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "See io.flow.google.pay.v0.models.payment_data"
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "identifier_form",
       "plural" : "identifier_forms",
@@ -37508,10 +37580,16 @@
       }, {
         "name" : "client_token",
         "type" : "string",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The client token provided by underlying payment processor."
+      }, {
+        "name" : "parameters",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
       } ],
       "attributes" : [ ],
       "description" : "Represents an online payment that requires the client token from underlying payment processor before entering their payment information."
@@ -37584,6 +37662,13 @@
         "annotations" : [ "personal_data" ],
         "description" : "The IP address of the consumer",
         "example" : "96.242.151.245"
+      }, {
+        "name" : "payload",
+        "type" : "authorization_payload",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If required, contains the payload used to complete the authorization (e.g. the token from Google Pay)"
       } ],
       "attributes" : [ ],
       "description" : "Executes a widget-based payment based on the provided payment method."
@@ -37872,6 +37957,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The time at which this authorization expires, if any."
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount/currency of the authorization in base currency. Added in Summer 2018 and always present since then."
       } ],
       "attributes" : [ ]
     }, {
@@ -38107,6 +38199,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The URL to which the customer should be redirected to complete payment."
+      }, {
+        "name" : "confirmation_details",
+        "type" : "confirmation_details",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Confirmation details received from the redirect response"
       } ],
       "attributes" : [ ],
       "description" : "Represents an online payment that requires the user to redirect to another site before entering their payment information."
@@ -38255,6 +38354,13 @@
         "annotations" : [ ],
         "description" : "Indicates the status of the refund.",
         "default" : "succeeded"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount/currency of the refund in base currency. Added in Summer 2018 and always present since then."
       } ],
       "attributes" : [ ],
       "description" : "Refunds can be created against either a specific capture or an authorization (in which case we will select 1 or more specific captures against which to execute the refund)."
@@ -38637,6 +38743,13 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "A set of key/value pairs that you can attach to a reversal object"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount/currency of the reversal in base currency. Added in Summer 2018 and always present since then."
       } ],
       "attributes" : [ ],
       "description" : "A reversal is used to clear an authorization (full or partial)."
@@ -39344,6 +39457,12 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "Customer email address. Useful for fraud."
+      }, {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
@@ -39850,6 +39969,57 @@
       } ],
       "attributes" : [ ],
       "description" : "Money represents an amount in a given currency"
+    }, {
+      "name" : "money_with_base",
+      "plural" : "money_with_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "money_with_optional_base",
+      "plural" : "money_with_optional_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to migrate older models to have a base value, without breaking compatibility"
     }, {
       "name" : "name",
       "plural" : "names",
@@ -40854,6 +41024,16 @@
       "discriminator" : "discriminator",
       "description" : "Flow provides several different options for creating an authorization"
     }, {
+      "name" : "authorization_payload_parameters",
+      "plural" : "authorization_payload_parameterses",
+      "types" : [ {
+        "type" : "google_pay_authorization_payload",
+        "attributes" : [ ],
+        "discriminator_value" : "google_pay_authorization_payload"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
       "name" : "card_authorization_data",
       "plural" : "card_authorization_data",
       "types" : [ {
@@ -40868,6 +41048,16 @@
       "attributes" : [ ],
       "discriminator" : "discriminator",
       "description" : "Represents the data needed to create a card authorization."
+    }, {
+      "name" : "confirmation_details",
+      "plural" : "confirmation_detailses",
+      "types" : [ {
+        "type" : "direct_debit",
+        "attributes" : [ ],
+        "discriminator_value" : "direct_debit"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
     }, {
       "name" : "expandable_card",
       "plural" : "expandable_cards",
@@ -41063,6 +41253,10 @@
         "name" : "redirect",
         "attributes" : [ ],
         "description" : "Indicates that the user should be redirected to the provided URL."
+      }, {
+        "name" : "wait",
+        "attributes" : [ ],
+        "description" : "Indicates that more time is needed before the authorization result is known. In the case of 3D Secure, this means the authorization status should be polled until it is no longer pending."
       } ],
       "attributes" : [ ],
       "description" : "Specifies an action necessary to continue processing the authorization, such as redirecting to a payment issuer to complete user verification."
@@ -41819,7 +42013,7 @@
       }, {
         "name" : "inch",
         "attributes" : [ ],
-        "description" : "A unit of length equal to 0.01004 m (standard name in)."
+        "description" : "A unit of length equal to 0.0254 m (standard name in)."
       }, {
         "name" : "foot",
         "attributes" : [ ],
