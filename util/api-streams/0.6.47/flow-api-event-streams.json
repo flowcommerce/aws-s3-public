@@ -4,6 +4,7 @@
     "shortName" : "consumer_invoice_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "b2b_invoice",
+      "typeName" : "b2b_invoice",
       "modelType" : {
         "name" : "b2b_invoice",
         "plural" : "b2b_invoices",
@@ -97,6 +98,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "consumer_invoice",
+      "typeName" : "consumer_invoice",
       "modelType" : {
         "name" : "consumer_invoice",
         "plural" : "consumer_invoices",
@@ -194,6 +196,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "credit_memo",
+      "typeName" : "credit_memo",
       "modelType" : {
         "name" : "credit_memo",
         "plural" : "credit_memoes",
@@ -17312,6 +17315,7 @@
     "shortName" : "fulfillment_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "center",
+      "typeName" : "center",
       "modelType" : {
         "name" : "center",
         "plural" : "centers",
@@ -17392,6 +17396,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "shipping_configuration",
+      "typeName" : "shipping_configuration",
       "modelType" : {
         "name" : "shipping_configuration",
         "plural" : "shipping_configurations",
@@ -17433,6 +17438,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "tier",
+      "typeName" : "tier",
       "modelType" : {
         "name" : "tier",
         "plural" : "tiers",
@@ -17533,6 +17539,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "shipping_lane",
+      "typeName" : "shipping_lane",
       "modelType" : {
         "name" : "shipping_lane",
         "plural" : "shipping_lanes",
@@ -22926,6 +22933,7 @@
     "shortName" : "catalog_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "attribute",
+      "typeName" : "attribute",
       "modelType" : {
         "name" : "attribute",
         "plural" : "attributes",
@@ -27994,6 +28002,7 @@
     "shortName" : "local_item_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "local_item",
+      "typeName" : "local_item",
       "modelType" : {
         "name" : "local_item",
         "plural" : "local_items",
@@ -32623,10 +32632,1941 @@
       "attributes" : [ ]
     } ]
   }, {
+    "streamName" : "production.optin.event.v0.optin_event.json",
+    "shortName" : "optin_event_v0",
+    "capturedEvents" : [ {
+      "fieldName" : "checkout_optin_responses",
+      "typeName" : "checkout_optin_responses",
+      "modelType" : {
+        "name" : "checkout_optin_responses",
+        "plural" : "checkout_optin_responses",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "order_number",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "session_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "optin_responses",
+          "type" : "[optin_response]",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ]
+      },
+      "upsertedDiscriminator" : "checkout_optin_responses_upserted",
+      "deletedDiscriminator" : "checkout_optin_responses_deleted",
+      "deletedHasModel" : false
+    }, {
+      "fieldName" : "browse_optin_responses",
+      "typeName" : "browse_optin_responses",
+      "modelType" : {
+        "name" : "browse_optin_responses",
+        "plural" : "browse_optin_responses",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "session_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "optin_responses",
+          "type" : "[optin_response]",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ]
+      },
+      "upsertedDiscriminator" : "browse_optin_responses_upserted",
+      "deletedDiscriminator" : "browse_optin_responses_deleted",
+      "deletedHasModel" : false
+    } ],
+    "allModels" : [ {
+      "name" : "browse_optin_responses",
+      "plural" : "browse_optin_responses",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "session_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "optin_responses",
+        "type" : "[optin_response]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "browse_optin_responses_deleted",
+      "plural" : "browse_optin_responses_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "browse_optin_responses_upserted",
+      "plural" : "browse_optin_responses_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "browse_optin_responses",
+        "type" : "browse_optin_responses",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "checkout_optin_responses",
+      "plural" : "checkout_optin_responses",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "order_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "session_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "optin_responses",
+        "type" : "[optin_response]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "checkout_optin_responses_deleted",
+      "plural" : "checkout_optin_responses_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "checkout_optin_responses_upserted",
+      "plural" : "checkout_optin_responses_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "checkout_optin_responses",
+        "type" : "checkout_optin_responses",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "optin_response",
+      "plural" : "optin_responses",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "optin_response_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "address",
+      "plural" : "addresses",
+      "fields" : [ {
+        "name" : "text",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Full text version of address"
+      }, {
+        "name" : "streets",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Array for street line 1, street line 2, etc., in order"
+      }, {
+        "name" : "street_number",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "The specific street number, if available."
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "province",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postal",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "latitude",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "longitude",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines structured fields for address to be used in user/form input. Either text or the structured input needs to be present."
+    }, {
+      "name" : "billing_address",
+      "plural" : "billing_addresses",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "name",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "The name of the customer associated with the billing address"
+      }, {
+        "name" : "streets",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Array for street line 1, street line 2, etc., in order"
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "province",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postal",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "company",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Business entity or organization name of this contact"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_item_reference",
+      "plural" : "catalog_item_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_item_summary",
+      "plural" : "catalog_item_summaries",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "contact",
+      "plural" : "contacts",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "name",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Personal information of point-of-contact"
+      }, {
+        "name" : "company",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Business entity or organization name of this contact"
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "phone",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines structured fields for a contact person. Typically used for specifying contact person for an account, shipment, or organization representative"
+    }, {
+      "name" : "customer",
+      "plural" : "customers",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "name",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      }, {
+        "name" : "phone",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery."
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud."
+      }, {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "datetime_range",
+      "plural" : "datetime_ranges",
+      "fields" : [ {
+        "name" : "from",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "to",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "dimension",
+      "plural" : "dimensions",
+      "fields" : [ {
+        "name" : "depth",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "diameter",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "length",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "weight",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "width",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "dimensions",
+      "plural" : "dimensionses",
+      "fields" : [ {
+        "name" : "product",
+        "type" : "dimension",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "packaging",
+        "type" : "dimension",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "duration",
+      "plural" : "durations",
+      "fields" : [ {
+        "name" : "unit",
+        "type" : "unit_of_time",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a duration of time."
+    }, {
+      "name" : "exception",
+      "plural" : "exceptions",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "exception_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "datetime_range",
+        "type" : "datetime_range",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Range for the holiday. For single-day holidays, from and to should just be the same.",
+        "example" : "2016/12/24 12:00 am to 2016/12/25 11:59 pm"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents an exception to the schedule of a center."
+    }, {
+      "name" : "experience_summary",
+      "plural" : "experience_summaries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 3166 3 currency code as defined in https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 4217-3 code for the currency. Case insensitive. See https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "language",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 639 2 language code as defined in https://api.flow.io/reference/languages",
+        "example" : "en"
+      } ],
+      "attributes" : [ ],
+      "description" : "Some important fields related to experiences used in various APIs"
+    }, {
+      "name" : "included_levies",
+      "plural" : "included_levies",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "included_levy_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The label for the included levies that can be displayed as a tooltip on the product detail page."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_form",
+      "plural" : "input_forms",
+      "fields" : [ {
+        "name" : "values",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_form_specification",
+      "plural" : "input_form_specifications",
+      "fields" : [ {
+        "name" : "inputs",
+        "type" : "[input_specification]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "limitations",
+        "type" : "input_specification_limitations",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_specification",
+      "plural" : "input_specifications",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "input_specification_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "display_text",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Text to display for this input."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_specification_limitation_max",
+      "plural" : "input_specification_limitation_maxes",
+      "fields" : [ {
+        "name" : "max",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the maximum number of accepted inputs"
+    }, {
+      "name" : "input_specification_limitations",
+      "plural" : "input_specification_limitationses",
+      "fields" : [ {
+        "name" : "limitations",
+        "type" : "[input_specification_limitation]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "item_reference",
+      "plural" : "item_references",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "line_item",
+      "plural" : "line_items",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "quantity",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 1
+      }, {
+        "name" : "price",
+        "type" : "money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The price of this item for this order. If not specified, we will use the item price from the experience. Note that this price represents the price of a single line item - the total price to the consumer will be quantity * price."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to the order. It can be useful for storing additional information about the charge in a structured format."
+      }, {
+        "name" : "center",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional center key associated with this item. Used for orders and quotes to specify where to ship an item from. If not specified, Flow will infer based on inventory setup."
+      }, {
+        "name" : "discount",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total discount, if any, to apply to this line item. Note that the discount is the total discount to apply regardless of the quantity here"
+      } ],
+      "attributes" : [ ],
+      "description" : "Line items represent the items a consumer is purchasing, including additional information to complete the transaction. Note that you may pass in as many line items as you like - including repeating item numbers across line items."
+    }, {
+      "name" : "line_item_form",
+      "plural" : "line_item_forms",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "quantity",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 1
+      }, {
+        "name" : "shipment_estimate",
+        "type" : "datetime_range",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "For items that may not immediately ship out from the origin because of different models of inventory (e.g. drop-ship, sell-first), this is a way for a client to communicate when the items can ship out. This will be used to calculate delivery option windows."
+      }, {
+        "name" : "price",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The price of this item for this order. If not specified, we will use the item price from the experience"
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to the order. It can be useful for storing additional information about the charge in a structured format."
+      }, {
+        "name" : "center",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional center key associated with this item. Used for orders and quotes to specify where to ship an item from. If not specified, Flow will infer based on inventory setup."
+      }, {
+        "name" : "discount",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total discount, if any, to apply to this line item. Note that the discount is the total discount to apply regardless of the quantity here"
+      } ],
+      "attributes" : [ ],
+      "description" : "Line items represent the items a consumer is purchasing, including additional information to complete the transaction. Note that you may pass in as many line items as you like - including repeating item numbers across line items."
+    }, {
+      "name" : "margin",
+      "plural" : "margins",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "margin_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "measurement",
+      "plural" : "measurements",
+      "fields" : [ {
+        "name" : "value",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "12.23"
+      }, {
+        "name" : "units",
+        "type" : "unit_of_measurement",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "inch"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "merchant_of_record_entity",
+      "plural" : "merchant_of_record_entities",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "Flow Commerce Limited"
+      }, {
+        "name" : "vat",
+        "type" : "merchant_of_record_entity_registration",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "streets",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Street Address Lines"
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "province",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postal",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "IRL"
+      }, {
+        "name" : "phone",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Primary customer service phone number for this entity"
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Primary customer service email address for this entity"
+      } ],
+      "attributes" : [ ],
+      "description" : "The merchant of record entity provides the legal name and address of the specific Flow entity serving as merchant of record."
+    }, {
+      "name" : "merchant_of_record_entity_registration",
+      "plural" : "merchant_of_record_entity_registrations",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "In Europe, this is the VAT registration number for the entity. In the US, this is the EIN."
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The country in which this registration number is defined. The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "money",
+      "plural" : "moneys",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      } ],
+      "attributes" : [ ],
+      "description" : "Money represents an amount in a given currency"
+    }, {
+      "name" : "money_with_base",
+      "plural" : "money_with_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "money_with_optional_base",
+      "plural" : "money_with_optional_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to migrate older models to have a base value, without breaking compatibility"
+    }, {
+      "name" : "name",
+      "plural" : "names",
+      "fields" : [ {
+        "name" : "first",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "last",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "organization",
+      "plural" : "organizations",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "environment",
+        "type" : "environment",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "parent",
+        "type" : "organization_reference",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "When creating an organization in the test environment, it is linked to your production organization. This allows you to have as many test organizations as you like."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a single organization in the system, and what environment it is currently operating in."
+    }, {
+      "name" : "organization_reference",
+      "plural" : "organization_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "organization_summary",
+      "plural" : "organization_summaries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "partner_reference",
+      "plural" : "partner_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price",
+      "plural" : "prices",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents an amount-currency pair for a basic price"
+    }, {
+      "name" : "price_form",
+      "plural" : "price_forms",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      } ],
+      "attributes" : [ ],
+      "description" : "Amount-currency paid for a basic price to be used in model forms, before a price label is created. Label in the main price model is created by the implementing api."
+    }, {
+      "name" : "price_with_base",
+      "plural" : "price_with_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The localized label of the amount and currency",
+        "example" : "$125.00 CAD"
+      }, {
+        "name" : "base",
+        "type" : "price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "rounding",
+      "plural" : "roundings",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "rounding_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "method",
+        "type" : "rounding_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "schedule",
+      "plural" : "schedules",
+      "fields" : [ {
+        "name" : "calendar",
+        "type" : "calendar",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Operating calendar used by origin center for shipment, if available. If not provided, assume they are never open.",
+        "example" : "Weekdays, 7 days, etc."
+      }, {
+        "name" : "holiday",
+        "type" : "holiday_calendar",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Standard holiday set to respect for this schedule",
+        "example" : "US bank holidays"
+      }, {
+        "name" : "exception",
+        "type" : "[exception]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Holiday calendar used by origin center for shipment, if available.",
+        "example" : "Memorial Day, Independence Day, etc."
+      }, {
+        "name" : "cutoff",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Daily cutoff time for shipment fulfillment at origin center, if available. 24-hour time",
+        "example" : "16:45"
+      }, {
+        "name" : "min_lead_time",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional number of days a center takes to make a shipment"
+      }, {
+        "name" : "max_lead_time",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional number of days a center takes to make a shipment"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents operating calendar and holidays of a center"
+    }, {
+      "name" : "user",
+      "plural" : "users",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "If known, the user's primary email address. While in most common cases, we expect users to have email addresses, there are edge cases where it is useful to allow a user to NOT have an email address. For example, users interacting solely from mobile devices, guest user accounts, initial onboarding where email is not known, etc. We think by starting off with an optional primary email address we can support these use cases with very little implementation cost."
+      }, {
+        "name" : "name",
+        "type" : "name",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "The user's name."
+      }, {
+        "name" : "status",
+        "type" : "user_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Only active users are authorized to login and interact with the Flow platform.",
+        "default" : "active"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a single user in the system"
+    }, {
+      "name" : "user_reference",
+      "plural" : "user_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "zone",
+      "plural" : "zones",
+      "fields" : [ {
+        "name" : "postals",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Group of postal code prefixes included in this zone",
+        "example" : "[M9P,M9R,M9V,M9W]"
+      }, {
+        "name" : "provinces",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Group of provinces included in this zone. Values should in ISO 3166-2 province code format.",
+        "example" : "[AB, ON]"
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      } ],
+      "attributes" : [ ]
+    } ],
+    "allUnions" : [ {
+      "name" : "optin_event",
+      "plural" : "optin_events",
+      "types" : [ {
+        "type" : "checkout_optin_responses_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "checkout_optin_responses_upserted"
+      }, {
+        "type" : "checkout_optin_responses_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "checkout_optin_responses_deleted"
+      }, {
+        "type" : "browse_optin_responses_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "browse_optin_responses_upserted"
+      }, {
+        "type" : "browse_optin_responses_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "browse_optin_responses_deleted"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "expandable_organization",
+      "plural" : "expandable_organizations",
+      "types" : [ {
+        "type" : "organization",
+        "attributes" : [ ],
+        "discriminator_value" : "organization"
+      }, {
+        "type" : "organization_reference",
+        "attributes" : [ ],
+        "discriminator_value" : "organization_reference"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "expandable_user",
+      "plural" : "expandable_users",
+      "types" : [ {
+        "type" : "user",
+        "attributes" : [ ],
+        "discriminator_value" : "user"
+      }, {
+        "type" : "user_reference",
+        "attributes" : [ ],
+        "discriminator_value" : "user_reference"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "input_specification_limitation",
+      "plural" : "input_specification_limitations",
+      "types" : [ {
+        "type" : "input_specification_limitation_max",
+        "attributes" : [ ],
+        "discriminator_value" : "input_specification_limitation_max"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    } ],
+    "allEnums" : [ {
+      "name" : "optin_response_type",
+      "plural" : "optin_response_types",
+      "values" : [ {
+        "name" : "not_shown",
+        "attributes" : [ ]
+      }, {
+        "name" : "opted_in",
+        "attributes" : [ ]
+      }, {
+        "name" : "opted_out",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "attribute_data_type",
+      "plural" : "attribute_data_types",
+      "values" : [ {
+        "name" : "boolean",
+        "attributes" : [ ],
+        "description" : "Boolean true/false data type"
+      }, {
+        "name" : "decimal",
+        "attributes" : [ ],
+        "description" : "Decimal datatype without size or precision restrictions. Commonly used for currency values."
+      }, {
+        "name" : "string",
+        "attributes" : [ ],
+        "description" : "Unvalidated string of characters."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to tag attributes with a data type so they are properly validated."
+    }, {
+      "name" : "availability_status",
+      "plural" : "availability_statuses",
+      "values" : [ {
+        "name" : "enabled",
+        "attributes" : [ ]
+      }, {
+        "name" : "disabled",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "calendar",
+      "plural" : "calendars",
+      "values" : [ {
+        "name" : "weekdays",
+        "attributes" : [ ],
+        "description" : "Mon - Fri"
+      }, {
+        "name" : "everyday",
+        "attributes" : [ ],
+        "description" : "7 days per week"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "capability",
+      "plural" : "capabilities",
+      "values" : [ {
+        "name" : "crossdock",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "change_type",
+      "plural" : "change_types",
+      "values" : [ {
+        "name" : "insert",
+        "attributes" : [ ]
+      }, {
+        "name" : "update",
+        "attributes" : [ ]
+      }, {
+        "name" : "delete",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "currency_label_formatter",
+      "plural" : "currency_label_formatters",
+      "values" : [ {
+        "name" : "strip_trailing_zeros",
+        "attributes" : [ ],
+        "description" : "If a price ends in '.00' or ',00', we remove the cents and just display the price as a whole number. e.g. 'A$100.00' becomes 'A$100'"
+      } ],
+      "attributes" : [ ],
+      "description" : "A currency label formatter accepts a price label and updates it according to a set of rules."
+    }, {
+      "name" : "currency_symbol_format",
+      "plural" : "currency_symbol_formats",
+      "values" : [ {
+        "name" : "narrow",
+        "attributes" : [ ],
+        "description" : "The narrow format refers to the Unicode Common Locale Data Repository (CLDR) 'narrow' symbols (e.g. '$' for CAD and AUD)"
+      }, {
+        "name" : "primary",
+        "attributes" : [ ],
+        "description" : "The primary format refers to the Unicode Common Locale Data Repository (CLDR) 'primary' symbols (e.g. 'CA$' for CAD and 'A$' for AUD)"
+      } ],
+      "attributes" : [ ],
+      "description" : "The currency symbol format controls which set of currency symbols we use when displaying currencies"
+    }, {
+      "name" : "day_of_week",
+      "plural" : "day_of_weeks",
+      "values" : [ {
+        "name" : "sunday",
+        "attributes" : [ ]
+      }, {
+        "name" : "monday",
+        "attributes" : [ ]
+      }, {
+        "name" : "tuesday",
+        "attributes" : [ ]
+      }, {
+        "name" : "wednesday",
+        "attributes" : [ ]
+      }, {
+        "name" : "thursday",
+        "attributes" : [ ]
+      }, {
+        "name" : "friday",
+        "attributes" : [ ]
+      }, {
+        "name" : "saturday",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "delivered_duty",
+      "plural" : "delivered_duties",
+      "values" : [ {
+        "name" : "paid",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Paid (DDP). See https://en.wikipedia.org/wiki/Incoterms for more information"
+      }, {
+        "name" : "unpaid",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Unpaid (DDU). See https://en.wikipedia.org/wiki/Incoterms for more information"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "environment",
+      "plural" : "environments",
+      "values" : [ {
+        "name" : "sandbox",
+        "attributes" : [ ],
+        "description" : "In sandbox, no external services (e.g. orders, payments, logistics) will generate real transactions"
+      }, {
+        "name" : "production",
+        "attributes" : [ ],
+        "description" : "In production, all external services are live and will generate real transactions"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "exception_type",
+      "plural" : "exception_types",
+      "values" : [ {
+        "name" : "open",
+        "attributes" : [ ]
+      }, {
+        "name" : "closed",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "holiday_calendar",
+      "plural" : "holiday_calendars",
+      "values" : [ {
+        "name" : "us_bank_holidays",
+        "attributes" : [ ]
+      }, {
+        "name" : "jewish_holidays",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "included_levy_key",
+      "plural" : "included_levy_keys",
+      "values" : [ {
+        "name" : "duty",
+        "attributes" : [ ]
+      }, {
+        "name" : "vat",
+        "attributes" : [ ]
+      }, {
+        "name" : "vat_and_duty",
+        "attributes" : [ ]
+      }, {
+        "name" : "none",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The key of each possible localized price note is defined here."
+    }, {
+      "name" : "incoterm",
+      "plural" : "incoterms",
+      "values" : [ {
+        "name" : "EXW",
+        "attributes" : [ ],
+        "description" : "Ex Works (named place of delivery)"
+      }, {
+        "name" : "FCA",
+        "attributes" : [ ],
+        "description" : "Free Carrier (named place of delivery)"
+      }, {
+        "name" : "CPT",
+        "attributes" : [ ],
+        "description" : "Carriage Paid To (named place of destination)"
+      }, {
+        "name" : "CIP",
+        "attributes" : [ ],
+        "description" : "Carriage and Insurance Paid to (named place of destination)"
+      }, {
+        "name" : "DAT",
+        "attributes" : [ ],
+        "description" : "Delivered At Terminal (named terminal at port or place of destination)"
+      }, {
+        "name" : "DAP",
+        "attributes" : [ ],
+        "description" : "Delivered At Place (named place of destination)"
+      }, {
+        "name" : "DDP",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Paid (named place of destination)"
+      }, {
+        "name" : "FAS",
+        "attributes" : [ ],
+        "description" : "Free Alongside Ship (named port of shipment)"
+      }, {
+        "name" : "FOB",
+        "attributes" : [ ],
+        "description" : "Free on Board (named port of shipment)"
+      }, {
+        "name" : "CFR",
+        "attributes" : [ ],
+        "description" : "Cost and Freight (named port of destination)"
+      }, {
+        "name" : "CIF",
+        "attributes" : [ ],
+        "description" : "Cost, Insurance & Freight (named port of destination)"
+      }, {
+        "name" : "DAF",
+        "attributes" : [ ],
+        "description" : "Delivered at Frontier (named place of delivery)"
+      }, {
+        "name" : "DES",
+        "attributes" : [ ],
+        "description" : "Delivered Ex Ship"
+      }, {
+        "name" : "DEQ",
+        "attributes" : [ ],
+        "description" : "Delivered Ex Quay (named port of delivery)"
+      }, {
+        "name" : "DDU",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Unpaid (named place of destination)"
+      } ],
+      "attributes" : [ ],
+      "description" : "International Commercial Terms are a series of pre-defined commercial terms published by the International Chamber of Commerce (ICC) relating to international commercial law."
+    }, {
+      "name" : "input_specification_type",
+      "plural" : "input_specification_types",
+      "values" : [ {
+        "name" : "text",
+        "attributes" : [ ]
+      }, {
+        "name" : "number",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "margin_type",
+      "plural" : "margin_types",
+      "values" : [ {
+        "name" : "fixed",
+        "attributes" : [ ],
+        "description" : "A fixed amount to add, e.g 2.5 would add an absolute margin of 2.5 in the base currency of your item."
+      }, {
+        "name" : "percent",
+        "attributes" : [ ],
+        "description" : "A percent of the base cost to add, e.g. 1.2 would represent a 1.2% increase."
+      } ],
+      "attributes" : [ ],
+      "description" : "Either a fixed or percent adjustment applied to some amount."
+    }, {
+      "name" : "measurement_system",
+      "plural" : "measurement_systems",
+      "values" : [ {
+        "name" : "imperial",
+        "attributes" : [ ]
+      }, {
+        "name" : "metric",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "merchant_of_record",
+      "plural" : "merchant_of_records",
+      "values" : [ {
+        "name" : "flow",
+        "attributes" : [ ]
+      }, {
+        "name" : "organization",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The merchant of record enum defines who is merchant of record for a particular transaction - either Flow is serving as the merchant of record or the organization is serving as merchant of record."
+    }, {
+      "name" : "order_merchant_of_record",
+      "plural" : "order_merchant_of_records",
+      "values" : [ {
+        "name" : "flow",
+        "attributes" : [ ]
+      }, {
+        "name" : "organization",
+        "attributes" : [ ]
+      }, {
+        "name" : "mixed",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The order merchant of record defines who is merchant of record for a particular order. The value will be 'mixed' if you support split payments and the merchant of record differed across the individual payment transactions."
+    }, {
+      "name" : "price_book_status",
+      "plural" : "price_book_statuses",
+      "values" : [ {
+        "name" : "draft",
+        "attributes" : [ ]
+      }, {
+        "name" : "published",
+        "attributes" : [ ]
+      }, {
+        "name" : "archived",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "role",
+      "plural" : "roles",
+      "values" : [ {
+        "name" : "admin",
+        "attributes" : [ ]
+      }, {
+        "name" : "member",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A user's role within an organization"
+    }, {
+      "name" : "rounding_method",
+      "plural" : "rounding_methods",
+      "values" : [ {
+        "name" : "up",
+        "attributes" : [ ],
+        "description" : "Round up to the specified rounding.value"
+      }, {
+        "name" : "down",
+        "attributes" : [ ],
+        "description" : "Round down to the specified rounding.value"
+      }, {
+        "name" : "nearest",
+        "attributes" : [ ],
+        "description" : "Round to the nearest specified rounding.value. If equidistant, will round up."
+      } ],
+      "attributes" : [ ],
+      "description" : "Direction to round localized price"
+    }, {
+      "name" : "rounding_type",
+      "plural" : "rounding_types",
+      "values" : [ {
+        "name" : "pattern",
+        "attributes" : [ ],
+        "description" : "Rounds a value to an amount ending with a pattern, e.g. an amount ending in '.99'."
+      }, {
+        "name" : "multiple",
+        "attributes" : [ ],
+        "description" : "Rounds a value to an amount that is the multiple of a value, e.g. rounding to the nearest 5 would ensure that the resulting number ends in either 0 or 5."
+      } ],
+      "attributes" : [ ],
+      "description" : "Rounding type determines the rule used to enforce rounding. Common rules will ensure that the final price ends w/ a given number (e.g. ends with .95) or is a multiple of some number (multiples of 5 or 10 are common)."
+    }, {
+      "name" : "schedule_exception_status",
+      "plural" : "schedule_exception_statuses",
+      "values" : [ {
+        "name" : "Open",
+        "attributes" : [ ]
+      }, {
+        "name" : "Closed",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "sort_direction",
+      "plural" : "sort_directions",
+      "values" : [ {
+        "name" : "ascending",
+        "attributes" : [ ]
+      }, {
+        "name" : "descending",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "unit_of_measurement",
+      "plural" : "unit_of_measurements",
+      "values" : [ {
+        "name" : "millimeter",
+        "attributes" : [ ],
+        "description" : "Equivalent to MILLI(METRE)."
+      }, {
+        "name" : "centimeter",
+        "attributes" : [ ],
+        "description" : "Equivalent to CENTI(METRE)."
+      }, {
+        "name" : "inch",
+        "attributes" : [ ],
+        "description" : "A unit of length equal to 0.0254 m (standard name in)."
+      }, {
+        "name" : "foot",
+        "attributes" : [ ],
+        "description" : "A unit of length equal to 0.3048 m (standard name ft)."
+      }, {
+        "name" : "cubic_inch",
+        "attributes" : [ ],
+        "description" : "A unit of volume equal to one cubic inch (in³)."
+      }, {
+        "name" : "cubic_meter",
+        "attributes" : [ ],
+        "description" : "The metric unit for volume quantities (m³)."
+      }, {
+        "name" : "gram",
+        "attributes" : [ ],
+        "description" : "A unit of mass equal to 1 / 1000 kilogram (standard name g)."
+      }, {
+        "name" : "kilogram",
+        "attributes" : [ ],
+        "description" : "The base unit for mass quantities (kg)."
+      }, {
+        "name" : "meter",
+        "attributes" : [ ],
+        "description" : "The base unit for length quantities (m)."
+      }, {
+        "name" : "ounce",
+        "attributes" : [ ],
+        "description" : "A unit of mass equal to 1 / 16 POUND (standard name oz)."
+      }, {
+        "name" : "pound",
+        "attributes" : [ ],
+        "description" : "A unit of mass equal to 453.59237 grams (avoirdupois pound, standard name lb)."
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines the units of measurement that we support. As units are added, we conform with the standard units provided by jscience as part of JSR 363 - see http://jscience.org/api/javax/measure/unit/SI.html and http://jscience.org/api/javax/measure/unit/NonSI.html"
+    }, {
+      "name" : "unit_of_time",
+      "plural" : "unit_of_times",
+      "values" : [ {
+        "name" : "year",
+        "attributes" : [ ]
+      }, {
+        "name" : "month",
+        "attributes" : [ ]
+      }, {
+        "name" : "week",
+        "attributes" : [ ]
+      }, {
+        "name" : "day",
+        "attributes" : [ ]
+      }, {
+        "name" : "hour",
+        "attributes" : [ ]
+      }, {
+        "name" : "minute",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines the units of time that we support"
+    }, {
+      "name" : "user_status",
+      "plural" : "user_statuses",
+      "values" : [ {
+        "name" : "pending",
+        "attributes" : [ ],
+        "description" : "Represents a new user account that is pending approval"
+      }, {
+        "name" : "active",
+        "attributes" : [ ],
+        "description" : "Represents an active user account - can authenticate with this account"
+      }, {
+        "name" : "inactive",
+        "attributes" : [ ],
+        "description" : "Represents an inactive user account - can no longer authenticate with this account"
+      } ],
+      "attributes" : [ ],
+      "description" : "The status of the user account. Valid transitions are from pending -> active, active -> inactive, inactive -> active"
+    }, {
+      "name" : "value_added_service",
+      "plural" : "value_added_services",
+      "values" : [ {
+        "name" : "Hazardous Material",
+        "attributes" : [ ],
+        "description" : "See https://en.wikipedia.org/wiki/ORM-D"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "visibility",
+      "plural" : "visibilities",
+      "values" : [ {
+        "name" : "public",
+        "attributes" : [ ]
+      }, {
+        "name" : "private",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    } ]
+  }, {
     "streamName" : "production.price.event.v0.price_event.json",
     "shortName" : "price_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "price_book",
+      "typeName" : "price_book",
       "modelType" : {
         "name" : "price_book",
         "plural" : "price_books",
@@ -32681,6 +34621,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "price_book_item",
+      "typeName" : "price_book_item",
       "modelType" : {
         "name" : "price_book_item",
         "plural" : "price_book_items",
@@ -35426,6 +37367,7 @@
     "shortName" : "payment_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "authorization",
+      "typeName" : "card_authorization",
       "modelType" : {
         "name" : "card_authorization",
         "plural" : "card_authorizations",
@@ -35562,6 +37504,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "authorization",
+      "typeName" : "online_authorization",
       "modelType" : {
         "name" : "online_authorization",
         "plural" : "online_authorizations",
@@ -35707,6 +37650,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "capture",
+      "typeName" : "capture",
       "modelType" : {
         "name" : "capture",
         "plural" : "captures",
@@ -35788,6 +37732,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "card",
+      "typeName" : "card",
       "modelType" : {
         "name" : "card",
         "plural" : "cards",
@@ -35853,6 +37798,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "reversal",
+      "typeName" : "reversal",
       "modelType" : {
         "name" : "reversal",
         "plural" : "reversals",
@@ -35933,6 +37879,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "identifier",
+      "typeName" : "capture_identifier",
       "modelType" : {
         "name" : "capture_identifier",
         "plural" : "capture_identifiers",
@@ -35968,6 +37915,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "identifier",
+      "typeName" : "refund_identifier",
       "modelType" : {
         "name" : "refund_identifier",
         "plural" : "refund_identifiers",
@@ -36003,6 +37951,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "capture",
+      "typeName" : "virtual_card_capture",
       "modelType" : {
         "name" : "virtual_card_capture",
         "plural" : "virtual_card_captures",
@@ -36061,6 +38010,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "refund",
+      "typeName" : "virtual_card_refund",
       "modelType" : {
         "name" : "virtual_card_refund",
         "plural" : "virtual_card_refunds",
@@ -42727,6 +44677,7 @@
     "shortName" : "organization_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "membership",
+      "typeName" : "membership",
       "modelType" : {
         "name" : "membership",
         "plural" : "memberships",
@@ -42763,6 +44714,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "organization",
+      "typeName" : "organization",
       "modelType" : {
         "name" : "organization",
         "plural" : "organizations",
@@ -42800,6 +44752,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "organization_short_id",
+      "typeName" : "organization_short_id",
       "modelType" : {
         "name" : "organization_short_id",
         "plural" : "organization_short_ids",
@@ -45811,6 +47764,7 @@
     "shortName" : "experience_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "allocation",
+      "typeName" : "allocation",
       "modelType" : {
         "name" : "allocation_v2",
         "plural" : "allocation_v2s",
@@ -45846,6 +47800,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "experience",
+      "typeName" : "experience",
       "modelType" : {
         "name" : "experience",
         "plural" : "experiences",
@@ -45948,6 +47903,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "experience_price_book_mapping",
+      "typeName" : "experience_price_book_mapping",
       "modelType" : {
         "name" : "experience_price_book_mapping",
         "plural" : "experience_price_book_mappings",
@@ -45985,6 +47941,7 @@
       "deletedHasModel" : false
     }, {
       "fieldName" : "logistics_settings",
+      "typeName" : "experience_logistics_settings",
       "modelType" : {
         "name" : "experience_logistics_settings",
         "plural" : "experience_logistics_settings",
@@ -46014,6 +47971,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "order",
+      "typeName" : "order",
       "modelType" : {
         "name" : "order",
         "plural" : "orders",
@@ -63247,6 +65205,7 @@
     "shortName" : "inventory_event_v0",
     "capturedEvents" : [ {
       "fieldName" : "experience_inventory_item",
+      "typeName" : "experience_inventory_item",
       "modelType" : {
         "name" : "experience_inventory_item",
         "plural" : "experience_inventory_items",
@@ -63283,6 +65242,7 @@
       "deletedHasModel" : true
     }, {
       "fieldName" : "serial",
+      "typeName" : "serial",
       "modelType" : {
         "name" : "serial",
         "plural" : "serials",
