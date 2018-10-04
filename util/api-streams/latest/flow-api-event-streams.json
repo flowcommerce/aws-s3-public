@@ -33790,6 +33790,96 @@
       "deletedDiscriminator" : "card_deleted",
       "deletedHasModel" : false
     }, {
+      "fieldName" : "refund",
+      "typeName" : "refund",
+      "modelType" : {
+        "name" : "refund",
+        "plural" : "refunds",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "key",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "authorization",
+          "type" : "authorization_reference",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "amount",
+          "type" : "decimal",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The amount to refund in the currency of the associated capture",
+          "example" : "120.38"
+        }, {
+          "name" : "currency",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The ISO 4217-3 code for the currency. Case insensitive. See https://api.flow.io/reference/currencies",
+          "example" : "CAD"
+        }, {
+          "name" : "requested",
+          "type" : "io.flow.common.v0.models.money",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The amount/currency of the request to refund."
+        }, {
+          "name" : "captures",
+          "type" : "[refund_capture_summary]",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The specific captures and the amounts refunded against each to match the total refund amount.",
+          "minimum" : 1
+        }, {
+          "name" : "created_at",
+          "type" : "date-time-iso8601",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "attributes",
+          "type" : "map[string]",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "A set of key/value pairs that you can attach to a refund object"
+        }, {
+          "name" : "status",
+          "type" : "refund_status",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "Indicates the status of the refund.",
+          "default" : "succeeded"
+        }, {
+          "name" : "base",
+          "type" : "io.flow.common.v0.models.money",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The amount/currency of the refund in base currency. Added in Summer 2018 and always present since then."
+        } ],
+        "attributes" : [ ],
+        "description" : "Refunds can be created against either a specific capture or an authorization (in which case we will select 1 or more specific captures against which to execute the refund)."
+      },
+      "upsertedDiscriminator" : "refund_upserted_v2",
+      "deletedDiscriminator" : "refund_deleted_v2",
+      "deletedHasModel" : true
+    }, {
       "fieldName" : "reversal",
       "typeName" : "reversal",
       "modelType" : {
@@ -34565,6 +34655,35 @@
       }, {
         "name" : "refund_capture",
         "type" : "io.flow.payment.v0.models.refund_capture",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "refund_deleted_v2",
+      "plural" : "refund_deleted_v2s",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "refund",
+        "type" : "io.flow.payment.v0.models.refund",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
@@ -39461,6 +39580,10 @@
         "type" : "refund_upserted_v2",
         "attributes" : [ ],
         "discriminator_value" : "refund_upserted_v2"
+      }, {
+        "type" : "refund_deleted_v2",
+        "attributes" : [ ],
+        "discriminator_value" : "refund_deleted_v2"
       }, {
         "type" : "refund_capture_upserted_v2",
         "attributes" : [ ],
