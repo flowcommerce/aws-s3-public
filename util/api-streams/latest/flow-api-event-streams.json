@@ -23426,6 +23426,35 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "catalog_item_deleted_v2",
+      "plural" : "catalog_item_deleted_v2s",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.catalog.v0.models.item",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "catalog_item_upserted",
       "plural" : "catalog_item_upserteds",
       "fields" : [ {
@@ -23510,6 +23539,35 @@
       }, {
         "name" : "images",
         "type" : "[object]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_item_upserted_v2",
+      "plural" : "catalog_item_upserted_v2s",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.catalog.v0.models.item",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
