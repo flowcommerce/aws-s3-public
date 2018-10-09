@@ -41022,8 +41022,8 @@
         "description" : "Represents the users that are part of this organization. Primary purpose is to manage which users have access to the organization's data and to provide a simple user interface to assign roles and permissions to each member of the organization"
       },
       "upsertedDiscriminator" : "membership_upserted_v2",
-      "deletedDiscriminator" : "membership_deleted",
-      "deletedHasModel" : false
+      "deletedDiscriminator" : "membership_deleted_v2",
+      "deletedHasModel" : true
     }, {
       "fieldName" : "organization",
       "typeName" : "organization",
@@ -41102,29 +41102,6 @@
       "deletedHasModel" : true
     } ],
     "allModels" : [ {
-      "name" : "membership_deleted",
-      "plural" : "membership_deleteds",
-      "fields" : [ {
-        "name" : "event_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "membership_deleted_v2",
       "plural" : "membership_deleted_v2s",
       "fields" : [ {
@@ -41145,47 +41122,6 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "membership_upserted",
-      "plural" : "membership_upserteds",
-      "fields" : [ {
-        "name" : "event_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "organization",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "user_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ "personal_data" ]
-      }, {
-        "name" : "role",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ "personal_data" ]
       } ],
       "attributes" : [ ]
     }, {
@@ -43750,14 +43686,6 @@
       "name" : "organization_event",
       "plural" : "organization_events",
       "types" : [ {
-        "type" : "membership_upserted",
-        "attributes" : [ ],
-        "discriminator_value" : "membership_upserted"
-      }, {
-        "type" : "membership_deleted",
-        "attributes" : [ ],
-        "discriminator_value" : "membership_deleted"
-      }, {
         "type" : "membership_upserted_v2",
         "attributes" : [ ],
         "discriminator_value" : "membership_upserted_v2"
@@ -44395,10 +44323,6 @@
         "name" : "membership_manager",
         "attributes" : [ ],
         "description" : "Can invite new users to the org."
-      }, {
-        "name" : "flow_operations",
-        "attributes" : [ ],
-        "description" : "User works at Flow and can perform additional backend functions for an organization."
       } ],
       "attributes" : [ ],
       "description" : "Default addon roles supported by Flow. These roles don't provide enough access to be useful on their own but convey additional responsibility to user roles."
@@ -44427,10 +44351,6 @@
         "name" : "organization_operations",
         "attributes" : [ ],
         "description" : "Can access customer service functions and retreive relevant data."
-      }, {
-        "name" : "partner_operations",
-        "attributes" : [ ],
-        "description" : "Can operate a partner (distribution center) account with Flow."
       } ],
       "attributes" : [ ],
       "description" : "Default user roles supported by Flow"

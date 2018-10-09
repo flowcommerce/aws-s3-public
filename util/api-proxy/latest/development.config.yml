@@ -505,9 +505,6 @@ operations:
     path: /permission/organization/:organization/roles
     server: permission
   - method: GET
-    path: /permission/partners/:partner/roles
-    server: permission
-  - method: GET
     path: /permission/audits
     server: permission
   - method: GET
