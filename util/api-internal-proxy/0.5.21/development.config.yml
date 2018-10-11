@@ -454,13 +454,13 @@ operations:
     path: /:organization/marketing/:platform
     server: marketing-gateway
   - method: POST
-    path: /:organization/marketing/:platform/:marketing_account_id
+    path: /:organization/marketing/:platform/:marketing_account_id/:existing_market_id
     server: marketing-gateway
   - method: PUT
-    path: /:organization/marketing/:platform/:marketing_account_id/:configured_market_id
+    path: /:organization/marketing/:platform/:marketing_account_id/:existing_market_id/:configured_market_id
     server: marketing-gateway
   - method: DELETE
-    path: /:organization/marketing/:platform/:marketing_account_id/:configured_market_id
+    path: /:organization/marketing/:platform/:marketing_account_id/:existing_market_id/:configured_market_id
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/:platform/markets

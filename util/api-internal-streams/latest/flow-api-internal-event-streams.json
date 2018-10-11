@@ -16199,17 +16199,11 @@
         "annotations" : [ ]
       }, {
         "name" : "cost",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
-      }, {
-        "name" : "cost_details",
-        "type" : "[delivery_option_cost_detail]",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
@@ -16218,7 +16212,7 @@
         "annotations" : [ ]
       }, {
         "name" : "price",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -16871,6 +16865,45 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents a collection of items, the available delivery option tier for that collection of items, and metadata about those options"
+    }, {
+      "name" : "price_with_base_and_details",
+      "plural" : "price_with_base_and_detailses",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The localized label of the amount and currency",
+        "example" : "$125.00 CAD"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "processing_estimate",
       "plural" : "processing_estimates",
@@ -28230,6 +28263,64 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "discount_request_form",
+      "plural" : "discount_request_forms",
+      "fields" : [ {
+        "name" : "order_form",
+        "type" : "discount_request_order_form",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "discount_request_offer_fixed_amount_form",
+      "plural" : "discount_request_offer_fixed_amount_forms",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "USD"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "discount_request_order_entitlement_form",
+      "plural" : "discount_request_order_entitlement_forms",
+      "fields" : [ {
+        "name" : "entitlement_key",
+        "type" : "discount_request_order_entitlement_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "offer_form",
+        "type" : "discount_request_offer_form",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "discount_request_order_form",
+      "plural" : "discount_request_order_forms",
+      "fields" : [ {
+        "name" : "order_entitlement_forms",
+        "type" : "[discount_request_order_entitlement_form]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "email_modification_form",
       "plural" : "email_modification_forms",
       "fields" : [ {
@@ -33557,17 +33648,11 @@
         "annotations" : [ ]
       }, {
         "name" : "cost",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
-      }, {
-        "name" : "cost_details",
-        "type" : "[delivery_option_cost_detail]",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
@@ -33576,7 +33661,7 @@
         "annotations" : [ ]
       }, {
         "name" : "price",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -34229,6 +34314,45 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents a collection of items, the available delivery option tier for that collection of items, and metadata about those options"
+    }, {
+      "name" : "price_with_base_and_details",
+      "plural" : "price_with_base_and_detailses",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The localized label of the amount and currency",
+        "example" : "$125.00 CAD"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "processing_estimate",
       "plural" : "processing_estimates",
@@ -38691,6 +38815,16 @@
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
+      "name" : "discount_request_offer_form",
+      "plural" : "discount_request_offer_forms",
+      "types" : [ {
+        "type" : "discount_request_offer_fixed_amount_form",
+        "attributes" : [ ],
+        "discriminator_value" : "discount_request_offer_fixed_amount_form"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
       "name" : "inventory_strategy",
       "plural" : "inventory_strategies",
       "types" : [ {
@@ -39999,6 +40133,14 @@
       "plural" : "delivered_duty_option_message_types",
       "values" : [ {
         "name" : "warning",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "discount_request_order_entitlement_key",
+      "plural" : "discount_request_order_entitlement_keys",
+      "values" : [ {
+        "name" : "subtotal",
         "attributes" : [ ]
       } ],
       "attributes" : [ ]
@@ -60659,17 +60801,11 @@
         "annotations" : [ ]
       }, {
         "name" : "cost",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
-      }, {
-        "name" : "cost_details",
-        "type" : "[delivery_option_cost_detail]",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
@@ -60678,7 +60814,7 @@
         "annotations" : [ ]
       }, {
         "name" : "price",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -61331,6 +61467,45 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents a collection of items, the available delivery option tier for that collection of items, and metadata about those options"
+    }, {
+      "name" : "price_with_base_and_details",
+      "plural" : "price_with_base_and_detailses",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The localized label of the amount and currency",
+        "example" : "$125.00 CAD"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "processing_estimate",
       "plural" : "processing_estimates",
@@ -79385,17 +79560,11 @@
         "annotations" : [ ]
       }, {
         "name" : "cost",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
-      }, {
-        "name" : "cost_details",
-        "type" : "[delivery_option_cost_detail]",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
@@ -79404,7 +79573,7 @@
         "annotations" : [ ]
       }, {
         "name" : "price",
-        "type" : "io.flow.common.v0.models.price_with_base",
+        "type" : "price_with_base_and_details",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -80057,6 +80226,45 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents a collection of items, the available delivery option tier for that collection of items, and metadata about those options"
+    }, {
+      "name" : "price_with_base_and_details",
+      "plural" : "price_with_base_and_detailses",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The localized label of the amount and currency",
+        "example" : "$125.00 CAD"
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "processing_estimate",
       "plural" : "processing_estimates",
