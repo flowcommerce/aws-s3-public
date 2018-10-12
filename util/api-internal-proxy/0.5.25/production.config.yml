@@ -526,7 +526,10 @@ operations:
     path: /:organization/experiment/:key/results/cumulative
     server: experiment-internal
   - method: GET
-    path: /permission/checks
+    path: /permission/audits
+    server: permission-internal
+  - method: GET
+    path: /:organization/permission/checks
     server: permission-internal
   - method: GET
     path: /internal/bank/payments
