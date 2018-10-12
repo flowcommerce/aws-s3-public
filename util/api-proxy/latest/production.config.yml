@@ -508,10 +508,10 @@ operations:
     path: /:organization/permission/audits
     server: permission
   - method: GET
-    path: /permission_checks/permission/checks/all
+    path: /permission/checks/all
     server: permission
   - method: GET
-    path: /permission_checks/:organization/permission/checks/all
+    path: /:organization/permission/checks/all
     server: permission
   - method: GET
     path: /checkout/tokens/:id
