@@ -472,10 +472,10 @@ operations:
     path: /:organization/marketing/:platform/:marketing_account_id/:existing_market_id/:configured_market_id
     server: marketing-gateway
   - method: GET
-    path: /:organization/marketing/:platform/markets
+    path: /:organization/marketing/:platform/localizations
     server: marketing-gateway
   - method: GET
-    path: /:organization/marketing/:platform/localizations
+    path: /:organization/marketing/:platform/markets
     server: marketing-gateway
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id

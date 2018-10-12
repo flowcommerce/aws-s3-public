@@ -16205,6 +16205,15 @@
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
       }, {
+        "name" : "cost_details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "deprecation" : {
+          "description" : "Moved to cost"
+        }
+      }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
         "required" : true,
@@ -33686,6 +33695,15 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
+      }, {
+        "name" : "cost_details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "deprecation" : {
+          "description" : "Moved to cost"
+        }
       }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
@@ -60862,6 +60880,15 @@
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
       }, {
+        "name" : "cost_details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "deprecation" : {
+          "description" : "Moved to cost"
+        }
+      }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
         "required" : true,
@@ -79642,6 +79669,15 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Sum of all cost details, including actual shipping cost and any fees levied by partner center or shipping carrier."
+      }, {
+        "name" : "cost_details",
+        "type" : "[delivery_option_cost_detail]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "deprecation" : {
+          "description" : "Moved to cost"
+        }
       }, {
         "name" : "delivered_duty",
         "type" : "io.flow.common.v0.enums.delivered_duty",
