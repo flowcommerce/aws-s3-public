@@ -3,58 +3,58 @@ version: 0.6.71
 servers:
   - name: consumer-invoice
     host: https://order-messenger.api.flow.io
-  - name: reference
-    host: https://reference.api.flow.io
-  - name: search
-    host: https://search.api.flow.io
-  - name: link
-    host: https://link.api.flow.io
-  - name: catalog
-    host: https://catalog.api.flow.io
-  - name: checkout
-    host: https://experience.api.flow.io
+  - name: shopify-session
+    host: https://session.api.flow.io
   - name: session
     host: https://session.api.flow.io
-  - name: fraud
-    host: https://fraud.api.flow.io
-  - name: label
-    host: https://label.api.flow.io
+  - name: harmonization
+    host: https://harmonization.api.flow.io
   - name: fulfillment
     host: https://fulfillment.api.flow.io
-  - name: inventory
-    host: https://inventory.api.flow.io
+  - name: return
+    host: https://return.api.flow.io
+  - name: token
+    host: https://token.api.flow.io
+  - name: search
+    host: https://search.api.flow.io
+  - name: webhook
+    host: https://webhook.api.flow.io
+  - name: order-management
+    host: https://order-management.api.flow.io
   - name: location
     host: https://location.api.flow.io
-  - name: tracking
-    host: https://tracking.api.flow.io
+  - name: currency
+    host: https://currency.api.flow.io
+  - name: permission
+    host: https://organization.api.flow.io
+  - name: checkout
+    host: https://experience.api.flow.io
   - name: experience
     host: https://experience.api.flow.io
+  - name: reference
+    host: https://reference.api.flow.io
+  - name: user
+    host: https://user.api.flow.io
+  - name: organization
+    host: https://organization.api.flow.io
   - name: payment
     host: https://payment.api.flow.io
   - name: shopify
     host: https://shopify.api.flow.io
+  - name: inventory
+    host: https://inventory.api.flow.io
+  - name: tracking
+    host: https://tracking.api.flow.io
+  - name: fraud
+    host: https://fraud.api.flow.io
+  - name: catalog
+    host: https://catalog.api.flow.io
+  - name: link
+    host: https://link.api.flow.io
+  - name: label
+    host: https://label.api.flow.io
   - name: feed
     host: https://feed.api.flow.io
-  - name: token
-    host: https://token.api.flow.io
-  - name: harmonization
-    host: https://harmonization.api.flow.io
-  - name: user
-    host: https://user.api.flow.io
-  - name: shopify-session
-    host: https://session.api.flow.io
-  - name: order-management
-    host: https://order-management.api.flow.io
-  - name: webhook
-    host: https://webhook.api.flow.io
-  - name: organization
-    host: https://organization.api.flow.io
-  - name: permission
-    host: https://organization.api.flow.io
-  - name: currency
-    host: https://currency.api.flow.io
-  - name: return
-    host: https://return.api.flow.io
 
 operations:
   - method: GET
@@ -85,335 +85,26 @@ operations:
     path: /consumer/invoice/document/tokens/:token/type/:type
     server: consumer-invoice
   - method: GET
-    path: /reference/countries
-    server: reference
-  - method: GET
-    path: /reference/currencies
-    server: reference
-  - method: GET
-    path: /reference/languages
-    server: reference
-  - method: GET
-    path: /reference/locales
-    server: reference
-  - method: GET
-    path: /reference/locales/:id
-    server: reference
-  - method: GET
-    path: /reference/payment-methods
-    server: reference
-  - method: GET
-    path: /reference/provinces
-    server: reference
-  - method: GET
-    path: /reference/provinces/:id
-    server: reference
-  - method: GET
-    path: /reference/regions
-    server: reference
-  - method: GET
-    path: /reference/regions/:id
-    server: reference
-  - method: GET
-    path: /reference/timezones
-    server: reference
-  - method: GET
-    path: /:organization/search/catalog
-    server: search
-  - method: GET
-    path: /:organization/search/harmonization
-    server: search
-  - method: GET
-    path: /:organization/exports
-    server: search
-  - method: GET
-    path: /:organization/exports/versions
-    server: search
-  - method: GET
-    path: /:organization/exports/:id
-    server: search
+    path: /sessions/shopify/:session
+    server: shopify-session
   - method: POST
-    path: /:organization/exports
-    server: search
-  - method: DELETE
-    path: /:organization/exports/:id
-    server: search
-  - method: GET
-    path: /users/scheduled/exports
-    server: search
-  - method: GET
-    path: /users/scheduled/exports/:id
-    server: search
-  - method: POST
-    path: /users/scheduled/exports
-    server: search
+    path: /sessions/shopify/organizations/:organization
+    server: shopify-session
   - method: PUT
-    path: /users/scheduled/exports/:id
-    server: search
-  - method: DELETE
-    path: /users/scheduled/exports/:id
-    server: search
-  - method: GET
-    path: /:organization/imports
-    server: search
-  - method: GET
-    path: /:organization/imports/versions
-    server: search
-  - method: GET
-    path: /:organization/imports/:id
-    server: search
-  - method: POST
-    path: /:organization/imports
-    server: search
-  - method: DELETE
-    path: /:organization/imports/:id
-    server: search
-  - method: GET
-    path: /:organization/import/templates
-    server: search
-  - method: POST
-    path: /:organization/import/templates
-    server: search
-  - method: GET
-    path: /:organization/search/item/query/suggestions
-    server: search
-  - method: GET
-    path: /:organization/suggestion/catalog
-    server: search
-  - method: POST
-    path: /:organization/uploads/:name
-    server: search
-  - method: GET
-    path: /carrier/:carrier/data/:organization/:order_number
-    server: link
-  - method: GET
-    path: /:organization/attributes/versions
-    server: catalog
-  - method: GET
-    path: /:organization/attributes
-    server: catalog
-  - method: GET
-    path: /:organization/attributes/:key
-    server: catalog
-  - method: POST
-    path: /:organization/attributes
-    server: catalog
+    path: /sessions/shopify/:session/organizations/:organization
+    server: shopify-session
   - method: PUT
-    path: /:organization/attributes/:key
-    server: catalog
-  - method: DELETE
-    path: /:organization/attributes/:key
-    server: catalog
-  - method: GET
-    path: /:organization/catalog
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/statistics
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/restrictions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/restrictions/:number
-    server: catalog
+    path: /sessions/shopify/:session
+    server: shopify-session
   - method: PUT
-    path: /:organization/catalog/restrictions/:number
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/restrictions/:number
-    server: catalog
-  - method: GET
-    path: /:organization/price/books
-    server: catalog
-  - method: GET
-    path: /:organization/price/books/:key
-    server: catalog
-  - method: POST
-    path: /:organization/price/books
-    server: catalog
+    path: /sessions/shopify/:session/reset
+    server: shopify-session
   - method: PUT
-    path: /:organization/price/books/:key
-    server: catalog
+    path: /sessions/shopify/:session/clear
+    server: shopify-session
   - method: DELETE
-    path: /:organization/price/books/:key
-    server: catalog
-  - method: GET
-    path: /:organization/price/books/:price_book_key/items
-    server: catalog
-  - method: GET
-    path: /:organization/price/books/:price_book_key/items/:key
-    server: catalog
-  - method: POST
-    path: /:organization/price/books/:price_book_key/items
-    server: catalog
-  - method: PUT
-    path: /:organization/price/books/:price_book_key/items/:key
-    server: catalog
-  - method: DELETE
-    path: /:organization/price/books/:price_book_key/items/:key
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/items/versions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/items
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/items/:number
-    server: catalog
-  - method: POST
-    path: /:organization/catalog/items
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/items/:number
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/items/:number/price
-    server: catalog
-  - method: PATCH
-    path: /:organization/catalog/items/:number/attributes
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/items/:number
-    server: catalog
-  - method: GET
-    path: /:organization/item-functions/versions
-    server: catalog
-  - method: GET
-    path: /:organization/item-functions
-    server: catalog
-  - method: GET
-    path: /:organization/item-functions/:key
-    server: catalog
-  - method: POST
-    path: /:organization/item-functions
-    server: catalog
-  - method: PUT
-    path: /:organization/item-functions/:key
-    server: catalog
-  - method: DELETE
-    path: /:organization/item-functions/:key
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries/:id
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number
-    server: catalog
-  - method: POST
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries/:id
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/statistics
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/versions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:id
-    server: catalog
-  - method: POST
-    path: /:organization/catalog/subcatalogs
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/subcatalogs/:id
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/subcatalogs/:id
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:id/settings
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/subcatalogs/:id/settings
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/versions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/:id
-    server: catalog
-  - method: POST
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/:id
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/items/versions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/items
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/items/:number
-    server: catalog
-  - method: POST
-    path: /:organization/query/validations
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/targetings/versions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/targetings
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/targetings/:key
-    server: catalog
-  - method: POST
-    path: /:organization/catalog/targetings
-    server: catalog
-  - method: PUT
-    path: /:organization/catalog/targetings/:key
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/targetings/:key
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/targeting-items
-    server: catalog
-  - method: GET
-    path: /checkout/tokens/:id
-    server: checkout
-  - method: DELETE
-    path: /checkout/tokens/:id
-    server: checkout
-  - method: POST
-    path: /:organization/checkout/tokens
-    server: checkout
+    path: /sessions/shopify/:session
+    server: shopify-session
   - method: GET
     path: /sessions/:session
     server: session
@@ -439,53 +130,83 @@ operations:
     path: /authorizations/sessions
     server: session
   - method: GET
-    path: /:organization/orders/:number/status/fraud
-    server: fraud
-  - method: POST
-    path: /:organization/orders/:number/labels
-    server: label
-  - method: GET
-    path: /:organization/manifests/services/:service/outstanding
-    server: label
-  - method: POST
-    path: /:organization/manifests
-    server: label
-  - method: GET
-    path: /:organization/manifests
-    server: label
-  - method: GET
-    path: /:organization/manifests/:id
-    server: label
-  - method: GET
-    path: /:organization/shipping_labels/versions
-    server: label
-  - method: GET
-    path: /:organization/shipping_labels
-    server: label
-  - method: GET
-    path: /:organization/shipping_labels/:id
-    server: label
-  - method: POST
-    path: /:organization/shipping_labels
-    server: label
-  - method: GET
-    path: /:organization/shipping-notifications/versions
-    server: label
-  - method: GET
-    path: /:organization/shipping-notifications
-    server: label
-  - method: GET
-    path: /:organization/shipping-notifications/:key
-    server: label
-  - method: POST
-    path: /:organization/shipping-notifications
-    server: label
+    path: /:organization/harmonization/settings
+    server: harmonization
   - method: PUT
-    path: /:organization/shipping-notifications/:key
-    server: label
+    path: /:organization/harmonization/settings
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/categories
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/items
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/items/versions
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/items/:number
+    server: harmonization
+  - method: POST
+    path: /:organization/harmonization/items
+    server: harmonization
+  - method: PUT
+    path: /:organization/harmonization/items/:number
+    server: harmonization
   - method: DELETE
-    path: /:organization/shipping-notifications/:key
-    server: label
+    path: /:organization/harmonization/items/:number
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/item-duties
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/item-duties/versions
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/item-duties/:id
+    server: harmonization
+  - method: POST
+    path: /:organization/harmonization/item-duties
+    server: harmonization
+  - method: DELETE
+    path: /:organization/harmonization/item-duties/:id
+    server: harmonization
+  - method: POST
+    path: /:organization/harmonization/landed-costs
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/hs10
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/hs10/versions
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/hs6
+    server: harmonization
+  - method: GET
+    path: /:organization/harmonization/hs6/versions
+    server: harmonization
+  - method: GET
+    path: /harmonization/codes
+    server: harmonization
+  - method: GET
+    path: /harmonization/codes/:code
+    server: harmonization
+  - method: GET
+    path: /harmonization/tariff-codes/:destination
+    server: harmonization
+  - method: GET
+    path: /harmonization/tariff-codes/:destination/:code
+    server: harmonization
+  - method: POST
+    path: /:organization/tax/registrations
+    server: harmonization
+  - method: PUT
+    path: /:organization/tax/registrations/:key
+    server: harmonization
+  - method: DELETE
+    path: /:organization/tax/registrations/:key
+    server: harmonization
   - method: GET
     path: /:organization/centers/versions
     server: fulfillment
@@ -589,56 +310,158 @@ operations:
     path: /:organization/tiers/:tier_id/rules/:id
     server: fulfillment
   - method: GET
-    path: /:organization/inventory_rules/versions
-    server: inventory
+    path: /:organization/returns/versions
+    server: return
   - method: GET
-    path: /:organization/inventory_rules
-    server: inventory
+    path: /:organization/returns
+    server: return
+  - method: GET
+    path: /:organization/returns/:key
+    server: return
   - method: POST
-    path: /:organization/inventory_rules
-    server: inventory
-  - method: GET
-    path: /:organization/inventory_snapshots/versions
-    server: inventory
-  - method: GET
-    path: /:organization/inventory_snapshots
-    server: inventory
-  - method: GET
-    path: /:organization/inventory_snapshots/:id
-    server: inventory
-  - method: GET
-    path: /:organization/inventory_updates/versions
-    server: inventory
-  - method: GET
-    path: /:organization/inventory_updates
-    server: inventory
-  - method: GET
-    path: /:organization/inventory_updates/:id
-    server: inventory
-  - method: POST
-    path: /:organization/inventory_updates
-    server: inventory
-  - method: GET
-    path: /:organization/inventory/serials/versions
-    server: inventory
-  - method: GET
-    path: /:organization/inventory/serials
-    server: inventory
-  - method: GET
-    path: /:organization/inventory/serials/:number
-    server: inventory
-  - method: POST
-    path: /:organization/inventory/serials
-    server: inventory
+    path: /:organization/returns
+    server: return
   - method: PUT
-    path: /:organization/inventory/serials/:number
-    server: inventory
+    path: /:organization/returns/:key
+    server: return
   - method: DELETE
-    path: /:organization/inventory/serials/:number
-    server: inventory
+    path: /:organization/returns/:key
+    server: return
   - method: GET
-    path: /:organization/inventory/serials/prices/:aggregate
-    server: inventory
+    path: /:organization/tokens
+    server: token
+  - method: POST
+    path: /:organization/tokens
+    server: token
+  - method: GET
+    path: /partners/:partner/tokens
+    server: token
+  - method: POST
+    path: /partners/:partner/tokens
+    server: token
+  - method: GET
+    path: /tokens
+    server: token
+  - method: GET
+    path: /tokens/:id
+    server: token
+  - method: GET
+    path: /tokens/:id/cleartext
+    server: token
+  - method: POST
+    path: /tokens/authentications
+    server: token
+  - method: DELETE
+    path: /tokens/:id
+    server: token
+  - method: POST
+    path: /token-validations
+    server: token
+  - method: GET
+    path: /:organization/search/catalog
+    server: search
+  - method: GET
+    path: /:organization/search/harmonization
+    server: search
+  - method: GET
+    path: /:organization/exports
+    server: search
+  - method: GET
+    path: /:organization/exports/versions
+    server: search
+  - method: GET
+    path: /:organization/exports/:id
+    server: search
+  - method: POST
+    path: /:organization/exports
+    server: search
+  - method: DELETE
+    path: /:organization/exports/:id
+    server: search
+  - method: GET
+    path: /users/scheduled/exports
+    server: search
+  - method: GET
+    path: /users/scheduled/exports/:id
+    server: search
+  - method: POST
+    path: /users/scheduled/exports
+    server: search
+  - method: PUT
+    path: /users/scheduled/exports/:id
+    server: search
+  - method: DELETE
+    path: /users/scheduled/exports/:id
+    server: search
+  - method: GET
+    path: /:organization/imports
+    server: search
+  - method: GET
+    path: /:organization/imports/versions
+    server: search
+  - method: GET
+    path: /:organization/imports/:id
+    server: search
+  - method: POST
+    path: /:organization/imports
+    server: search
+  - method: DELETE
+    path: /:organization/imports/:id
+    server: search
+  - method: GET
+    path: /:organization/import/templates
+    server: search
+  - method: POST
+    path: /:organization/import/templates
+    server: search
+  - method: GET
+    path: /:organization/search/item/query/suggestions
+    server: search
+  - method: GET
+    path: /:organization/suggestion/catalog
+    server: search
+  - method: POST
+    path: /:organization/uploads/:name
+    server: search
+  - method: GET
+    path: /:organization/webhooks
+    server: webhook
+  - method: GET
+    path: /:organization/webhooks/:id
+    server: webhook
+  - method: POST
+    path: /:organization/webhooks
+    server: webhook
+  - method: PUT
+    path: /:organization/webhooks/:id
+    server: webhook
+  - method: DELETE
+    path: /:organization/webhooks/:id
+    server: webhook
+  - method: GET
+    path: /:organization/webhook/deliveries
+    server: webhook
+  - method: GET
+    path: /:organization/webhook/deliveries/:id
+    server: webhook
+  - method: POST
+    path: /:organization/webhook/deliveries/:id/requests
+    server: webhook
+  - method: GET
+    path: /:organization/webhook/settings
+    server: webhook
+  - method: PUT
+    path: /:organization/webhook/settings
+    server: webhook
+  - method: GET
+    path: /:organization/orders/:number/fulfillments
+    server: order-management
+  - method: PUT
+    path: /:organization/orders/:number/fulfillments/cancellations
+    server: order-management
+  - method: PUT
+    path: /:organization/orders/:number/fulfillments/complete/cancellations
+    server: order-management
   - method: GET
     path: /geolocation/defaults
     server: location
@@ -655,38 +478,44 @@ operations:
     path: /geolocation/timezones
     server: location
   - method: GET
-    path: /trackings/:id
-    server: tracking
+    path: /:organization/currency/settings
+    server: currency
   - method: GET
-    path: /:organization/trackings/versions
-    server: tracking
+    path: /:organization/currency/settings/versions
+    server: currency
   - method: GET
-    path: /:organization/trackings
-    server: tracking
+    path: /:organization/currency/settings/:id
+    server: currency
   - method: POST
-    path: /:organization/trackings
-    server: tracking
+    path: /:organization/currency/settings
+    server: currency
+  - method: PUT
+    path: /:organization/currency/settings/:id
+    server: currency
+  - method: DELETE
+    path: /:organization/currency/settings/:id
+    server: currency
   - method: GET
-    path: /:organization/tracking-events/versions
-    server: tracking
+    path: /:organization/currency/rates
+    server: currency
   - method: GET
-    path: /:organization/tracking-events
-    server: tracking
+    path: /:organization/currency/rates/versions
+    server: currency
   - method: GET
-    path: /:organization/tracking-events/:id
-    server: tracking
+    path: /permission/organization/:organization/roles
+    server: permission
   - method: GET
-    path: /:organization/tracking-labels/versions
-    server: tracking
+    path: /:organization/permission/checks/all
+    server: permission
   - method: GET
-    path: /:organization/tracking-labels
-    server: tracking
-  - method: GET
-    path: /:organization/tracking-labels/:id
-    server: tracking
+    path: /checkout/tokens/:id
+    server: checkout
+  - method: DELETE
+    path: /checkout/tokens/:id
+    server: checkout
   - method: POST
-    path: /:organization/tracking-labels
-    server: tracking
+    path: /:organization/checkout/tokens
+    server: checkout
   - method: GET
     path: /:organization/orders/allocations/:number
     server: experience
@@ -949,6 +778,147 @@ operations:
     path: /:organization/payment/method/rules
     server: experience
   - method: GET
+    path: /reference/countries
+    server: reference
+  - method: GET
+    path: /reference/currencies
+    server: reference
+  - method: GET
+    path: /reference/languages
+    server: reference
+  - method: GET
+    path: /reference/locales
+    server: reference
+  - method: GET
+    path: /reference/locales/:id
+    server: reference
+  - method: GET
+    path: /reference/payment-methods
+    server: reference
+  - method: GET
+    path: /reference/provinces
+    server: reference
+  - method: GET
+    path: /reference/provinces/:id
+    server: reference
+  - method: GET
+    path: /reference/regions
+    server: reference
+  - method: GET
+    path: /reference/regions/:id
+    server: reference
+  - method: GET
+    path: /reference/timezones
+    server: reference
+  - method: POST
+    path: /users/emails/verifications/:token
+    server: user
+  - method: GET
+    path: /users
+    server: user
+  - method: POST
+    path: /users/authenticate
+    server: user
+  - method: GET
+    path: /users/:id
+    server: user
+  - method: POST
+    path: /users
+    server: user
+  - method: PUT
+    path: /users/:id
+    server: user
+  - method: PATCH
+    path: /users/:id/passwords
+    server: user
+  - method: DELETE
+    path: /users/:id/passwords
+    server: user
+  - method: POST
+    path: /users/passwords/resets
+    server: user
+  - method: POST
+    path: /users/passwords
+    server: user
+  - method: GET
+    path: /invitations
+    server: organization
+  - method: GET
+    path: /invitations/versions
+    server: organization
+  - method: GET
+    path: /invitations/:id
+    server: organization
+  - method: POST
+    path: /invitations
+    server: organization
+  - method: GET
+    path: /invitations/tokens/:token
+    server: organization
+  - method: PUT
+    path: /invitations/tokens/:token
+    server: organization
+  - method: DELETE
+    path: /invitations/:id
+    server: organization
+  - method: GET
+    path: /organizations
+    server: organization
+  - method: GET
+    path: /organizations/versions
+    server: organization
+  - method: GET
+    path: /organizations/:organization_id
+    server: organization
+  - method: GET
+    path: /organizations/:organization_id/settings/currencies
+    server: organization
+  - method: GET
+    path: /organizations/:organization_id/settings/regions/countries/available
+    server: organization
+  - method: GET
+    path: /organizations/:organization_id/settings/regions
+    server: organization
+  - method: PUT
+    path: /organizations/:organization_id/settings/regions/:region
+    server: organization
+  - method: DELETE
+    path: /organizations/:organization_id/settings/regions/:region
+    server: organization
+  - method: POST
+    path: /organizations
+    server: organization
+  - method: PUT
+    path: /organizations/:organization_id
+    server: organization
+  - method: DELETE
+    path: /organizations/:organization_id
+    server: organization
+  - method: GET
+    path: /memberships
+    server: organization
+  - method: GET
+    path: /memberships/versions
+    server: organization
+  - method: GET
+    path: /memberships/:id
+    server: organization
+  - method: POST
+    path: /memberships
+    server: organization
+  - method: PUT
+    path: /memberships/:id
+    server: organization
+  - method: DELETE
+    path: /memberships/:id
+    server: organization
+  - method: POST
+    path: /organization-authorizations
+    server: organization
+  - method: GET
+    path: /organization-authorizations/:organization
+    server: organization
+  - method: GET
     path: /:organization/authorizations
     server: payment
   - method: GET
@@ -1150,6 +1120,360 @@ operations:
     path: /:organization/shopify/private/apps/:id
     server: shopify
   - method: GET
+    path: /:organization/inventory_rules/versions
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_rules
+    server: inventory
+  - method: POST
+    path: /:organization/inventory_rules
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_snapshots/versions
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_snapshots
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_snapshots/:id
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_updates/versions
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_updates
+    server: inventory
+  - method: GET
+    path: /:organization/inventory_updates/:id
+    server: inventory
+  - method: POST
+    path: /:organization/inventory_updates
+    server: inventory
+  - method: GET
+    path: /:organization/inventory/serials/versions
+    server: inventory
+  - method: GET
+    path: /:organization/inventory/serials
+    server: inventory
+  - method: GET
+    path: /:organization/inventory/serials/:number
+    server: inventory
+  - method: POST
+    path: /:organization/inventory/serials
+    server: inventory
+  - method: PUT
+    path: /:organization/inventory/serials/:number
+    server: inventory
+  - method: DELETE
+    path: /:organization/inventory/serials/:number
+    server: inventory
+  - method: GET
+    path: /:organization/inventory/serials/prices/:aggregate
+    server: inventory
+  - method: GET
+    path: /trackings/:id
+    server: tracking
+  - method: GET
+    path: /:organization/trackings/versions
+    server: tracking
+  - method: GET
+    path: /:organization/trackings
+    server: tracking
+  - method: POST
+    path: /:organization/trackings
+    server: tracking
+  - method: GET
+    path: /:organization/tracking-events/versions
+    server: tracking
+  - method: GET
+    path: /:organization/tracking-events
+    server: tracking
+  - method: GET
+    path: /:organization/tracking-events/:id
+    server: tracking
+  - method: GET
+    path: /:organization/tracking-labels/versions
+    server: tracking
+  - method: GET
+    path: /:organization/tracking-labels
+    server: tracking
+  - method: GET
+    path: /:organization/tracking-labels/:id
+    server: tracking
+  - method: POST
+    path: /:organization/tracking-labels
+    server: tracking
+  - method: GET
+    path: /:organization/orders/:number/status/fraud
+    server: fraud
+  - method: GET
+    path: /:organization/attributes/versions
+    server: catalog
+  - method: GET
+    path: /:organization/attributes
+    server: catalog
+  - method: GET
+    path: /:organization/attributes/:key
+    server: catalog
+  - method: POST
+    path: /:organization/attributes
+    server: catalog
+  - method: PUT
+    path: /:organization/attributes/:key
+    server: catalog
+  - method: DELETE
+    path: /:organization/attributes/:key
+    server: catalog
+  - method: GET
+    path: /:organization/catalog
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/statistics
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/restrictions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/restrictions/:number
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/restrictions/:number
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/restrictions/:number
+    server: catalog
+  - method: GET
+    path: /:organization/price/books
+    server: catalog
+  - method: GET
+    path: /:organization/price/books/:key
+    server: catalog
+  - method: POST
+    path: /:organization/price/books
+    server: catalog
+  - method: PUT
+    path: /:organization/price/books/:key
+    server: catalog
+  - method: DELETE
+    path: /:organization/price/books/:key
+    server: catalog
+  - method: GET
+    path: /:organization/price/books/:price_book_key/items
+    server: catalog
+  - method: GET
+    path: /:organization/price/books/:price_book_key/items/:key
+    server: catalog
+  - method: POST
+    path: /:organization/price/books/:price_book_key/items
+    server: catalog
+  - method: PUT
+    path: /:organization/price/books/:price_book_key/items/:key
+    server: catalog
+  - method: DELETE
+    path: /:organization/price/books/:price_book_key/items/:key
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/items/versions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/items
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/items/:number
+    server: catalog
+  - method: POST
+    path: /:organization/catalog/items
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/items/:number
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/items/:number/price
+    server: catalog
+  - method: PATCH
+    path: /:organization/catalog/items/:number/attributes
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/items/:number
+    server: catalog
+  - method: GET
+    path: /:organization/item-functions/versions
+    server: catalog
+  - method: GET
+    path: /:organization/item-functions
+    server: catalog
+  - method: GET
+    path: /:organization/item-functions/:key
+    server: catalog
+  - method: POST
+    path: /:organization/item-functions
+    server: catalog
+  - method: PUT
+    path: /:organization/item-functions/:key
+    server: catalog
+  - method: DELETE
+    path: /:organization/item-functions/:key
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries/:id
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number
+    server: catalog
+  - method: POST
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/queries/:id
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/statistics
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/versions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:id
+    server: catalog
+  - method: POST
+    path: /:organization/catalog/subcatalogs
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/subcatalogs/:id
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/subcatalogs/:id
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:id/settings
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/subcatalogs/:id/settings
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/versions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/:id
+    server: catalog
+  - method: POST
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/:id
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/items/versions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/items
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/subcatalogs/:subcatalog_id/items/:number
+    server: catalog
+  - method: POST
+    path: /:organization/query/validations
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/targetings/versions
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/targetings
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/targetings/:key
+    server: catalog
+  - method: POST
+    path: /:organization/catalog/targetings
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/targetings/:key
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/targetings/:key
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/targeting-items
+    server: catalog
+  - method: GET
+    path: /carrier/:carrier/data/:organization/:order_number
+    server: link
+  - method: POST
+    path: /:organization/orders/:number/labels
+    server: label
+  - method: GET
+    path: /:organization/manifests/services/:service/outstanding
+    server: label
+  - method: POST
+    path: /:organization/manifests
+    server: label
+  - method: GET
+    path: /:organization/manifests
+    server: label
+  - method: GET
+    path: /:organization/manifests/:id
+    server: label
+  - method: GET
+    path: /:organization/shipping_labels/versions
+    server: label
+  - method: GET
+    path: /:organization/shipping_labels
+    server: label
+  - method: GET
+    path: /:organization/shipping_labels/:id
+    server: label
+  - method: POST
+    path: /:organization/shipping_labels
+    server: label
+  - method: GET
+    path: /:organization/shipping-notifications/versions
+    server: label
+  - method: GET
+    path: /:organization/shipping-notifications
+    server: label
+  - method: GET
+    path: /:organization/shipping-notifications/:key
+    server: label
+  - method: POST
+    path: /:organization/shipping-notifications
+    server: label
+  - method: PUT
+    path: /:organization/shipping-notifications/:key
+    server: label
+  - method: DELETE
+    path: /:organization/shipping-notifications/:key
+    server: label
+  - method: GET
     path: /:organization/feeds
     server: feed
   - method: POST
@@ -1161,327 +1485,3 @@ operations:
   - method: DELETE
     path: /:organization/feeds/:id
     server: feed
-  - method: GET
-    path: /:organization/tokens
-    server: token
-  - method: POST
-    path: /:organization/tokens
-    server: token
-  - method: GET
-    path: /partners/:partner/tokens
-    server: token
-  - method: POST
-    path: /partners/:partner/tokens
-    server: token
-  - method: GET
-    path: /tokens
-    server: token
-  - method: GET
-    path: /tokens/:id
-    server: token
-  - method: GET
-    path: /tokens/:id/cleartext
-    server: token
-  - method: POST
-    path: /tokens/authentications
-    server: token
-  - method: DELETE
-    path: /tokens/:id
-    server: token
-  - method: POST
-    path: /token-validations
-    server: token
-  - method: GET
-    path: /:organization/harmonization/settings
-    server: harmonization
-  - method: PUT
-    path: /:organization/harmonization/settings
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/categories
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/items
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/items/versions
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/items/:number
-    server: harmonization
-  - method: POST
-    path: /:organization/harmonization/items
-    server: harmonization
-  - method: PUT
-    path: /:organization/harmonization/items/:number
-    server: harmonization
-  - method: DELETE
-    path: /:organization/harmonization/items/:number
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/item-duties
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/item-duties/versions
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/item-duties/:id
-    server: harmonization
-  - method: POST
-    path: /:organization/harmonization/item-duties
-    server: harmonization
-  - method: DELETE
-    path: /:organization/harmonization/item-duties/:id
-    server: harmonization
-  - method: POST
-    path: /:organization/harmonization/landed-costs
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/hs10
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/hs10/versions
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/hs6
-    server: harmonization
-  - method: GET
-    path: /:organization/harmonization/hs6/versions
-    server: harmonization
-  - method: GET
-    path: /harmonization/codes
-    server: harmonization
-  - method: GET
-    path: /harmonization/codes/:code
-    server: harmonization
-  - method: GET
-    path: /harmonization/tariff-codes/:destination
-    server: harmonization
-  - method: GET
-    path: /harmonization/tariff-codes/:destination/:code
-    server: harmonization
-  - method: POST
-    path: /:organization/tax/registrations
-    server: harmonization
-  - method: PUT
-    path: /:organization/tax/registrations/:key
-    server: harmonization
-  - method: DELETE
-    path: /:organization/tax/registrations/:key
-    server: harmonization
-  - method: POST
-    path: /users/emails/verifications/:token
-    server: user
-  - method: GET
-    path: /users
-    server: user
-  - method: POST
-    path: /users/authenticate
-    server: user
-  - method: GET
-    path: /users/:id
-    server: user
-  - method: POST
-    path: /users
-    server: user
-  - method: PUT
-    path: /users/:id
-    server: user
-  - method: PATCH
-    path: /users/:id/passwords
-    server: user
-  - method: DELETE
-    path: /users/:id/passwords
-    server: user
-  - method: POST
-    path: /users/passwords/resets
-    server: user
-  - method: POST
-    path: /users/passwords
-    server: user
-  - method: GET
-    path: /sessions/shopify/:session
-    server: shopify-session
-  - method: POST
-    path: /sessions/shopify/organizations/:organization
-    server: shopify-session
-  - method: PUT
-    path: /sessions/shopify/:session/organizations/:organization
-    server: shopify-session
-  - method: PUT
-    path: /sessions/shopify/:session
-    server: shopify-session
-  - method: PUT
-    path: /sessions/shopify/:session/reset
-    server: shopify-session
-  - method: PUT
-    path: /sessions/shopify/:session/clear
-    server: shopify-session
-  - method: DELETE
-    path: /sessions/shopify/:session
-    server: shopify-session
-  - method: GET
-    path: /:organization/orders/:number/fulfillments
-    server: order-management
-  - method: PUT
-    path: /:organization/orders/:number/fulfillments/cancellations
-    server: order-management
-  - method: PUT
-    path: /:organization/orders/:number/fulfillments/complete/cancellations
-    server: order-management
-  - method: GET
-    path: /:organization/webhooks
-    server: webhook
-  - method: GET
-    path: /:organization/webhooks/:id
-    server: webhook
-  - method: POST
-    path: /:organization/webhooks
-    server: webhook
-  - method: PUT
-    path: /:organization/webhooks/:id
-    server: webhook
-  - method: DELETE
-    path: /:organization/webhooks/:id
-    server: webhook
-  - method: GET
-    path: /:organization/webhook/deliveries
-    server: webhook
-  - method: GET
-    path: /:organization/webhook/deliveries/:id
-    server: webhook
-  - method: POST
-    path: /:organization/webhook/deliveries/:id/requests
-    server: webhook
-  - method: GET
-    path: /:organization/webhook/settings
-    server: webhook
-  - method: PUT
-    path: /:organization/webhook/settings
-    server: webhook
-  - method: GET
-    path: /invitations
-    server: organization
-  - method: GET
-    path: /invitations/versions
-    server: organization
-  - method: GET
-    path: /invitations/:id
-    server: organization
-  - method: POST
-    path: /invitations
-    server: organization
-  - method: GET
-    path: /invitations/tokens/:token
-    server: organization
-  - method: PUT
-    path: /invitations/tokens/:token
-    server: organization
-  - method: DELETE
-    path: /invitations/:id
-    server: organization
-  - method: GET
-    path: /organizations
-    server: organization
-  - method: GET
-    path: /organizations/versions
-    server: organization
-  - method: GET
-    path: /organizations/:organization_id
-    server: organization
-  - method: GET
-    path: /organizations/:organization_id/settings/currencies
-    server: organization
-  - method: GET
-    path: /organizations/:organization_id/settings/regions/countries/available
-    server: organization
-  - method: GET
-    path: /organizations/:organization_id/settings/regions
-    server: organization
-  - method: PUT
-    path: /organizations/:organization_id/settings/regions/:region
-    server: organization
-  - method: DELETE
-    path: /organizations/:organization_id/settings/regions/:region
-    server: organization
-  - method: POST
-    path: /organizations
-    server: organization
-  - method: PUT
-    path: /organizations/:organization_id
-    server: organization
-  - method: DELETE
-    path: /organizations/:organization_id
-    server: organization
-  - method: GET
-    path: /memberships
-    server: organization
-  - method: GET
-    path: /memberships/versions
-    server: organization
-  - method: GET
-    path: /memberships/:id
-    server: organization
-  - method: POST
-    path: /memberships
-    server: organization
-  - method: PUT
-    path: /memberships/:id
-    server: organization
-  - method: DELETE
-    path: /memberships/:id
-    server: organization
-  - method: POST
-    path: /organization-authorizations
-    server: organization
-  - method: GET
-    path: /organization-authorizations/:organization
-    server: organization
-  - method: GET
-    path: /permission/organization/:organization/roles
-    server: permission
-  - method: GET
-    path: /:organization/permission/checks/all
-    server: permission
-  - method: GET
-    path: /:organization/currency/settings
-    server: currency
-  - method: GET
-    path: /:organization/currency/settings/versions
-    server: currency
-  - method: GET
-    path: /:organization/currency/settings/:id
-    server: currency
-  - method: POST
-    path: /:organization/currency/settings
-    server: currency
-  - method: PUT
-    path: /:organization/currency/settings/:id
-    server: currency
-  - method: DELETE
-    path: /:organization/currency/settings/:id
-    server: currency
-  - method: GET
-    path: /:organization/currency/rates
-    server: currency
-  - method: GET
-    path: /:organization/currency/rates/versions
-    server: currency
-  - method: GET
-    path: /:organization/returns/versions
-    server: return
-  - method: GET
-    path: /:organization/returns
-    server: return
-  - method: GET
-    path: /:organization/returns/:key
-    server: return
-  - method: POST
-    path: /:organization/returns
-    server: return
-  - method: PUT
-    path: /:organization/returns/:key
-    server: return
-  - method: DELETE
-    path: /:organization/returns/:key
-    server: return
