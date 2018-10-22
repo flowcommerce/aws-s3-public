@@ -6762,6 +6762,181 @@
       "attributes" : [ ],
       "description" : "Retrieve journaled history of a serial"
     }, {
+      "name" : "behavior_audit",
+      "plural" : "behavior_audits",
+      "fields" : [ {
+        "name" : "behavior",
+        "type" : "flow_behavior",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "permission_audit",
+      "plural" : "permission_audits",
+      "fields" : [ {
+        "name" : "routes",
+        "type" : "[route_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[behavior_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Returns all known permissions, along with their authorization technique and all of the roles which contain them."
+    }, {
+      "name" : "permission_check",
+      "plural" : "permission_checks",
+      "fields" : [ {
+        "name" : "authentication_technique",
+        "type" : "authentication_technique",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The authentication technique currently being used."
+      }, {
+        "name" : "user",
+        "type" : "io.flow.common.v0.unions.expandable_user",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "routes",
+        "type" : "[permitted_route]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "All the routes this request would be able to access."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to test an integration's permissions, including identifying the authentication technique that will be used for similar requests."
+    }, {
+      "name" : "permission_error",
+      "plural" : "permission_errors",
+      "fields" : [ {
+        "name" : "code",
+        "type" : "io.flow.error.v0.enums.generic_error_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "messages",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A summary of the error.",
+        "minimum" : 1
+      }, {
+        "name" : "granting_roles",
+        "type" : "[flow_role]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A collection of roles the user does not have that would grant the permission. Not returned if user is not a member of this org."
+      }, {
+        "name" : "admin_users",
+        "type" : "[io.flow.common.v0.models.user]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A brief list of users who could grant one of the missing roles. Not returned if user is not a member of this org",
+        "maximum" : 5
+      } ],
+      "attributes" : [ ],
+      "description" : "Returned if no permissions are available for a request."
+    }, {
+      "name" : "permitted_route",
+      "plural" : "permitted_routes",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      } ],
+      "attributes" : [ ],
+      "description" : "A Flow API route and method."
+    }, {
+      "name" : "route_audit",
+      "plural" : "route_audits",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "simple_permission_check",
+      "plural" : "simple_permission_checks",
+      "fields" : [ {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A simple model, used to convey permitted behaviors along with approval of a request for a specific permitted route."
+    }, {
       "name" : "carrier",
       "plural" : "carriers",
       "fields" : [ {
@@ -9955,6 +10130,13 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data" ],
         "description" : "Intermediate destination required before going to final destination"
+      }, {
+        "name" : "surcharge",
+        "type" : "price_with_base_and_details",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Surcharges to be paid for by the end-customer."
       } ],
       "attributes" : [ ],
       "description" : "Represents a way to fulfill a delivery, including an estimates for the date range and cost"
@@ -15132,6 +15314,25 @@
       "discriminator" : "code",
       "description" : "Types of failed inventory reservation reasons"
     }, {
+      "name" : "flow_role",
+      "plural" : "flow_roles",
+      "types" : [ {
+        "type" : "flow_user_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_user_role"
+      }, {
+        "type" : "flow_addon_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_addon_role"
+      } ],
+      "attributes" : [ {
+        "name" : "linter",
+        "value" : {
+          "ignore" : [ "discriminator" ]
+        }
+      } ],
+      "description" : "All roles available to attach to a user."
+    }, {
       "name" : "expandable_item_function",
       "plural" : "expandable_item_functions",
       "types" : [ {
@@ -15852,6 +16053,14 @@
         "name" : "duty_subsidy",
         "attributes" : [ ],
         "description" : "An offset to account for any duty subsidized by the organization. For example, if duty is included in an item price and changes at the order level (due to passing de minimis threshold, or the destination having a more specific duty rate), the difference will be represented here."
+      }, {
+        "name" : "remote_area_surcharge",
+        "attributes" : [ ],
+        "description" : "Surcharge applied to a shipment for delivery to a remote area determined by the carrier."
+      }, {
+        "name" : "fuel_surcharge",
+        "attributes" : [ ],
+        "description" : "Surcharge applied to a shipment for fuel consumption by the carrier."
       } ],
       "attributes" : [ ]
     }, {
@@ -15885,6 +16094,10 @@
         "name" : "discount",
         "attributes" : [ ],
         "description" : "The details of any discount applied to the order."
+      }, {
+        "name" : "surcharges",
+        "attributes" : [ ],
+        "description" : "Additional fees and levies applied to the order"
       } ],
       "attributes" : [ ]
     }, {
@@ -16518,6 +16731,111 @@
       } ],
       "attributes" : [ ],
       "description" : "Types of updates that can be made on quantity of inventory"
+    }, {
+      "name" : "authentication_technique",
+      "plural" : "authentication_techniques",
+      "values" : [ {
+        "name" : "anonymous",
+        "attributes" : [ ],
+        "description" : "No authentication necessary."
+      }, {
+        "name" : "session",
+        "attributes" : [ ],
+        "description" : "A browser has been assigned an identifier by flow to track their use of our service for an organization."
+      }, {
+        "name" : "token",
+        "attributes" : [ ],
+        "description" : "A token. Tokens carry the same permissions as the user who originally created them."
+      }, {
+        "name" : "partner_token",
+        "attributes" : [ ],
+        "description" : "A partner token. Partner Tokens can only access anonymous endpoints and the endpoints of the partner api."
+      }, {
+        "name" : "user",
+        "attributes" : [ ],
+        "description" : "A user logs into Flow."
+      } ],
+      "attributes" : [ ],
+      "description" : "Various techniques a client request will use to authenticate with Flow."
+    }, {
+      "name" : "flow_addon_role",
+      "plural" : "flow_addon_roles",
+      "values" : [ {
+        "name" : "consumer_data_viewer",
+        "attributes" : [ ],
+        "description" : "Can view consumer's private data"
+      }, {
+        "name" : "membership_manager",
+        "attributes" : [ ],
+        "description" : "Can invite new users to the org."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default addon roles supported by Flow. These roles don't provide enough access to be useful on their own but convey additional responsibility to user roles."
+    }, {
+      "name" : "flow_behavior",
+      "plural" : "flow_behaviors",
+      "values" : [ {
+        "name" : "view_consumer_data",
+        "attributes" : [ ],
+        "description" : "Allows user to view consumers' personal data."
+      } ],
+      "attributes" : [ ],
+      "description" : "Behaviors represent cross-cutting concerns that may be assigned via roles and may apply to many API endpoints."
+    }, {
+      "name" : "flow_user_role",
+      "plural" : "flow_user_roles",
+      "values" : [ {
+        "name" : "organization_admin",
+        "attributes" : [ ],
+        "description" : "Can fully administrate a merchant organization."
+      }, {
+        "name" : "organization_merchant",
+        "attributes" : [ ],
+        "description" : "Can access merchant functions such as analytics, billing, experiences."
+      }, {
+        "name" : "organization_operations",
+        "attributes" : [ ],
+        "description" : "Can access customer service functions and retreive relevant data."
+      }, {
+        "name" : "organization_fulfillment",
+        "attributes" : [ ],
+        "description" : "Can access fulfillment functions and retreive relevant data."
+      }, {
+        "name" : "organization_marketing",
+        "attributes" : [ ],
+        "description" : "Can access marketing functions and retreive relevant data."
+      }, {
+        "name" : "organization_finance",
+        "attributes" : [ ],
+        "description" : "Can access billing and reconcilliation functions and retreive relevant data."
+      }, {
+        "name" : "flow_operations",
+        "attributes" : [ ],
+        "description" : "Can access Flow internal functions."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default user roles supported by Flow"
+    }, {
+      "name" : "permitted_http_method",
+      "plural" : "permitted_http_methods",
+      "values" : [ {
+        "name" : "GET",
+        "attributes" : [ ]
+      }, {
+        "name" : "POST",
+        "attributes" : [ ]
+      }, {
+        "name" : "PUT",
+        "attributes" : [ ]
+      }, {
+        "name" : "DELETE",
+        "attributes" : [ ]
+      }, {
+        "name" : "PATCH",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "List of HTTP methods for which user permissions may be applied (OPTION for example is always permitted where CORS is enabled)."
     }, {
       "name" : "payment_method_type",
       "plural" : "payment_method_types",
@@ -18767,6 +19085,13 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data" ],
         "description" : "Intermediate destination required before going to final destination"
+      }, {
+        "name" : "surcharge",
+        "type" : "price_with_base_and_details",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Surcharges to be paid for by the end-customer."
       } ],
       "attributes" : [ ],
       "description" : "Represents a way to fulfill a delivery, including an estimates for the date range and cost"
@@ -41773,9 +42098,12 @@
       "fields" : [ {
         "name" : "role",
         "type" : "io.flow.common.v0.enums.role",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
-        "annotations" : [ "personal_data" ]
+        "annotations" : [ "personal_data" ],
+        "deprecation" : {
+          "description" : "Static roles are being deprecated for role-based permissions."
+        }
       }, {
         "name" : "environment",
         "type" : "io.flow.common.v0.enums.environment",
@@ -44497,6 +44825,22 @@
         "name" : "organization_operations",
         "attributes" : [ ],
         "description" : "Can access customer service functions and retreive relevant data."
+      }, {
+        "name" : "organization_fulfillment",
+        "attributes" : [ ],
+        "description" : "Can access fulfillment functions and retreive relevant data."
+      }, {
+        "name" : "organization_marketing",
+        "attributes" : [ ],
+        "description" : "Can access marketing functions and retreive relevant data."
+      }, {
+        "name" : "organization_finance",
+        "attributes" : [ ],
+        "description" : "Can access billing and reconcilliation functions and retreive relevant data."
+      }, {
+        "name" : "flow_operations",
+        "attributes" : [ ],
+        "description" : "Can access Flow internal functions."
       } ],
       "attributes" : [ ],
       "description" : "Default user roles supported by Flow"
@@ -53132,6 +53476,13 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data" ],
         "description" : "Intermediate destination required before going to final destination"
+      }, {
+        "name" : "surcharge",
+        "type" : "price_with_base_and_details",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Surcharges to be paid for by the end-customer."
       } ],
       "attributes" : [ ],
       "description" : "Represents a way to fulfill a delivery, including an estimates for the date range and cost"
@@ -55561,6 +55912,181 @@
       } ],
       "attributes" : [ ],
       "description" : "Retrieve journaled history of a serial"
+    }, {
+      "name" : "behavior_audit",
+      "plural" : "behavior_audits",
+      "fields" : [ {
+        "name" : "behavior",
+        "type" : "flow_behavior",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "permission_audit",
+      "plural" : "permission_audits",
+      "fields" : [ {
+        "name" : "routes",
+        "type" : "[route_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[behavior_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Returns all known permissions, along with their authorization technique and all of the roles which contain them."
+    }, {
+      "name" : "permission_check",
+      "plural" : "permission_checks",
+      "fields" : [ {
+        "name" : "authentication_technique",
+        "type" : "authentication_technique",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The authentication technique currently being used."
+      }, {
+        "name" : "user",
+        "type" : "io.flow.common.v0.unions.expandable_user",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "routes",
+        "type" : "[permitted_route]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "All the routes this request would be able to access."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to test an integration's permissions, including identifying the authentication technique that will be used for similar requests."
+    }, {
+      "name" : "permission_error",
+      "plural" : "permission_errors",
+      "fields" : [ {
+        "name" : "code",
+        "type" : "io.flow.error.v0.enums.generic_error_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "messages",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A summary of the error.",
+        "minimum" : 1
+      }, {
+        "name" : "granting_roles",
+        "type" : "[flow_role]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A collection of roles the user does not have that would grant the permission. Not returned if user is not a member of this org."
+      }, {
+        "name" : "admin_users",
+        "type" : "[io.flow.common.v0.models.user]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A brief list of users who could grant one of the missing roles. Not returned if user is not a member of this org",
+        "maximum" : 5
+      } ],
+      "attributes" : [ ],
+      "description" : "Returned if no permissions are available for a request."
+    }, {
+      "name" : "permitted_route",
+      "plural" : "permitted_routes",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      } ],
+      "attributes" : [ ],
+      "description" : "A Flow API route and method."
+    }, {
+      "name" : "route_audit",
+      "plural" : "route_audits",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "simple_permission_check",
+      "plural" : "simple_permission_checks",
+      "fields" : [ {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A simple model, used to convey permitted behaviors along with approval of a request for a specific permitted route."
     }, {
       "name" : "carrier",
       "plural" : "carriers",
@@ -60562,6 +61088,25 @@
       "discriminator" : "code",
       "description" : "Types of failed inventory reservation reasons"
     }, {
+      "name" : "flow_role",
+      "plural" : "flow_roles",
+      "types" : [ {
+        "type" : "flow_user_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_user_role"
+      }, {
+        "type" : "flow_addon_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_addon_role"
+      } ],
+      "attributes" : [ {
+        "name" : "linter",
+        "value" : {
+          "ignore" : [ "discriminator" ]
+        }
+      } ],
+      "description" : "All roles available to attach to a user."
+    }, {
       "name" : "deminimis",
       "plural" : "deminimises",
       "types" : [ {
@@ -61101,6 +61646,14 @@
         "name" : "duty_subsidy",
         "attributes" : [ ],
         "description" : "An offset to account for any duty subsidized by the organization. For example, if duty is included in an item price and changes at the order level (due to passing de minimis threshold, or the destination having a more specific duty rate), the difference will be represented here."
+      }, {
+        "name" : "remote_area_surcharge",
+        "attributes" : [ ],
+        "description" : "Surcharge applied to a shipment for delivery to a remote area determined by the carrier."
+      }, {
+        "name" : "fuel_surcharge",
+        "attributes" : [ ],
+        "description" : "Surcharge applied to a shipment for fuel consumption by the carrier."
       } ],
       "attributes" : [ ]
     }, {
@@ -61134,6 +61687,10 @@
         "name" : "discount",
         "attributes" : [ ],
         "description" : "The details of any discount applied to the order."
+      }, {
+        "name" : "surcharges",
+        "attributes" : [ ],
+        "description" : "Additional fees and levies applied to the order"
       } ],
       "attributes" : [ ]
     }, {
@@ -62129,6 +62686,111 @@
       } ],
       "attributes" : [ ],
       "description" : "Types of updates that can be made on quantity of inventory"
+    }, {
+      "name" : "authentication_technique",
+      "plural" : "authentication_techniques",
+      "values" : [ {
+        "name" : "anonymous",
+        "attributes" : [ ],
+        "description" : "No authentication necessary."
+      }, {
+        "name" : "session",
+        "attributes" : [ ],
+        "description" : "A browser has been assigned an identifier by flow to track their use of our service for an organization."
+      }, {
+        "name" : "token",
+        "attributes" : [ ],
+        "description" : "A token. Tokens carry the same permissions as the user who originally created them."
+      }, {
+        "name" : "partner_token",
+        "attributes" : [ ],
+        "description" : "A partner token. Partner Tokens can only access anonymous endpoints and the endpoints of the partner api."
+      }, {
+        "name" : "user",
+        "attributes" : [ ],
+        "description" : "A user logs into Flow."
+      } ],
+      "attributes" : [ ],
+      "description" : "Various techniques a client request will use to authenticate with Flow."
+    }, {
+      "name" : "flow_addon_role",
+      "plural" : "flow_addon_roles",
+      "values" : [ {
+        "name" : "consumer_data_viewer",
+        "attributes" : [ ],
+        "description" : "Can view consumer's private data"
+      }, {
+        "name" : "membership_manager",
+        "attributes" : [ ],
+        "description" : "Can invite new users to the org."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default addon roles supported by Flow. These roles don't provide enough access to be useful on their own but convey additional responsibility to user roles."
+    }, {
+      "name" : "flow_behavior",
+      "plural" : "flow_behaviors",
+      "values" : [ {
+        "name" : "view_consumer_data",
+        "attributes" : [ ],
+        "description" : "Allows user to view consumers' personal data."
+      } ],
+      "attributes" : [ ],
+      "description" : "Behaviors represent cross-cutting concerns that may be assigned via roles and may apply to many API endpoints."
+    }, {
+      "name" : "flow_user_role",
+      "plural" : "flow_user_roles",
+      "values" : [ {
+        "name" : "organization_admin",
+        "attributes" : [ ],
+        "description" : "Can fully administrate a merchant organization."
+      }, {
+        "name" : "organization_merchant",
+        "attributes" : [ ],
+        "description" : "Can access merchant functions such as analytics, billing, experiences."
+      }, {
+        "name" : "organization_operations",
+        "attributes" : [ ],
+        "description" : "Can access customer service functions and retreive relevant data."
+      }, {
+        "name" : "organization_fulfillment",
+        "attributes" : [ ],
+        "description" : "Can access fulfillment functions and retreive relevant data."
+      }, {
+        "name" : "organization_marketing",
+        "attributes" : [ ],
+        "description" : "Can access marketing functions and retreive relevant data."
+      }, {
+        "name" : "organization_finance",
+        "attributes" : [ ],
+        "description" : "Can access billing and reconcilliation functions and retreive relevant data."
+      }, {
+        "name" : "flow_operations",
+        "attributes" : [ ],
+        "description" : "Can access Flow internal functions."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default user roles supported by Flow"
+    }, {
+      "name" : "permitted_http_method",
+      "plural" : "permitted_http_methods",
+      "values" : [ {
+        "name" : "GET",
+        "attributes" : [ ]
+      }, {
+        "name" : "POST",
+        "attributes" : [ ]
+      }, {
+        "name" : "PUT",
+        "attributes" : [ ]
+      }, {
+        "name" : "DELETE",
+        "attributes" : [ ]
+      }, {
+        "name" : "PATCH",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "List of HTTP methods for which user permissions may be applied (OPTION for example is always permitted where CORS is enabled)."
     }, {
       "name" : "payment_method_type",
       "plural" : "payment_method_types",
@@ -65593,6 +66255,13 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data" ],
         "description" : "Intermediate destination required before going to final destination"
+      }, {
+        "name" : "surcharge",
+        "type" : "price_with_base_and_details",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Surcharges to be paid for by the end-customer."
       } ],
       "attributes" : [ ],
       "description" : "Represents a way to fulfill a delivery, including an estimates for the date range and cost"
@@ -77746,6 +78415,13 @@
         "attributes" : [ ],
         "annotations" : [ "personal_data" ],
         "description" : "Intermediate destination required before going to final destination"
+      }, {
+        "name" : "surcharge",
+        "type" : "price_with_base_and_details",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Surcharges to be paid for by the end-customer."
       } ],
       "attributes" : [ ],
       "description" : "Represents a way to fulfill a delivery, including an estimates for the date range and cost"
@@ -79397,6 +80073,181 @@
       } ],
       "attributes" : [ ],
       "description" : "An error of some type has occurred. The most common error will be validation on input. See messages for details."
+    }, {
+      "name" : "behavior_audit",
+      "plural" : "behavior_audits",
+      "fields" : [ {
+        "name" : "behavior",
+        "type" : "flow_behavior",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "permission_audit",
+      "plural" : "permission_audits",
+      "fields" : [ {
+        "name" : "routes",
+        "type" : "[route_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[behavior_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Returns all known permissions, along with their authorization technique and all of the roles which contain them."
+    }, {
+      "name" : "permission_check",
+      "plural" : "permission_checks",
+      "fields" : [ {
+        "name" : "authentication_technique",
+        "type" : "authentication_technique",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The authentication technique currently being used."
+      }, {
+        "name" : "user",
+        "type" : "io.flow.common.v0.unions.expandable_user",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "routes",
+        "type" : "[permitted_route]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "All the routes this request would be able to access."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to test an integration's permissions, including identifying the authentication technique that will be used for similar requests."
+    }, {
+      "name" : "permission_error",
+      "plural" : "permission_errors",
+      "fields" : [ {
+        "name" : "code",
+        "type" : "io.flow.error.v0.enums.generic_error_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "messages",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A summary of the error.",
+        "minimum" : 1
+      }, {
+        "name" : "granting_roles",
+        "type" : "[flow_role]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A collection of roles the user does not have that would grant the permission. Not returned if user is not a member of this org."
+      }, {
+        "name" : "admin_users",
+        "type" : "[io.flow.common.v0.models.user]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A brief list of users who could grant one of the missing roles. Not returned if user is not a member of this org",
+        "maximum" : 5
+      } ],
+      "attributes" : [ ],
+      "description" : "Returned if no permissions are available for a request."
+    }, {
+      "name" : "permitted_route",
+      "plural" : "permitted_routes",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      } ],
+      "attributes" : [ ],
+      "description" : "A Flow API route and method."
+    }, {
+      "name" : "route_audit",
+      "plural" : "route_audits",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "simple_permission_check",
+      "plural" : "simple_permission_checks",
+      "fields" : [ {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A simple model, used to convey permitted behaviors along with approval of a request for a specific permitted route."
     }, {
       "name" : "carrier",
       "plural" : "carriers",
@@ -84271,6 +85122,25 @@
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
+      "name" : "flow_role",
+      "plural" : "flow_roles",
+      "types" : [ {
+        "type" : "flow_user_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_user_role"
+      }, {
+        "type" : "flow_addon_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_addon_role"
+      } ],
+      "attributes" : [ {
+        "name" : "linter",
+        "value" : {
+          "ignore" : [ "discriminator" ]
+        }
+      } ],
+      "description" : "All roles available to attach to a user."
+    }, {
       "name" : "deminimis",
       "plural" : "deminimises",
       "types" : [ {
@@ -84917,6 +85787,14 @@
         "name" : "duty_subsidy",
         "attributes" : [ ],
         "description" : "An offset to account for any duty subsidized by the organization. For example, if duty is included in an item price and changes at the order level (due to passing de minimis threshold, or the destination having a more specific duty rate), the difference will be represented here."
+      }, {
+        "name" : "remote_area_surcharge",
+        "attributes" : [ ],
+        "description" : "Surcharge applied to a shipment for delivery to a remote area determined by the carrier."
+      }, {
+        "name" : "fuel_surcharge",
+        "attributes" : [ ],
+        "description" : "Surcharge applied to a shipment for fuel consumption by the carrier."
       } ],
       "attributes" : [ ]
     }, {
@@ -84950,6 +85828,10 @@
         "name" : "discount",
         "attributes" : [ ],
         "description" : "The details of any discount applied to the order."
+      }, {
+        "name" : "surcharges",
+        "attributes" : [ ],
+        "description" : "Additional fees and levies applied to the order"
       } ],
       "attributes" : [ ]
     }, {
@@ -85893,6 +86775,111 @@
         "description" : "A server error has occurred. The Flow tech team is automatically notified of all server errors"
       } ],
       "attributes" : [ ]
+    }, {
+      "name" : "authentication_technique",
+      "plural" : "authentication_techniques",
+      "values" : [ {
+        "name" : "anonymous",
+        "attributes" : [ ],
+        "description" : "No authentication necessary."
+      }, {
+        "name" : "session",
+        "attributes" : [ ],
+        "description" : "A browser has been assigned an identifier by flow to track their use of our service for an organization."
+      }, {
+        "name" : "token",
+        "attributes" : [ ],
+        "description" : "A token. Tokens carry the same permissions as the user who originally created them."
+      }, {
+        "name" : "partner_token",
+        "attributes" : [ ],
+        "description" : "A partner token. Partner Tokens can only access anonymous endpoints and the endpoints of the partner api."
+      }, {
+        "name" : "user",
+        "attributes" : [ ],
+        "description" : "A user logs into Flow."
+      } ],
+      "attributes" : [ ],
+      "description" : "Various techniques a client request will use to authenticate with Flow."
+    }, {
+      "name" : "flow_addon_role",
+      "plural" : "flow_addon_roles",
+      "values" : [ {
+        "name" : "consumer_data_viewer",
+        "attributes" : [ ],
+        "description" : "Can view consumer's private data"
+      }, {
+        "name" : "membership_manager",
+        "attributes" : [ ],
+        "description" : "Can invite new users to the org."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default addon roles supported by Flow. These roles don't provide enough access to be useful on their own but convey additional responsibility to user roles."
+    }, {
+      "name" : "flow_behavior",
+      "plural" : "flow_behaviors",
+      "values" : [ {
+        "name" : "view_consumer_data",
+        "attributes" : [ ],
+        "description" : "Allows user to view consumers' personal data."
+      } ],
+      "attributes" : [ ],
+      "description" : "Behaviors represent cross-cutting concerns that may be assigned via roles and may apply to many API endpoints."
+    }, {
+      "name" : "flow_user_role",
+      "plural" : "flow_user_roles",
+      "values" : [ {
+        "name" : "organization_admin",
+        "attributes" : [ ],
+        "description" : "Can fully administrate a merchant organization."
+      }, {
+        "name" : "organization_merchant",
+        "attributes" : [ ],
+        "description" : "Can access merchant functions such as analytics, billing, experiences."
+      }, {
+        "name" : "organization_operations",
+        "attributes" : [ ],
+        "description" : "Can access customer service functions and retreive relevant data."
+      }, {
+        "name" : "organization_fulfillment",
+        "attributes" : [ ],
+        "description" : "Can access fulfillment functions and retreive relevant data."
+      }, {
+        "name" : "organization_marketing",
+        "attributes" : [ ],
+        "description" : "Can access marketing functions and retreive relevant data."
+      }, {
+        "name" : "organization_finance",
+        "attributes" : [ ],
+        "description" : "Can access billing and reconcilliation functions and retreive relevant data."
+      }, {
+        "name" : "flow_operations",
+        "attributes" : [ ],
+        "description" : "Can access Flow internal functions."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default user roles supported by Flow"
+    }, {
+      "name" : "permitted_http_method",
+      "plural" : "permitted_http_methods",
+      "values" : [ {
+        "name" : "GET",
+        "attributes" : [ ]
+      }, {
+        "name" : "POST",
+        "attributes" : [ ]
+      }, {
+        "name" : "PUT",
+        "attributes" : [ ]
+      }, {
+        "name" : "DELETE",
+        "attributes" : [ ]
+      }, {
+        "name" : "PATCH",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "List of HTTP methods for which user permissions may be applied (OPTION for example is always permitted where CORS is enabled)."
     }, {
       "name" : "payment_method_type",
       "plural" : "payment_method_types",
