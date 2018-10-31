@@ -73285,37 +73285,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "fraud_email_rule",
-      "plural" : "fraud_email_rules",
-      "fields" : [ {
-        "name" : "email",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "The email address for the customer"
-      }, {
-        "name" : "decision",
-        "type" : "fraud_email_rule_decision",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "The fraud decision to take when the email address matches"
-      } ],
-      "attributes" : [ ],
-      "description" : "White and black listing"
-    }, {
-      "name" : "fraud_email_rule_form",
-      "plural" : "fraud_email_rule_forms",
-      "fields" : [ {
-        "name" : "rule",
-        "type" : "fraud_email_rule",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "fraud_pending_review",
       "plural" : "fraud_pending_reviews",
       "fields" : [ {
@@ -88423,18 +88392,6 @@
       "discriminator" : "discriminator"
     } ],
     "allEnums" : [ {
-      "name" : "fraud_email_rule_decision",
-      "plural" : "fraud_email_rule_decisions",
-      "values" : [ {
-        "name" : "approved",
-        "attributes" : [ ]
-      }, {
-        "name" : "declined",
-        "attributes" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "The decision to take when applying an email rule"
-    }, {
       "name" : "risk_evaluation",
       "plural" : "risk_evaluations",
       "values" : [ {

@@ -480,15 +480,6 @@ operations:
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp-internal
-  - method: POST
-    path: /:organization/fraud/email/rules
-    server: fraud-internal
-  - method: GET
-    path: /:organization/fraud/email/rules
-    server: fraud-internal
-  - method: DELETE
-    path: /:organization/fraud/email/rules/:id
-    server: fraud-internal
   - method: GET
     path: /:organization/fraud/reviews
     server: fraud-internal
