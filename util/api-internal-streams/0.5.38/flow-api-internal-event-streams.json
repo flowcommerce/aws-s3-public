@@ -93225,5 +93225,1791 @@
       "attributes" : [ ],
       "description" : "Indicates the type of the rate"
     } ]
+  }, {
+    "streamName" : "production.adyen.internal.event.v0.adyen_internal_event.json",
+    "shortName" : "adyen_internal_event_v0",
+    "capturedEvents" : [ {
+      "fieldName" : "authorization",
+      "typeName" : "adyen_authorization",
+      "modelType" : {
+        "name" : "authorization",
+        "plural" : "authorizations",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "flow_authorization_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_account",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "request",
+          "type" : "object",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "psp_reference",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "Adyen's 16-digit unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request.",
+          "example" : "7914595433280823"
+        }, {
+          "name" : "result_code",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "example" : "Authorized"
+        }, {
+          "name" : "auth_code",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "example" : "33600"
+        }, {
+          "name" : "refusal_reason",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "When the payment is not authorised, it is refused, or if an error occurs, this field holds Adyen's mapped reason for the refusal or a description of the error."
+        }, {
+          "name" : "cvc_result",
+          "type" : "long",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "avs_result",
+          "type" : "long",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "payment_amount",
+          "type" : "long",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The amount in minor units (e.g. 12300 equates to $123.00 when the currency is USD)."
+        }, {
+          "name" : "payment_currency",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The currency of the payment amount."
+        }, {
+          "name" : "skin_code",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The Adyen skin code used for this payment."
+        }, {
+          "name" : "session_validity",
+          "type" : "date-time-iso8601",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The time at which the authorization expires."
+        }, {
+          "name" : "brand_code",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The payment method type, such as UnionPay or AliPay."
+        }, {
+          "name" : "issuer_id",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "The issuer id of the bank, which is only required in cases"
+        }, {
+          "name" : "post_payment_success_redirect_url",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "post_payment_failure_redirect_url",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "payment_redirect_url",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ],
+        "description" : "Stores the results of authorize requests"
+      },
+      "upsertedDiscriminator" : "adyen_authorization_upserted",
+      "deletedDiscriminator" : "adyen_authorization_deleted",
+      "deletedHasModel" : true
+    }, {
+      "fieldName" : "cancel",
+      "typeName" : "adyen_cancel",
+      "modelType" : {
+        "name" : "cancel",
+        "plural" : "cancels",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "flow_authorization_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "flow_reversal_id",
+          "type" : "string",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_account",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "request",
+          "type" : "object",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "psp_reference",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "response",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ],
+        "description" : "Records the cancel response"
+      },
+      "upsertedDiscriminator" : "adyen_cancel_upserted",
+      "deletedDiscriminator" : "adyen_cancel_deleted",
+      "deletedHasModel" : true
+    }, {
+      "fieldName" : "capture",
+      "typeName" : "adyen_capture",
+      "modelType" : {
+        "name" : "capture",
+        "plural" : "captures",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "flow_capture_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_account",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "request",
+          "type" : "object",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "psp_reference",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "response",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ]
+      },
+      "upsertedDiscriminator" : "adyen_capture_upserted",
+      "deletedDiscriminator" : "adyen_capture_deleted",
+      "deletedHasModel" : true
+    }, {
+      "fieldName" : "refund",
+      "typeName" : "adyen_refund",
+      "modelType" : {
+        "name" : "refund",
+        "plural" : "refunds",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "flow_refund_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_account",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "request",
+          "type" : "object",
+          "required" : false,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "psp_reference",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "response",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ],
+        "description" : "Records the refund response"
+      },
+      "upsertedDiscriminator" : "adyen_refund_upserted",
+      "deletedDiscriminator" : "adyen_refund_deleted",
+      "deletedHasModel" : true
+    } ],
+    "allModels" : [ {
+      "name" : "adyen_authorization_deleted",
+      "plural" : "adyen_authorization_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authorization",
+        "type" : "authorization",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_authorization_upserted",
+      "plural" : "adyen_authorization_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authorization",
+        "type" : "authorization",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_cancel_deleted",
+      "plural" : "adyen_cancel_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "cancel",
+        "type" : "cancel",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_cancel_upserted",
+      "plural" : "adyen_cancel_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "cancel",
+        "type" : "cancel",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_capture_deleted",
+      "plural" : "adyen_capture_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "capture",
+        "type" : "capture",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_capture_upserted",
+      "plural" : "adyen_capture_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "capture",
+        "type" : "capture",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_refund_deleted",
+      "plural" : "adyen_refund_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "refund",
+        "type" : "refund",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adyen_refund_upserted",
+      "plural" : "adyen_refund_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "refund",
+        "type" : "refund",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "authorization",
+      "plural" : "authorizations",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "flow_authorization_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_account",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "request",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "psp_reference",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Adyen's 16-digit unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request.",
+        "example" : "7914595433280823"
+      }, {
+        "name" : "result_code",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "Authorized"
+      }, {
+        "name" : "auth_code",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "33600"
+      }, {
+        "name" : "refusal_reason",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "When the payment is not authorised, it is refused, or if an error occurs, this field holds Adyen's mapped reason for the refusal or a description of the error."
+      }, {
+        "name" : "cvc_result",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "avs_result",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "payment_amount",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount in minor units (e.g. 12300 equates to $123.00 when the currency is USD)."
+      }, {
+        "name" : "payment_currency",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The currency of the payment amount."
+      }, {
+        "name" : "skin_code",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The Adyen skin code used for this payment."
+      }, {
+        "name" : "session_validity",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The time at which the authorization expires."
+      }, {
+        "name" : "brand_code",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The payment method type, such as UnionPay or AliPay."
+      }, {
+        "name" : "issuer_id",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The issuer id of the bank, which is only required in cases"
+      }, {
+        "name" : "post_payment_success_redirect_url",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "post_payment_failure_redirect_url",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "payment_redirect_url",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Stores the results of authorize requests"
+    }, {
+      "name" : "cancel",
+      "plural" : "cancels",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "flow_authorization_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "flow_reversal_id",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_account",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "request",
+        "type" : "object",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "psp_reference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "response",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Records the cancel response"
+    }, {
+      "name" : "capture",
+      "plural" : "captures",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "flow_capture_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_account",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "request",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "psp_reference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "response",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "refund",
+      "plural" : "refunds",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "flow_refund_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_account",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "request",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "psp_reference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "response",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Records the refund response"
+    }, {
+      "name" : "address",
+      "plural" : "addresses",
+      "fields" : [ {
+        "name" : "street",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "houseNumberOrName",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Adyen API requires this - but said to just send as blank string"
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postalCode",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "stateOrProvince",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The country in ISO 3166-1 alpha-2 format (e.g. NL)."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "amount",
+      "plural" : "amounts",
+      "fields" : [ {
+        "name" : "value",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "1500"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 3,
+        "maximum" : 3,
+        "example" : "EUR"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "authorize_request",
+      "plural" : "authorize_requests",
+      "fields" : [ {
+        "name" : "reference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A reference to uniquely identify the payment. This reference is used in all communication with you about the payment status. We recommend using a unique value per payment; however, it is not a requirement. If you need to provide multiple references for a transaction, you can enter them in this field. Separate each reference value with a hyphen character ('-').",
+        "maximum" : 80,
+        "example" : "payment-613613"
+      }, {
+        "name" : "merchantAccount",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "NewCoCOM"
+      }, {
+        "name" : "amount",
+        "type" : "amount",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "card",
+        "type" : "card",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Either card details, including cvv, or the shopperReference with selectedRecurringDetailReference=xxx must be specified to select the card to use"
+      }, {
+        "name" : "shopperStatement",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Determines what shows up on the consumer's card statement. If not specified, defaults to the value configured in Adyen."
+      }, {
+        "name" : "shopperIP",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The shopper's IP address. We recommend you provide this data, as it is used in a number of risk checks. For example: number of payment attempts, location based checks."
+      }, {
+        "name" : "shopperReference",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An ID that uniquely identifes the shopper. In our case, such as a customer id. (recommended). This is also used to select stored payment details"
+      }, {
+        "name" : "shopperEmail",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "recurring",
+        "type" : "recurring",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "selectedRecurringDetailReference",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ID of the recurring contract to use",
+        "example" : "LATEST"
+      }, {
+        "name" : "deliveryAddress",
+        "type" : "address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "billingAddress",
+        "type" : "address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchantOrderReference",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shopperInteraction",
+        "type" : "shopper_interaction",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "ContAuth"
+      }, {
+        "name" : "bankAccount",
+        "type" : "bank_account",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Bank account info required for ACH payments."
+      }, {
+        "name" : "additionalData",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Additional request data that varies depending on the transaction. For example, using Google Pay requires passing the token as `paywithgoogle.token`, which currently can't be modeled by APIBuilder because of the period (hence the `object` type)."
+      }, {
+        "name" : "mpiData",
+        "type" : "three_d_secure_data",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Authentication data produced by an MPI (Mastercard SecureCode or Verified By Visa)."
+      }, {
+        "name" : "selectedBrand",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Some payment methods require defining a value for this field to specify how to process the transaction, like 'applepay'."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "authorize_response",
+      "plural" : "authorize_responses",
+      "fields" : [ {
+        "name" : "pspReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Adyen's 16-digit unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request.",
+        "example" : "7914595433280823"
+      }, {
+        "name" : "resultCode",
+        "type" : "result_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "Authorized"
+      }, {
+        "name" : "authCode",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "33600"
+      }, {
+        "name" : "refusalReason",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "When the payment is not authorised, it is refused, or if an error occurs, this field holds Adyen's mapped reason for the refusal or a description of the error."
+      }, {
+        "name" : "cvcResult",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "avsResult",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "additionalData",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Returns additional data depending on payment method."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "bank_account",
+      "plural" : "bank_accounts",
+      "fields" : [ {
+        "name" : "countryCode",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The country code for the transaction. For ACH transactions, set its value to 'US'."
+      }, {
+        "name" : "ownerName",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The bank account holder name."
+      }, {
+        "name" : "bankLocationId",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ABA routing transit number."
+      }, {
+        "name" : "bankAccountNumber",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The US bank account number from which the payment will be debited."
+      }, {
+        "name" : "bankName",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The name of the bank where the account is held."
+      }, {
+        "name" : "bic",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The business identifier code (BIC) is the SWIFT address assigned to a bank."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents bank account details sent to Adyen when authorizing an ACH transfer. For more info, see https://docs.adyen.com/developers/api-reference/hosted-payment-pages-api/hpp-additional-fields/ach-payment-fields"
+    }, {
+      "name" : "cancel_request",
+      "plural" : "cancel_requests",
+      "fields" : [ {
+        "name" : "merchantAccount",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The merchant account where the transaction, for which the request needs to be initiated, was processed.",
+        "example" : "NewCoCOM"
+      }, {
+        "name" : "originalReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The  originalReference value corresponds to the  pspReference value assigned to the original payment."
+      }, {
+        "name" : "reference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If you want, you can specify your reference for the modification request. The reference is visible in the Merchant Backoffice and in the reporting section. This field has a length restriction: you can enter max. 80 characters. Not required in Adyen but we mark required as we always provide.",
+        "maximum" : 80,
+        "example" : "payment-613613"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "cancel_response",
+      "plural" : "cancel_responses",
+      "fields" : [ {
+        "name" : "pspReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Adyen's 16-digit unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request."
+      }, {
+        "name" : "response",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "card",
+      "plural" : "cards",
+      "fields" : [ {
+        "name" : "expiryMonth",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The card expiry month. Format: 2 digits, zero-padded for single digits. For example: 03 = March, 11 = November",
+        "minimum" : 2,
+        "maximum" : 2,
+        "example" : "03"
+      }, {
+        "name" : "expiryYear",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The card expiry year. Format: 4 digits. For example: 2018.",
+        "minimum" : 4,
+        "example" : "2018"
+      }, {
+        "name" : "holderName",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The name of the card holder, as printed on the card."
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The card number. Do not use any separators.",
+        "minimum" : 4,
+        "maximum" : 19
+      }, {
+        "name" : "cvc",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The card verification code. Depending on the card brand, it is known also as CVV2/CVC2 – length: 3 digits, CID – length: 4 digits",
+        "minimum" : 1,
+        "maximum" : 20
+      }, {
+        "name" : "billingAddress",
+        "type" : "address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "error",
+      "plural" : "errors",
+      "fields" : [ {
+        "name" : "status",
+        "type" : "integer",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "errorCode",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "message",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "errorType",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "pspReference",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "inner_notification_request_item",
+      "plural" : "inner_notification_request_items",
+      "fields" : [ {
+        "name" : "additionalData",
+        "type" : "object",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "amount",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "pspReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Adyen's 16-digit globally unique reference associated with the transaction or request."
+      }, {
+        "name" : "originalReference",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If the event corresponds with a modification (such as a capture or refund), this field contains the PSP reference of the original transaction that was modified."
+      }, {
+        "name" : "eventCode",
+        "type" : "event_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The type of event then notification refers to."
+      }, {
+        "name" : "eventDate",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchantAccountCode",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "operations",
+        "type" : "[operation]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchantReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "paymentMethod",
+        "type" : "payment_method",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "reason",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "success",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Boolean value as a string, e.g. 'true'"
+      } ],
+      "attributes" : [ ],
+      "description" : "See https://docs.adyen.com/developers/api-reference/notifications-api/notificationrequestitem"
+    }, {
+      "name" : "modification_request",
+      "plural" : "modification_requests",
+      "fields" : [ {
+        "name" : "merchantAccount",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The merchant account where the transaction, for which the request needs to be initiated, was processed.",
+        "example" : "NewCoCOM"
+      }, {
+        "name" : "modificationAmount",
+        "type" : "amount",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount to capture. The  currency must match the currency used in the original payment request. The value must be smaller than or equal to the authorised amount."
+      }, {
+        "name" : "originalReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The  originalReference value corresponds to the  pspReference value assigned to the original payment."
+      }, {
+        "name" : "reference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If you want, you can specify your reference for the modification request. The reference is visible in the Merchant Backoffice and in the reporting section. This field has a length restriction: you can enter max. 80 characters. Not required in Adyen but we mark required as we always provide.",
+        "maximum" : 80,
+        "example" : "payment-613613"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "modification_response",
+      "plural" : "modification_responses",
+      "fields" : [ {
+        "name" : "pspReference",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Adyen's 16-digit unique reference associated with the transaction/the request. This value is globally unique; quote it when communicating with us about this request."
+      }, {
+        "name" : "response",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "notification_request",
+      "plural" : "notification_requests",
+      "fields" : [ {
+        "name" : "live",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Boolean string that indicates whether the notification is live (true) or test (false)."
+      }, {
+        "name" : "notificationItems",
+        "type" : "[outer_notification_request_item]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Models the body of the notification webhooks sent by Adyen."
+    }, {
+      "name" : "notification_response",
+      "plural" : "notification_responses",
+      "fields" : [ {
+        "name" : "notificationResponse",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The response used to acknowledge receipt of an Adyen notification. Its value is always '[accepted]'."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "outer_notification_request_item",
+      "plural" : "outer_notification_request_items",
+      "fields" : [ {
+        "name" : "NotificationRequestItem",
+        "type" : "inner_notification_request_item",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "See https://docs.adyen.com/developers/api-reference/notifications-api/notificationrequestitem"
+    }, {
+      "name" : "recurring",
+      "plural" : "recurrings",
+      "fields" : [ {
+        "name" : "contract",
+        "type" : "contract",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "three_d_secure_data",
+      "plural" : "three_d_secure_data",
+      "fields" : [ {
+        "name" : "authenticationResponse",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The authentication response if a shopper was redirected."
+      }, {
+        "name" : "cavv",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The cardholder authentication value (base64 encoded, 20 bytes in a decoded form)."
+      }, {
+        "name" : "cavvAlgorithm",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The CAVV algorithm used."
+      }, {
+        "name" : "directoryResponse",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The enrollment response from the 3D directory server."
+      }, {
+        "name" : "eci",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The electronic commerce indicator."
+      }, {
+        "name" : "xid",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The transaction identifier (base64 encoded, 20 bytes in a decoded form)."
+      } ],
+      "attributes" : [ ]
+    } ],
+    "allUnions" : [ {
+      "name" : "adyen_internal_event",
+      "plural" : "adyen_internal_events",
+      "types" : [ {
+        "type" : "adyen_authorization_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_authorization_deleted"
+      }, {
+        "type" : "adyen_authorization_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_authorization_upserted"
+      }, {
+        "type" : "adyen_cancel_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_cancel_deleted"
+      }, {
+        "type" : "adyen_cancel_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_cancel_upserted"
+      }, {
+        "type" : "adyen_capture_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_capture_deleted"
+      }, {
+        "type" : "adyen_capture_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_capture_upserted"
+      }, {
+        "type" : "adyen_refund_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_refund_deleted"
+      }, {
+        "type" : "adyen_refund_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "adyen_refund_upserted"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    } ],
+    "allEnums" : [ {
+      "name" : "contract",
+      "plural" : "contracts",
+      "values" : [ {
+        "name" : "RECURRING",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "event_code",
+      "plural" : "event_codes",
+      "values" : [ {
+        "name" : "AUTHORISATION",
+        "attributes" : [ ],
+        "description" : "The result of an authorized transaction is returned in this notification. It does not necessarily reflect a successful auth - see the `success` attribute of the notification instead."
+      }, {
+        "name" : "CANCELLATION",
+        "attributes" : [ ],
+        "description" : "The result of a cancel modification."
+      }, {
+        "name" : "REFUND",
+        "attributes" : [ ],
+        "description" : "The result of a refund modification."
+      }, {
+        "name" : "CANCEL_OR_REFUND",
+        "attributes" : [ ],
+        "description" : "The result of a refund or cancel modification."
+      }, {
+        "name" : "CAPTURE",
+        "attributes" : [ ],
+        "description" : "The result of a capture modification."
+      }, {
+        "name" : "CAPTURE_FAILED",
+        "attributes" : [ ],
+        "description" : "Returned when a capture was processed by a third party, but there was a technical issue that should be investigated. Most of the time a retry is necessary. This notification always follows a CAPTURE notification where `success` is true."
+      }, {
+        "name" : "REFUND_FAILED",
+        "attributes" : [ ],
+        "description" : "Returned when a refund was processed by a third party, but there was a technical issue that should be investigated. Most of the time a retry is necessary. This notification always follows a REFUND notification where `success` is true."
+      }, {
+        "name" : "REFUNDED_REVERSED",
+        "attributes" : [ ],
+        "description" : "Represents when funds are received back from the bank, for instance when a card is closed."
+      }, {
+        "name" : "PAIDOUT_REVERSED",
+        "attributes" : [ ],
+        "description" : "Represents when funds are received back because they could not be paid to the shopper."
+      }, {
+        "name" : "REQUEST_FOR_INFORMATION",
+        "attributes" : [ ],
+        "description" : "Occurs when a shopper opens an RFI (request for information). In this case, defense material can be uploaded to help the shopper understand the charge."
+      }, {
+        "name" : "CHARGEBACK",
+        "attributes" : [ ],
+        "description" : "Occurs whenever the funds are deducted."
+      }, {
+        "name" : "CHARGEBACK_REVERSED",
+        "attributes" : [ ],
+        "description" : "Occurs whenever funds are returned to your merchant account."
+      }, {
+        "name" : "NOTIFICATION_OF_CHARGEBACK",
+        "attributes" : [ ],
+        "description" : "Signals that a dispute case has been initiated."
+      }, {
+        "name" : "NOTIFICATION_OF_FRAUD",
+        "attributes" : [ ],
+        "description" : "Signals that the transaction has been reported fraudulent by the schemes. This is only the case if a chargeback is received."
+      }, {
+        "name" : "MANUAL_REVIEW_ACCEPT",
+        "attributes" : [ ],
+        "description" : "Notification for acceptance of manual review."
+      }, {
+        "name" : "MANUAL_REVIEW_REJECT",
+        "attributes" : [ ],
+        "description" : "Notification for rejection of manual review."
+      }, {
+        "name" : "RECURRING_CONTRACT",
+        "attributes" : [ ],
+        "description" : "Notification for the creation of a recurring contract."
+      }, {
+        "name" : "PAYOUT_EXPIRE",
+        "attributes" : [ ],
+        "description" : "Notification when a payout expires."
+      }, {
+        "name" : "PAYOUT_DECLINE",
+        "attributes" : [ ],
+        "description" : "Notification when a payout is declined."
+      }, {
+        "name" : "PAYOUT_THIRDPARTY",
+        "attributes" : [ ],
+        "description" : "Notification when a third party payout is processed."
+      }, {
+        "name" : "REFUND_WITH_DATA",
+        "attributes" : [ ],
+        "description" : "Notification when a refund with data or payout is processed."
+      }, {
+        "name" : "AUTHORISE_REFERRAL",
+        "attributes" : [ ],
+        "description" : "Notification when a referral is authorised."
+      }, {
+        "name" : "EXPIRE",
+        "attributes" : [ ],
+        "description" : "Notification when a transaction time expires."
+      }, {
+        "name" : "FRAUD_ONLY",
+        "attributes" : [ ],
+        "description" : "Notification for a fraud transaction."
+      }, {
+        "name" : "FUND_TRANSFER",
+        "attributes" : [ ],
+        "description" : "Notification for a fund transfer from your account to the shopper's account."
+      }, {
+        "name" : "HANDLED_EXTERNALLY",
+        "attributes" : [ ],
+        "description" : "Notification if a payment is handled outside the Adyen system."
+      }, {
+        "name" : "OFFER_CLOSED",
+        "attributes" : [ ],
+        "description" : "Notification when an offer is closed."
+      }, {
+        "name" : "ORDER_OPENED",
+        "attributes" : [ ],
+        "description" : "Notification when an order is created."
+      }, {
+        "name" : "ORDER_CLOSED",
+        "attributes" : [ ],
+        "description" : "This notification is sent in case of partial payments when all the transactions for the order are complete. This event code does not symbolize whether the order is successful."
+      }, {
+        "name" : "PENDING",
+        "attributes" : [ ],
+        "description" : "Notification when the transaction is pending."
+      }, {
+        "name" : "PROCESS_RETRY",
+        "attributes" : [ ],
+        "description" : "Notification when an idempotent request is processed."
+      }, {
+        "name" : "REPORT_AVAILABLE",
+        "attributes" : [ ],
+        "description" : "Every time Adyen's system generates a report, a notification is sent which includes the URL which can be used automatically to retrieve the notification."
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines possible event codes to identify notifications from Adyen. See https://docs.adyen.com/developers/payment-notifications#eventcodes"
+    }, {
+      "name" : "operation",
+      "plural" : "operations",
+      "values" : [ {
+        "name" : "cancel",
+        "attributes" : [ ]
+      }, {
+        "name" : "capture",
+        "attributes" : [ ]
+      }, {
+        "name" : "refund",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines available operations that can be performed on an Adyen authorization."
+    }, {
+      "name" : "payment_method",
+      "plural" : "payment_methods",
+      "values" : [ {
+        "name" : "ach",
+        "attributes" : [ ],
+        "description" : "Automated Clearing House, i.e. bank transfer"
+      }, {
+        "name" : "alipay",
+        "attributes" : [ ]
+      }, {
+        "name" : "alipay_wap",
+        "attributes" : [ ],
+        "description" : "AliPay Wap (see https://en.wikipedia.org/wiki/WAP_billing)"
+      }, {
+        "name" : "amex",
+        "attributes" : [ ],
+        "description" : "American Express"
+      }, {
+        "name" : "bankTransfer_IBAN",
+        "attributes" : [ ],
+        "description" : "International Bank Transfer (IBAN)"
+      }, {
+        "name" : "bcmc",
+        "attributes" : [ ],
+        "description" : "Bancontact card"
+      }, {
+        "name" : "cup",
+        "attributes" : [ ],
+        "description" : "China Union Pay (Credit Cards)"
+      }, {
+        "name" : "diners",
+        "attributes" : [ ],
+        "description" : "Diners Club"
+      }, {
+        "name" : "directEbanking",
+        "attributes" : [ ],
+        "description" : "Sofortüberweisung"
+      }, {
+        "name" : "discover",
+        "attributes" : [ ],
+        "description" : "Discover"
+      }, {
+        "name" : "dotpay",
+        "attributes" : [ ],
+        "description" : "Dotpay"
+      }, {
+        "name" : "dragonpay_ebanking",
+        "attributes" : [ ],
+        "description" : "Dragonpay eBanking"
+      }, {
+        "name" : "dragonpay_gcash",
+        "attributes" : [ ],
+        "description" : "GCash via Dragonpay"
+      }, {
+        "name" : "dragonpay_otc_banking",
+        "attributes" : [ ],
+        "description" : "Dragonpay OTC"
+      }, {
+        "name" : "ebanking_FI",
+        "attributes" : [ ],
+        "description" : "Finnish E-Banking"
+      }, {
+        "name" : "giropay",
+        "attributes" : [ ]
+      }, {
+        "name" : "ideal",
+        "attributes" : [ ],
+        "description" : "iDEAL"
+      }, {
+        "name" : "interac",
+        "attributes" : [ ],
+        "description" : "Interac Online"
+      }, {
+        "name" : "jcb",
+        "attributes" : [ ]
+      }, {
+        "name" : "kcp_banktransfer",
+        "attributes" : [ ],
+        "description" : "Bank Transfer via KCP"
+      }, {
+        "name" : "kcp_creditcard",
+        "attributes" : [ ],
+        "description" : "Credit Card via KCP"
+      }, {
+        "name" : "kcp_payco",
+        "attributes" : [ ],
+        "description" : "PayCo"
+      }, {
+        "name" : "maestro",
+        "attributes" : [ ]
+      }, {
+        "name" : "mc",
+        "attributes" : [ ],
+        "description" : "MasterCard"
+      }, {
+        "name" : "molpay_points",
+        "attributes" : [ ],
+        "description" : "MOLPoints via MOLPay"
+      }, {
+        "name" : "multibanco",
+        "attributes" : [ ],
+        "description" : "Multibanco"
+      }, {
+        "name" : "qiwiwallet",
+        "attributes" : [ ],
+        "description" : "Qiwi Wallet"
+      }, {
+        "name" : "sepadirectdebit",
+        "attributes" : [ ],
+        "description" : "SEPA Direct Debit"
+      }, {
+        "name" : "trustly",
+        "attributes" : [ ],
+        "description" : "Trustly"
+      }, {
+        "name" : "trustpay",
+        "attributes" : [ ],
+        "description" : "TrustPay"
+      }, {
+        "name" : "unionpay",
+        "attributes" : [ ],
+        "description" : "UnionPay"
+      }, {
+        "name" : "visa",
+        "attributes" : [ ],
+        "description" : "VISA"
+      }, {
+        "name" : "wechatpay",
+        "attributes" : [ ],
+        "description" : "WeChat Pay"
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines available payment methods supported by Adyen."
+    }, {
+      "name" : "result_code",
+      "plural" : "result_codes",
+      "values" : [ {
+        "name" : "Authorised",
+        "attributes" : [ ]
+      }, {
+        "name" : "Cancelled",
+        "attributes" : [ ]
+      }, {
+        "name" : "Error",
+        "attributes" : [ ]
+      }, {
+        "name" : "Refused",
+        "attributes" : [ ]
+      }, {
+        "name" : "Received",
+        "attributes" : [ ]
+      }, {
+        "name" : "RedirectShopper",
+        "attributes" : [ ]
+      }, {
+        "name" : "Pending",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "shopper_interaction",
+      "plural" : "shopper_interactions",
+      "values" : [ {
+        "name" : "Ecommerce",
+        "attributes" : [ ],
+        "description" : "Online transactions where the card holder is present (online). For better authorisation rates, we recommend sending the card security code (CSC) along with the request."
+      }, {
+        "name" : "ContAuth",
+        "attributes" : [ ],
+        "description" : "Card on file and/or subscription transactions, where the card holder is known to the merchant (returning customer). If the shopper is present (online), you can supply also the CSC to improve authorisation (one-click payment)."
+      }, {
+        "name" : "POS",
+        "attributes" : [ ],
+        "description" : "Point-of-sale transactions where the shopper is physically present to make a payment using a secure payment terminal."
+      }, {
+        "name" : "Moto",
+        "attributes" : [ ],
+        "description" : "Mail-order and telephone-order transactions where the shopper is in contact with the merchant via email or telephone."
+      } ],
+      "attributes" : [ ]
+    } ]
   } ]
 }
