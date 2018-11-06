@@ -571,34 +571,6 @@
       "attributes" : [ ],
       "description" : "The b2b invoice represents a transaction between Flow and one of our clients (e.g. Flow purchasing inventory to resell to a consumer)."
     }, {
-      "name" : "b2b_invoice_export",
-      "plural" : "b2b_invoice_exports",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "b2b_invoice_export_form",
-      "plural" : "b2b_invoice_export_forms",
-      "fields" : [ {
-        "name" : "date_from",
-        "type" : "date-iso8601",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "date_to",
-        "type" : "date-iso8601",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "consumer_invoice",
       "plural" : "consumer_invoices",
       "fields" : [ {
@@ -1103,6 +1075,34 @@
       } ],
       "attributes" : [ ],
       "description" : "A credit memo form defines the information needed to create a credit memo. You must provide a way to identify the refund issued - either by id, key or identifier."
+    }, {
+      "name" : "invoice_export",
+      "plural" : "invoice_exports",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "invoice_export_form",
+      "plural" : "invoice_export_forms",
+      "fields" : [ {
+        "name" : "date_from",
+        "type" : "date-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "date_to",
+        "type" : "date-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "harmonization_settings",
       "plural" : "harmonization_settings",
