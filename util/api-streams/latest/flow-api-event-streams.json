@@ -18677,7 +18677,7 @@
         "annotations" : [ ]
       }, {
         "name" : "surcharge",
-        "type" : "object",
+        "type" : "io.flow.fulfillment.v0.models.price_with_base_and_details",
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
