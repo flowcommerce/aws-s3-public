@@ -9344,15 +9344,8 @@
         "annotations" : [ ],
         "description" : "A display name for the price book."
       }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
-      }, {
         "name" : "includes",
-        "type" : "io.flow.common.v0.models.included_levies",
+        "type" : "io.flow.common.v0.enums.included_levy_key",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -9360,7 +9353,7 @@
       }, {
         "name" : "status",
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Represents the status of a price book within Flow.",
@@ -9419,8 +9412,8 @@
       "attributes" : [ ],
       "description" : "Represents the price of a single item within a price book."
     }, {
-      "name" : "price_book_item_form",
-      "plural" : "price_book_item_forms",
+      "name" : "price_book_item_number_form",
+      "plural" : "price_book_item_number_forms",
       "fields" : [ {
         "name" : "price_book_key",
         "type" : "string",
@@ -9429,12 +9422,6 @@
         "annotations" : [ ],
         "description" : "Corresponds with the price book key to which this price book item belongs."
       }, {
-        "name" : "price",
-        "type" : "io.flow.common.v0.models.money",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -9442,9 +9429,16 @@
         "annotations" : [ ],
         "description" : "Corresponds with the unique product id from the ingested price book."
       }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
         "name" : "schedule",
         "type" : "price_book_item_schedule",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
@@ -9458,6 +9452,48 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
+    }, {
+      "name" : "price_book_item_query_form",
+      "plural" : "price_book_item_query_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_query",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This query will be used to select all matching items, setting the price for all the items that match this query.",
+        "example" : "number:xxx or sku:yyy"
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Upserts a price book item for items matching a query"
     }, {
       "name" : "price_book_item_schedule",
       "plural" : "price_book_item_schedules",
@@ -15706,6 +15742,21 @@
       "attributes" : [ ],
       "discriminator" : "discriminator",
       "description" : "De Minimis describes the country specific rules for exactly how tax and duties are calculated, as well as any exemptions that apply. See https://en.wikipedia.org/wiki/De_minimis for more information."
+    }, {
+      "name" : "price_book_item_form",
+      "plural" : "price_book_item_forms",
+      "types" : [ {
+        "type" : "price_book_item_number_form",
+        "attributes" : [ ],
+        "default" : true,
+        "discriminator_value" : "number"
+      }, {
+        "type" : "price_book_item_query_form",
+        "attributes" : [ ],
+        "discriminator_value" : "query"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
     }, {
       "name" : "delivery",
       "plural" : "deliveries",
@@ -28410,15 +28461,8 @@
         "annotations" : [ ],
         "description" : "A display name for the price book."
       }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
-      }, {
         "name" : "includes",
-        "type" : "io.flow.common.v0.models.included_levies",
+        "type" : "io.flow.common.v0.enums.included_levy_key",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -28426,7 +28470,7 @@
       }, {
         "name" : "status",
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Represents the status of a price book within Flow.",
@@ -28485,8 +28529,8 @@
       "attributes" : [ ],
       "description" : "Represents the price of a single item within a price book."
     }, {
-      "name" : "price_book_item_form",
-      "plural" : "price_book_item_forms",
+      "name" : "price_book_item_number_form",
+      "plural" : "price_book_item_number_forms",
       "fields" : [ {
         "name" : "price_book_key",
         "type" : "string",
@@ -28495,12 +28539,6 @@
         "annotations" : [ ],
         "description" : "Corresponds with the price book key to which this price book item belongs."
       }, {
-        "name" : "price",
-        "type" : "io.flow.common.v0.models.money",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -28508,9 +28546,16 @@
         "annotations" : [ ],
         "description" : "Corresponds with the unique product id from the ingested price book."
       }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
         "name" : "schedule",
         "type" : "price_book_item_schedule",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
@@ -28524,6 +28569,48 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
+    }, {
+      "name" : "price_book_item_query_form",
+      "plural" : "price_book_item_query_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_query",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This query will be used to select all matching items, setting the price for all the items that match this query.",
+        "example" : "number:xxx or sku:yyy"
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Upserts a price book item for items matching a query"
     }, {
       "name" : "price_book_item_schedule",
       "plural" : "price_book_item_schedules",
@@ -29090,6 +29177,21 @@
       "attributes" : [ ],
       "discriminator" : "discriminator",
       "description" : "De Minimis describes the country specific rules for exactly how tax and duties are calculated, as well as any exemptions that apply. See https://en.wikipedia.org/wiki/De_minimis for more information."
+    }, {
+      "name" : "price_book_item_form",
+      "plural" : "price_book_item_forms",
+      "types" : [ {
+        "type" : "price_book_item_number_form",
+        "attributes" : [ ],
+        "default" : true,
+        "discriminator_value" : "number"
+      }, {
+        "type" : "price_book_item_query_form",
+        "attributes" : [ ],
+        "discriminator_value" : "query"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
     } ],
     "allEnums" : [ {
       "name" : "adjustment_reason_key",
@@ -32514,15 +32616,8 @@
         "annotations" : [ ],
         "description" : "A display name for the price book."
       }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
-      }, {
         "name" : "includes",
-        "type" : "io.flow.common.v0.models.included_levies",
+        "type" : "io.flow.common.v0.enums.included_levy_key",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -32530,7 +32625,7 @@
       }, {
         "name" : "status",
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Represents the status of a price book within Flow.",
@@ -32589,8 +32684,8 @@
       "attributes" : [ ],
       "description" : "Represents the price of a single item within a price book."
     }, {
-      "name" : "price_book_item_form",
-      "plural" : "price_book_item_forms",
+      "name" : "price_book_item_number_form",
+      "plural" : "price_book_item_number_forms",
       "fields" : [ {
         "name" : "price_book_key",
         "type" : "string",
@@ -32599,12 +32694,6 @@
         "annotations" : [ ],
         "description" : "Corresponds with the price book key to which this price book item belongs."
       }, {
-        "name" : "price",
-        "type" : "io.flow.common.v0.models.money",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -32612,9 +32701,16 @@
         "annotations" : [ ],
         "description" : "Corresponds with the unique product id from the ingested price book."
       }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
         "name" : "schedule",
         "type" : "price_book_item_schedule",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
@@ -32628,6 +32724,48 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
+    }, {
+      "name" : "price_book_item_query_form",
+      "plural" : "price_book_item_query_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_query",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This query will be used to select all matching items, setting the price for all the items that match this query.",
+        "example" : "number:xxx or sku:yyy"
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Upserts a price book item for items matching a query"
     }, {
       "name" : "price_book_item_schedule",
       "plural" : "price_book_item_schedules",
@@ -34195,6 +34333,21 @@
       "attributes" : [ ],
       "discriminator" : "discriminator",
       "description" : "De Minimis describes the country specific rules for exactly how tax and duties are calculated, as well as any exemptions that apply. See https://en.wikipedia.org/wiki/De_minimis for more information."
+    }, {
+      "name" : "price_book_item_form",
+      "plural" : "price_book_item_forms",
+      "types" : [ {
+        "type" : "price_book_item_number_form",
+        "attributes" : [ ],
+        "default" : true,
+        "discriminator_value" : "number"
+      }, {
+        "type" : "price_book_item_query_form",
+        "attributes" : [ ],
+        "discriminator_value" : "query"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
     }, {
       "name" : "expandable_organization",
       "plural" : "expandable_organizations",
@@ -58583,15 +58736,8 @@
         "annotations" : [ ],
         "description" : "A display name for the price book."
       }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
-      }, {
         "name" : "includes",
-        "type" : "io.flow.common.v0.models.included_levies",
+        "type" : "io.flow.common.v0.enums.included_levy_key",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -58599,7 +58745,7 @@
       }, {
         "name" : "status",
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Represents the status of a price book within Flow.",
@@ -58658,8 +58804,8 @@
       "attributes" : [ ],
       "description" : "Represents the price of a single item within a price book."
     }, {
-      "name" : "price_book_item_form",
-      "plural" : "price_book_item_forms",
+      "name" : "price_book_item_number_form",
+      "plural" : "price_book_item_number_forms",
       "fields" : [ {
         "name" : "price_book_key",
         "type" : "string",
@@ -58668,12 +58814,6 @@
         "annotations" : [ ],
         "description" : "Corresponds with the price book key to which this price book item belongs."
       }, {
-        "name" : "price",
-        "type" : "io.flow.common.v0.models.money",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -58681,9 +58821,16 @@
         "annotations" : [ ],
         "description" : "Corresponds with the unique product id from the ingested price book."
       }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
         "name" : "schedule",
         "type" : "price_book_item_schedule",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
@@ -58697,6 +58844,48 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
+    }, {
+      "name" : "price_book_item_query_form",
+      "plural" : "price_book_item_query_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_query",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This query will be used to select all matching items, setting the price for all the items that match this query.",
+        "example" : "number:xxx or sku:yyy"
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Upserts a price book item for items matching a query"
     }, {
       "name" : "price_book_item_schedule",
       "plural" : "price_book_item_schedules",
@@ -62802,6 +62991,21 @@
       "attributes" : [ ],
       "discriminator" : "discriminator",
       "description" : "De Minimis describes the country specific rules for exactly how tax and duties are calculated, as well as any exemptions that apply. See https://en.wikipedia.org/wiki/De_minimis for more information."
+    }, {
+      "name" : "price_book_item_form",
+      "plural" : "price_book_item_forms",
+      "types" : [ {
+        "type" : "price_book_item_number_form",
+        "attributes" : [ ],
+        "default" : true,
+        "discriminator_value" : "number"
+      }, {
+        "type" : "price_book_item_query_form",
+        "attributes" : [ ],
+        "discriminator_value" : "query"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
     }, {
       "name" : "authorization",
       "plural" : "authorizations",
@@ -83437,15 +83641,8 @@
         "annotations" : [ ],
         "description" : "A display name for the price book."
       }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
-      }, {
         "name" : "includes",
-        "type" : "io.flow.common.v0.models.included_levies",
+        "type" : "io.flow.common.v0.enums.included_levy_key",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
@@ -83453,7 +83650,7 @@
       }, {
         "name" : "status",
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "Represents the status of a price book within Flow.",
@@ -83512,8 +83709,8 @@
       "attributes" : [ ],
       "description" : "Represents the price of a single item within a price book."
     }, {
-      "name" : "price_book_item_form",
-      "plural" : "price_book_item_forms",
+      "name" : "price_book_item_number_form",
+      "plural" : "price_book_item_number_forms",
       "fields" : [ {
         "name" : "price_book_key",
         "type" : "string",
@@ -83522,12 +83719,6 @@
         "annotations" : [ ],
         "description" : "Corresponds with the price book key to which this price book item belongs."
       }, {
-        "name" : "price",
-        "type" : "io.flow.common.v0.models.money",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
         "name" : "item_number",
         "type" : "string",
         "required" : true,
@@ -83535,9 +83726,16 @@
         "annotations" : [ ],
         "description" : "Corresponds with the unique product id from the ingested price book."
       }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
         "name" : "schedule",
         "type" : "price_book_item_schedule",
-        "required" : true,
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The schedule used to indicate when the price applies to the price book item."
@@ -83551,6 +83749,48 @@
       } ],
       "attributes" : [ ],
       "description" : "Represents the form to create an item in a pricebook."
+    }, {
+      "name" : "price_book_item_query_form",
+      "plural" : "price_book_item_query_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_query",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This query will be used to select all matching items, setting the price for all the items that match this query.",
+        "example" : "number:xxx or sku:yyy"
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Upserts a price book item for items matching a query"
     }, {
       "name" : "price_book_item_schedule",
       "plural" : "price_book_item_schedules",
@@ -87529,6 +87769,21 @@
       "attributes" : [ ],
       "discriminator" : "discriminator",
       "description" : "De Minimis describes the country specific rules for exactly how tax and duties are calculated, as well as any exemptions that apply. See https://en.wikipedia.org/wiki/De_minimis for more information."
+    }, {
+      "name" : "price_book_item_form",
+      "plural" : "price_book_item_forms",
+      "types" : [ {
+        "type" : "price_book_item_number_form",
+        "attributes" : [ ],
+        "default" : true,
+        "discriminator_value" : "number"
+      }, {
+        "type" : "price_book_item_query_form",
+        "attributes" : [ ],
+        "discriminator_value" : "query"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
     }, {
       "name" : "authorization",
       "plural" : "authorizations",
