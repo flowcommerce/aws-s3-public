@@ -1,3 +1,3 @@
-price_book_key,item_number,amount,item_attributes[compare_at]
-eur,1504113,250,350
+price_book_key,item_number,amount,item_attributes[compare_at],schedule[starts_at],schedule[ends_at]
+eur,1504113,250,350,2018-11-16T21:24:29.046Z,2018-12-16T21:24:29.046Z
 
