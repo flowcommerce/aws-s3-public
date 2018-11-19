@@ -457,6 +457,9 @@ operations:
   - method: GET
     path: /:organization/marketing/:platform/accounts
     server: marketing-gateway
+  - method: DELETE
+    path: /:organization/marketing/:platform/accounts
+    server: marketing-gateway
   - method: GET
     path: /:organization/marketing/:platform/accounts/:marketing_account_id
     server: marketing-gateway
