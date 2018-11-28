@@ -1359,24 +1359,6 @@ operations:
     path: /:organization/catalog/items/:number
     server: catalog
   - method: GET
-    path: /:organization/item-functions/versions
-    server: catalog
-  - method: GET
-    path: /:organization/item-functions
-    server: catalog
-  - method: GET
-    path: /:organization/item-functions/:key
-    server: catalog
-  - method: POST
-    path: /:organization/item-functions
-    server: catalog
-  - method: PUT
-    path: /:organization/item-functions/:key
-    server: catalog
-  - method: DELETE
-    path: /:organization/item-functions/:key
-    server: catalog
-  - method: GET
     path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions
     server: catalog
   - method: GET
@@ -1438,21 +1420,6 @@ operations:
     server: catalog
   - method: PUT
     path: /:organization/catalog/subcatalogs/:id/settings
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/versions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions
-    server: catalog
-  - method: GET
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/:id
-    server: catalog
-  - method: POST
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions
-    server: catalog
-  - method: DELETE
-    path: /:organization/catalog/subcatalogs/:subcatalog_id/functions/:id
     server: catalog
   - method: GET
     path: /:organization/catalog/subcatalogs/:subcatalog_id/items/versions

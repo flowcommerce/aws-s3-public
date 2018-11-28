@@ -8183,123 +8183,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "item_function",
-      "plural" : "item_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique, url friendly key identifying this function"
-      }, {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_post_form",
-      "plural" : "item_function_post_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique key to identify this function. If not specified, generated server side as the lowercase, hex encoded, Sha-256 of the source code itself"
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_put_form",
-      "plural" : "item_function_put_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_reference",
-      "plural" : "item_function_references",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "item_function_version",
-      "plural" : "item_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "item_price_update_put_form",
       "plural" : "item_price_update_put_forms",
       "fields" : [ {
@@ -8676,94 +8559,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "subcatalog_function",
-      "plural" : "subcatalog_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Apply this pricing function to the items that match this query"
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_form",
-      "plural" : "subcatalog_function_forms",
-      "fields" : [ {
-        "name" : "item_function_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "The Id of the item function to associate with this subcatalog"
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Optionally apply this pricing function only to the items that match this query. If not specified, the pricing function will apply to all items."
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier. Defaults to last in list.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_version",
-      "plural" : "subcatalog_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "subcatalog_function",
-        "type" : "subcatalog_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "subcatalog_item",
       "plural" : "subcatalog_items",
       "fields" : [ {
@@ -8782,12 +8577,6 @@
         "name" : "status",
         "type" : "subcatalog_item_status",
         "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "expandable_item_function",
-        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       } ],
@@ -15738,21 +15527,6 @@
       "attributes" : [ ],
       "discriminator" : "code",
       "description" : "Types of failed inventory reservation reasons"
-    }, {
-      "name" : "expandable_item_function",
-      "plural" : "expandable_item_functions",
-      "types" : [ {
-        "type" : "item_function",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function"
-      }, {
-        "type" : "item_function_reference",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function_reference"
-      } ],
-      "attributes" : [ ],
-      "discriminator" : "discriminator",
-      "description" : "An item function can be represented with just its Id, or the entire model"
     }, {
       "name" : "expandable_subcatalog",
       "plural" : "expandable_subcatalogs",
@@ -25166,12 +24940,6 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
-      }, {
-        "name" : "function_id",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       } ],
       "attributes" : [ ]
     }, {
@@ -25775,123 +25543,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "item_function",
-      "plural" : "item_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique, url friendly key identifying this function"
-      }, {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_post_form",
-      "plural" : "item_function_post_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique key to identify this function. If not specified, generated server side as the lowercase, hex encoded, Sha-256 of the source code itself"
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_put_form",
-      "plural" : "item_function_put_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_reference",
-      "plural" : "item_function_references",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "item_function_version",
-      "plural" : "item_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "item_price_update_put_form",
       "plural" : "item_price_update_put_forms",
       "fields" : [ {
@@ -26268,94 +25919,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "subcatalog_function",
-      "plural" : "subcatalog_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Apply this pricing function to the items that match this query"
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_form",
-      "plural" : "subcatalog_function_forms",
-      "fields" : [ {
-        "name" : "item_function_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "The Id of the item function to associate with this subcatalog"
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Optionally apply this pricing function only to the items that match this query. If not specified, the pricing function will apply to all items."
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier. Defaults to last in list.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_version",
-      "plural" : "subcatalog_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "subcatalog_function",
-        "type" : "subcatalog_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "subcatalog_item",
       "plural" : "subcatalog_items",
       "fields" : [ {
@@ -26374,12 +25937,6 @@
         "name" : "status",
         "type" : "subcatalog_item_status",
         "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "expandable_item_function",
-        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       } ],
@@ -29101,21 +28658,6 @@
       } ],
       "attributes" : [ ],
       "discriminator" : "discriminator"
-    }, {
-      "name" : "expandable_item_function",
-      "plural" : "expandable_item_functions",
-      "types" : [ {
-        "type" : "item_function",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function"
-      }, {
-        "type" : "item_function_reference",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function_reference"
-      } ],
-      "attributes" : [ ],
-      "discriminator" : "discriminator",
-      "description" : "An item function can be represented with just its Id, or the entire model"
     }, {
       "name" : "expandable_subcatalog",
       "plural" : "expandable_subcatalogs",
@@ -52552,123 +52094,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "item_function",
-      "plural" : "item_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique, url friendly key identifying this function"
-      }, {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_post_form",
-      "plural" : "item_function_post_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique key to identify this function. If not specified, generated server side as the lowercase, hex encoded, Sha-256 of the source code itself"
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_put_form",
-      "plural" : "item_function_put_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_reference",
-      "plural" : "item_function_references",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "item_function_version",
-      "plural" : "item_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "item_price_update_put_form",
       "plural" : "item_price_update_put_forms",
       "fields" : [ {
@@ -53045,94 +52470,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "subcatalog_function",
-      "plural" : "subcatalog_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Apply this pricing function to the items that match this query"
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_form",
-      "plural" : "subcatalog_function_forms",
-      "fields" : [ {
-        "name" : "item_function_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "The Id of the item function to associate with this subcatalog"
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Optionally apply this pricing function only to the items that match this query. If not specified, the pricing function will apply to all items."
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier. Defaults to last in list.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_version",
-      "plural" : "subcatalog_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "subcatalog_function",
-        "type" : "subcatalog_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "subcatalog_item",
       "plural" : "subcatalog_items",
       "fields" : [ {
@@ -53151,12 +52488,6 @@
         "name" : "status",
         "type" : "subcatalog_item_status",
         "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "expandable_item_function",
-        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       } ],
@@ -62744,21 +62075,6 @@
       } ],
       "attributes" : [ ],
       "discriminator" : "discriminator"
-    }, {
-      "name" : "expandable_item_function",
-      "plural" : "expandable_item_functions",
-      "types" : [ {
-        "type" : "item_function",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function"
-      }, {
-        "type" : "item_function_reference",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function_reference"
-      } ],
-      "attributes" : [ ],
-      "discriminator" : "discriminator",
-      "description" : "An item function can be represented with just its Id, or the entire model"
     }, {
       "name" : "expandable_subcatalog",
       "plural" : "expandable_subcatalogs",
@@ -78402,123 +77718,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "item_function",
-      "plural" : "item_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique, url friendly key identifying this function"
-      }, {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_post_form",
-      "plural" : "item_function_post_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "key",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Unique key to identify this function. If not specified, generated server side as the lowercase, hex encoded, Sha-256 of the source code itself"
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_put_form",
-      "plural" : "item_function_put_forms",
-      "fields" : [ {
-        "name" : "description",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Details of what the item function actually does"
-      }, {
-        "name" : "code",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ],
-      "description" : "Item Functions are javascript code used to calculate the localized price of an additional item. Each function can be associated with an optional query identifying the products to which the function applies. Flow selects the first function matching an item, then uses that function to calculate local prices whenever any data relevant to the item changes (e.g. on update in master catalog, on change in relevant exchange rate, etc.). Item functions are immutable once created."
-    }, {
-      "name" : "item_function_reference",
-      "plural" : "item_function_references",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "item_function_version",
-      "plural" : "item_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "item_price_update_put_form",
       "plural" : "item_price_update_put_forms",
       "fields" : [ {
@@ -78895,94 +78094,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "subcatalog_function",
-      "plural" : "subcatalog_functions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "item_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Apply this pricing function to the items that match this query"
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_form",
-      "plural" : "subcatalog_function_forms",
-      "fields" : [ {
-        "name" : "item_function_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "The Id of the item function to associate with this subcatalog"
-      }, {
-        "name" : "q",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Optionally apply this pricing function only to the items that match this query. If not specified, the pricing function will apply to all items."
-      }, {
-        "name" : "position",
-        "type" : "long",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Functions are ordered. Lower position numbers indicate function that should be applied earlier. Defaults to last in list.",
-        "minimum" : 0
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "subcatalog_function_version",
-      "plural" : "subcatalog_function_versions",
-      "fields" : [ {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "type",
-        "type" : "io.flow.common.v0.enums.change_type",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "subcatalog_function",
-        "type" : "subcatalog_function",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "subcatalog_item",
       "plural" : "subcatalog_items",
       "fields" : [ {
@@ -79001,12 +78112,6 @@
         "name" : "status",
         "type" : "subcatalog_item_status",
         "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "item_function",
-        "type" : "expandable_item_function",
-        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       } ],
@@ -87577,21 +86682,6 @@
         }
       } ],
       "description" : "All roles available to attach to a user."
-    }, {
-      "name" : "expandable_item_function",
-      "plural" : "expandable_item_functions",
-      "types" : [ {
-        "type" : "item_function",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function"
-      }, {
-        "type" : "item_function_reference",
-        "attributes" : [ ],
-        "discriminator_value" : "item_function_reference"
-      } ],
-      "attributes" : [ ],
-      "discriminator" : "discriminator",
-      "description" : "An item function can be represented with just its Id, or the entire model"
     }, {
       "name" : "expandable_subcatalog",
       "plural" : "expandable_subcatalogs",
