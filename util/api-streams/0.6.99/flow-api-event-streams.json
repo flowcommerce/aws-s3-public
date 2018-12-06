@@ -18448,8 +18448,8 @@
         "description" : "Service shipping tier available in this tier group. e.g. Standard tier, Express tier, Economy tier"
       },
       "upsertedDiscriminator" : "tier_upserted_v2",
-      "deletedDiscriminator" : "tier_deleted",
-      "deletedHasModel" : false
+      "deletedDiscriminator" : "tier_deleted_v2",
+      "deletedHasModel" : true
     }, {
       "fieldName" : "shipping_lane",
       "typeName" : "shipping_lane",
@@ -18790,29 +18790,6 @@
       } ],
       "attributes" : [ ]
     }, {
-      "name" : "tier_deleted",
-      "plural" : "tier_deleteds",
-      "fields" : [ {
-        "name" : "event_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
       "name" : "tier_deleted_v2",
       "plural" : "tier_deleted_v2s",
       "fields" : [ {
@@ -18837,107 +18814,6 @@
         "name" : "tier",
         "type" : "io.flow.fulfillment.v0.models.tier",
         "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      } ],
-      "attributes" : [ ]
-    }, {
-      "name" : "tier_upserted",
-      "plural" : "tier_upserteds",
-      "fields" : [ {
-        "name" : "event_id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "timestamp",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "organization",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "id",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "experience_key",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "integration",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "name",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "message",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "rules",
-        "type" : "[object]",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "services",
-        "type" : "[object]",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "strategy",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "visibility",
-        "type" : "string",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "currency",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "description",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "direction",
-        "type" : "string",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "display",
-        "type" : "io.flow.fulfillment.v0.models.tier_display",
-        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       } ],
@@ -23228,14 +23104,6 @@
         "type" : "center_deleted",
         "attributes" : [ ],
         "discriminator_value" : "center_deleted"
-      }, {
-        "type" : "tier_upserted",
-        "attributes" : [ ],
-        "discriminator_value" : "tier_upserted"
-      }, {
-        "type" : "tier_deleted",
-        "attributes" : [ ],
-        "discriminator_value" : "tier_deleted"
       }, {
         "type" : "delivery_option_upserted",
         "attributes" : [ ],
