@@ -798,6 +798,12 @@ operations:
     path: /:organization/payment/method/rules
     server: experience
   - method: GET
+    path: /reference/carriers
+    server: reference
+  - method: GET
+    path: /reference/carrier/services
+    server: reference
+  - method: GET
     path: /reference/countries
     server: reference
   - method: GET
@@ -813,7 +819,7 @@ operations:
     path: /reference/locales/:id
     server: reference
   - method: GET
-    path: /reference/payment-methods
+    path: /reference/payment/methods
     server: reference
   - method: GET
     path: /reference/provinces
