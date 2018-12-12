@@ -7933,7 +7933,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -8018,7 +8019,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -24385,7 +24386,8 @@
           "required" : true,
           "attributes" : [ ],
           "annotations" : [ ],
-          "example" : "en_US"
+          "description" : "Locale id. See https://api.flow.io/reference/locales",
+          "example" : "en-US"
         }, {
           "name" : "name",
           "type" : "string",
@@ -25289,7 +25291,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -25374,7 +25377,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -51840,7 +51843,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -51925,7 +51929,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -77641,7 +77645,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -77726,7 +77731,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
