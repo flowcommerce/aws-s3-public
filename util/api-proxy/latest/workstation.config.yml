@@ -246,9 +246,6 @@ operations:
     path: /:organization/delivery-windows/summary
     server: fulfillment
   - method: GET
-    path: /:organization/quotes/versions
-    server: fulfillment
-  - method: GET
     path: /:organization/quotes
     server: fulfillment
   - method: GET
