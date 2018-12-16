@@ -14548,7 +14548,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -14633,7 +14634,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -22713,6 +22714,14 @@
         "name" : "invalid_language",
         "attributes" : [ ],
         "description" : "Indicates that the specified language code is not valid"
+      }, {
+        "name" : "order_item_out_of_stock",
+        "attributes" : [ ],
+        "description" : "Indicates that one or more ordered items is marked as out-of-stock or otherwise cannot be reserved."
+      }, {
+        "name" : "gift_card_error",
+        "attributes" : [ ],
+        "description" : "Indicates a failure to charge a gift card."
       } ],
       "attributes" : [ ]
     }, {
@@ -32459,7 +32468,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -32544,7 +32554,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -40627,6 +40637,14 @@
         "name" : "invalid_language",
         "attributes" : [ ],
         "description" : "Indicates that the specified language code is not valid"
+      }, {
+        "name" : "order_item_out_of_stock",
+        "attributes" : [ ],
+        "description" : "Indicates that one or more ordered items is marked as out-of-stock or otherwise cannot be reserved."
+      }, {
+        "name" : "gift_card_error",
+        "attributes" : [ ],
+        "description" : "Indicates a failure to charge a gift card."
       } ],
       "attributes" : [ ]
     }, {
@@ -61644,7 +61662,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -61729,7 +61748,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -66961,6 +66980,14 @@
         "name" : "invalid_language",
         "attributes" : [ ],
         "description" : "Indicates that the specified language code is not valid"
+      }, {
+        "name" : "order_item_out_of_stock",
+        "attributes" : [ ],
+        "description" : "Indicates that one or more ordered items is marked as out-of-stock or otherwise cannot be reserved."
+      }, {
+        "name" : "gift_card_error",
+        "attributes" : [ ],
+        "description" : "Indicates a failure to charge a gift card."
       } ],
       "attributes" : [ ]
     }, {
@@ -83709,7 +83736,8 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ],
-        "example" : "en_US"
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -83794,7 +83822,7 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The locale in which the content of this item is written.",
-        "example" : "en_US"
+        "example" : "en-US"
       }, {
         "name" : "name",
         "type" : "string",
@@ -91867,6 +91895,14 @@
         "name" : "invalid_language",
         "attributes" : [ ],
         "description" : "Indicates that the specified language code is not valid"
+      }, {
+        "name" : "order_item_out_of_stock",
+        "attributes" : [ ],
+        "description" : "Indicates that one or more ordered items is marked as out-of-stock or otherwise cannot be reserved."
+      }, {
+        "name" : "gift_card_error",
+        "attributes" : [ ],
+        "description" : "Indicates a failure to charge a gift card."
       } ],
       "attributes" : [ ]
     }, {
