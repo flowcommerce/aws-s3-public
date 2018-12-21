@@ -53679,13 +53679,6 @@
         "annotations" : [ ],
         "description" : "Total number of events with created_at timesteamp both a) 'greater than or equal to' b) 'less than' the datetime range"
       }, {
-        "name" : "needle_marker",
-        "type" : "date-time-iso8601",
-        "required" : true,
-        "attributes" : [ ],
-        "annotations" : [ ],
-        "description" : "Indicates the current processing withing the sync"
-      }, {
         "name" : "buckets",
         "type" : "[shopify_event_bucket]",
         "required" : true,
