@@ -953,6 +953,9 @@ operations:
   - method: POST
     path: /:organization/authorizations
     server: payment
+  - method: PUT
+    path: /:organization/authorizations/:key
+    server: payment
   - method: DELETE
     path: /:organization/authorizations/:key
     server: payment
