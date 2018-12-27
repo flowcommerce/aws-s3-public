@@ -631,6 +631,9 @@ operations:
   - method: PUT
     path: /:organization/ratecard-lanes/:id
     server: ratecard-internal
+  - method: DELETE
+    path: /:organization/ratecard-lanes/:id
+    server: ratecard-internal
   - method: GET
     path: /:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/versions
     server: ratecard-internal
