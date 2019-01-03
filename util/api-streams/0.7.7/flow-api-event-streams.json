@@ -89244,5 +89244,4908 @@
       "attributes" : [ ],
       "description" : "The Available Filter Format defines the type of data that is expected in a single filter"
     } ]
+  }, {
+    "streamName" : "production.targeting.event.v0.targeting_event.json",
+    "shortName" : "targeting_event_v0",
+    "capturedEvents" : [ {
+      "fieldName" : "targeting_item",
+      "typeName" : "targeting_item",
+      "modelType" : {
+        "name" : "targeting_item",
+        "plural" : "targeting_items",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "targeting",
+          "type" : "targeting_summary",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "item_number",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "query",
+          "type" : "targeting_query",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ],
+        "description" : "Represents catalog items where a targeting query is applicable"
+      },
+      "upsertedDiscriminator" : "targeting_item_upserted_v2",
+      "deletedDiscriminator" : "targeting_item_deleted",
+      "deletedHasModel" : false
+    } ],
+    "allModels" : [ {
+      "name" : "targeting_item_deleted",
+      "plural" : "targeting_item_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting_item_upserted",
+      "plural" : "targeting_item_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "targeting_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "q",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "outcome_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "catalog_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "subcatalog_id",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Indiciates that a given item has been targeted by the query q producing an outcome. The item number is unique within its targeting_id."
+    }, {
+      "name" : "targeting_item_upserted_v2",
+      "plural" : "targeting_item_upserted_v2s",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "targeting_item",
+        "type" : "io.flow.catalog.v0.models.targeting_item",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "adjustment_reason",
+      "plural" : "adjustment_reasons",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "adjustment_reason_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The label for the adjustment reason that can be displayed as a tooltip on the product detail page."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "attribute",
+      "plural" : "attributes",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The unique identifier for the attribute."
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The key of the attribute that identifies it within a map of attributes."
+      }, {
+        "name" : "options",
+        "type" : "options",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Defines special rules for handling this attribute."
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A human-readable label used for display purposes."
+      }, {
+        "name" : "intent",
+        "type" : "attribute_intent",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify the meaning of this attribute to ensure accurate processing, such as marking a price that should be localized. Note that specifying an intent may restrict what data types are legal -- for example, a price must also be of type decimal.",
+        "example" : "price"
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.attribute_data_type",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally tag attributes with their data type so they are properly validated. If omitted, we will default to string",
+        "example" : "string"
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      } ],
+      "attributes" : [ ],
+      "description" : "An attribute can be configured to be used in different ways throughout Flow. A common example is to identify a meaningful attribute (e.g. brand) that can then be displayed throughout the Flow console."
+    }, {
+      "name" : "attribute_form",
+      "plural" : "attribute_forms",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual attribute key. This key should match the keys used in the item.attributes maps",
+        "example" : "brand"
+      }, {
+        "name" : "options",
+        "type" : "options",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Defines the configuration for how the options are used through flow"
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A human-readable label used for display purposes",
+        "example" : "Brand"
+      }, {
+        "name" : "intent",
+        "type" : "attribute_intent",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify the meaning of this attribute to ensure accurate processing, such as marking a price that should be localized. Note that specifying an intent may restrict what data types are legal -- for example, a price must also be of type decimal.",
+        "example" : "price"
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.attribute_data_type",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally tag attributes with their data type so they are properly validated. If omitted, we will default to string",
+        "example" : "string"
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The position of this attribute in the set of attributes. If not specified, will default to last",
+        "minimum" : 0
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "attribute_version",
+      "plural" : "attribute_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attribute",
+        "type" : "attribute",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Retrieve journaled history of an attribute"
+    }, {
+      "name" : "catalog",
+      "plural" : "catalogs",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_reference",
+      "plural" : "catalog_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_statistics",
+      "plural" : "catalog_statisticses",
+      "fields" : [ {
+        "name" : "items",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Total number of catalog items available from master catalog"
+      }, {
+        "name" : "categories",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Distinct number of catalog item categories"
+      } ],
+      "attributes" : [ ],
+      "description" : "Statistics covering product catalog item information, including total catalog item count, number of distinct categories, etc."
+    }, {
+      "name" : "catalog_version",
+      "plural" : "catalog_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "catalog",
+        "type" : "catalog",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "flow_item_index_metadata",
+      "plural" : "flow_item_index_metadata",
+      "fields" : [ {
+        "name" : "status",
+        "type" : "subcatalog_item_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "image",
+      "plural" : "images",
+      "fields" : [ {
+        "name" : "url",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The full URL to the image",
+        "example" : "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      }, {
+        "name" : "tags",
+        "type" : "[image_tag]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Tags can be used to identify the type of image being sent",
+        "default" : "[]"
+      } ],
+      "attributes" : [ ],
+      "description" : "The URL to an image, with optional tags. Flow Commerce primarily uses images to enhance the administrative tools (e.g. showing an item image in console)"
+    }, {
+      "name" : "image_form",
+      "plural" : "image_forms",
+      "fields" : [ {
+        "name" : "url",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The full URL to the image",
+        "example" : "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"
+      }, {
+        "name" : "tags",
+        "type" : "[image_tag]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional tags that can keep track of the primary purpose of this image throughout the Flow platform."
+      } ],
+      "attributes" : [ ],
+      "description" : "Image form defines the data needed to create an image"
+    }, {
+      "name" : "item",
+      "plural" : "items",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "locale",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Locale id. See https://api.flow.io/reference/locales",
+        "example" : "en-US"
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "categories",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "[]"
+      }, {
+        "name" : "description",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Attributes of the items. An attribute of type intent must be given as a string representation of a decimal to be correctly localized.",
+        "default" : "{}"
+      }, {
+        "name" : "dimensions",
+        "type" : "io.flow.common.v0.models.dimensions",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "images",
+        "type" : "[image]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "[]"
+      }, {
+        "name" : "local",
+        "type" : "local",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The Flow item defines a specific item that can be purchased by a consumer. For many clients, this will map to a Sku."
+    }, {
+      "name" : "item_attributes_patch_form",
+      "plural" : "item_attributes_patch_forms",
+      "fields" : [ {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Attributes of the item.",
+        "default" : "{}"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "item_form",
+      "plural" : "item_forms",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "locale",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The locale in which the content of this item is written.",
+        "example" : "en-US"
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The customer friendly name of the actual item in the catalog.",
+        "example" : "Drawstring linen pants"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "usd"
+      }, {
+        "name" : "price",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "categories",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A list of categories associated with this item."
+      }, {
+        "name" : "description",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, the item description is used to improve classification."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Attributes represent all other product data that you have regarding this item. Common attributes include 'country_of_origin', 'color', 'size', 'material', etc. We recommend including as many attributes as possible, even if you are not currently planning to use them."
+      }, {
+        "name" : "dimensions",
+        "type" : "io.flow.common.v0.models.dimensions",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, dimensions are used to drive more accurate shipping estimates."
+      }, {
+        "name" : "images",
+        "type" : "[image_form]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, the item images will be used to enhance the user experience in Flow's online tools."
+      } ],
+      "attributes" : [ ],
+      "description" : "The item form defines the data required to create an item."
+    }, {
+      "name" : "item_form_overlay",
+      "plural" : "item_form_overlays",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      }, {
+        "name" : "categories",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A list of categories associated with this item."
+      }, {
+        "name" : "description",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, the item description is used to improve classification."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Attributes represent all other product data that you have regarding this item. Common attributes include 'country_of_origin', 'color', 'size', 'material', etc. We recommend including as many attributes as possible, even if you are not currently planning to use them."
+      }, {
+        "name" : "dimensions",
+        "type" : "io.flow.common.v0.models.dimensions",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, dimensions are used to drive more accurate shipping estimates."
+      }, {
+        "name" : "images",
+        "type" : "[image_form]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, the item images will be used to enhance the user experience in Flow's online tools."
+      } ],
+      "attributes" : [ ],
+      "description" : "The item form overlay defines data to merge into an item form."
+    }, {
+      "name" : "item_form_overlay_form",
+      "plural" : "item_form_overlay_forms",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Position determines the order in which item form overlays are merged.  If not provided, will be treated as the last overlay to be merged.",
+        "minimum" : 0
+      }, {
+        "name" : "categories",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A list of categories associated with this item."
+      }, {
+        "name" : "description",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, the item description is used to improve classification."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Attributes represent all other product data that you have regarding this item. Common attributes include 'country_of_origin', 'color', 'size', 'material', etc. We recommend including as many attributes as possible, even if you are not currently planning to use them."
+      }, {
+        "name" : "dimensions",
+        "type" : "io.flow.common.v0.models.dimensions",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, dimensions are used to drive more accurate shipping estimates."
+      }, {
+        "name" : "images",
+        "type" : "[image_form]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If provided, the item images will be used to enhance the user experience in Flow's online tools."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "item_price_update_put_form",
+      "plural" : "item_price_update_put_forms",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "usd"
+      }, {
+        "name" : "price",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Attributes of the items. An attribute of type intent must be given as a string representation of a decimal to be correctly localized.",
+        "default" : "{}"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "item_statistics",
+      "plural" : "item_statisticses",
+      "fields" : [ {
+        "name" : "items",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Total number of catalog items available from master catalog"
+      }, {
+        "name" : "categories",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Distinct number of catalog item categories"
+      } ],
+      "attributes" : [ ],
+      "description" : "Statistics covering product catalog item information, including total catalog item count, number of distinct categories, etc."
+    }, {
+      "name" : "item_version",
+      "plural" : "item_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "item",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "local",
+      "plural" : "locals",
+      "fields" : [ {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "prices",
+        "type" : "[localized_price]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "rates",
+        "type" : "[io.flow.currency.v0.models.rate]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "spot_rates",
+        "type" : "[object]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "deprecation" : {
+          "description" : "This field is deprecated - you will see an empty array in the response"
+        }
+      }, {
+        "name" : "status",
+        "type" : "subcatalog_item_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "included"
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This field contains the localized attributes. For instance a base attribute of intent price will be converted in the target currency."
+      }, {
+        "name" : "price_attributes",
+        "type" : "map[io.flow.common.v0.models.price_with_base]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This field contains the localized prices attributes."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "localized_adjustment",
+      "plural" : "localized_adjustments",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "reason",
+        "type" : "adjustment_reason",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "localized_item_duty",
+      "plural" : "localized_item_duties",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "adjustment",
+        "type" : "localized_adjustment",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An adjustment may need to be applied to VAT at the order level if the de minimis value is met; if so, its value is stored here."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "localized_item_price",
+      "plural" : "localized_item_prices",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "includes",
+        "type" : "io.flow.common.v0.models.included_levies",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Describes which levies are included in the price, if any."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "localized_item_vat",
+      "plural" : "localized_item_vats",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The specific name of the tax in the local region.",
+        "example" : "VAT, GST, HST, etc."
+      }, {
+        "name" : "adjustment",
+        "type" : "localized_adjustment",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An adjustment may need to be applied to VAT at the order level if the de minimis value is met; if so, its value is stored here."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "localized_total",
+      "plural" : "localized_totals",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "options",
+      "plural" : "optionses",
+      "fields" : [ {
+        "name" : "required",
+        "type" : "boolean",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If true, when you create or update items in Flow, we will validate that data presented contains an attribute with this key.",
+        "default" : "false",
+        "example" : "brand"
+      }, {
+        "name" : "show_in_catalog",
+        "type" : "boolean",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Flag indicating that a feature is applicable to catalog and can be used in Console",
+        "default" : "false"
+      }, {
+        "name" : "show_in_harmonization",
+        "type" : "boolean",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Flag indicating that a feature is applicable to harmoniztion and can be used in Console",
+        "default" : "false"
+      } ],
+      "attributes" : [ ],
+      "description" : "Flags to indicate whether a feature is enabled/disabled on a particular model (e.g. show/do not show attribute as a column in harmonization table view of items)"
+    }, {
+      "name" : "subcatalog",
+      "plural" : "subcatalogs",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "catalog",
+        "type" : "catalog",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "settings",
+        "type" : "subcatalog_settings",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A configuration with custom query to select a subset of master catalog items for a localized experience"
+    }, {
+      "name" : "subcatalog_form",
+      "plural" : "subcatalog_forms",
+      "fields" : [ {
+        "name" : "settings",
+        "type" : "subcatalog_settings_form",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "subcatalog_item",
+      "plural" : "subcatalog_items",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "item",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "status",
+        "type" : "subcatalog_item_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents information specific to an item in a given subcatalog"
+    }, {
+      "name" : "subcatalog_item_version",
+      "plural" : "subcatalog_item_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "subcatalog_item",
+        "type" : "subcatalog_item",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "subcatalog_query",
+      "plural" : "subcatalog_queries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "q",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "query_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a typed query to indicate which items to include or exclude in a subcatalog"
+    }, {
+      "name" : "subcatalog_query_form",
+      "plural" : "subcatalog_query_forms",
+      "fields" : [ {
+        "name" : "q",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Query string used to search for items"
+      }, {
+        "name" : "type",
+        "type" : "query_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines a query specifying items to be included or excluded in a subcatalog"
+    }, {
+      "name" : "subcatalog_query_validation",
+      "plural" : "subcatalog_query_validations",
+      "fields" : [ {
+        "name" : "valid",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "invalid",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Indicates valid and invalid queries"
+    }, {
+      "name" : "subcatalog_reference",
+      "plural" : "subcatalog_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "subcatalog_settings",
+      "plural" : "subcatalog_settings",
+      "fields" : [ {
+        "name" : "update_policy",
+        "type" : "update_policy",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "default" : "auto"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "subcatalog_settings_form",
+      "plural" : "subcatalog_settings_forms",
+      "fields" : [ {
+        "name" : "update_policy",
+        "type" : "update_policy",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "subcatalog_statistics",
+      "plural" : "subcatalog_statisticses",
+      "fields" : [ {
+        "name" : "excluded",
+        "type" : "item_statistics",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Number of items that are currently excluded in this subcatalog"
+      }, {
+        "name" : "included",
+        "type" : "item_statistics",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Total number of catalog items available from master catalog"
+      }, {
+        "name" : "restricted",
+        "type" : "item_statistics",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Number of items that are currently restricted in this subcatalog"
+      }, {
+        "name" : "queue",
+        "type" : "item_statistics",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Number of items that are currently queued to be added or updated to this subcatalog"
+      }, {
+        "name" : "catalog",
+        "type" : "catalog_statistics",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The parent catalog's statistics. Provided here to make summary data easy to compute (e.g. what % of items are in this subcatalog)"
+      } ],
+      "attributes" : [ ],
+      "description" : "Statistics related to the items in this subcatalog, including item count, number of distinct categories, etc."
+    }, {
+      "name" : "subcatalog_version",
+      "plural" : "subcatalog_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "subcatalog",
+        "type" : "subcatalog",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting",
+      "plural" : "targetings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Unique client-provided identifier indicating uniqueness of the targeting request. Follows the convention: [service]-[model]-[id]. For example: ratecard-dimension-estimate-dst-8eec70ab1f2740e0b46c7c8867cd8e07"
+      }, {
+        "name" : "queries",
+        "type" : "[targeting_query]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Tuples of valid queries on a catalog and their corresponding output object in the client service"
+      }, {
+        "name" : "catalog",
+        "type" : "catalog_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "subcatalog",
+        "type" : "subcatalog_reference",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting_form",
+      "plural" : "targeting_forms",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Unique client-provided identifier indicating uniqueness of the targeting request. Follows the convention: [service]-[model]-[id]. For example: ratecard-dimension-estimate-dst-8eec70ab1f2740e0b46c7c8867cd8e07"
+      }, {
+        "name" : "queries",
+        "type" : "[targeting_query_form]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Tuples of valid queries on a catalog and their corresponding output object in the client service"
+      }, {
+        "name" : "subcatalog_id",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If a targeting is only for a specific subcatalog, then this needs to be provided"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting_item",
+      "plural" : "targeting_items",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "targeting",
+        "type" : "targeting_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "query",
+        "type" : "targeting_query",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents catalog items where a targeting query is applicable"
+    }, {
+      "name" : "targeting_query",
+      "plural" : "targeting_queries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "q",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Valid query on the organization's catalog items"
+      }, {
+        "name" : "outcome_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ID of corresponding outcome object in client service (e.g. item margin, dimension estimate, etc)"
+      }, {
+        "name" : "position",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting_query_form",
+      "plural" : "targeting_query_forms",
+      "fields" : [ {
+        "name" : "q",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Valid query on the organization's catalog items"
+      }, {
+        "name" : "outcome_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ID of corresponding outcome object in client service (e.g. item margin, dimension estimate, etc)"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting_summary",
+      "plural" : "targeting_summaries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "catalog",
+        "type" : "catalog_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "subcatalog",
+        "type" : "subcatalog_reference",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "targeting_version",
+      "plural" : "targeting_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "targeting",
+        "type" : "targeting",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "behavior_audit",
+      "plural" : "behavior_audits",
+      "fields" : [ {
+        "name" : "behavior",
+        "type" : "flow_behavior",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "permission_audit",
+      "plural" : "permission_audits",
+      "fields" : [ {
+        "name" : "routes",
+        "type" : "[route_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[behavior_audit]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Returns all known permissions, along with their authorization technique and all of the roles which contain them."
+    }, {
+      "name" : "permission_check",
+      "plural" : "permission_checks",
+      "fields" : [ {
+        "name" : "authentication_technique",
+        "type" : "authentication_technique",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The authentication technique currently being used."
+      }, {
+        "name" : "user",
+        "type" : "io.flow.common.v0.unions.expandable_user",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "routes",
+        "type" : "[permitted_route]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "All the routes this request would be able to access."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to test an integration's permissions, including identifying the authentication technique that will be used for similar requests."
+    }, {
+      "name" : "permission_error",
+      "plural" : "permission_errors",
+      "fields" : [ {
+        "name" : "code",
+        "type" : "io.flow.error.v0.enums.generic_error_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "messages",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A summary of the error.",
+        "minimum" : 1
+      }, {
+        "name" : "granting_roles",
+        "type" : "[flow_role]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A collection of roles the user does not have that would grant the permission. Not returned if user is not a member of this org."
+      }, {
+        "name" : "admin_users",
+        "type" : "[io.flow.common.v0.models.user]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A brief list of users who could grant one of the missing roles. Not returned if user is not a member of this org",
+        "maximum" : 5
+      } ],
+      "attributes" : [ ],
+      "description" : "Returned if no permissions are available for a request."
+    }, {
+      "name" : "permitted_route",
+      "plural" : "permitted_routes",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      } ],
+      "attributes" : [ ],
+      "description" : "A Flow API route and method."
+    }, {
+      "name" : "route_audit",
+      "plural" : "route_audits",
+      "fields" : [ {
+        "name" : "method",
+        "type" : "permitted_http_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "path",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "An API Builder path, starting with / and excluding query strings."
+      }, {
+        "name" : "authentication_techniques",
+        "type" : "[authentication_technique]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "roles",
+        "type" : "[flow_role]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "simple_permission_check",
+      "plural" : "simple_permission_checks",
+      "fields" : [ {
+        "name" : "behaviors",
+        "type" : "[flow_behavior]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A simple model, used to convey permitted behaviors along with approval of a request for a specific permitted route."
+    }, {
+      "name" : "organization_currency_setting",
+      "plural" : "organization_currency_settings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The base currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "target",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The target currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "margin",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A percent of the base currency value added to the base currency before conversion.",
+        "example" : "5.0"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents organization-specific currency conversion adjustments."
+    }, {
+      "name" : "organization_currency_setting_form",
+      "plural" : "organization_currency_setting_forms",
+      "fields" : [ {
+        "name" : "base",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The base currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "target",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The target currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "margin",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A percent of the base currency value added to the base currency before conversion.",
+        "example" : "5.0"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the parts of an organization setting that can be updated."
+    }, {
+      "name" : "organization_currency_setting_version",
+      "plural" : "organization_currency_setting_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization_currency_setting",
+        "type" : "organization_currency_setting",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "rate",
+      "plural" : "rates",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The base currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "target",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The target currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "effective_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The time at which this rate is effective."
+      }, {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual conversion rate from the base currency to target currency including any applicable margins."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents an organization-specific currency conversion rate at a point in time."
+    }, {
+      "name" : "rate_form",
+      "plural" : "rate_forms",
+      "fields" : [ {
+        "name" : "base",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The base currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "target",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The target currency's ISO 4217 3-character code as defined in https://api.flow.io/reference/currencies"
+      }, {
+        "name" : "effective_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The time at which this rate is effective."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the parts of an organization rate that can be updated."
+    }, {
+      "name" : "rate_version",
+      "plural" : "rate_versions",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "type",
+        "type" : "io.flow.common.v0.enums.change_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "rate",
+        "type" : "rate",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "address",
+      "plural" : "addresses",
+      "fields" : [ {
+        "name" : "text",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Full text version of address"
+      }, {
+        "name" : "streets",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Array for street line 1, street line 2, etc., in order"
+      }, {
+        "name" : "street_number",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "The specific street number, if available."
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "province",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postal",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "latitude",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "longitude",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines structured fields for address to be used in user/form input. Either text or the structured input needs to be present."
+    }, {
+      "name" : "billing_address",
+      "plural" : "billing_addresses",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "name",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "The name of the customer associated with the billing address"
+      }, {
+        "name" : "streets",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Array for street line 1, street line 2, etc., in order"
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "province",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postal",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "company",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Business entity or organization name of this contact"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_item_reference",
+      "plural" : "catalog_item_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "catalog_item_summary",
+      "plural" : "catalog_item_summaries",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "contact",
+      "plural" : "contacts",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "name",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Personal information of point-of-contact"
+      }, {
+        "name" : "company",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "Business entity or organization name of this contact"
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "phone",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines structured fields for a contact person. Typically used for specifying contact person for an account, shipment, or organization representative"
+    }, {
+      "name" : "customer",
+      "plural" : "customers",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "name",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      }, {
+        "name" : "phone",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery."
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud."
+      }, {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "datetime_range",
+      "plural" : "datetime_ranges",
+      "fields" : [ {
+        "name" : "from",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "to",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "dimension",
+      "plural" : "dimensions",
+      "fields" : [ {
+        "name" : "depth",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "diameter",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "length",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "weight",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "width",
+        "type" : "measurement",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "dimensions",
+      "plural" : "dimensionses",
+      "fields" : [ {
+        "name" : "product",
+        "type" : "dimension",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "packaging",
+        "type" : "dimension",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "duration",
+      "plural" : "durations",
+      "fields" : [ {
+        "name" : "unit",
+        "type" : "unit_of_time",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 0
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a duration of time."
+    }, {
+      "name" : "exception",
+      "plural" : "exceptions",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "exception_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "datetime_range",
+        "type" : "datetime_range",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Range for the holiday. For single-day holidays, from and to should just be the same.",
+        "example" : "2021/12/24 12:00 am to 2021/12/25 11:59 pm"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents an exception to the schedule of a center."
+    }, {
+      "name" : "experience_summary",
+      "plural" : "experience_summaries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 3166 3 currency code as defined in https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 4217-3 code for the currency. Case insensitive. See https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "language",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 639 2 language code as defined in https://api.flow.io/reference/languages",
+        "example" : "en"
+      } ],
+      "attributes" : [ ],
+      "description" : "Some important fields related to experiences used in various APIs"
+    }, {
+      "name" : "included_levies",
+      "plural" : "included_levies",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "included_levy_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The label for the included levies that can be displayed as a tooltip on the product detail page."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_form",
+      "plural" : "input_forms",
+      "fields" : [ {
+        "name" : "values",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_form_specification",
+      "plural" : "input_form_specifications",
+      "fields" : [ {
+        "name" : "inputs",
+        "type" : "[input_specification]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "limitations",
+        "type" : "input_specification_limitations",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_specification",
+      "plural" : "input_specifications",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "input_specification_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "display_text",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Text to display for this input."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "input_specification_limitation_max",
+      "plural" : "input_specification_limitation_maxes",
+      "fields" : [ {
+        "name" : "max",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the maximum number of accepted inputs"
+    }, {
+      "name" : "input_specification_limitations",
+      "plural" : "input_specification_limitationses",
+      "fields" : [ {
+        "name" : "limitations",
+        "type" : "[input_specification_limitation]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "item_reference",
+      "plural" : "item_references",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "line_item",
+      "plural" : "line_items",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "quantity",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 1
+      }, {
+        "name" : "price",
+        "type" : "money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The price of this item for this order. If not specified, we will use the item price from the experience. Note that this price represents the price of a single line item - the total price to the consumer will be quantity * price."
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to the order. It can be useful for storing additional information about the charge in a structured format."
+      }, {
+        "name" : "center",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional center key associated with this item. Used for orders and quotes to specify where to ship an item from. If not specified, Flow will infer based on inventory setup."
+      }, {
+        "name" : "discount",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total discount, if any, to apply to this line item. Note that the discount is the total discount to apply regardless of the quantity here"
+      } ],
+      "attributes" : [ ],
+      "description" : "Line items represent the items a consumer is purchasing, including additional information to complete the transaction. Note that you may pass in as many line items as you like - including repeating item numbers across line items."
+    }, {
+      "name" : "line_item_form",
+      "plural" : "line_item_forms",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "quantity",
+        "type" : "long",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 1
+      }, {
+        "name" : "shipment_estimate",
+        "type" : "datetime_range",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "For items that may not immediately ship out from the origin because of different models of inventory (e.g. drop-ship, sell-first), this is a way for a client to communicate when the items can ship out. This will be used to calculate delivery option windows."
+      }, {
+        "name" : "price",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The price of this item for this order. If not specified, we will use the item price from the experience"
+      }, {
+        "name" : "attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A set of key/value pairs that you can attach to the order. It can be useful for storing additional information about the charge in a structured format."
+      }, {
+        "name" : "center",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional center key associated with this item. Used for orders and quotes to specify where to ship an item from. If not specified, Flow will infer based on inventory setup."
+      }, {
+        "name" : "discount",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total discount, if any, to apply to this line item. Note that the discount is the total discount to apply regardless of the quantity here"
+      } ],
+      "attributes" : [ ],
+      "description" : "Line items represent the items a consumer is purchasing, including additional information to complete the transaction. Note that you may pass in as many line items as you like - including repeating item numbers across line items."
+    }, {
+      "name" : "margin",
+      "plural" : "margins",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "margin_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "measurement",
+      "plural" : "measurements",
+      "fields" : [ {
+        "name" : "value",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "12.23"
+      }, {
+        "name" : "units",
+        "type" : "unit_of_measurement",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "inch"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "merchant_of_record_entity",
+      "plural" : "merchant_of_record_entities",
+      "fields" : [ {
+        "name" : "organization",
+        "type" : "organization_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "flow"
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "example" : "Flow Commerce Limited"
+      }, {
+        "name" : "vat",
+        "type" : "merchant_of_record_entity_registration",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "streets",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Street Address Lines"
+      }, {
+        "name" : "city",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "province",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "postal",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "IRL"
+      }, {
+        "name" : "phone",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Primary customer service phone number for this entity"
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Primary customer service email address for this entity"
+      } ],
+      "attributes" : [ ],
+      "description" : "The merchant of record entity provides the legal name and address of the specific Flow entity serving as merchant of record."
+    }, {
+      "name" : "merchant_of_record_entity_registration",
+      "plural" : "merchant_of_record_entity_registrations",
+      "fields" : [ {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "In Europe, this is the VAT registration number for the entity. In the US, this is the EIN."
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The country in which this registration number is defined. The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "money",
+      "plural" : "moneys",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      } ],
+      "attributes" : [ ],
+      "description" : "Money represents an amount in a given currency"
+    }, {
+      "name" : "money_with_base",
+      "plural" : "money_with_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "money_with_optional_base",
+      "plural" : "money_with_optional_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "base",
+        "type" : "money",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to migrate older models to have a base value, without breaking compatibility"
+    }, {
+      "name" : "name",
+      "plural" : "names",
+      "fields" : [ {
+        "name" : "first",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "last",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "organization",
+      "plural" : "organizations",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "environment",
+        "type" : "environment",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "parent",
+        "type" : "organization_reference",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "When creating an organization in the test environment, it is linked to your production organization. This allows you to have as many test organizations as you like."
+      }, {
+        "name" : "defaults",
+        "type" : "organization_defaults",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Always present. Marked optional for backwards compatibility."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a single organization in the system, and what environment it is currently operating in."
+    }, {
+      "name" : "organization_defaults",
+      "plural" : "organization_defaults",
+      "fields" : [ {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      }, {
+        "name" : "base_currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "language",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 639 2 language code as defined in https://api.flow.io/reference/languages",
+        "example" : "en"
+      }, {
+        "name" : "locale",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The locale id as defined in https://api.flow.io/reference/locales",
+        "example" : "fr-CA"
+      }, {
+        "name" : "timezone",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The name of the timezone as defined in https://api.flow.io/reference/timezones",
+        "example" : "America/New_York"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "organization_reference",
+      "plural" : "organization_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "organization_summary",
+      "plural" : "organization_summaries",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "partner_reference",
+      "plural" : "partner_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price",
+      "plural" : "prices",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents an amount-currency pair for a basic price"
+    }, {
+      "name" : "price_form",
+      "plural" : "price_forms",
+      "fields" : [ {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "ISO 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      } ],
+      "attributes" : [ ],
+      "description" : "Amount-currency paid for a basic price to be used in model forms, before a price label is created. Label in the main price model is created by the implementing api."
+    }, {
+      "name" : "price_with_base",
+      "plural" : "price_with_bases",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Iso 4217 3 currency code as defined in https://api.flow.io/reference/currencies",
+        "example" : "CAD"
+      }, {
+        "name" : "amount",
+        "type" : "double",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The localized label of the amount and currency",
+        "example" : "$125.00 CAD"
+      }, {
+        "name" : "base",
+        "type" : "price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "rounding",
+      "plural" : "roundings",
+      "fields" : [ {
+        "name" : "type",
+        "type" : "rounding_type",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "method",
+        "type" : "rounding_method",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "schedule",
+      "plural" : "schedules",
+      "fields" : [ {
+        "name" : "calendar",
+        "type" : "calendar",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Operating calendar used by origin center for shipment, if available. If not provided, assume they are never open.",
+        "example" : "Weekdays, 7 days, etc."
+      }, {
+        "name" : "holiday",
+        "type" : "holiday_calendar",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Standard holiday set to respect for this schedule",
+        "example" : "US bank holidays"
+      }, {
+        "name" : "exception",
+        "type" : "[exception]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Holiday calendar used by origin center for shipment, if available.",
+        "example" : "Memorial Day, Independence Day, etc."
+      }, {
+        "name" : "cutoff",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Daily cutoff time for shipment fulfillment at origin center, if available. 24-hour time",
+        "example" : "16:45"
+      }, {
+        "name" : "min_lead_time",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional number of days a center takes to make a shipment"
+      }, {
+        "name" : "max_lead_time",
+        "type" : "long",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optional number of days a center takes to make a shipment"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents operating calendar and holidays of a center"
+    }, {
+      "name" : "user",
+      "plural" : "users",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "email",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "If known, the user's primary email address. While in most common cases, we expect users to have email addresses, there are edge cases where it is useful to allow a user to NOT have an email address. For example, users interacting solely from mobile devices, guest user accounts, initial onboarding where email is not known, etc. We think by starting off with an optional primary email address we can support these use cases with very little implementation cost."
+      }, {
+        "name" : "name",
+        "type" : "name",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data" ],
+        "description" : "The user's name."
+      }, {
+        "name" : "status",
+        "type" : "user_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Only active users are authorized to login and interact with the Flow platform.",
+        "default" : "active"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a single user in the system"
+    }, {
+      "name" : "user_reference",
+      "plural" : "user_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "zone",
+      "plural" : "zones",
+      "fields" : [ {
+        "name" : "postals",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Group of postal code prefixes included in this zone",
+        "example" : "[M9P,M9R,M9V,M9W]"
+      }, {
+        "name" : "provinces",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Group of provinces included in this zone. Values should in ISO 3166-2 province code format.",
+        "example" : "[AB, ON]"
+      }, {
+        "name" : "country",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO 3166-3 country code. Case insensitive. See https://api.flow.io/reference/countries",
+        "example" : "CAN"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "currency_format",
+      "plural" : "currency_formats",
+      "fields" : [ {
+        "name" : "symbol",
+        "type" : "io.flow.common.v0.enums.currency_symbol_format",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label_formatters",
+        "type" : "[io.flow.common.v0.enums.currency_label_formatter]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "deminimis_per_item",
+      "plural" : "deminimis_per_items",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO-4217 3 character currency code in which the value is calculated"
+      }, {
+        "name" : "minimum",
+        "type" : "decimal",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If specified, the minimum amount due per item",
+        "minimum" : 0
+      }, {
+        "name" : "maximum",
+        "type" : "decimal",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If specified, the maximum amount due per item",
+        "minimum" : 0
+      } ],
+      "attributes" : [ ],
+      "description" : "De Minimis per item describes rules which require minimum and/or maximum values per item"
+    }, {
+      "name" : "deminimis_simple",
+      "plural" : "deminimis_simples",
+      "fields" : [ {
+        "name" : "value",
+        "type" : "decimal",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The value below which no tax or duty is collected, which is a sum of the values associated with the de minimis components."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The ISO-4217 3 character currency code in which the value is calculated."
+      }, {
+        "name" : "components",
+        "type" : "[levy_component]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The components that are used to determine the value. Note that these components may be different from the components for the VAT or duty itself."
+      }, {
+        "name" : "minimum",
+        "type" : "decimal",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If the calculated VAT or duty amount is less than the minimum, no VAT or duty is owed. In other words, this is the minimum payable amount.",
+        "minimum" : 0
+      } ],
+      "attributes" : [ ],
+      "description" : "De Minimis for most common example which includes a value threshold and rules on what components are used in the duty calculation"
+    }, {
+      "name" : "duty",
+      "plural" : "duties",
+      "fields" : [ {
+        "name" : "rate",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The combined duty rate. A value of 25 indicates a duty rate of 25%",
+        "minimum" : 0,
+        "example" : "25"
+      }, {
+        "name" : "components",
+        "type" : "[levy_component]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The components to which duty is applied.",
+        "minimum" : 1
+      }, {
+        "name" : "deminimis",
+        "type" : "deminimis",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Describes the duty de minimis if there is one for this destination"
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Generally used for Where this rate came from and potentially its type."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a simple model of duties that apply to a given item / trade lane."
+    }, {
+      "name" : "local_price_details",
+      "plural" : "local_price_detailses",
+      "fields" : [ {
+        "name" : "base",
+        "type" : "price_details",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the localized price details, but converted to the base currency of the organization."
+      }, {
+        "name" : "local",
+        "type" : "price_details",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the localized price details in the currency of the experience."
+      }, {
+        "name" : "discount",
+        "type" : "price_detail",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the amount subtracted post-VAT/Duty/Rounding due to a percent discount."
+      }, {
+        "name" : "local_before_discount",
+        "type" : "price_detail",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the amount subtracted post-VAT/Duty/Rounding due to a percent discount."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price_book",
+      "plural" : "price_books",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A unique string that identifies a price book within Flow."
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A unique string that identifies a price book within an organization, which defaults to the id if none is set."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The currency for which the price book is valid."
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A display name for the price book."
+      }, {
+        "name" : "includes",
+        "type" : "io.flow.common.v0.models.included_levies",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Describes which levies are included in the price book item prices."
+      }, {
+        "name" : "status",
+        "type" : "io.flow.common.v0.enums.price_book_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents the status of a price book within Flow."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a list of target prices in a specific currency that can override any subset of item prices within an experience."
+    }, {
+      "name" : "price_book_form",
+      "plural" : "price_book_forms",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The currency for which the price book is valid."
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A display name for the price book."
+      }, {
+        "name" : "includes",
+        "type" : "io.flow.common.v0.enums.included_levy_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Describes which levies are included in the price book item prices."
+      }, {
+        "name" : "status",
+        "type" : "io.flow.common.v0.enums.price_book_status",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Represents the status of a price book within Flow.",
+        "default" : "draft"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a price book for a specific currency that can override any subset of item prices within an experience."
+    }, {
+      "name" : "price_book_item",
+      "plural" : "price_book_items",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price_book",
+        "type" : "price_book_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the product id from the ingested price book."
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the price of a single item within a price book."
+    }, {
+      "name" : "price_book_item_form",
+      "plural" : "price_book_item_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the unique product id from the ingested price book."
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents the form to create an item in a pricebook."
+    }, {
+      "name" : "price_book_item_query_form",
+      "plural" : "price_book_item_query_forms",
+      "fields" : [ {
+        "name" : "price_book_key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Corresponds with the price book key to which this price book item belongs."
+      }, {
+        "name" : "item_query",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "This query will be used to select all matching items, setting the price for all the items that match this query.",
+        "example" : "number:xxx or sku:yyy"
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The item price amount, in the currency of the price book"
+      }, {
+        "name" : "schedule",
+        "type" : "price_book_item_schedule",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The schedule used to indicate when the price applies to the price book item."
+      }, {
+        "name" : "item_attributes",
+        "type" : "map[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Optionally specify values for any of the catalog item attributes that have an intent of price, e.g. add a 'compare_at' or 'msrp' price here."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to create price book items for multiple items matching a query"
+    }, {
+      "name" : "price_book_item_schedule",
+      "plural" : "price_book_item_schedules",
+      "fields" : [ {
+        "name" : "starts_at",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The date and time for the price to take effect."
+      }, {
+        "name" : "ends_at",
+        "type" : "date-time-iso8601",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The date and time for the price to stop taking effect. If not provided, no default end time will be set."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents schedule applied to a price book item"
+    }, {
+      "name" : "price_book_reference",
+      "plural" : "price_book_references",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "key",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price_check",
+      "plural" : "price_checks",
+      "fields" : [ {
+        "name" : "display",
+        "type" : "local_price_details",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the (estimated) price details that are displayed to the user. These details will never change."
+      }, {
+        "name" : "final",
+        "type" : "local_price_details",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the final price details, which are initially equal to the display details. At the order level (when shipping address is known), these details may be adjusted."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price_detail",
+      "plural" : "price_details",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "price_detail_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The key indicating what this price detail represents."
+      }, {
+        "name" : "components",
+        "type" : "[price_detail_component]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The formatted label to display for this detail, e.g. '$123.45 CAD'."
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The display name for this price detail."
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a top-level price detail, e.g. 'Subtotal' or 'VAT'."
+    }, {
+      "name" : "price_detail_component",
+      "plural" : "price_detail_components",
+      "fields" : [ {
+        "name" : "key",
+        "type" : "price_detail_component_key",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "amount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "label",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The formatted label to display for this component, e.g. '$123.45 CAD'."
+      }, {
+        "name" : "name",
+        "type" : "string",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The display name for this price detail component."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price_details",
+      "plural" : "price_detailses",
+      "fields" : [ {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The currency in which these price details were calculated."
+      }, {
+        "name" : "item_price",
+        "type" : "price_detail",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Details of the item's base price from the master catalog, including any applicable discounts."
+      }, {
+        "name" : "margins",
+        "type" : "price_detail",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains the currency margin, percent item margin, and fixed item margin."
+      }, {
+        "name" : "vat",
+        "type" : "price_detail",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total amount of VAT applied. VAT is applied to the item price and optionally to the duty/shipping prices based on the destination country."
+      }, {
+        "name" : "duty",
+        "type" : "price_detail",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total amount of DUTY applied. Duty is applied to the item price and optionally to the shipping prices based on the destination country, and also will take into account de minimis (thus amount may be zero if de minimis applies)."
+      }, {
+        "name" : "rounding",
+        "type" : "price_detail",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The amount required to meet the rounding requirements from the experience's settings. For example, if an item price is 121.50, and the rounding setting is up to the nearest '1.00', rounding would return .50 here."
+      }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The rounded price of the item as seen by customers in price detail pages, which takes into account VAT and duty pricing settings of the experience."
+      }, {
+        "name" : "total",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total price of the item as seen by customers at checkout, which includes the base price, discount, margins, VAT, duty, and rounding."
+      }, {
+        "name" : "adjustment",
+        "type" : "price_detail",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The total amount the total price was altered due to sales margins. A negative value indicates a discount."
+      } ],
+      "attributes" : [ ],
+      "description" : "Detailed information for the pricing of a given item within an experience."
+    }, {
+      "name" : "price_equation",
+      "plural" : "price_equations",
+      "fields" : [ {
+        "name" : "contracted_rate",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The value of the contracted currency conversion rate between Flow and an organization."
+      }, {
+        "name" : "rate",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The value of the currency conversion rate that includes an organization-specific margin if applicable."
+      }, {
+        "name" : "pricing",
+        "type" : "pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Contains pricing settings for VAT, duty, and rounding."
+      }, {
+        "name" : "base_price",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The base price of the product."
+      }, {
+        "name" : "discount",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The discount to apply to the base price of the product in the same currency as the base product."
+      }, {
+        "name" : "fixed_margin",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A fixed amount to add, e.g 2.5 would add an absolute margin of 2.5 in the base currency of your item."
+      }, {
+        "name" : "percent_margin",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A percent of the base cost to add, e.g. 1.2 would represent a 1.2% increase."
+      }, {
+        "name" : "insurance",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The insurance information associated with the product."
+      }, {
+        "name" : "freight",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The freight information associated with the product."
+      }, {
+        "name" : "duty",
+        "type" : "duty",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The duty rate applicable to the product. A value of 15 indicates a duty rate of 15%.",
+        "example" : "15.25"
+      }, {
+        "name" : "tax",
+        "type" : "tax",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The tax rate applicable to the product. A value of 17 indicates a tax rate of 17%.",
+        "example" : "17"
+      }, {
+        "name" : "percent_sales_margin",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "A percent sales margin to apply after the other margins, duties, taxes and margins. A value of 17 indicates an increase of 17%. A value of 5.5 indicates a discount of 5.5%",
+        "default" : "0"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "pricing",
+      "plural" : "pricings",
+      "fields" : [ {
+        "name" : "vat",
+        "type" : "pricing_levy_setting",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Determines how VAT is treated within this experience - whether it is included in the item price, displayed as a stand alone line item, or ignored - and only used in checkout (see the orders resource)"
+      }, {
+        "name" : "duty",
+        "type" : "pricing_levy_setting",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Determines how Duty is treated within this experience - whether it is included in the item price, displayed as a stand alone line item, or ignored - and only used in checkout (see the orders resource)"
+      }, {
+        "name" : "rounding",
+        "type" : "io.flow.common.v0.models.rounding",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If specified, we will round prices in this experience"
+      } ],
+      "attributes" : [ ],
+      "description" : "Pricing determines how the item price is calculated when items are requests via the experience."
+    }, {
+      "name" : "tax",
+      "plural" : "taxes",
+      "fields" : [ {
+        "name" : "name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The name of the taxes being applied",
+        "example" : "VAT, GST + PST, HST"
+      }, {
+        "name" : "rate",
+        "type" : "decimal",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The combined tax rate. A value of 17 indicates a tax rate of 17%",
+        "minimum" : 0,
+        "example" : "17"
+      }, {
+        "name" : "components",
+        "type" : "[levy_component]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The components to which tax is applied.",
+        "minimum" : 1
+      }, {
+        "name" : "deminimis",
+        "type" : "deminimis",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Describes the tax de minimis if there is one for this destination"
+      } ],
+      "attributes" : [ ],
+      "description" : "Represents a simple model of taxes that apply to a given item / destination."
+    }, {
+      "name" : "generic_error",
+      "plural" : "generic_errors",
+      "fields" : [ {
+        "name" : "code",
+        "type" : "generic_error_code",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Generic errors will always have a code set to 'generic_error'",
+        "default" : "generic_error"
+      }, {
+        "name" : "messages",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "minimum" : 1
+      } ],
+      "attributes" : [ ],
+      "description" : "An error of some type has occurred. The most common error will be validation on input. See messages for details."
+    } ],
+    "allUnions" : [ {
+      "name" : "targeting_event",
+      "plural" : "targeting_events",
+      "types" : [ {
+        "type" : "targeting_item_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "targeting_item_upserted"
+      }, {
+        "type" : "targeting_item_upserted_v2",
+        "attributes" : [ ],
+        "discriminator_value" : "targeting_item_upserted_v2"
+      }, {
+        "type" : "targeting_item_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "targeting_item_deleted"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "expandable_subcatalog",
+      "plural" : "expandable_subcatalogs",
+      "types" : [ {
+        "type" : "subcatalog",
+        "attributes" : [ ],
+        "discriminator_value" : "subcatalog"
+      }, {
+        "type" : "subcatalog_reference",
+        "attributes" : [ ],
+        "discriminator_value" : "subcatalog_reference"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator",
+      "description" : "A subcatalog can be represented with just it's ID, or the entire model"
+    }, {
+      "name" : "localized_price",
+      "plural" : "localized_prices",
+      "types" : [ {
+        "type" : "localized_item_price",
+        "attributes" : [ ],
+        "discriminator_value" : "localized_item_price"
+      }, {
+        "type" : "localized_item_vat",
+        "attributes" : [ ],
+        "discriminator_value" : "localized_item_vat"
+      }, {
+        "type" : "localized_item_duty",
+        "attributes" : [ ],
+        "discriminator_value" : "localized_item_duty"
+      }, {
+        "type" : "localized_total",
+        "attributes" : [ ],
+        "discriminator_value" : "localized_total"
+      } ],
+      "attributes" : [ {
+        "name" : "linter",
+        "value" : {
+          "ignore" : [ "discriminator" ]
+        }
+      } ],
+      "discriminator" : "key",
+      "description" : "The localized prices for an item are returned as a list - the key of each element is defined here"
+    }, {
+      "name" : "flow_role",
+      "plural" : "flow_roles",
+      "types" : [ {
+        "type" : "flow_user_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_user_role"
+      }, {
+        "type" : "flow_addon_role",
+        "attributes" : [ ],
+        "discriminator_value" : "flow_addon_role"
+      } ],
+      "attributes" : [ {
+        "name" : "linter",
+        "value" : {
+          "ignore" : [ "discriminator" ]
+        }
+      } ],
+      "description" : "All roles available to attach to a user."
+    }, {
+      "name" : "expandable_organization",
+      "plural" : "expandable_organizations",
+      "types" : [ {
+        "type" : "organization",
+        "attributes" : [ ],
+        "discriminator_value" : "organization"
+      }, {
+        "type" : "organization_reference",
+        "attributes" : [ ],
+        "discriminator_value" : "organization_reference"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "expandable_user",
+      "plural" : "expandable_users",
+      "types" : [ {
+        "type" : "user",
+        "attributes" : [ ],
+        "discriminator_value" : "user"
+      }, {
+        "type" : "user_reference",
+        "attributes" : [ ],
+        "discriminator_value" : "user_reference"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "input_specification_limitation",
+      "plural" : "input_specification_limitations",
+      "types" : [ {
+        "type" : "input_specification_limitation_max",
+        "attributes" : [ ],
+        "discriminator_value" : "input_specification_limitation_max"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "name" : "deminimis",
+      "plural" : "deminimises",
+      "types" : [ {
+        "type" : "deminimis_simple",
+        "attributes" : [ ],
+        "discriminator_value" : "deminimis_simple"
+      }, {
+        "type" : "deminimis_per_item",
+        "attributes" : [ ],
+        "discriminator_value" : "deminimis_per_item"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator",
+      "description" : "De Minimis describes the country specific rules for exactly how tax and duties are calculated, as well as any exemptions that apply. See https://en.wikipedia.org/wiki/De_minimis for more information."
+    } ],
+    "allEnums" : [ {
+      "name" : "adjustment_reason_key",
+      "plural" : "adjustment_reason_keys",
+      "values" : [ {
+        "name" : "duty_deminimis",
+        "attributes" : [ ],
+        "description" : "If the duty de minimis value has not been met, an adjustment may be made to offset any previously calculated duty."
+      }, {
+        "name" : "vat_deminimis",
+        "attributes" : [ ],
+        "description" : "If the VAT de minimis value has not been met, an adjustment may be made to offset any previously calculated VAT."
+      } ],
+      "attributes" : [ ],
+      "description" : "The key of each possible adjustment is defined here."
+    }, {
+      "name" : "attribute_intent",
+      "plural" : "attribute_intents",
+      "values" : [ {
+        "name" : "brand",
+        "attributes" : [ ],
+        "description" : "A brand name of the item (for retailers that sell multiple brands)"
+      }, {
+        "name" : "color",
+        "attributes" : [ ],
+        "description" : "The color of the item"
+      }, {
+        "name" : "countries_of_origin",
+        "attributes" : [ ],
+        "description" : "A space separate list of the countries of origin for this item"
+      }, {
+        "name" : "product_id",
+        "attributes" : [ ],
+        "description" : "An identifier used to group items that are variations of the same product, such as different sizes or colors of the same shirt"
+      }, {
+        "name" : "fulfillment_method",
+        "attributes" : [ ],
+        "description" : "Identifies whether the item is a physical or digital good"
+      }, {
+        "name" : "hazardous",
+        "attributes" : [ ],
+        "description" : "Identifies whether this item may contain hazardous materials"
+      }, {
+        "name" : "price",
+        "attributes" : [ ],
+        "description" : "A price for the item in the organization's base currency (will be localized based on each Experience's pricing policy)"
+      }, {
+        "name" : "size",
+        "attributes" : [ ],
+        "description" : "A size label of the item"
+      }, {
+        "name" : "sku",
+        "attributes" : [ ],
+        "description" : "An SKU for the item"
+      }, {
+        "name" : "taxability",
+        "attributes" : [ ],
+        "description" : "Identifies whether taxes are applicable to an item"
+      }, {
+        "name" : "consumer_url",
+        "attributes" : [ ],
+        "description" : "A URL of the product detail page of the item"
+      }, {
+        "name" : "gtin",
+        "attributes" : [ ],
+        "description" : "The Global Trade Item Number of this item."
+      }, {
+        "name" : "mpn",
+        "attributes" : [ ],
+        "description" : "The Manufacturer Part Number of this item."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to tag attributes as having a specific meaning that can affect processing. For example, if you have an attribute called \"brandname\", and assign it the \"brand\" intent, the value of the \"brandname\" attribute will be used where a brand name is needed. Note that an intent can be assigned to any amount of attributes of an item."
+    }, {
+      "name" : "fulfillment_method_type",
+      "plural" : "fulfillment_method_types",
+      "values" : [ {
+        "name" : "fulfillment_method",
+        "attributes" : [ ],
+        "description" : "Indicates how an item will be shipped or fulfilled.  Acceptable values are defined by the 'fulfillment_method_value' enum."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to indicate an item's fulfillment method type."
+    }, {
+      "name" : "fulfillment_method_value",
+      "plural" : "fulfillment_method_values",
+      "values" : [ {
+        "name" : "digital",
+        "attributes" : [ ],
+        "description" : "Indicates item will be fulfilled digitally and no shipment is required (e.g. Gift Card)."
+      }, {
+        "name" : "physical",
+        "attributes" : [ ],
+        "description" : "Indicates item will be shipped in a physical package."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to indicate an item's fulfillment method values."
+    }, {
+      "name" : "image_tag",
+      "plural" : "image_tags",
+      "values" : [ {
+        "name" : "thumbnail",
+        "attributes" : [ ],
+        "description" : "Thumbnail images identify the image to use when displaying products in the Flow Console."
+      }, {
+        "name" : "checkout",
+        "attributes" : [ ],
+        "description" : "Checkout images identify the item image to use when displaying the item in the context of a consumer checkout (e.g. cart, checkout page)."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "query_type",
+      "plural" : "query_types",
+      "values" : [ {
+        "name" : "exclusion",
+        "attributes" : [ ],
+        "description" : "Exclude items satisfied by the associated query"
+      }, {
+        "name" : "inclusion",
+        "attributes" : [ ],
+        "description" : "Include items satisfied by the associated query"
+      } ],
+      "attributes" : [ ],
+      "description" : "Type to indicate whether query is an inclusion or exclusion"
+    }, {
+      "name" : "subcatalog_item_status",
+      "plural" : "subcatalog_item_statuses",
+      "values" : [ {
+        "name" : "excluded",
+        "attributes" : [ ],
+        "description" : "The user has chosen to exclude the item from the associated subcatalog."
+      }, {
+        "name" : "included",
+        "attributes" : [ ],
+        "description" : "The item is included in the associated subcatalog."
+      }, {
+        "name" : "restricted",
+        "attributes" : [ ],
+        "description" : "Item is not allowed to be sold in the market associated with the given subcatalog."
+      } ],
+      "attributes" : [ ],
+      "description" : "Status indicating availability of a subcatalog item in an experience."
+    }, {
+      "name" : "taxability_type",
+      "plural" : "taxability_types",
+      "values" : [ {
+        "name" : "tax_rule",
+        "attributes" : [ ],
+        "description" : "Rule indicating how taxes should be applied.  Acceptable values are defined by the 'taxability_value' enum."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "taxability_value",
+      "plural" : "taxability_values",
+      "values" : [ {
+        "name" : "exempt",
+        "attributes" : [ ],
+        "description" : "An item with this value is exempt from being taxed."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to indicate an item's taxability."
+    }, {
+      "name" : "update_policy",
+      "plural" : "update_policies",
+      "values" : [ {
+        "name" : "auto",
+        "attributes" : [ ]
+      }, {
+        "name" : "queue",
+        "attributes" : [ ],
+        "description" : "Queue item update for approval."
+      }, {
+        "name" : "discard",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "authentication_technique",
+      "plural" : "authentication_techniques",
+      "values" : [ {
+        "name" : "anonymous",
+        "attributes" : [ ],
+        "description" : "No authentication necessary."
+      }, {
+        "name" : "session",
+        "attributes" : [ ],
+        "description" : "A browser has been assigned an identifier by flow to track their use of our service for an organization."
+      }, {
+        "name" : "token",
+        "attributes" : [ ],
+        "description" : "A token. Tokens carry the same permissions as the user who originally created them."
+      }, {
+        "name" : "partner_token",
+        "attributes" : [ ],
+        "description" : "A partner token. Partner Tokens can only access anonymous endpoints and the endpoints of the partner api."
+      }, {
+        "name" : "user",
+        "attributes" : [ ],
+        "description" : "A user logs into Flow."
+      } ],
+      "attributes" : [ ],
+      "description" : "Various techniques a client request will use to authenticate with Flow."
+    }, {
+      "name" : "flow_addon_role",
+      "plural" : "flow_addon_roles",
+      "values" : [ {
+        "name" : "consumer_data_viewer",
+        "attributes" : [ ],
+        "description" : "Can view consumer's private data"
+      }, {
+        "name" : "membership_manager",
+        "attributes" : [ ],
+        "description" : "Can invite new users to the org."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default addon roles supported by Flow. These roles don't provide enough access to be useful on their own but convey additional responsibility to user roles."
+    }, {
+      "name" : "flow_behavior",
+      "plural" : "flow_behaviors",
+      "values" : [ {
+        "name" : "view_consumer_data",
+        "attributes" : [ ],
+        "description" : "Allows user to view consumers' personal data."
+      } ],
+      "attributes" : [ ],
+      "description" : "Behaviors represent cross-cutting concerns that may be assigned via roles and may apply to many API endpoints."
+    }, {
+      "name" : "flow_user_role",
+      "plural" : "flow_user_roles",
+      "values" : [ {
+        "name" : "organization_admin",
+        "attributes" : [ ],
+        "description" : "Can fully administrate a merchant organization."
+      }, {
+        "name" : "organization_merchant",
+        "attributes" : [ ],
+        "description" : "Can access merchant functions such as analytics, billing, experiences."
+      }, {
+        "name" : "organization_operations",
+        "attributes" : [ ],
+        "description" : "Can access customer service functions and retreive relevant data."
+      }, {
+        "name" : "organization_fulfillment",
+        "attributes" : [ ],
+        "description" : "Can access fulfillment functions and retreive relevant data."
+      }, {
+        "name" : "organization_marketing",
+        "attributes" : [ ],
+        "description" : "Can access marketing functions and retreive relevant data."
+      }, {
+        "name" : "organization_finance",
+        "attributes" : [ ],
+        "description" : "Can access billing and reconcilliation functions and retreive relevant data."
+      }, {
+        "name" : "flow_operations",
+        "attributes" : [ ],
+        "description" : "Can access Flow internal functions."
+      } ],
+      "attributes" : [ ],
+      "description" : "Default user roles supported by Flow"
+    }, {
+      "name" : "permitted_http_method",
+      "plural" : "permitted_http_methods",
+      "values" : [ {
+        "name" : "GET",
+        "attributes" : [ ]
+      }, {
+        "name" : "POST",
+        "attributes" : [ ]
+      }, {
+        "name" : "PUT",
+        "attributes" : [ ]
+      }, {
+        "name" : "DELETE",
+        "attributes" : [ ]
+      }, {
+        "name" : "PATCH",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "List of HTTP methods for which user permissions may be applied (OPTION for example is always permitted where CORS is enabled)."
+    }, {
+      "name" : "rate_type",
+      "plural" : "rate_types",
+      "values" : [ {
+        "name" : "flow",
+        "attributes" : [ ],
+        "description" : "Represents a Flow rate type (which excludes currency margins)"
+      }, {
+        "name" : "organization",
+        "attributes" : [ ],
+        "description" : "Represents an organization rate type (which includes currency margins)"
+      } ],
+      "attributes" : [ ],
+      "description" : "Indicates the type of the rate"
+    }, {
+      "name" : "attribute_data_type",
+      "plural" : "attribute_data_types",
+      "values" : [ {
+        "name" : "boolean",
+        "attributes" : [ ],
+        "description" : "Boolean true/false data type"
+      }, {
+        "name" : "decimal",
+        "attributes" : [ ],
+        "description" : "Decimal datatype without size or precision restrictions. Commonly used for currency values."
+      }, {
+        "name" : "string",
+        "attributes" : [ ],
+        "description" : "Unvalidated string of characters."
+      } ],
+      "attributes" : [ ],
+      "description" : "Used to tag attributes with a data type so they are properly validated."
+    }, {
+      "name" : "availability_status",
+      "plural" : "availability_statuses",
+      "values" : [ {
+        "name" : "enabled",
+        "attributes" : [ ]
+      }, {
+        "name" : "disabled",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "calendar",
+      "plural" : "calendars",
+      "values" : [ {
+        "name" : "weekdays",
+        "attributes" : [ ],
+        "description" : "Mon - Fri"
+      }, {
+        "name" : "everyday",
+        "attributes" : [ ],
+        "description" : "7 days per week"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "capability",
+      "plural" : "capabilities",
+      "values" : [ {
+        "name" : "crossdock",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "change_type",
+      "plural" : "change_types",
+      "values" : [ {
+        "name" : "insert",
+        "attributes" : [ ]
+      }, {
+        "name" : "update",
+        "attributes" : [ ]
+      }, {
+        "name" : "delete",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "currency_label_formatter",
+      "plural" : "currency_label_formatters",
+      "values" : [ {
+        "name" : "strip_trailing_zeros",
+        "attributes" : [ ],
+        "description" : "If a price ends in '.00' or ',00', we remove the cents and just display the price as a whole number. e.g. 'A$100.00' becomes 'A$100'"
+      } ],
+      "attributes" : [ ],
+      "description" : "A currency label formatter accepts a price label and updates it according to a set of rules."
+    }, {
+      "name" : "currency_symbol_format",
+      "plural" : "currency_symbol_formats",
+      "values" : [ {
+        "name" : "narrow",
+        "attributes" : [ ],
+        "description" : "The narrow format refers to the Unicode Common Locale Data Repository (CLDR) 'narrow' symbols (e.g. '$' for CAD and AUD)"
+      }, {
+        "name" : "primary",
+        "attributes" : [ ],
+        "description" : "The primary format refers to the Unicode Common Locale Data Repository (CLDR) 'primary' symbols (e.g. 'CA$' for CAD and 'A$' for AUD)"
+      } ],
+      "attributes" : [ ],
+      "description" : "The currency symbol format controls which set of currency symbols we use when displaying currencies"
+    }, {
+      "name" : "day_of_week",
+      "plural" : "day_of_weeks",
+      "values" : [ {
+        "name" : "sunday",
+        "attributes" : [ ]
+      }, {
+        "name" : "monday",
+        "attributes" : [ ]
+      }, {
+        "name" : "tuesday",
+        "attributes" : [ ]
+      }, {
+        "name" : "wednesday",
+        "attributes" : [ ]
+      }, {
+        "name" : "thursday",
+        "attributes" : [ ]
+      }, {
+        "name" : "friday",
+        "attributes" : [ ]
+      }, {
+        "name" : "saturday",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "delivered_duty",
+      "plural" : "delivered_duties",
+      "values" : [ {
+        "name" : "paid",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Paid (DDP). See https://en.wikipedia.org/wiki/Incoterms for more information"
+      }, {
+        "name" : "unpaid",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Unpaid (DDU). See https://en.wikipedia.org/wiki/Incoterms for more information"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "environment",
+      "plural" : "environments",
+      "values" : [ {
+        "name" : "sandbox",
+        "attributes" : [ ],
+        "description" : "In sandbox, no external services (e.g. orders, payments, logistics) will generate real transactions"
+      }, {
+        "name" : "production",
+        "attributes" : [ ],
+        "description" : "In production, all external services are live and will generate real transactions"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "exception_type",
+      "plural" : "exception_types",
+      "values" : [ {
+        "name" : "open",
+        "attributes" : [ ]
+      }, {
+        "name" : "closed",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "holiday_calendar",
+      "plural" : "holiday_calendars",
+      "values" : [ {
+        "name" : "us_bank_holidays",
+        "attributes" : [ ]
+      }, {
+        "name" : "jewish_holidays",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "included_levy_key",
+      "plural" : "included_levy_keys",
+      "values" : [ {
+        "name" : "duty",
+        "attributes" : [ ]
+      }, {
+        "name" : "vat",
+        "attributes" : [ ]
+      }, {
+        "name" : "vat_and_duty",
+        "attributes" : [ ]
+      }, {
+        "name" : "none",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The key of each possible localized price note is defined here."
+    }, {
+      "name" : "incoterm",
+      "plural" : "incoterms",
+      "values" : [ {
+        "name" : "EXW",
+        "attributes" : [ ],
+        "description" : "Ex Works (named place of delivery)"
+      }, {
+        "name" : "FCA",
+        "attributes" : [ ],
+        "description" : "Free Carrier (named place of delivery)"
+      }, {
+        "name" : "CPT",
+        "attributes" : [ ],
+        "description" : "Carriage Paid To (named place of destination)"
+      }, {
+        "name" : "CIP",
+        "attributes" : [ ],
+        "description" : "Carriage and Insurance Paid to (named place of destination)"
+      }, {
+        "name" : "DAT",
+        "attributes" : [ ],
+        "description" : "Delivered At Terminal (named terminal at port or place of destination)"
+      }, {
+        "name" : "DAP",
+        "attributes" : [ ],
+        "description" : "Delivered At Place (named place of destination)"
+      }, {
+        "name" : "DDP",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Paid (named place of destination)"
+      }, {
+        "name" : "FAS",
+        "attributes" : [ ],
+        "description" : "Free Alongside Ship (named port of shipment)"
+      }, {
+        "name" : "FOB",
+        "attributes" : [ ],
+        "description" : "Free on Board (named port of shipment)"
+      }, {
+        "name" : "CFR",
+        "attributes" : [ ],
+        "description" : "Cost and Freight (named port of destination)"
+      }, {
+        "name" : "CIF",
+        "attributes" : [ ],
+        "description" : "Cost, Insurance & Freight (named port of destination)"
+      }, {
+        "name" : "DAF",
+        "attributes" : [ ],
+        "description" : "Delivered at Frontier (named place of delivery)"
+      }, {
+        "name" : "DES",
+        "attributes" : [ ],
+        "description" : "Delivered Ex Ship"
+      }, {
+        "name" : "DEQ",
+        "attributes" : [ ],
+        "description" : "Delivered Ex Quay (named port of delivery)"
+      }, {
+        "name" : "DDU",
+        "attributes" : [ ],
+        "description" : "Delivered Duty Unpaid (named place of destination)"
+      } ],
+      "attributes" : [ ],
+      "description" : "International Commercial Terms are a series of pre-defined commercial terms published by the International Chamber of Commerce (ICC) relating to international commercial law."
+    }, {
+      "name" : "input_specification_type",
+      "plural" : "input_specification_types",
+      "values" : [ {
+        "name" : "text",
+        "attributes" : [ ]
+      }, {
+        "name" : "number",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "margin_type",
+      "plural" : "margin_types",
+      "values" : [ {
+        "name" : "fixed",
+        "attributes" : [ ],
+        "description" : "A fixed amount to add, e.g 2.5 would add an absolute margin of 2.5 in the base currency of your item."
+      }, {
+        "name" : "percent",
+        "attributes" : [ ],
+        "description" : "A percent of the base cost to add, e.g. 1.2 would represent a 1.2% increase."
+      } ],
+      "attributes" : [ ],
+      "description" : "Either a fixed or percent adjustment applied to some amount."
+    }, {
+      "name" : "measurement_system",
+      "plural" : "measurement_systems",
+      "values" : [ {
+        "name" : "imperial",
+        "attributes" : [ ]
+      }, {
+        "name" : "metric",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "merchant_of_record",
+      "plural" : "merchant_of_records",
+      "values" : [ {
+        "name" : "flow",
+        "attributes" : [ ]
+      }, {
+        "name" : "organization",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The merchant of record enum defines who is merchant of record for a particular transaction - either Flow is serving as the merchant of record or the organization is serving as merchant of record."
+    }, {
+      "name" : "order_merchant_of_record",
+      "plural" : "order_merchant_of_records",
+      "values" : [ {
+        "name" : "flow",
+        "attributes" : [ ]
+      }, {
+        "name" : "organization",
+        "attributes" : [ ]
+      }, {
+        "name" : "mixed",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "The order merchant of record defines who is merchant of record for a particular order. The value will be 'mixed' if you support split payments and the merchant of record differed across the individual payment transactions."
+    }, {
+      "name" : "price_book_status",
+      "plural" : "price_book_statuses",
+      "values" : [ {
+        "name" : "draft",
+        "attributes" : [ ]
+      }, {
+        "name" : "published",
+        "attributes" : [ ]
+      }, {
+        "name" : "archived",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "role",
+      "plural" : "roles",
+      "values" : [ {
+        "name" : "admin",
+        "attributes" : [ ]
+      }, {
+        "name" : "member",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "A user's role within an organization"
+    }, {
+      "name" : "rounding_method",
+      "plural" : "rounding_methods",
+      "values" : [ {
+        "name" : "up",
+        "attributes" : [ ],
+        "description" : "Round up to the specified rounding.value"
+      }, {
+        "name" : "down",
+        "attributes" : [ ],
+        "description" : "Round down to the specified rounding.value"
+      }, {
+        "name" : "nearest",
+        "attributes" : [ ],
+        "description" : "Round to the nearest specified rounding.value. If equidistant, will round up."
+      } ],
+      "attributes" : [ ],
+      "description" : "Direction to round localized price"
+    }, {
+      "name" : "rounding_type",
+      "plural" : "rounding_types",
+      "values" : [ {
+        "name" : "pattern",
+        "attributes" : [ ],
+        "description" : "Rounds a value to an amount ending with a pattern, e.g. an amount ending in '.99'."
+      }, {
+        "name" : "multiple",
+        "attributes" : [ ],
+        "description" : "Rounds a value to an amount that is the multiple of a value, e.g. rounding to the nearest 5 would ensure that the resulting number ends in either 0 or 5."
+      } ],
+      "attributes" : [ ],
+      "description" : "Rounding type determines the rule used to enforce rounding. Common rules will ensure that the final price ends w/ a given number (e.g. ends with .95) or is a multiple of some number (multiples of 5 or 10 are common)."
+    }, {
+      "name" : "schedule_exception_status",
+      "plural" : "schedule_exception_statuses",
+      "values" : [ {
+        "name" : "Open",
+        "attributes" : [ ]
+      }, {
+        "name" : "Closed",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "sort_direction",
+      "plural" : "sort_directions",
+      "values" : [ {
+        "name" : "ascending",
+        "attributes" : [ ]
+      }, {
+        "name" : "descending",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "unit_of_measurement",
+      "plural" : "unit_of_measurements",
+      "values" : [ {
+        "name" : "millimeter",
+        "attributes" : [ ],
+        "description" : "Equivalent to MILLI(METRE)."
+      }, {
+        "name" : "centimeter",
+        "attributes" : [ ],
+        "description" : "Equivalent to CENTI(METRE)."
+      }, {
+        "name" : "inch",
+        "attributes" : [ ],
+        "description" : "A unit of length equal to 0.0254 m (standard name in)."
+      }, {
+        "name" : "foot",
+        "attributes" : [ ],
+        "description" : "A unit of length equal to 0.3048 m (standard name ft)."
+      }, {
+        "name" : "cubic_inch",
+        "attributes" : [ ],
+        "description" : "A unit of volume equal to one cubic inch (in³)."
+      }, {
+        "name" : "cubic_meter",
+        "attributes" : [ ],
+        "description" : "The metric unit for volume quantities (m³)."
+      }, {
+        "name" : "gram",
+        "attributes" : [ ],
+        "description" : "A unit of mass equal to 1 / 1000 kilogram (standard name g)."
+      }, {
+        "name" : "kilogram",
+        "attributes" : [ ],
+        "description" : "The base unit for mass quantities (kg)."
+      }, {
+        "name" : "meter",
+        "attributes" : [ ],
+        "description" : "The base unit for length quantities (m)."
+      }, {
+        "name" : "ounce",
+        "attributes" : [ ],
+        "description" : "A unit of mass equal to 1 / 16 POUND (standard name oz)."
+      }, {
+        "name" : "pound",
+        "attributes" : [ ],
+        "description" : "A unit of mass equal to 453.59237 grams (avoirdupois pound, standard name lb)."
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines the units of measurement that we support. As units are added, we conform with the standard units provided by jscience as part of JSR 363 - see http://jscience.org/api/javax/measure/unit/SI.html and http://jscience.org/api/javax/measure/unit/NonSI.html"
+    }, {
+      "name" : "unit_of_time",
+      "plural" : "unit_of_times",
+      "values" : [ {
+        "name" : "year",
+        "attributes" : [ ]
+      }, {
+        "name" : "month",
+        "attributes" : [ ]
+      }, {
+        "name" : "week",
+        "attributes" : [ ]
+      }, {
+        "name" : "day",
+        "attributes" : [ ]
+      }, {
+        "name" : "hour",
+        "attributes" : [ ]
+      }, {
+        "name" : "minute",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines the units of time that we support"
+    }, {
+      "name" : "user_status",
+      "plural" : "user_statuses",
+      "values" : [ {
+        "name" : "pending",
+        "attributes" : [ ],
+        "description" : "Represents a new user account that is pending approval"
+      }, {
+        "name" : "active",
+        "attributes" : [ ],
+        "description" : "Represents an active user account - can authenticate with this account"
+      }, {
+        "name" : "inactive",
+        "attributes" : [ ],
+        "description" : "Represents an inactive user account - can no longer authenticate with this account"
+      } ],
+      "attributes" : [ ],
+      "description" : "The status of the user account. Valid transitions are from pending -> active, active -> inactive, inactive -> active"
+    }, {
+      "name" : "value_added_service",
+      "plural" : "value_added_services",
+      "values" : [ {
+        "name" : "Hazardous Material",
+        "attributes" : [ ],
+        "description" : "See https://en.wikipedia.org/wiki/ORM-D"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "visibility",
+      "plural" : "visibilities",
+      "values" : [ {
+        "name" : "public",
+        "attributes" : [ ]
+      }, {
+        "name" : "private",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "levy_component",
+      "plural" : "levy_components",
+      "values" : [ {
+        "name" : "goods",
+        "attributes" : [ ],
+        "description" : "The value of goods"
+      }, {
+        "name" : "duty",
+        "attributes" : [ ]
+      }, {
+        "name" : "insurance",
+        "attributes" : [ ]
+      }, {
+        "name" : "freight",
+        "attributes" : [ ]
+      }, {
+        "name" : "vat",
+        "attributes" : [ ],
+        "description" : "Value-Added Tax"
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "levy_strategy",
+      "plural" : "levy_strategies",
+      "values" : [ {
+        "name" : "minimum",
+        "attributes" : [ ]
+      }, {
+        "name" : "average",
+        "attributes" : [ ]
+      }, {
+        "name" : "maximum",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price_detail_component_key",
+      "plural" : "price_detail_component_keys",
+      "values" : [ {
+        "name" : "base_price",
+        "attributes" : [ ],
+        "description" : "The base price of the item."
+      }, {
+        "name" : "discount",
+        "attributes" : [ ],
+        "description" : "A discount applied to the base price of the item."
+      }, {
+        "name" : "currency_margin",
+        "attributes" : [ ],
+        "description" : "The amount added to the post-discount item price due to FX markup, as configured in the organization's currency settings."
+      }, {
+        "name" : "percent_item_margin",
+        "attributes" : [ ],
+        "description" : "The amount added to the post-discount item price from a percent item margin. Negative amounts represent discounts."
+      }, {
+        "name" : "fixed_item_margin",
+        "attributes" : [ ],
+        "description" : "The amount added to the post-discount item price from a fixed item margin. Negative amounts represent discounts."
+      }, {
+        "name" : "duties_item_price",
+        "attributes" : [ ],
+        "description" : "The duty owed on the post-discount base item price."
+      }, {
+        "name" : "duties_added_margin",
+        "attributes" : [ ],
+        "description" : "The duty owed on the sum of the currency margin, percent item margin, and fixed item margin."
+      }, {
+        "name" : "duties_rounding",
+        "attributes" : [ ],
+        "description" : "The duty owed on any rounding applied to the total item price."
+      }, {
+        "name" : "duties_deminimis",
+        "attributes" : [ ],
+        "description" : "An adjustment made if the item does not meet the duty de minimis rule."
+      }, {
+        "name" : "vat_item_price",
+        "attributes" : [ ],
+        "description" : "The VAT owed on the post-discount base item price."
+      }, {
+        "name" : "vat_added_margin",
+        "attributes" : [ ],
+        "description" : "The VAT owed on the sum of the currency margin, percent item margin, and fixed item margin."
+      }, {
+        "name" : "vat_rounding",
+        "attributes" : [ ],
+        "description" : "The VAT owed on any rounding applied to the total item price."
+      }, {
+        "name" : "vat_duties_item_price",
+        "attributes" : [ ],
+        "description" : "The VAT owed on the duty owed on the post-discount base item price."
+      }, {
+        "name" : "vat_duties_added_margin",
+        "attributes" : [ ],
+        "description" : "The VAT owed on the duty owed on the sum of the currency margin, percent item margin, and fixed item margin."
+      }, {
+        "name" : "vat_duties_rounding",
+        "attributes" : [ ],
+        "description" : "The VAT owed on the duty owed on any rounding applied to the total item price."
+      }, {
+        "name" : "vat_deminimis",
+        "attributes" : [ ],
+        "description" : "An adjustment made if the item does not meet the VAT de minimis rule."
+      }, {
+        "name" : "item_price_percent_sales_margin",
+        "attributes" : [ ],
+        "description" : "An adjustment made to the item price as a result of a percent sales margin."
+      }, {
+        "name" : "margins_percent_sales_margin",
+        "attributes" : [ ],
+        "description" : "An adjustment made to the item margins as a result of a percent sales margin."
+      }, {
+        "name" : "rounding_percent_sales_margin",
+        "attributes" : [ ],
+        "description" : "An adjustment made to rounding as a result of a percent sales margin."
+      }, {
+        "name" : "vat_percent_sales_margin",
+        "attributes" : [ ],
+        "description" : "An adjustment made to VAT owed as a result of a percent sales margin."
+      }, {
+        "name" : "vat_duty_percent_sales_margin",
+        "attributes" : [ ],
+        "description" : "An adjustment made to VAT on duties (e.g. VAT on duties on item price) owed as a result of a percent sales margin."
+      }, {
+        "name" : "duty_percent_sales_margin",
+        "attributes" : [ ],
+        "description" : "An adjustment made to duty owed as a result of a percent sales margin."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "price_detail_key",
+      "plural" : "price_detail_keys",
+      "values" : [ {
+        "name" : "item_price",
+        "attributes" : [ ],
+        "description" : "The details of the item price."
+      }, {
+        "name" : "margins",
+        "attributes" : [ ],
+        "description" : "The details of any margins added to the item price."
+      }, {
+        "name" : "vat",
+        "attributes" : [ ],
+        "description" : "The details of any VAT owed on the item."
+      }, {
+        "name" : "duty",
+        "attributes" : [ ],
+        "description" : "The details of any duties owed on the item."
+      }, {
+        "name" : "rounding",
+        "attributes" : [ ],
+        "description" : "The details of any rounding added to the item."
+      }, {
+        "name" : "adjustment",
+        "attributes" : [ ],
+        "description" : "The details of any price adjustments due to sales margins. A negative value indicates a discount."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "pricing_levy_setting",
+      "plural" : "pricing_levy_settings",
+      "values" : [ {
+        "name" : "included",
+        "attributes" : [ ]
+      }, {
+        "name" : "displayed",
+        "attributes" : [ ]
+      }, {
+        "name" : "ignored",
+        "attributes" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "generic_error_code",
+      "plural" : "generic_error_codes",
+      "values" : [ {
+        "name" : "generic_error",
+        "attributes" : [ ],
+        "description" : "Generic errors are the default type. The accompanying message will provide details on the failure."
+      }, {
+        "name" : "client_error",
+        "attributes" : [ ],
+        "description" : "A client error has occurred. This represents a misconfiguration of the client"
+      }, {
+        "name" : "server_error",
+        "attributes" : [ ],
+        "description" : "A server error has occurred. The Flow tech team is automatically notified of all server errors"
+      } ],
+      "attributes" : [ ]
+    } ]
   } ]
 }
