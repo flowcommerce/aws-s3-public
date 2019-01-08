@@ -737,10 +737,10 @@ operations:
     path: /bundles/checkout/:org/order/:number
     server: bundle-internal
   - method: PUT
-    path: /:organization_id/checkout/bundles/orders/:number/submit
+    path: /:organization_id/checkout/bundles/orders/:number/finalize
     server: bundle-internal
   - method: PUT
-    path: /:organization_id/checkout/bundles/orders/:number/finalize
+    path: /:organization_id/checkout/bundles/orders/:number/submit
     server: bundle-internal
   - method: POST
     path: /shopify/bundles/checkout/cart/:id
