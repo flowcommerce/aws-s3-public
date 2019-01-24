@@ -17102,7 +17102,7 @@
       }, {
         "name" : "countries_of_origin",
         "attributes" : [ ],
-        "description" : "A space separate list of the countries of origin for this item"
+        "description" : "A space separated list of the countries of origin for this item"
       }, {
         "name" : "product_id",
         "attributes" : [ ],
@@ -17143,6 +17143,10 @@
         "name" : "mpn",
         "attributes" : [ ],
         "description" : "The Manufacturer Part Number of this item."
+      }, {
+        "name" : "excluded_regions",
+        "attributes" : [ ],
+        "description" : "A space separated list of the regions (as defined in https://api.flow.io/reference/regions) where the item must be excluded."
       } ],
       "attributes" : [ ],
       "description" : "Used to tag attributes as having a specific meaning that can affect processing. For example, if you have an attribute called \"brandname\", and assign it the \"brand\" intent, the value of the \"brandname\" attribute will be used where a brand name is needed. Note that an intent can be assigned to any amount of attributes of an item."
@@ -28733,7 +28737,7 @@
       }, {
         "name" : "countries_of_origin",
         "attributes" : [ ],
-        "description" : "A space separate list of the countries of origin for this item"
+        "description" : "A space separated list of the countries of origin for this item"
       }, {
         "name" : "product_id",
         "attributes" : [ ],
@@ -28774,6 +28778,10 @@
         "name" : "mpn",
         "attributes" : [ ],
         "description" : "The Manufacturer Part Number of this item."
+      }, {
+        "name" : "excluded_regions",
+        "attributes" : [ ],
+        "description" : "A space separated list of the regions (as defined in https://api.flow.io/reference/regions) where the item must be excluded."
       } ],
       "attributes" : [ ],
       "description" : "Used to tag attributes as having a specific meaning that can affect processing. For example, if you have an attribute called \"brandname\", and assign it the \"brand\" intent, the value of the \"brandname\" attribute will be used where a brand name is needed. Note that an intent can be assigned to any amount of attributes of an item."
@@ -62781,7 +62789,7 @@
       }, {
         "name" : "countries_of_origin",
         "attributes" : [ ],
-        "description" : "A space separate list of the countries of origin for this item"
+        "description" : "A space separated list of the countries of origin for this item"
       }, {
         "name" : "product_id",
         "attributes" : [ ],
@@ -62822,6 +62830,10 @@
         "name" : "mpn",
         "attributes" : [ ],
         "description" : "The Manufacturer Part Number of this item."
+      }, {
+        "name" : "excluded_regions",
+        "attributes" : [ ],
+        "description" : "A space separated list of the regions (as defined in https://api.flow.io/reference/regions) where the item must be excluded."
       } ],
       "attributes" : [ ],
       "description" : "Used to tag attributes as having a specific meaning that can affect processing. For example, if you have an attribute called \"brandname\", and assign it the \"brand\" intent, the value of the \"brandname\" attribute will be used where a brand name is needed. Note that an intent can be assigned to any amount of attributes of an item."
@@ -87652,7 +87664,7 @@
       }, {
         "name" : "countries_of_origin",
         "attributes" : [ ],
-        "description" : "A space separate list of the countries of origin for this item"
+        "description" : "A space separated list of the countries of origin for this item"
       }, {
         "name" : "product_id",
         "attributes" : [ ],
@@ -87693,6 +87705,10 @@
         "name" : "mpn",
         "attributes" : [ ],
         "description" : "The Manufacturer Part Number of this item."
+      }, {
+        "name" : "excluded_regions",
+        "attributes" : [ ],
+        "description" : "A space separated list of the regions (as defined in https://api.flow.io/reference/regions) where the item must be excluded."
       } ],
       "attributes" : [ ],
       "description" : "Used to tag attributes as having a specific meaning that can affect processing. For example, if you have an attribute called \"brandname\", and assign it the \"brand\" intent, the value of the \"brandname\" attribute will be used where a brand name is needed. Note that an intent can be assigned to any amount of attributes of an item."
@@ -93237,7 +93253,7 @@
       }, {
         "name" : "countries_of_origin",
         "attributes" : [ ],
-        "description" : "A space separate list of the countries of origin for this item"
+        "description" : "A space separated list of the countries of origin for this item"
       }, {
         "name" : "product_id",
         "attributes" : [ ],
@@ -93278,6 +93294,10 @@
         "name" : "mpn",
         "attributes" : [ ],
         "description" : "The Manufacturer Part Number of this item."
+      }, {
+        "name" : "excluded_regions",
+        "attributes" : [ ],
+        "description" : "A space separated list of the regions (as defined in https://api.flow.io/reference/regions) where the item must be excluded."
       } ],
       "attributes" : [ ],
       "description" : "Used to tag attributes as having a specific meaning that can affect processing. For example, if you have an attribute called \"brandname\", and assign it the \"brand\" intent, the value of the \"brandname\" attribute will be used where a brand name is needed. Note that an intent can be assigned to any amount of attributes of an item."
