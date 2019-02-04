@@ -1,2 +1,2 @@
-number,attributes[country_of_origin]
-sku-123456,CHN
+number,price,currency,attributes[country_of_origin]
+sku-123456,100,EUR,CHN
