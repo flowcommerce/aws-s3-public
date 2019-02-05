@@ -4380,6 +4380,30 @@
       "attributes" : [ ],
       "description" : "Range of time given a from and to number and the unit. For example: 1-4 hours or 4-7 days"
     }, {
+      "name" : "experience_center",
+      "plural" : "experience_centers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "center_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Calculated mapping of centers for an experience based on experience logistics configuration, shipping configuration, and shipping lanes defined for the organization."
+    }, {
       "name" : "flat_rate",
       "plural" : "flat_rates",
       "fields" : [ {
@@ -11498,6 +11522,12 @@
         "annotations" : [ ],
         "minimum" : 0
       }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "categories",
         "type" : "[string]",
         "required" : false,
@@ -11542,6 +11572,19 @@
         "name" : "number",
         "type" : "string",
         "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "double",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
@@ -33839,6 +33882,12 @@
         "annotations" : [ ],
         "minimum" : 0
       }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "categories",
         "type" : "[string]",
         "required" : false,
@@ -33883,6 +33932,19 @@
         "name" : "number",
         "type" : "string",
         "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "double",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
@@ -36262,6 +36324,30 @@
       } ],
       "attributes" : [ ],
       "description" : "Range of time given a from and to number and the unit. For example: 1-4 hours or 4-7 days"
+    }, {
+      "name" : "experience_center",
+      "plural" : "experience_centers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "center_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Calculated mapping of centers for an experience based on experience logistics configuration, shipping configuration, and shipping lanes defined for the organization."
     }, {
       "name" : "flat_rate",
       "plural" : "flat_rates",
@@ -51682,6 +51768,12 @@
         "annotations" : [ ],
         "minimum" : 0
       }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "categories",
         "type" : "[string]",
         "required" : false,
@@ -51726,6 +51818,19 @@
         "name" : "number",
         "type" : "string",
         "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "double",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
@@ -54105,6 +54210,30 @@
       } ],
       "attributes" : [ ],
       "description" : "Range of time given a from and to number and the unit. For example: 1-4 hours or 4-7 days"
+    }, {
+      "name" : "experience_center",
+      "plural" : "experience_centers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "center_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Calculated mapping of centers for an experience based on experience logistics configuration, shipping configuration, and shipping lanes defined for the organization."
     }, {
       "name" : "flat_rate",
       "plural" : "flat_rates",
@@ -80234,6 +80363,12 @@
         "annotations" : [ ],
         "minimum" : 0
       }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "categories",
         "type" : "[string]",
         "required" : false,
@@ -80278,6 +80413,19 @@
         "name" : "number",
         "type" : "string",
         "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "double",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
@@ -82657,6 +82805,30 @@
       } ],
       "attributes" : [ ],
       "description" : "Range of time given a from and to number and the unit. For example: 1-4 hours or 4-7 days"
+    }, {
+      "name" : "experience_center",
+      "plural" : "experience_centers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "center_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Calculated mapping of centers for an experience based on experience logistics configuration, shipping configuration, and shipping lanes defined for the organization."
     }, {
       "name" : "flat_rate",
       "plural" : "flat_rates",
@@ -102072,6 +102244,12 @@
         "annotations" : [ ],
         "minimum" : 0
       }, {
+        "name" : "price",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
         "name" : "categories",
         "type" : "[string]",
         "required" : false,
@@ -102116,6 +102294,19 @@
         "name" : "number",
         "type" : "string",
         "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "price",
+        "type" : "double",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The actual price of the item as offered to a customer. This price must be in the currency specified for this item."
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : false,
         "attributes" : [ ],
         "annotations" : [ ]
       }, {
@@ -104495,6 +104686,30 @@
       } ],
       "attributes" : [ ],
       "description" : "Range of time given a from and to number and the unit. For example: 1-4 hours or 4-7 days"
+    }, {
+      "name" : "experience_center",
+      "plural" : "experience_centers",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "experience",
+        "type" : "io.flow.common.v0.models.experience_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "center",
+        "type" : "center_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Calculated mapping of centers for an experience based on experience logistics configuration, shipping configuration, and shipping lanes defined for the organization."
     }, {
       "name" : "flat_rate",
       "plural" : "flat_rates",
