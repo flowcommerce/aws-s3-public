@@ -673,7 +673,7 @@ operations:
     path: /:organization/orders/:number/status/charges
     server: order-management-internal
   - method: POST
-    path: /order_management_events/:organization/orders/:number/lifecycle/events/:order_lifecycle_event/replay
+    path: /:organization/orders/:number/lifecycle/events/:order_lifecycle_event/replay
     server: order-management-internal
   - method: GET
     path: /:organization/orders/:number/status/actions/available
