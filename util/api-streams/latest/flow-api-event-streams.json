@@ -820,18 +820,6 @@
         "attributes" : [ ],
         "annotations" : [ ],
         "description" : "The value of the discount. Amount will be negative"
-      }, {
-        "name" : "tax",
-        "type" : "consumer_invoice_levy",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "duty",
-        "type" : "consumer_invoice_levy",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       } ],
       "attributes" : [ ]
     }, {
@@ -845,18 +833,6 @@
         "annotations" : [ ],
         "description" : "The value of the discount. Amount must be negative",
         "example" : "-10"
-      }, {
-        "name" : "tax",
-        "type" : "consumer_invoice_levy_form",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
-      }, {
-        "name" : "duty",
-        "type" : "consumer_invoice_levy_form",
-        "required" : false,
-        "attributes" : [ ],
-        "annotations" : [ ]
       } ],
       "attributes" : [ ]
     }, {
@@ -10044,6 +10020,24 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "country_shipping_pricing",
+      "plural" : "country_shipping_pricings",
+      "fields" : [ {
+        "name" : "pricing",
+        "type" : "item_shipping_pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "countries",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "List of iso-3166-3 country codes. See https://api.flow.io/reference/countries."
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "delivery_item",
       "plural" : "delivery_items",
       "fields" : [ {
@@ -10625,6 +10619,26 @@
         "annotations" : [ ]
       } ],
       "attributes" : [ ]
+    }, {
+      "name" : "item_shipping_pricing",
+      "plural" : "item_shipping_pricings",
+      "fields" : [ {
+        "name" : "min",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Minimum possible amount a customer might pay."
+      }, {
+        "name" : "max",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If different than the minimum available price, then this is provided."
+      } ],
+      "attributes" : [ ],
+      "description" : "Available shipping price(s) a customer sees. This can be used for targetted ads on Google or to display shipping price(s) on a PDP."
     }, {
       "name" : "number_range",
       "plural" : "number_ranges",
@@ -11253,6 +11267,36 @@
       } ],
       "attributes" : [ ],
       "description" : "Denormalized availability status of an item in a shipping configuration for a destination region"
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing",
+      "plural" : "shipping_configuration_item_shipping_pricings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.common.v0.models.item_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration",
+        "type" : "shipping_configuration_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country_shipping_pricings",
+        "type" : "[country_shipping_pricing]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Denormalized shipping pricing available for a customer of an item in a shipping configuration for a destination region."
     }, {
       "name" : "shipping_configuration_reference",
       "plural" : "shipping_configuration_references",
@@ -18561,6 +18605,43 @@
       "upsertedDiscriminator" : "shipping_configuration_item_availability_upserted",
       "deletedDiscriminator" : "shipping_configuration_item_availability_deleted",
       "deletedHasModel" : true
+    }, {
+      "fieldName" : "shipping_configuration_item_shipping_pricing",
+      "typeName" : "shipping_configuration_item_shipping_pricing",
+      "modelType" : {
+        "name" : "shipping_configuration_item_shipping_pricing",
+        "plural" : "shipping_configuration_item_shipping_pricings",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "item",
+          "type" : "io.flow.common.v0.models.item_reference",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "shipping_configuration",
+          "type" : "shipping_configuration_summary",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "country_shipping_pricings",
+          "type" : "[country_shipping_pricing]",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ],
+        "description" : "Denormalized shipping pricing available for a customer of an item in a shipping configuration for a destination region."
+      },
+      "upsertedDiscriminator" : "shipping_configuration_item_shipping_pricing_upserted",
+      "deletedDiscriminator" : "shipping_configuration_item_shipping_pricing_deleted",
+      "deletedHasModel" : true
     } ],
     "allModels" : [ {
       "name" : "center_deleted",
@@ -18820,6 +18901,64 @@
       }, {
         "name" : "shipping_configuration_item_availability",
         "type" : "io.flow.fulfillment.v0.models.shipping_configuration_item_availability",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing_deleted",
+      "plural" : "shipping_configuration_item_shipping_pricing_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration_item_shipping_pricing",
+        "type" : "io.flow.fulfillment.v0.models.shipping_configuration_item_shipping_pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing_upserted",
+      "plural" : "shipping_configuration_item_shipping_pricing_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration_item_shipping_pricing",
+        "type" : "io.flow.fulfillment.v0.models.shipping_configuration_item_shipping_pricing",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
@@ -19273,6 +19412,24 @@
       "fields" : [ {
         "name" : "status",
         "type" : "item_availability_status",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "countries",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "List of iso-3166-3 country codes. See https://api.flow.io/reference/countries."
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "country_shipping_pricing",
+      "plural" : "country_shipping_pricings",
+      "fields" : [ {
+        "name" : "pricing",
+        "type" : "item_shipping_pricing",
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
@@ -19867,6 +20024,26 @@
         "annotations" : [ ]
       } ],
       "attributes" : [ ]
+    }, {
+      "name" : "item_shipping_pricing",
+      "plural" : "item_shipping_pricings",
+      "fields" : [ {
+        "name" : "min",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Minimum possible amount a customer might pay."
+      }, {
+        "name" : "max",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If different than the minimum available price, then this is provided."
+      } ],
+      "attributes" : [ ],
+      "description" : "Available shipping price(s) a customer sees. This can be used for targetted ads on Google or to display shipping price(s) on a PDP."
     }, {
       "name" : "number_range",
       "plural" : "number_ranges",
@@ -20495,6 +20672,36 @@
       } ],
       "attributes" : [ ],
       "description" : "Denormalized availability status of an item in a shipping configuration for a destination region"
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing",
+      "plural" : "shipping_configuration_item_shipping_pricings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.common.v0.models.item_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration",
+        "type" : "shipping_configuration_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country_shipping_pricings",
+        "type" : "[country_shipping_pricing]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Denormalized shipping pricing available for a customer of an item in a shipping configuration for a destination region."
     }, {
       "name" : "shipping_configuration_reference",
       "plural" : "shipping_configuration_references",
@@ -23351,6 +23558,14 @@
         "type" : "shipping_configuration_item_availability_deleted",
         "attributes" : [ ],
         "discriminator_value" : "shipping_configuration_item_availability_deleted"
+      }, {
+        "type" : "shipping_configuration_item_shipping_pricing_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "shipping_configuration_item_shipping_pricing_upserted"
+      }, {
+        "type" : "shipping_configuration_item_shipping_pricing_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "shipping_configuration_item_shipping_pricing_deleted"
       } ],
       "attributes" : [ ],
       "discriminator" : "discriminator"
@@ -54633,6 +54848,24 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "country_shipping_pricing",
+      "plural" : "country_shipping_pricings",
+      "fields" : [ {
+        "name" : "pricing",
+        "type" : "item_shipping_pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "countries",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "List of iso-3166-3 country codes. See https://api.flow.io/reference/countries."
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "delivery_item",
       "plural" : "delivery_items",
       "fields" : [ {
@@ -55214,6 +55447,26 @@
         "annotations" : [ ]
       } ],
       "attributes" : [ ]
+    }, {
+      "name" : "item_shipping_pricing",
+      "plural" : "item_shipping_pricings",
+      "fields" : [ {
+        "name" : "min",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Minimum possible amount a customer might pay."
+      }, {
+        "name" : "max",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If different than the minimum available price, then this is provided."
+      } ],
+      "attributes" : [ ],
+      "description" : "Available shipping price(s) a customer sees. This can be used for targetted ads on Google or to display shipping price(s) on a PDP."
     }, {
       "name" : "number_range",
       "plural" : "number_ranges",
@@ -55842,6 +56095,36 @@
       } ],
       "attributes" : [ ],
       "description" : "Denormalized availability status of an item in a shipping configuration for a destination region"
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing",
+      "plural" : "shipping_configuration_item_shipping_pricings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.common.v0.models.item_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration",
+        "type" : "shipping_configuration_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country_shipping_pricings",
+        "type" : "[country_shipping_pricing]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Denormalized shipping pricing available for a customer of an item in a shipping configuration for a destination region."
     }, {
       "name" : "shipping_configuration_reference",
       "plural" : "shipping_configuration_references",
@@ -67744,6 +68027,24 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "country_shipping_pricing",
+      "plural" : "country_shipping_pricings",
+      "fields" : [ {
+        "name" : "pricing",
+        "type" : "item_shipping_pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "countries",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "List of iso-3166-3 country codes. See https://api.flow.io/reference/countries."
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "delivery_item",
       "plural" : "delivery_items",
       "fields" : [ {
@@ -68325,6 +68626,26 @@
         "annotations" : [ ]
       } ],
       "attributes" : [ ]
+    }, {
+      "name" : "item_shipping_pricing",
+      "plural" : "item_shipping_pricings",
+      "fields" : [ {
+        "name" : "min",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Minimum possible amount a customer might pay."
+      }, {
+        "name" : "max",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If different than the minimum available price, then this is provided."
+      } ],
+      "attributes" : [ ],
+      "description" : "Available shipping price(s) a customer sees. This can be used for targetted ads on Google or to display shipping price(s) on a PDP."
     }, {
       "name" : "number_range",
       "plural" : "number_ranges",
@@ -68953,6 +69274,36 @@
       } ],
       "attributes" : [ ],
       "description" : "Denormalized availability status of an item in a shipping configuration for a destination region"
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing",
+      "plural" : "shipping_configuration_item_shipping_pricings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.common.v0.models.item_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration",
+        "type" : "shipping_configuration_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country_shipping_pricings",
+        "type" : "[country_shipping_pricing]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Denormalized shipping pricing available for a customer of an item in a shipping configuration for a destination region."
     }, {
       "name" : "shipping_configuration_reference",
       "plural" : "shipping_configuration_references",
@@ -79676,6 +80027,24 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "country_shipping_pricing",
+      "plural" : "country_shipping_pricings",
+      "fields" : [ {
+        "name" : "pricing",
+        "type" : "item_shipping_pricing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "countries",
+        "type" : "[string]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "List of iso-3166-3 country codes. See https://api.flow.io/reference/countries."
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "delivery_item",
       "plural" : "delivery_items",
       "fields" : [ {
@@ -80257,6 +80626,26 @@
         "annotations" : [ ]
       } ],
       "attributes" : [ ]
+    }, {
+      "name" : "item_shipping_pricing",
+      "plural" : "item_shipping_pricings",
+      "fields" : [ {
+        "name" : "min",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Minimum possible amount a customer might pay."
+      }, {
+        "name" : "max",
+        "type" : "io.flow.common.v0.models.price",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "If different than the minimum available price, then this is provided."
+      } ],
+      "attributes" : [ ],
+      "description" : "Available shipping price(s) a customer sees. This can be used for targetted ads on Google or to display shipping price(s) on a PDP."
     }, {
       "name" : "number_range",
       "plural" : "number_ranges",
@@ -80885,6 +81274,36 @@
       } ],
       "attributes" : [ ],
       "description" : "Denormalized availability status of an item in a shipping configuration for a destination region"
+    }, {
+      "name" : "shipping_configuration_item_shipping_pricing",
+      "plural" : "shipping_configuration_item_shipping_pricings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "item",
+        "type" : "io.flow.common.v0.models.item_reference",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "shipping_configuration",
+        "type" : "shipping_configuration_summary",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "country_shipping_pricings",
+        "type" : "[country_shipping_pricing]",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Denormalized shipping pricing available for a customer of an item in a shipping configuration for a destination region."
     }, {
       "name" : "shipping_configuration_reference",
       "plural" : "shipping_configuration_references",
