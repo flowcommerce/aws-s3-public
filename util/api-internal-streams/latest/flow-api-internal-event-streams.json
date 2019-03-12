@@ -2630,9 +2630,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -7797,6 +7816,17 @@
         "required" : true,
         "attributes" : [ ],
         "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "order_builder_customer_invoice_address_form",
+      "plural" : "order_builder_customer_invoice_address_forms",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
       } ],
       "attributes" : [ ]
     }, {
@@ -20885,9 +20915,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -29026,6 +29075,17 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "order_builder_customer_invoice_address_form",
+      "plural" : "order_builder_customer_invoice_address_forms",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "order_builder_delivered_duty_form",
       "plural" : "order_builder_delivered_duty_forms",
       "fields" : [ {
@@ -30494,9 +30554,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -44238,6 +44317,48 @@
       "deletedHasModel" : false
     } ],
     "allModels" : [ {
+      "name" : "experience_export_request",
+      "plural" : "experience_export_requests",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "organization",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "ids",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "keys",
+        "type" : "[string]",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "export_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Defines data necessary to process bulk export of experiences."
+    }, {
       "name" : "experience_import_request",
       "plural" : "experience_import_requests",
       "fields" : [ {
@@ -46370,6 +46491,17 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "order_builder_customer_invoice_address_form",
+      "plural" : "order_builder_customer_invoice_address_forms",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "order_builder_delivered_duty_form",
       "plural" : "order_builder_delivered_duty_forms",
       "fields" : [ {
@@ -47663,9 +47795,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -59445,6 +59596,16 @@
         "description" : "Use experience_internal_event"
       }
     }, {
+      "name" : "experience_export_request_event",
+      "plural" : "experience_export_request_events",
+      "types" : [ {
+        "type" : "experience_export_request",
+        "attributes" : [ ],
+        "discriminator_value" : "experience_export_request"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
       "name" : "experience_import_request_event",
       "plural" : "experience_import_request_events",
       "types" : [ {
@@ -63176,9 +63337,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -68923,6 +69103,17 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "order_builder_customer_invoice_address_form",
+      "plural" : "order_builder_customer_invoice_address_forms",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "order_builder_delivered_duty_form",
       "plural" : "order_builder_delivered_duty_forms",
       "fields" : [ {
@@ -70909,9 +71100,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -90314,9 +90524,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -93614,9 +93843,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
@@ -97864,6 +98112,17 @@
       } ],
       "attributes" : [ ]
     }, {
+      "name" : "order_builder_customer_invoice_address_form",
+      "plural" : "order_builder_customer_invoice_address_forms",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "io.flow.common.v0.models.billing_address",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ "personal_data", "consumer" ]
+      } ],
+      "attributes" : [ ]
+    }, {
       "name" : "order_builder_delivered_duty_form",
       "plural" : "order_builder_delivered_duty_forms",
       "fields" : [ {
@@ -99332,9 +99591,28 @@
         "required" : false,
         "attributes" : [ ],
         "annotations" : [ "personal_data" ]
+      }, {
+        "name" : "invoice",
+        "type" : "customer_invoice",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Customer invoice details."
       } ],
       "attributes" : [ ],
       "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier."
+    }, {
+      "name" : "customer_invoice",
+      "plural" : "customer_invoices",
+      "fields" : [ {
+        "name" : "address",
+        "type" : "billing_address",
+        "required" : false,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "The address to be used for invoicing and harmonization."
+      } ],
+      "attributes" : [ ]
     }, {
       "name" : "datetime_range",
       "plural" : "datetime_ranges",
