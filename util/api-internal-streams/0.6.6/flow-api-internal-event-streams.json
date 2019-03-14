@@ -76247,6 +76247,278 @@
       "attributes" : [ ]
     } ]
   }, {
+    "streamName" : "production.svb.internal.event.v0.svb_internal_event.json",
+    "shortName" : "svb_internal_event_v0",
+    "capturedEvents" : [ {
+      "fieldName" : "svb_virtual_card_clearing",
+      "typeName" : "svb_virtual_card_clearing",
+      "modelType" : {
+        "name" : "svb_virtual_card_clearing",
+        "plural" : "svb_virtual_card_clearings",
+        "fields" : [ {
+          "name" : "id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "virtual_card_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "Flow virtual card ID"
+        }, {
+          "name" : "number",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "Silicon Valley Bank virtual card ID"
+        }, {
+          "name" : "amount",
+          "type" : "integer",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "currency",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "date",
+          "type" : "date-time-iso8601",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "clearing_type",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "exchange_rate",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ],
+          "description" : "SVB rate, not used by flow"
+        }, {
+          "name" : "mcc",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "mcc_description",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_amount",
+          "type" : "integer",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_currency",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_id",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "merchant_name",
+          "type" : "string",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        }, {
+          "name" : "settlement_date",
+          "type" : "date-time-iso8601",
+          "required" : true,
+          "attributes" : [ ],
+          "annotations" : [ ]
+        } ],
+        "attributes" : [ ],
+        "description" : "Silicon Valley Bank Virtual Card Clearings"
+      },
+      "upsertedDiscriminator" : "svb_virtual_card_clearing_upserted",
+      "deletedDiscriminator" : "svb_virtual_card_clearing_deleted",
+      "deletedHasModel" : true
+    } ],
+    "allModels" : [ {
+      "name" : "svb_virtual_card_clearing",
+      "plural" : "svb_virtual_card_clearings",
+      "fields" : [ {
+        "name" : "id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "virtual_card_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Flow virtual card ID"
+      }, {
+        "name" : "number",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "Silicon Valley Bank virtual card ID"
+      }, {
+        "name" : "amount",
+        "type" : "integer",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "date",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "clearing_type",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "exchange_rate",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ],
+        "description" : "SVB rate, not used by flow"
+      }, {
+        "name" : "mcc",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "mcc_description",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_amount",
+        "type" : "integer",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_currency",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "merchant_name",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "settlement_date",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ],
+      "description" : "Silicon Valley Bank Virtual Card Clearings"
+    }, {
+      "name" : "svb_virtual_card_clearing_deleted",
+      "plural" : "svb_virtual_card_clearing_deleteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "svb_virtual_card_clearing",
+        "type" : "svb_virtual_card_clearing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    }, {
+      "name" : "svb_virtual_card_clearing_upserted",
+      "plural" : "svb_virtual_card_clearing_upserteds",
+      "fields" : [ {
+        "name" : "event_id",
+        "type" : "string",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "timestamp",
+        "type" : "date-time-iso8601",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      }, {
+        "name" : "svb_virtual_card_clearing",
+        "type" : "svb_virtual_card_clearing",
+        "required" : true,
+        "attributes" : [ ],
+        "annotations" : [ ]
+      } ],
+      "attributes" : [ ]
+    } ],
+    "allUnions" : [ {
+      "name" : "svb_internal_event",
+      "plural" : "svb_internal_events",
+      "types" : [ {
+        "type" : "svb_virtual_card_clearing_upserted",
+        "attributes" : [ ],
+        "discriminator_value" : "svb_virtual_card_clearing_upserted"
+      }, {
+        "type" : "svb_virtual_card_clearing_deleted",
+        "attributes" : [ ],
+        "discriminator_value" : "svb_virtual_card_clearing_deleted"
+      } ],
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    } ],
+    "allEnums" : [ ]
+  }, {
     "streamName" : "production.fraud.internal.event.v0.fraud_internal_event.json",
     "shortName" : "fraud_internal_event_v0",
     "capturedEvents" : [ {
