@@ -227,15 +227,6 @@ operations:
     path: /:organization/tax/registrations/:key
     server: harmonization
   - method: GET
-    path: /:organization/tax/settings
-    server: harmonization
-  - method: PUT
-    path: /:organization/tax/settings
-    server: harmonization
-  - method: DELETE
-    path: /:organization/tax/settings
-    server: harmonization
-  - method: GET
     path: /:organization/centers/versions
     server: fulfillment
   - method: GET
