@@ -5430,9 +5430,9 @@
         "required" : false
       } ]
     }, {
-      "plural" : "authorization_result_actions",
-      "name" : "authorization_result_action",
-      "description" : "Provides details for how to acquire additional information from the customer when needed (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "plural" : "authorization_result_action_gets",
+      "name" : "authorization_result_action_get",
+      "description" : "Provides details for how to acquire additional information from the customer using GET (e.g. redirecting to the issuer for online payment method or 3D Secure).",
       "attributes" : [ ],
       "fields" : [ {
         "name" : "type",
@@ -5446,6 +5446,44 @@
         "attributes" : [ ],
         "type" : "string",
         "required" : false
+      } ]
+    }, {
+      "plural" : "authorization_result_action_posts",
+      "name" : "authorization_result_action_post",
+      "description" : "Provides details for how to acquire additional information from the customer using POST (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
+      }, {
+        "name" : "url",
+        "annotations" : [ ],
+        "description" : "The URL to use for the POST request.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "parameters",
+        "annotations" : [ ],
+        "description" : "Contains parameters that are required to be included as part of the request.",
+        "attributes" : [ ],
+        "type" : "object",
+        "required" : true
+      } ]
+    }, {
+      "plural" : "authorization_result_action_waits",
+      "name" : "authorization_result_action_wait",
+      "description" : "Indicates that a response is not ready and that the consumer should poll (or wait) for a response.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
       } ]
     }, {
       "plural" : "authorization_result_descriptions",
@@ -8912,6 +8950,24 @@
       } ],
       "plural" : "authorization_payload_parameterses",
       "name" : "authorization_payload_parameters",
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "types" : [ {
+        "discriminator_value" : "authorization_result_action_get",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_get"
+      }, {
+        "discriminator_value" : "authorization_result_action_post",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_post"
+      }, {
+        "discriminator_value" : "authorization_result_action_wait",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_wait"
+      } ],
+      "plural" : "authorization_result_actions",
+      "name" : "authorization_result_action",
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
@@ -22056,9 +22112,9 @@
         "required" : false
       } ]
     }, {
-      "plural" : "authorization_result_actions",
-      "name" : "authorization_result_action",
-      "description" : "Provides details for how to acquire additional information from the customer when needed (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "plural" : "authorization_result_action_gets",
+      "name" : "authorization_result_action_get",
+      "description" : "Provides details for how to acquire additional information from the customer using GET (e.g. redirecting to the issuer for online payment method or 3D Secure).",
       "attributes" : [ ],
       "fields" : [ {
         "name" : "type",
@@ -22072,6 +22128,44 @@
         "attributes" : [ ],
         "type" : "string",
         "required" : false
+      } ]
+    }, {
+      "plural" : "authorization_result_action_posts",
+      "name" : "authorization_result_action_post",
+      "description" : "Provides details for how to acquire additional information from the customer using POST (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
+      }, {
+        "name" : "url",
+        "annotations" : [ ],
+        "description" : "The URL to use for the POST request.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "parameters",
+        "annotations" : [ ],
+        "description" : "Contains parameters that are required to be included as part of the request.",
+        "attributes" : [ ],
+        "type" : "object",
+        "required" : true
+      } ]
+    }, {
+      "plural" : "authorization_result_action_waits",
+      "name" : "authorization_result_action_wait",
+      "description" : "Indicates that a response is not ready and that the consumer should poll (or wait) for a response.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
       } ]
     }, {
       "plural" : "authorization_result_descriptions",
@@ -26300,6 +26394,24 @@
       } ],
       "plural" : "authorization_payload_parameterses",
       "name" : "authorization_payload_parameters",
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "types" : [ {
+        "discriminator_value" : "authorization_result_action_get",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_get"
+      }, {
+        "discriminator_value" : "authorization_result_action_post",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_post"
+      }, {
+        "discriminator_value" : "authorization_result_action_wait",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_wait"
+      } ],
+      "plural" : "authorization_result_actions",
+      "name" : "authorization_result_action",
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
@@ -41379,9 +41491,9 @@
         "required" : false
       } ]
     }, {
-      "plural" : "authorization_result_actions",
-      "name" : "authorization_result_action",
-      "description" : "Provides details for how to acquire additional information from the customer when needed (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "plural" : "authorization_result_action_gets",
+      "name" : "authorization_result_action_get",
+      "description" : "Provides details for how to acquire additional information from the customer using GET (e.g. redirecting to the issuer for online payment method or 3D Secure).",
       "attributes" : [ ],
       "fields" : [ {
         "name" : "type",
@@ -41395,6 +41507,44 @@
         "attributes" : [ ],
         "type" : "string",
         "required" : false
+      } ]
+    }, {
+      "plural" : "authorization_result_action_posts",
+      "name" : "authorization_result_action_post",
+      "description" : "Provides details for how to acquire additional information from the customer using POST (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
+      }, {
+        "name" : "url",
+        "annotations" : [ ],
+        "description" : "The URL to use for the POST request.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "parameters",
+        "annotations" : [ ],
+        "description" : "Contains parameters that are required to be included as part of the request.",
+        "attributes" : [ ],
+        "type" : "object",
+        "required" : true
+      } ]
+    }, {
+      "plural" : "authorization_result_action_waits",
+      "name" : "authorization_result_action_wait",
+      "description" : "Indicates that a response is not ready and that the consumer should poll (or wait) for a response.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
       } ]
     }, {
       "plural" : "authorization_result_descriptions",
@@ -45678,6 +45828,24 @@
       } ],
       "plural" : "authorization_payload_parameterses",
       "name" : "authorization_payload_parameters",
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "types" : [ {
+        "discriminator_value" : "authorization_result_action_get",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_get"
+      }, {
+        "discriminator_value" : "authorization_result_action_post",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_post"
+      }, {
+        "discriminator_value" : "authorization_result_action_wait",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_wait"
+      } ],
+      "plural" : "authorization_result_actions",
+      "name" : "authorization_result_action",
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
@@ -59663,9 +59831,9 @@
         "required" : false
       } ]
     }, {
-      "plural" : "authorization_result_actions",
-      "name" : "authorization_result_action",
-      "description" : "Provides details for how to acquire additional information from the customer when needed (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "plural" : "authorization_result_action_gets",
+      "name" : "authorization_result_action_get",
+      "description" : "Provides details for how to acquire additional information from the customer using GET (e.g. redirecting to the issuer for online payment method or 3D Secure).",
       "attributes" : [ ],
       "fields" : [ {
         "name" : "type",
@@ -59679,6 +59847,44 @@
         "attributes" : [ ],
         "type" : "string",
         "required" : false
+      } ]
+    }, {
+      "plural" : "authorization_result_action_posts",
+      "name" : "authorization_result_action_post",
+      "description" : "Provides details for how to acquire additional information from the customer using POST (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
+      }, {
+        "name" : "url",
+        "annotations" : [ ],
+        "description" : "The URL to use for the POST request.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "parameters",
+        "annotations" : [ ],
+        "description" : "Contains parameters that are required to be included as part of the request.",
+        "attributes" : [ ],
+        "type" : "object",
+        "required" : true
+      } ]
+    }, {
+      "plural" : "authorization_result_action_waits",
+      "name" : "authorization_result_action_wait",
+      "description" : "Indicates that a response is not ready and that the consumer should poll (or wait) for a response.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
       } ]
     }, {
       "plural" : "authorization_result_descriptions",
@@ -72898,6 +73104,24 @@
       } ],
       "plural" : "authorization_payload_parameterses",
       "name" : "authorization_payload_parameters",
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "types" : [ {
+        "discriminator_value" : "authorization_result_action_get",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_get"
+      }, {
+        "discriminator_value" : "authorization_result_action_post",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_post"
+      }, {
+        "discriminator_value" : "authorization_result_action_wait",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_wait"
+      } ],
+      "plural" : "authorization_result_actions",
+      "name" : "authorization_result_action",
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
@@ -95670,9 +95894,9 @@
         "required" : false
       } ]
     }, {
-      "plural" : "authorization_result_actions",
-      "name" : "authorization_result_action",
-      "description" : "Provides details for how to acquire additional information from the customer when needed (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "plural" : "authorization_result_action_gets",
+      "name" : "authorization_result_action_get",
+      "description" : "Provides details for how to acquire additional information from the customer using GET (e.g. redirecting to the issuer for online payment method or 3D Secure).",
       "attributes" : [ ],
       "fields" : [ {
         "name" : "type",
@@ -95686,6 +95910,44 @@
         "attributes" : [ ],
         "type" : "string",
         "required" : false
+      } ]
+    }, {
+      "plural" : "authorization_result_action_posts",
+      "name" : "authorization_result_action_post",
+      "description" : "Provides details for how to acquire additional information from the customer using POST (e.g. redirecting to the issuer for online payment method or 3D Secure).",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
+      }, {
+        "name" : "url",
+        "annotations" : [ ],
+        "description" : "The URL to use for the POST request.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "parameters",
+        "annotations" : [ ],
+        "description" : "Contains parameters that are required to be included as part of the request.",
+        "attributes" : [ ],
+        "type" : "object",
+        "required" : true
+      } ]
+    }, {
+      "plural" : "authorization_result_action_waits",
+      "name" : "authorization_result_action_wait",
+      "description" : "Indicates that a response is not ready and that the consumer should poll (or wait) for a response.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "type",
+        "annotations" : [ ],
+        "attributes" : [ ],
+        "type" : "authorization_result_action_type",
+        "required" : true
       } ]
     }, {
       "plural" : "authorization_result_descriptions",
@@ -99913,6 +100175,24 @@
       } ],
       "plural" : "authorization_payload_parameterses",
       "name" : "authorization_payload_parameters",
+      "attributes" : [ ],
+      "discriminator" : "discriminator"
+    }, {
+      "types" : [ {
+        "discriminator_value" : "authorization_result_action_get",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_get"
+      }, {
+        "discriminator_value" : "authorization_result_action_post",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_post"
+      }, {
+        "discriminator_value" : "authorization_result_action_wait",
+        "attributes" : [ ],
+        "type" : "authorization_result_action_wait"
+      } ],
+      "plural" : "authorization_result_actions",
+      "name" : "authorization_result_action",
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
