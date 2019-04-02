@@ -479,6 +479,9 @@ operations:
   - method: GET
     path: /payment/redirects/:id
     server: payment-internal
+  - method: POST
+    path: /payment/redirects/:id
+    server: payment-internal
   - method: GET
     path: /:organization/tribes
     server: payment-internal
