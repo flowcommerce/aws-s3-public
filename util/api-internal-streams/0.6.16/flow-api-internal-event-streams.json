@@ -16033,32 +16033,6 @@
         "required" : true
       } ]
     }, {
-      "plural" : "avalara_tax_settings",
-      "name" : "avalara_tax_setting",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "company_code",
-        "annotations" : [ ],
-        "description" : "The Avalara company code to be used for the organizations account.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "base_currency",
-        "annotations" : [ ],
-        "description" : "The organizations currency used for tax calculations.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "api_key",
-        "annotations" : [ ],
-        "description" : "Avalara API key for access to the organizations account. If not set the Flow account will be used.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      } ]
-    }, {
       "plural" : "harmonization_settings",
       "name" : "harmonization_settings",
       "description" : "Organization level settings.",
@@ -26163,16 +26137,6 @@
       "discriminator" : "discriminator"
     }, {
       "types" : [ {
-        "discriminator_value" : "avalara_tax_setting",
-        "attributes" : [ ],
-        "type" : "avalara_tax_setting"
-      } ],
-      "plural" : "tax_settings",
-      "name" : "tax_setting",
-      "attributes" : [ ],
-      "discriminator" : "discriminator"
-    }, {
-      "types" : [ {
         "discriminator_value" : "subcatalog",
         "attributes" : [ ],
         "type" : "subcatalog"
@@ -35235,32 +35199,6 @@
         "attributes" : [ ],
         "type" : "serial",
         "required" : true
-      } ]
-    }, {
-      "plural" : "avalara_tax_settings",
-      "name" : "avalara_tax_setting",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "company_code",
-        "annotations" : [ ],
-        "description" : "The Avalara company code to be used for the organizations account.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "base_currency",
-        "annotations" : [ ],
-        "description" : "The organizations currency used for tax calculations.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "api_key",
-        "annotations" : [ ],
-        "description" : "Avalara API key for access to the organizations account. If not set the Flow account will be used.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
       } ]
     }, {
       "plural" : "harmonization_settings",
@@ -45578,16 +45516,6 @@
       "discriminator" : "discriminator"
     }, {
       "types" : [ {
-        "discriminator_value" : "avalara_tax_setting",
-        "attributes" : [ ],
-        "type" : "avalara_tax_setting"
-      } ],
-      "plural" : "tax_settings",
-      "name" : "tax_setting",
-      "attributes" : [ ],
-      "discriminator" : "discriminator"
-    }, {
-      "types" : [ {
         "discriminator_value" : "flow_user_role",
         "attributes" : [ ],
         "type" : "flow_user_role"
@@ -52040,32 +51968,6 @@
         "attributes" : [ ],
         "type" : "io.flow.shopify.external.v0.enums.topic",
         "required" : true
-      } ]
-    }, {
-      "plural" : "avalara_tax_settings",
-      "name" : "avalara_tax_setting",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "company_code",
-        "annotations" : [ ],
-        "description" : "The Avalara company code to be used for the organizations account.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "base_currency",
-        "annotations" : [ ],
-        "description" : "The organizations currency used for tax calculations.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "api_key",
-        "annotations" : [ ],
-        "description" : "Avalara API key for access to the organizations account. If not set the Flow account will be used.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
       } ]
     }, {
       "plural" : "harmonization_settings",
@@ -72771,16 +72673,6 @@
       "discriminator" : "discriminator"
     }, {
       "types" : [ {
-        "discriminator_value" : "avalara_tax_setting",
-        "attributes" : [ ],
-        "type" : "avalara_tax_setting"
-      } ],
-      "plural" : "tax_settings",
-      "name" : "tax_setting",
-      "attributes" : [ ],
-      "discriminator" : "discriminator"
-    }, {
-      "types" : [ {
         "discriminator_value" : "organization_session",
         "attributes" : [ ],
         "type" : "organization_session"
@@ -89815,32 +89707,6 @@
         "required" : true
       } ]
     }, {
-      "plural" : "avalara_tax_settings",
-      "name" : "avalara_tax_setting",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "company_code",
-        "annotations" : [ ],
-        "description" : "The Avalara company code to be used for the organizations account.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "base_currency",
-        "annotations" : [ ],
-        "description" : "The organizations currency used for tax calculations.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : true
-      }, {
-        "name" : "api_key",
-        "annotations" : [ ],
-        "description" : "Avalara API key for access to the organizations account. If not set the Flow account will be used.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      } ]
-    }, {
       "plural" : "harmonization_settings",
       "name" : "harmonization_settings",
       "description" : "Organization level settings.",
@@ -99940,16 +99806,6 @@
       "plural" : "hint_forms",
       "name" : "hint_form",
       "description" : "Describes types of forms that can be used to assign an HS code based on product data.",
-      "attributes" : [ ],
-      "discriminator" : "discriminator"
-    }, {
-      "types" : [ {
-        "discriminator_value" : "avalara_tax_setting",
-        "attributes" : [ ],
-        "type" : "avalara_tax_setting"
-      } ],
-      "plural" : "tax_settings",
-      "name" : "tax_setting",
       "attributes" : [ ],
       "discriminator" : "discriminator"
     }, {
