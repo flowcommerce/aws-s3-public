@@ -57,6 +57,8 @@ servers:
     host: http://localhost:7271
   - name: label
     host: http://localhost:7041
+  - name: tax
+    host: http://localhost:7631
   - name: feed
     host: http://localhost:7221
 
@@ -1606,6 +1608,15 @@ operations:
   - method: DELETE
     path: /:organization/shipping-notifications/:key
     server: label
+  - method: GET
+    path: /:organization/tax/settings
+    server: tax
+  - method: PUT
+    path: /:organization/tax/settings
+    server: tax
+  - method: DELETE
+    path: /:organization/tax/settings
+    server: tax
   - method: GET
     path: /:organization/feeds
     server: feed
