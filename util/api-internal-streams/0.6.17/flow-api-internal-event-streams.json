@@ -28168,7 +28168,7 @@
         "attributes" : [ ]
       }, {
         "name" : "low",
-        "description" : "Inventory is low and may soon become unavailable for purchase. Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
+        "description" : "Inventory is low and may soon become unavailable for purchase (# inventory items <= 5). Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
         "attributes" : [ ]
       }, {
         "name" : "out_of_stock",
@@ -34044,6 +34044,25 @@
         "attributes" : [ ],
         "type" : "[string]",
         "minimum" : 1,
+        "required" : true
+      } ]
+    }, {
+      "plural" : "item_query_responses",
+      "name" : "item_query_response",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "q",
+        "annotations" : [ ],
+        "description" : "The query used to filter these items.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "items",
+        "annotations" : [ ],
+        "description" : "List of items matching the query.",
+        "attributes" : [ ],
+        "type" : "[io.flow.catalog.v0.models.item]",
         "required" : true
       } ]
     }, {
@@ -47610,7 +47629,7 @@
         "attributes" : [ ]
       }, {
         "name" : "low",
-        "description" : "Inventory is low and may soon become unavailable for purchase. Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
+        "description" : "Inventory is low and may soon become unavailable for purchase (# inventory items <= 5). Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
         "attributes" : [ ]
       }, {
         "name" : "out_of_stock",
@@ -76188,7 +76207,7 @@
         "attributes" : [ ]
       }, {
         "name" : "low",
-        "description" : "Inventory is low and may soon become unavailable for purchase. Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
+        "description" : "Inventory is low and may soon become unavailable for purchase (# inventory items <= 5). Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
         "attributes" : [ ]
       }, {
         "name" : "out_of_stock",
@@ -101885,7 +101904,7 @@
         "attributes" : [ ]
       }, {
         "name" : "low",
-        "description" : "Inventory is low and may soon become unavailable for purchase. Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
+        "description" : "Inventory is low and may soon become unavailable for purchase (# inventory items <= 5). Unless there is a specific use case for low inventory, it can be treated the same as 'available'",
         "attributes" : [ ]
       }, {
         "name" : "out_of_stock",
