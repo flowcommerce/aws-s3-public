@@ -34047,6 +34047,25 @@
         "required" : true
       } ]
     }, {
+      "plural" : "item_query_responses",
+      "name" : "item_query_response",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "q",
+        "annotations" : [ ],
+        "description" : "The query used to filter these items.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : true
+      }, {
+        "name" : "items",
+        "annotations" : [ ],
+        "description" : "List of items matching the query.",
+        "attributes" : [ ],
+        "type" : "[io.flow.catalog.v0.models.item]",
+        "required" : true
+      } ]
+    }, {
       "plural" : "item_sales_margins",
       "name" : "item_sales_margin",
       "description" : "Defines a fixed and percent margin to apply to items matching a query after pricing functions like tax, duty or rounding have been applied.",

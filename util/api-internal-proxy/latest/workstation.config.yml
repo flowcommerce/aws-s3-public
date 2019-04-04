@@ -317,6 +317,9 @@ operations:
   - method: POST
     path: /:organization/experiences/items/filters/:filter
     server: experience-internal
+  - method: GET
+    path: /:organization/experiences/:experience_key/items/query
+    server: experience-internal
   - method: POST
     path: /:organization/experiences/items/filters
     server: experience-internal
