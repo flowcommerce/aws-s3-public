@@ -3928,6 +3928,13 @@
         "attributes" : [ ],
         "type" : "io.flow.harmonization.v0.models.tax_registration",
         "required" : false
+      }, {
+        "name" : "geo",
+        "annotations" : [ ],
+        "description" : "If present, provides the geo ip related information for this order",
+        "attributes" : [ ],
+        "type" : "order_geo",
+        "required" : false
       } ]
     }, {
       "plural" : "order_addresses",
@@ -51309,6 +51316,13 @@
           "attributes" : [ ],
           "type" : "io.flow.harmonization.v0.models.tax_registration",
           "required" : false
+        }, {
+          "name" : "geo",
+          "annotations" : [ ],
+          "description" : "If present, provides the geo ip related information for this order",
+          "attributes" : [ ],
+          "type" : "order_geo",
+          "required" : false
         } ]
       },
       "upsertedDiscriminator" : "order_upserted_v2",
@@ -55349,6 +55363,13 @@
         "description" : "Represents the tax registration on an order, if applicable.",
         "attributes" : [ ],
         "type" : "io.flow.harmonization.v0.models.tax_registration",
+        "required" : false
+      }, {
+        "name" : "geo",
+        "annotations" : [ ],
+        "description" : "If present, provides the geo ip related information for this order",
+        "attributes" : [ ],
+        "type" : "order_geo",
         "required" : false
       } ]
     }, {
@@ -81991,6 +82012,13 @@
         "description" : "Represents the tax registration on an order, if applicable.",
         "attributes" : [ ],
         "type" : "io.flow.harmonization.v0.models.tax_registration",
+        "required" : false
+      }, {
+        "name" : "geo",
+        "annotations" : [ ],
+        "description" : "If present, provides the geo ip related information for this order",
+        "attributes" : [ ],
+        "type" : "order_geo",
         "required" : false
       } ]
     }, {
@@ -111881,6 +111909,13 @@
         "description" : "Represents the tax registration on an order, if applicable.",
         "attributes" : [ ],
         "type" : "io.flow.harmonization.v0.models.tax_registration",
+        "required" : false
+      }, {
+        "name" : "geo",
+        "annotations" : [ ],
+        "description" : "If present, provides the geo ip related information for this order",
+        "attributes" : [ ],
+        "type" : "order_geo",
         "required" : false
       } ]
     }, {
