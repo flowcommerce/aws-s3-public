@@ -3810,7 +3810,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "delivered_duty",
@@ -4238,7 +4238,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "items",
@@ -4779,7 +4779,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "delivered_duty",
@@ -5492,96 +5492,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -6247,6 +6157,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -9640,7 +9640,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -13263,7 +13263,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -13632,7 +13632,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase. While optional, providing name and email at a minimum will significantly increase the acceptance rate.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : false
       }, {
         "name" : "key",
@@ -14142,7 +14142,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -16099,7 +16099,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -16205,7 +16205,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -16213,7 +16213,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -16229,7 +16229,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -16237,7 +16237,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
@@ -23686,96 +23686,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -24441,6 +24351,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -29051,96 +29051,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -29809,6 +29719,96 @@
         "required" : false
       } ]
     }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
       "plural" : "organizations",
       "name" : "organization",
       "description" : "Represents a single organization in the system, and what environment it is currently operating in.",
@@ -30466,7 +30466,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -31088,7 +31088,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -31194,7 +31194,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -31202,7 +31202,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -31218,7 +31218,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -31226,7 +31226,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
@@ -33796,96 +33796,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -34551,6 +34461,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -36067,7 +36067,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -36797,96 +36797,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -37552,6 +37462,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -38860,7 +38860,7 @@
           "annotations" : [ "personal_data", "consumer" ],
           "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
           "attributes" : [ ],
-          "type" : "io.flow.common.v0.models.customer",
+          "type" : "io.flow.common.v0.models.order_customer",
           "required" : true
         }, {
           "name" : "attributes",
@@ -39006,7 +39006,7 @@
           "annotations" : [ "personal_data", "consumer" ],
           "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
           "attributes" : [ ],
-          "type" : "io.flow.common.v0.models.customer",
+          "type" : "io.flow.common.v0.models.order_customer",
           "required" : true
         }, {
           "name" : "attributes",
@@ -41179,7 +41179,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -41548,7 +41548,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase. While optional, providing name and email at a minimum will significantly increase the acceptance rate.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : false
       }, {
         "name" : "key",
@@ -42058,7 +42058,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -43600,96 +43600,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -44355,6 +44265,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -47581,7 +47581,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -47687,7 +47687,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -47695,7 +47695,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -47711,7 +47711,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -47719,7 +47719,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
@@ -48197,96 +48197,6 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -48955,6 +48865,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -51198,7 +51198,7 @@
           "annotations" : [ "personal_data", "consumer" ],
           "description" : "The customer who is actually making the purchase",
           "attributes" : [ ],
-          "type" : "io.flow.common.v0.models.customer",
+          "type" : "io.flow.common.v0.models.order_customer",
           "required" : true
         }, {
           "name" : "delivered_duty",
@@ -52401,7 +52401,7 @@
         "name" : "customer",
         "annotations" : [ "personal_data", "consumer" ],
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "selections",
@@ -55246,7 +55246,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "delivered_duty",
@@ -55674,7 +55674,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "items",
@@ -56215,7 +56215,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "delivered_duty",
@@ -58178,96 +58178,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -58933,6 +58843,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -63595,7 +63595,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -64865,7 +64865,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -65234,7 +65234,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase. While optional, providing name and email at a minimum will significantly increase the acceptance rate.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : false
       }, {
         "name" : "key",
@@ -65744,7 +65744,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -67514,7 +67514,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -67620,7 +67620,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -67628,7 +67628,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -67644,7 +67644,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -67652,7 +67652,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
@@ -72478,96 +72478,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -73233,6 +73143,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -81895,7 +81895,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "delivered_duty",
@@ -82323,7 +82323,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "items",
@@ -82864,7 +82864,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "delivered_duty",
@@ -85002,96 +85002,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -85757,6 +85667,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -90265,7 +90265,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -91535,7 +91535,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -91904,7 +91904,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase. While optional, providing name and email at a minimum will significantly increase the acceptance rate.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : false
       }, {
         "name" : "key",
@@ -92414,7 +92414,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -94184,7 +94184,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -94290,7 +94290,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -94298,7 +94298,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -94314,7 +94314,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -94322,7 +94322,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
@@ -99836,96 +99836,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -100594,6 +100504,96 @@
         "required" : false
       } ]
     }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
       "plural" : "organizations",
       "name" : "organization",
       "description" : "Represents a single organization in the system, and what environment it is currently operating in.",
@@ -101251,7 +101251,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -101873,7 +101873,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -101979,7 +101979,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -101987,7 +101987,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -102003,7 +102003,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -102011,7 +102011,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
@@ -106442,96 +106442,6 @@
         "required" : false
       } ]
     }, {
-      "plural" : "customers",
-      "name" : "customer",
-      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : true
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
-      "plural" : "customer_forms",
-      "name" : "customer_form",
-      "attributes" : [ ],
-      "fields" : [ {
-        "name" : "name",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "name",
-        "required" : false
-      }, {
-        "name" : "number",
-        "annotations" : [ "personal_data", "consumer" ],
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "phone",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer phone number. Useful for both fraud and order delivery.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false
-      }, {
-        "name" : "email",
-        "annotations" : [ "personal_data", "consumer" ],
-        "description" : "Customer email address. Useful for fraud.",
-        "attributes" : [ ],
-        "type" : "string",
-        "required" : false,
-        "example" : "user@flow.io"
-      }, {
-        "name" : "address",
-        "annotations" : [ "personal_data" ],
-        "attributes" : [ ],
-        "type" : "billing_address",
-        "required" : false
-      }, {
-        "name" : "invoice",
-        "annotations" : [ ],
-        "description" : "Customer invoice details.",
-        "attributes" : [ ],
-        "type" : "customer_invoice",
-        "required" : false
-      } ]
-    }, {
       "plural" : "customer_invoices",
       "name" : "customer_invoice",
       "attributes" : [ ],
@@ -107197,6 +107107,96 @@
         "annotations" : [ "personal_data" ],
         "attributes" : [ ],
         "type" : "string",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customers",
+      "name" : "order_customer",
+      "description" : "A customer represents the actual person purchasing from you. This information is needed primarily to support logistics (delivery to this person), fraud management (verification of who the person is), and reporting. We also recommend including your customer number whenever possible as doing so will allow Flow to link up transactions for this customer making customer service easier.",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : true
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
+        "required" : false
+      } ]
+    }, {
+      "plural" : "order_customer_forms",
+      "name" : "order_customer_form",
+      "attributes" : [ ],
+      "fields" : [ {
+        "name" : "name",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "name",
+        "required" : false
+      }, {
+        "name" : "number",
+        "annotations" : [ "personal_data", "consumer" ],
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "phone",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer phone number. Useful for both fraud and order delivery.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false
+      }, {
+        "name" : "email",
+        "annotations" : [ "personal_data", "consumer" ],
+        "description" : "Customer email address. Useful for fraud.",
+        "attributes" : [ ],
+        "type" : "string",
+        "required" : false,
+        "example" : "user@flow.io"
+      }, {
+        "name" : "address",
+        "annotations" : [ "personal_data" ],
+        "attributes" : [ ],
+        "type" : "billing_address",
+        "required" : false
+      }, {
+        "name" : "invoice",
+        "annotations" : [ ],
+        "description" : "Customer invoice details.",
+        "attributes" : [ ],
+        "type" : "customer_invoice",
         "required" : false
       } ]
     }, {
@@ -111792,7 +111792,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "delivered_duty",
@@ -112220,7 +112220,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "items",
@@ -112761,7 +112761,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who actually is making the purchase. We recommend providing as much information as you have, notably email address which can be used to increase acceptance rates if Flow is processing payment for this order. If you can also provide your customer number - we can link multiple orders for each customer in the Flow console.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer_form",
+        "type" : "io.flow.common.v0.models.order_customer_form",
         "required" : false
       }, {
         "name" : "delivered_duty",
@@ -117071,7 +117071,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "price_book_items",
@@ -118341,7 +118341,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -118710,7 +118710,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually making the purchase. While optional, providing name and email at a minimum will significantly increase the acceptance rate.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : false
       }, {
         "name" : "key",
@@ -119220,7 +119220,7 @@
         "annotations" : [ "personal_data", "consumer" ],
         "description" : "The customer who is actually receiving the goods. Providing name and email at a minimum will significantly increase the acceptance rate and are recommended.",
         "attributes" : [ ],
-        "type" : "io.flow.common.v0.models.customer",
+        "type" : "io.flow.common.v0.models.order_customer",
         "required" : true
       }, {
         "name" : "attributes",
@@ -120981,7 +120981,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "name" : "roles",
         "annotations" : [ "personal_data" ],
@@ -121087,7 +121087,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -121095,7 +121095,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_put_forms",
@@ -121111,7 +121111,7 @@
         "deprecation" : {
           "description" : "Static roles are being deprecated for role-based permissions."
         },
-        "required" : false
+        "required" : true
       }, {
         "default" : "[]",
         "name" : "roles",
@@ -121119,7 +121119,7 @@
         "description" : "The desired role(s) this user will play for the organization",
         "attributes" : [ ],
         "type" : "[io.flow.permission.v0.unions.flow_role]",
-        "required" : false
+        "required" : true
       } ]
     }, {
       "plural" : "membership_versions",
