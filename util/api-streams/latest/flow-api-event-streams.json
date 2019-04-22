@@ -9640,7 +9640,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
@@ -30466,7 +30466,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
@@ -36067,7 +36067,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
@@ -63595,7 +63595,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
@@ -90265,7 +90265,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
@@ -101251,7 +101251,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
@@ -117071,7 +117071,7 @@
         "description" : "Represents the status of a price book within Flow.",
         "attributes" : [ ],
         "type" : "io.flow.common.v0.enums.price_book_status",
-        "required" : true
+        "required" : false
       } ]
     }, {
       "plural" : "price_book_items",
