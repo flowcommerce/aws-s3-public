@@ -1323,6 +1323,27 @@ operations:
     path: /:organization/customers/:number
     server: customer
   - method: GET
+    path: /:organization/customers/:number/addresses/book
+    server: customer
+  - method: PATCH
+    path: /:organization/customers/:number/addresses/book
+    server: customer
+  - method: GET
+    path: /:organization/customers/:number/addresses/book/contacts
+    server: customer
+  - method: GET
+    path: /:organization/customers/:number/addresses/book/contacts/:id
+    server: customer
+  - method: POST
+    path: /:organization/customers/:number/addresses/book/contacts
+    server: customer
+  - method: PUT
+    path: /:organization/customers/:number/addresses/book/contacts/:id
+    server: customer
+  - method: DELETE
+    path: /:organization/customers/:number/addresses/book/contacts/:id
+    server: customer
+  - method: GET
     path: /trackings/:id
     server: tracking
   - method: GET
