@@ -712,6 +712,9 @@ operations:
   - method: GET
     path: /bundles/checkout/:org/order/:number
     server: bundle-internal
+  - method: POST
+    path: /bundles/checkout/:org/orders
+    server: bundle-internal
   - method: PUT
     path: /:organization_id/checkout/bundles/orders/:number/finalize
     server: bundle-internal
