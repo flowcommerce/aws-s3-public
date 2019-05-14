@@ -1170,7 +1170,7 @@ operations:
     path: /shopify/carts/:id/orders
     server: shopify
   - method: POST
-    path: /shopify/carts/orders
+    path: /shopify/cart/representations
     server: shopify
   - method: GET
     path: /:organization/shopify/localization/settings
