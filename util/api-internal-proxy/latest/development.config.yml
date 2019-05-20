@@ -715,6 +715,18 @@ operations:
   - method: POST
     path: /internal/organization/membership/copies
     server: organization-internal
+  - method: GET
+    path: /checkouts/:id
+    server: bundle-internal
+  - method: PUT
+    path: /checkouts/:id
+    server: bundle-internal
+  - method: POST
+    path: /checkouts
+    server: bundle-internal
+  - method: PUT
+    path: /checkouts/:id/submissions
+    server: bundle-internal
   - method: POST
     path: /bundles/checkout/cart/:id
     server: bundle-internal
