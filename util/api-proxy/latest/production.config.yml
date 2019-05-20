@@ -258,24 +258,6 @@ operations:
     path: /:organization/tiers/:id
     server: fulfillment
   - method: GET
-    path: /:organization/tiers/:tier_id/rules/versions
-    server: fulfillment
-  - method: GET
-    path: /:organization/tiers/:tier_id/rules
-    server: fulfillment
-  - method: GET
-    path: /:organization/tiers/:tier_id/rules/:id
-    server: fulfillment
-  - method: POST
-    path: /:organization/tiers/:tier_id/rules
-    server: fulfillment
-  - method: PUT
-    path: /:organization/tiers/:tier_id/rules/:id
-    server: fulfillment
-  - method: DELETE
-    path: /:organization/tiers/:tier_id/rules/:id
-    server: fulfillment
-  - method: GET
     path: /:organization/dimension-estimates/versions
     server: ratecard
   - method: GET
