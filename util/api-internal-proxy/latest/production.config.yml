@@ -724,9 +724,6 @@ operations:
   - method: GET
     path: /checkouts/:id
     server: bundle-internal
-  - method: PUT
-    path: /checkouts/:id
-    server: bundle-internal
   - method: POST
     path: /checkouts
     server: bundle-internal
