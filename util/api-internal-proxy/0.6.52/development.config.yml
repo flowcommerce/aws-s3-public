@@ -533,7 +533,7 @@ operations:
     path: /:organization_id/feeds/:feed_id
     server: marketing-gateway
   - method: GET
-    path: /:organization_id/feeds/:feed_id.tsv
+    path: /:organization_id/feeds/:feed_id/downloads/:format
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id/products
