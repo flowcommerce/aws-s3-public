@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 46 (44423) - http://www.bohemiancoding.com/sketch -->
-    <title>NL</title>
-    <desc>Created with sketchtool.</desc>
-    <defs>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
-            <stop stop-color="#FFFFFF" offset="0%"></stop>
-            <stop stop-color="#F0F0F0" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
-            <stop stop-color="#CA2B39" offset="0%"></stop>
-            <stop stop-color="#AC1F2C" offset="100%"></stop>
-        </linearGradient>
-        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
-            <stop stop-color="#2C56A2" offset="0%"></stop>
-            <stop stop-color="#244889" offset="100%"></stop>
-        </linearGradient>
-    </defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="NL">
-            <rect id="FlagBackground" fill="url(#linearGradient-1)" x="0" y="0" width="21" height="15"></rect>
-            <rect id="Rectangle-2" fill="url(#linearGradient-2)" x="0" y="0" width="21" height="5"></rect>
-            <rect id="Rectangle-2" fill="url(#linearGradient-3)" x="0" y="10" width="21" height="5"></rect>
-            <rect id="Rectangle-2" fill="url(#linearGradient-1)" x="0" y="5" width="21" height="5"></rect>
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>03-flags / bonaire-bq</title>
+    <desc>Created with Sketch.</desc>
+    <g id="03-flags-/-bonaire-bq" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="BQ" fill-rule="nonzero">
+            <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="21" height="15"></rect>
+            <polygon id="Path" fill="#012A87" points="21 15 -1.77635684e-15 15 21 -8.8817842e-16"></polygon>
+            <polygon id="Path" fill="#F9D90F" points="0 1.42108547e-14 0 6.25000001 8.75 1.42108547e-14"></polygon>
+            <path d="M3.01936557,6.48561277 L2.38590644,6.14 L3.01936557,5.79438723 C3.17862923,4.3822857 4.30210853,3.26218112 5.71577405,3.10810291 L6.05,2.52920659 L6.38422595,3.10810291 C7.80168918,3.26259504 8.92740496,4.38831082 9.08189709,5.80577405 L9.66079341,6.14 L9.08189709,6.47422595 C8.92781888,7.88789147 7.8077143,9.01137077 6.39561277,9.17063443 L6.05,9.80409356 L5.70438723,9.17063443 C4.2960792,9.01179862 3.17820138,7.8939208 3.01936557,6.48561277 L3.01936557,6.48561277 Z M6.05,8.69 C7.45832611,8.69 8.6,7.54832611 8.6,6.14 C8.6,4.73167389 7.45832611,3.59 6.05,3.59 C4.64167389,3.59 3.5,4.73167389 3.5,6.14 C3.5,7.54832611 4.64167389,8.69 6.05,8.69 Z" id="Shape" fill="#000000"></path>
+            <polygon id="Path" fill="#DC171D" points="6.56528512 5.2475 7.59585535 5.2475 7.08057023 6.14 7.59585535 7.0325 6.56528512 7.0325 6.05 7.925 5.53471488 7.0325 4.50414465 7.0325 5.01942977 6.14 4.50414465 5.2475 5.53471488 5.2475 6.05 4.355"></polygon>
         </g>
     </g>
 </svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="15px" viewBox="0 0 21 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>03-flags / western-sahara-eh</title>
+    <desc>Created with Sketch.</desc>
+    <g id="03-flags-/-western-sahara-eh" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="EH" fill-rule="nonzero">
+            <polygon id="Rectangle" fill="#000000" points="0 0 21 0 21 5 0 5"></polygon>
+            <polygon id="Rectangle" fill="#007A3D" points="0 10 21 10 21 15 0 15"></polygon>
+            <polygon id="Rectangle" fill="#FFFFFF" points="0 5 21 5 21 10 0 10"></polygon>
+            <polygon id="Path" fill="#C4111B" points="0 0 7 7.5 0 15"></polygon>
+            <path d="M11.5,5.56300874 C10.6373864,5.78503014 10,6.56808029 10,7.5 C10,8.43191971 10.6373864,9.21496986 11.5,9.43699126 C11.34019,9.4781235 11.1726498,9.5 11,9.5 C9.8954305,9.5 9,8.6045695 9,7.5 C9,6.3954305 9.8954305,5.5 11,5.5 C11.1726498,5.5 11.34019,5.5218765 11.5,5.56300874 Z" id="Combined-Shape" fill="#C4111B"></path>
+            <polygon id="Path" fill="#C4111B" points="11.5633818 8.7394412 12.4940709 8.04113013 13.4174826 8.75 13.0723404 7.60515915 14 6.90242319 12.8560013 6.89318452 12.5059133 5.75 12.1440259 6.88913019 11 6.88534446 11.9203413 7.59860371 11.5633818 8.73944578"></polygon>
+        </g>
+    </g>
+</svg>
