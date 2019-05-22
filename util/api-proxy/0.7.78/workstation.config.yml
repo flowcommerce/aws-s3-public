@@ -1155,7 +1155,7 @@ operations:
     path: /shopify/carts/:id/orders
     server: shopify
   - method: POST
-    path: /shopify/cart/representations
+    path: /:organization/experiences/:experience_key/shopify/cart/conversions
     server: shopify
   - method: GET
     path: /:organization/shopify/localization/settings
