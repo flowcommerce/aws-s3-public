@@ -530,13 +530,13 @@ operations:
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id.tsv
     server: marketing-gateway
   - method: GET
-    path: /:organization_id/feeds
+    path: /:organization_id/marketing-gateway/feeds
     server: marketing-gateway
   - method: GET
-    path: /:organization_id/feeds/:feed_id
+    path: /:organization_id/marketing-gateway/feeds/:feed_id
     server: marketing-gateway
   - method: GET
-    path: /:organization_id/feeds/:feed_id/downloads/:format
+    path: /:organization_id/marketing-gateway/feeds/:feed_id/downloads/:format
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id/products
