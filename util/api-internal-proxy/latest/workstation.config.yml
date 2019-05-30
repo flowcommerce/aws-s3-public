@@ -75,6 +75,8 @@ servers:
     host: http://172.17.0.1:6221
   - name: experiment-engine-internal
     host: http://172.17.0.1:7560
+  - name: feed
+    host: http://172.17.0.1:7221
   - name: installment
     host: http://172.17.0.1:7491
 
@@ -946,6 +948,18 @@ operations:
   - method: PUT
     path: /experiment-engine/backfill/totals/daily
     server: experiment-engine-internal
+  - method: GET
+    path: /:organization/feeds
+    server: feed
+  - method: POST
+    path: /:organization/feeds/catalog
+    server: feed
+  - method: PUT
+    path: /:organization/feeds/catalog/:id
+    server: feed
+  - method: DELETE
+    path: /:organization/feeds/:id
+    server: feed
   - method: POST
     path: /:organization/installments
     server: installment
