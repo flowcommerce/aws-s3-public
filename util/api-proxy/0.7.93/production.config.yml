@@ -1288,6 +1288,18 @@ operations:
     path: /:organization/customers/:number/addresses/book/contacts/:id
     server: customer
   - method: GET
+    path: /:organization/customer/tokens
+    server: customer
+  - method: GET
+    path: /:organization/customer/tokens/:id
+    server: customer
+  - method: POST
+    path: /:organization/customer/tokens/latest/:customer_number
+    server: customer
+  - method: DELETE
+    path: /:organization/customer/tokens/:id
+    server: customer
+  - method: GET
     path: /trackings/:id
     server: tracking
   - method: GET
