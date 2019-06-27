@@ -189,6 +189,9 @@ operations:
   - method: PUT
     path: /:organization/centers/:key
     server: fulfillment
+  - method: DELETE
+    path: /:organization/centers/:key
+    server: fulfillment
   - method: GET
     path: /:organization/delivery-windows/summary
     server: fulfillment
@@ -1466,6 +1469,21 @@ operations:
     server: catalog
   - method: DELETE
     path: /:organization/catalog/items/:number
+    server: catalog
+  - method: POST
+    path: /:organization/catalog/item/overlays
+    server: catalog
+  - method: PUT
+    path: /:organization/catalog/item/overlays/:key
+    server: catalog
+  - method: DELETE
+    path: /:organization/catalog/item/overlays/:key
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/item/overlays
+    server: catalog
+  - method: GET
+    path: /:organization/catalog/item/overlays/:key
     server: catalog
   - method: GET
     path: /:organization/catalog/subcatalogs/:subcatalog_id/exclusions
