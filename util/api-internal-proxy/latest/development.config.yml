@@ -249,6 +249,9 @@ operations:
   - method: DELETE
     path: /shopify/shops/:myshopify_domain
     server: shopify-internal
+  - method: POST
+    path: /:organization/shopify/gift/cards/balance
+    server: shopify-internal
   - method: GET
     path: /shopify/grants/check.html
     server: shopify-internal
