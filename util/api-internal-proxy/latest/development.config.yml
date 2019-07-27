@@ -351,6 +351,12 @@ operations:
   - method: POST
     path: /:organization/orders/:number/gift_cards/authorize
     server: experience-internal
+  - method: POST
+    path: /:organization/orders/:number/gift_cards/v2
+    server: experience-internal
+  - method: DELETE
+    path: /:organization/orders/:number/gift_cards/v2/:id
+    server: experience-internal
   - method: PUT
     path: /:organization/orders/:number/submissions/check
     server: experience-internal
