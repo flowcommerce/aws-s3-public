@@ -879,21 +879,6 @@ operations:
   - method: POST
     path: /:organization/account/statements/:id/email
     server: billing
-  - method: GET
-    path: /:organization/exclusion/rules
-    server: catalog-internal
-  - method: GET
-    path: /:organization/exclusion/rules/versions
-    server: catalog-internal
-  - method: POST
-    path: /:organization/exclusion/rules
-    server: catalog-internal
-  - method: PUT
-    path: /:organization/exclusion/rules/:id
-    server: catalog-internal
-  - method: PUT
-    path: /:organization/exclusion/rules/:id/deletion
-    server: catalog-internal
   - method: POST
     path: /:organization/query/builders
     server: catalog-internal
