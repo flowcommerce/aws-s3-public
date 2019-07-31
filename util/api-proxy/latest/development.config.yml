@@ -37,6 +37,8 @@ servers:
     host: http://localhost:6121
   - name: user
     host: http://localhost:6021
+  - name: catalog-exclusion
+    host: http://localhost:6071
   - name: organization
     host: http://localhost:6081
   - name: payment
@@ -888,6 +890,21 @@ operations:
   - method: POST
     path: /users/passwords
     server: user
+  - method: GET
+    path: /:organization/exclusion/rules
+    server: catalog-exclusion
+  - method: GET
+    path: /:organization/exclusion/rules/versions
+    server: catalog-exclusion
+  - method: POST
+    path: /:organization/exclusion/rules
+    server: catalog-exclusion
+  - method: PUT
+    path: /:organization/exclusion/rules/:id
+    server: catalog-exclusion
+  - method: PUT
+    path: /:organization/exclusion/rules/:id/deletion
+    server: catalog-exclusion
   - method: GET
     path: /organizations/:organization_id/ecommerce/platform
     server: organization

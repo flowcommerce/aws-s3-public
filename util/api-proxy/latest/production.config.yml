@@ -37,6 +37,8 @@ servers:
     host: https://reference.api.flow.io
   - name: user
     host: https://user.api.flow.io
+  - name: catalog-exclusion
+    host: https://catalog.api.flow.io
   - name: organization
     host: https://organization.api.flow.io
   - name: payment
@@ -888,6 +890,21 @@ operations:
   - method: POST
     path: /users/passwords
     server: user
+  - method: GET
+    path: /:organization/exclusion/rules
+    server: catalog-exclusion
+  - method: GET
+    path: /:organization/exclusion/rules/versions
+    server: catalog-exclusion
+  - method: POST
+    path: /:organization/exclusion/rules
+    server: catalog-exclusion
+  - method: PUT
+    path: /:organization/exclusion/rules/:id
+    server: catalog-exclusion
+  - method: PUT
+    path: /:organization/exclusion/rules/:id/deletion
+    server: catalog-exclusion
   - method: GET
     path: /organizations/:organization_id/ecommerce/platform
     server: organization
