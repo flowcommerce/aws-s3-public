@@ -571,6 +571,12 @@ operations:
     path: /:organization/marketing/gateway/feeds/:feed/downloads/:format
     server: marketing-gateway
   - method: GET
+    path: /:organization/marketing/gateway/google/accounts/:account
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/gateway/google
+    server: marketing-gateway
+  - method: GET
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id/products
     server: marketing-gateway
   - method: GET
