@@ -931,6 +931,18 @@ operations:
     path: /:organization/harmonization/results/items
     server: harmonization-internal
   - method: GET
+    path: /:organization/harmonization/item-harmonization-summaries
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/classification/multi-product-items
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/classification/multi-product-items/:item_number
+    server: harmonization-internal
+  - method: POST
+    path: /:organization/classification/multi-product-items/:item_number
+    server: harmonization-internal
+  - method: GET
     path: /:organization/harmonization/codes/hs6
     server: harmonization-internal
   - method: GET
