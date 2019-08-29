@@ -558,7 +558,7 @@ operations:
     path: /:organization/center/query/builders
     server: fulfillment-internal
   - method: GET
-    path: /:organization/bundles/browser
+    path: /:organization/bundles/browser/:country
     server: bundle-browser
   - method: POST
     path: /:organization/marketing/:platform/accounts
