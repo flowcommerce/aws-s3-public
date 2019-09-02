@@ -942,13 +942,19 @@ operations:
     path: /:organization/harmonization/item-harmonization-summaries
     server: harmonization-internal
   - method: GET
-    path: /:organization/classification/multi-product-items
+    path: /:organization/classification/multi-product/items
     server: harmonization-internal
   - method: GET
-    path: /:organization/classification/multi-product-items/:item_number
+    path: /:organization/classification/multi-product/items/:item_number
     server: harmonization-internal
   - method: POST
-    path: /:organization/classification/multi-product-items/:item_number
+    path: /:organization/classification/multi-product/items/:item_number
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/classification/multi-product/products/:product_id
+    server: harmonization-internal
+  - method: POST
+    path: /:organization/classification/multi-product/products/:product_id
     server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/codes/hs6
