@@ -926,6 +926,9 @@ operations:
   - method: GET
     path: /classification/organizations
     server: harmonization-internal
+  - method: POST
+    path: /classification/products
+    server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/countries
     server: harmonization-internal
