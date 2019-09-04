@@ -921,6 +921,12 @@ operations:
     path: /:organization/classification/product/:id
     server: harmonization-internal
   - method: GET
+    path: /:organization/classification/product/:id/ignore
+    server: harmonization-internal
+  - method: POST
+    path: /:organization/classification/product/ignore
+    server: harmonization-internal
+  - method: GET
     path: /classification/products
     server: harmonization-internal
   - method: GET
