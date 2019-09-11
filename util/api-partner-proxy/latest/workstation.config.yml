@@ -8,6 +8,9 @@ operations:
   - method: POST
     path: /partners/:partner/organizations/:organization_id/labels
     server: partner
+  - method: GET
+    path: /partners/:partner/organizations/:organization_id/labels
+    server: partner
   - method: PUT
     path: /partners/:partner/organizations/:organization_id/shipping-notifications/:key
     server: partner
