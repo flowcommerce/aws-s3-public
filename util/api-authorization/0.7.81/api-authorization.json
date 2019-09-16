@@ -1,0 +1,5375 @@
+{
+  "organization_marketing" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/item/query/suggestions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/suggestion/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/item/content/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/promotions/available"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/conversions/:base/:amount"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/items/:number/price"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment-method-types"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experience/defaults"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/prices/:aggregate"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targeting-items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/feeds"
+    } ]
+  },
+  "anonymous" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/sessions/shopify/:session"
+    }, {
+      "method" : "POST",
+      "path" : "/sessions/shopify/organizations/:organization"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/shopify/:session/organizations/:organization"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/shopify/:session"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/shopify/:session/reset"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/shopify/:session/clear"
+    }, {
+      "method" : "DELETE",
+      "path" : "/sessions/shopify/:session"
+    }, {
+      "method" : "GET",
+      "path" : "/sessions/:session"
+    }, {
+      "method" : "POST",
+      "path" : "/sessions/organizations/:organization"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/:session/organizations/:organization"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/:session"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/:session/reset"
+    }, {
+      "method" : "PUT",
+      "path" : "/sessions/:session/clear"
+    }, {
+      "method" : "DELETE",
+      "path" : "/sessions/:session"
+    }, {
+      "method" : "POST",
+      "path" : "/authorizations/sessions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/surcharge/settings/displays"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/versions"
+    }, {
+      "method" : "POST",
+      "path" : "/tokens/authentications"
+    }, {
+      "method" : "GET",
+      "path" : "/geolocation/defaults"
+    }, {
+      "method" : "GET",
+      "path" : "/geolocation/defaults/:country"
+    }, {
+      "method" : "GET",
+      "path" : "/addresses"
+    }, {
+      "method" : "POST",
+      "path" : "/addresses/verifications"
+    }, {
+      "method" : "GET",
+      "path" : "/geolocation/timezones"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/permission/checks/all"
+    }, {
+      "method" : "GET",
+      "path" : "/checkout/tokens/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/checkout/tokens/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/logistics/summary"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payment-method-rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payment/method/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/carriers"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/carrier/services"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/countries"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/languages"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/locales"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/locales/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/payment/methods"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/provinces"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/provinces/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/regions"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/regions/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/reference/timezones"
+    }, {
+      "method" : "POST",
+      "path" : "/users/emails/verifications/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/users/authenticate"
+    }, {
+      "method" : "POST",
+      "path" : "/users"
+    }, {
+      "method" : "POST",
+      "path" : "/users/passwords/resets"
+    }, {
+      "method" : "POST",
+      "path" : "/users/passwords"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/tokens/:token"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/encryption/keys/latest"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/shopify/cart/conversions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/trackings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ftp/files"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ftp/files/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ftp/files"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ftp/files/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ftp/folders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ftp/folders/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ftp/folders"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ftp/folders/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ftp/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ftp/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ftp/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/carrier/:carrier/data/:organization/:order_number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/manifests/services/:service/outstanding"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/manifests/:id"
+    } ]
+  },
+  "organization_finance" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/number/generators"
+    } ]
+  },
+  "membership_manager" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/tokens"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/tokens"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens/:id/cleartext"
+    }, {
+      "method" : "DELETE",
+      "path" : "/tokens/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/token-validations"
+    }, {
+      "method" : "GET",
+      "path" : "/permission/organization/:organization/roles"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/invitations"
+    }, {
+      "method" : "PUT",
+      "path" : "/invitations/tokens/:token"
+    }, {
+      "method" : "DELETE",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "PUT",
+      "path" : "/organizations/:organization_id/settings/regions/:region"
+    }, {
+      "method" : "DELETE",
+      "path" : "/organizations/:organization_id/settings/regions/:region"
+    }, {
+      "method" : "POST",
+      "path" : "/organizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/memberships"
+    }, {
+      "method" : "PUT",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/organization-authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organization-authorizations/:organization"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "PATCH",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    } ]
+  },
+  "organization_fulfillment" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/b2b/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/order/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/memos"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/delivery-windows/summary"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:id/publish"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates/summaries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/item/query/suggestions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/suggestion/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/complete/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/prices/:aggregate"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targeting-items"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping-notifications/:key"
+    } ]
+  },
+  "organization_admin" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/b2b/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/order/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/memos"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/categories"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/harmonization/landed-costs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10/versions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tax/registrations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tax/registrations/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tax/registrations/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/centers/query"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/delivery-windows/summary"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/quotes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration/copies/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:id/publish"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates/summaries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tokens"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/tokens"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens/:id/cleartext"
+    }, {
+      "method" : "DELETE",
+      "path" : "/tokens/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/token-validations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/harmonization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/imports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/imports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/item/query/suggestions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/suggestion/catalog"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/uploads/:name"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhooks"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhooks/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/webhooks"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/webhooks/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/webhooks/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhook/deliveries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhook/deliveries/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/webhook/deliveries/:id/requests"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhook/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/webhook/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/complete/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/currency/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/permission/organization/:organization/roles"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/checkout/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/address/configurations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/checkout/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/checkout/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/item/content/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/promotions/available"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/conversions/:base/:amount"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/items/:number/price"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:key/clone"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/clone/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key/status"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment-method-types"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/query/builders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experience/defaults"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries/destinations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/inventory/reservations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/destination"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/submissions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/authorizations"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/installment/plan/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/promotions/:key/free_shipping"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/tax/registration"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number/tax/registration/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order/builders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/country"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/destination"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/duty"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/carts/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/invoice/address"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/tax/registration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-estimates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order/promotions/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/users"
+    }, {
+      "method" : "GET",
+      "path" : "/users/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/:id"
+    }, {
+      "method" : "PATCH",
+      "path" : "/users/:id/passwords"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/:id/passwords"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/invitations"
+    }, {
+      "method" : "PUT",
+      "path" : "/invitations/tokens/:token"
+    }, {
+      "method" : "DELETE",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "PUT",
+      "path" : "/organizations/:organization_id/settings/regions/:region"
+    }, {
+      "method" : "DELETE",
+      "path" : "/organizations/:organization_id/settings/regions/:region"
+    }, {
+      "method" : "POST",
+      "path" : "/organizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/memberships"
+    }, {
+      "method" : "PUT",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/organization-authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organization-authorizations/:organization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization_id/default/configurations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization_id/default/configurations/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/:key/identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/captures/:key/identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/captures/:key/identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/cards"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/cards/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/cards/nonces"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/gateways/authentication"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/payments/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/encryption/keys"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/summary/:order_number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/:key/identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/refunds/:key/identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/refunds/:key/identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/reversals"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/reversals/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/virtual/cards/:key/authorizations/:authorization_key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/cards/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/captures/:virtual_card_id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/refunds/:virtual_card_id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/private/apps"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/private/apps/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/private/apps"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/private/apps/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/sync/status"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/prices/:aggregate"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "PATCH",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/trackings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/fraud/email/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/fraud/email/rules"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/fraud/email/rules/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/status/fraud"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/items/:number/price"
+    }, {
+      "method" : "PATCH",
+      "path" : "/:organization/catalog/items/:number/attributes"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/query/validations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targeting-items"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/feeds"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/feeds/catalog"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/feeds/catalog/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/feeds/:id"
+    } ]
+  },
+  "flow_operations" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/consumer/invoice/document/tokens/:token/type/:type"
+    } ]
+  },
+  "token" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/b2b/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/order/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/consumer/invoice/document/tokens/:token/type/:type"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/memos"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/categories"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/harmonization/landed-costs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10/versions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tax/registrations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tax/registrations/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tax/registrations/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/centers/query"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/delivery-windows/summary"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/quotes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration/copies/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:id/publish"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates/summaries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tokens"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/tokens"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/tokens/:id/cleartext"
+    }, {
+      "method" : "DELETE",
+      "path" : "/tokens/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/token-validations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/harmonization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/imports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/imports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/item/query/suggestions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/suggestion/catalog"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/uploads/:name"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhooks"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhooks/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/webhooks"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/webhooks/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/webhooks/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhook/deliveries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhook/deliveries/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/webhook/deliveries/:id/requests"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/webhook/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/webhook/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/complete/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/currency/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/permission/organization/:organization/roles"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/checkout/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/address/configurations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/checkout/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/checkout/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/item/content/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/promotions/available"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/conversions/:base/:amount"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/items/:number/price"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:key/clone"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/clone/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key/status"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment-method-types"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/query/builders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experience/defaults"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries/destinations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/inventory/reservations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/destination"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/submissions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/authorizations"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/installment/plan/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/promotions/:key/free_shipping"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/tax/registration"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number/tax/registration/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order/builders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/country"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/destination"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/duty"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/carts/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/invoice/address"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/tax/registration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-estimates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order/promotions/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/users"
+    }, {
+      "method" : "GET",
+      "path" : "/users/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/:id"
+    }, {
+      "method" : "PATCH",
+      "path" : "/users/:id/passwords"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/:id/passwords"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/invitations"
+    }, {
+      "method" : "PUT",
+      "path" : "/invitations/tokens/:token"
+    }, {
+      "method" : "DELETE",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "PUT",
+      "path" : "/organizations/:organization_id/settings/regions/:region"
+    }, {
+      "method" : "DELETE",
+      "path" : "/organizations/:organization_id/settings/regions/:region"
+    }, {
+      "method" : "POST",
+      "path" : "/organizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/memberships"
+    }, {
+      "method" : "PUT",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/organization-authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organization-authorizations/:organization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization_id/default/configurations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization_id/default/configurations/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/:key/identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/captures/:key/identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/captures/:key/identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/cards"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/cards/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/cards/nonces"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/gateways/authentication"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/payments/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/encryption/keys"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/summary/:order_number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/:key/identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/refunds/:key/identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/refunds/:key/identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/reversals"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/reversals/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/virtual/cards/:key/authorizations/:authorization_key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/cards/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/captures/:virtual_card_id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/refunds/:virtual_card_id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/private/apps"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/private/apps/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/private/apps"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/private/apps/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/sync/status"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/prices/:aggregate"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "PATCH",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/trackings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/fraud/email/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/fraud/email/rules"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/fraud/email/rules/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/status/fraud"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/items/:number/price"
+    }, {
+      "method" : "PATCH",
+      "path" : "/:organization/catalog/items/:number/attributes"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/query/validations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targeting-items"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/feeds"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/feeds/catalog"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/feeds/catalog/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/feeds/:id"
+    } ]
+  },
+  "session" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/item/content/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment-method-types"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries/destinations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/inventory/reservations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/submissions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/authorizations"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/installment/plan/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/tax/registration"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number/tax/registration/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/tax/registration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-estimates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/shopify/carts/:id.html"
+    }, {
+      "method" : "GET",
+      "path" : "/shopify/carts/order/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/shopify/carts/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/shopify/carts/:id/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/shopify/carts/:id/geo"
+    }, {
+      "method" : "POST",
+      "path" : "/shopify/carts/:id/add"
+    }, {
+      "method" : "POST",
+      "path" : "/shopify/carts/:id/change"
+    }, {
+      "method" : "POST",
+      "path" : "/shopify/carts/:id/clear"
+    }, {
+      "method" : "POST",
+      "path" : "/shopify/carts/:id/orders"
+    } ]
+  },
+  "organization_merchant" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/categories"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/centers/query"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/delivery-windows/summary"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shipping/configuration/copies/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/dimension-estimates"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/dimension-estimates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:id/publish"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard_estimates/summaries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecard-lanes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/ratecard-lanes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/ratecards/:ratecard_id/lanes/:lane_id/rates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/harmonization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/item/query/suggestions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/suggestion/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/currency/settings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/currency/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates/versions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/checkout/tokens"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/checkout/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/checkout/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/checkout/attributes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/item/content/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/promotions/available"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/conversions/:base/:amount"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/items/:number/price"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:key/clone"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/clone/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key/status"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:key/pricing"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/margins"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:experience_key/margins/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/payment/method/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/payment-method-types"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/currency/formats"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/price/books"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/experiences/:experience_key/price/books/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/experiences/query/builders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/settings/checkout"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experience/defaults"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/experiences/:experience_key/settings/logistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries/destinations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-estimates"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-estimates/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/users"
+    }, {
+      "method" : "GET",
+      "path" : "/users/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organization-authorizations/:organization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/private/apps"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/private/apps/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/private/apps"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/private/apps/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/sync/status"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/prices/:aggregate"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/items/:number/price"
+    }, {
+      "method" : "PATCH",
+      "path" : "/:organization/catalog/items/:number/attributes"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/query/validations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targeting-items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tax/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/feeds"
+    } ]
+  },
+  "organization_operations" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/b2b/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/b2b/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/order/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/consumer/invoices/:invoice_key/credit/memos/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/consumer/invoices/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/memos"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/categories"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/harmonization/hs10/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/centers/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/delivery-windows/summary"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/quotes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping/configuration/:key/lanes/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tiers/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/returns"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/returns/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/harmonization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/exports"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "GET",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/users/scheduled/exports"
+    }, {
+      "method" : "PUT",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/users/scheduled/exports/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/imports/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/import/templates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/search/item/query/suggestions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/suggestion/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/fulfillments/complete/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/currency/rates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/allocations/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/credit/payments"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/credit/payments/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/countries/destinations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/inventory/reservations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/identifier/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/destination"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/submissions"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/authorizations"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/orders/:number/installment/plan/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/allocations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/promotions/:key/free_shipping"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/orders/:number/tax/registration"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/orders/:number/tax/registration/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order/builders"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/attributes"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/country"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/destination"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/duty"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/carts/:number"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/invoice/address"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/builders/:number/tax/registration"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/builders/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/order-identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order-identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order/number/generators"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/order/promotions/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/users"
+    }, {
+      "method" : "GET",
+      "path" : "/users/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/invitations/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/currencies"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions/countries/available"
+    }, {
+      "method" : "GET",
+      "path" : "/organizations/:organization_id/settings/regions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/memberships/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/organization-authorizations/:organization"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/authorizations"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/authorizations/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/captures/:key/identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/captures/:key/identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/captures/:key/identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/cards/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/cards"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/cards/:token"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/cards/nonces"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/sources/payments/cards"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/sources/payments/cards/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/gateways/authentication"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/payments/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/payments"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/payments/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/summary/:order_number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/refunds/:key/identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/refunds/:key/identifiers/:identifier"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/refunds/:key/identifiers/:identifier"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/reversals/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/reversals"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/reversals/:key"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/virtual/cards/:key/authorizations/:authorization_key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/cards"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/cards/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/captures"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/captures/:virtual_card_id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/refunds"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/virtual/card/refunds/:virtual_card_id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/localization/settings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/localization/settings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/shopify/locations/mappings"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/shopify/locations/mappings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_snapshots/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory_updates/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/inventory/serials"
+    }, {
+      "method" : "PUT",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/:organization/inventory/serials/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/inventory/serials/prices/:aggregate"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/customers/:number/addresses/book/contacts/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/trackings/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/trackings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-events/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tracking-labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/:organization/tracking-labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/fraud/email/rules"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/orders/:number/status/fraud"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/attributes/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/restrictions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/price/books/:price_book_key/items/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/exclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/inclusions/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/queries/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/statistics"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:id/settings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/subcatalogs/:subcatalog_id/items/:number"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targetings/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/catalog/targeting-items"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping_labels/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/versions"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/shipping-notifications/:key"
+    }, {
+      "method" : "GET",
+      "path" : "/:organization/tax/settings"
+    } ]
+  }
+}

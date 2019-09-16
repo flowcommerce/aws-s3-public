@@ -1,0 +1,209 @@
+{
+  "anonymous" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/partners/:partner/labels"
+    } ]
+  },
+  "organization_fulfillment" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/labels"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization_id/shipping-notifications/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/returns/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/labels"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests/services/:service/outstanding"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    } ]
+  },
+  "organization_admin" : {
+    "routes" : [ {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/labels"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/labels"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization_id/shipping-notifications/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/returns/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/labels"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments/complete/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests/services/:service/outstanding"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    } ]
+  },
+  "token" : {
+    "routes" : [ {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/labels"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/labels"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization_id/shipping-notifications/:key"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/shipping-notifications"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/returns/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/returns"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/labels/:id"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/labels"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments/cancellations"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments/complete/cancellations"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests/services/:service/outstanding"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/manifests/:id"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers"
+    }, {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    }, {
+      "method" : "POST",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    }, {
+      "method" : "DELETE",
+      "path" : "/partners/:partner/organizations/:organization/order-identifiers/:number"
+    } ]
+  },
+  "organization_operations" : {
+    "routes" : [ {
+      "method" : "GET",
+      "path" : "/partners/:partner/organizations/:organization_id/labels"
+    }, {
+      "method" : "PUT",
+      "path" : "/partners/:partner/organizations/:organization/orders/:number/fulfillments/complete/cancellations"
+    } ]
+  }
+}
