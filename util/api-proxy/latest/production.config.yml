@@ -1617,9 +1617,6 @@ operations:
     path: /carrier/:carrier/data/:organization/:order_number
     server: link
   - method: POST
-    path: /:organization/orders/:number/labels
-    server: label
-  - method: POST
     path: /:organization/orders/:number/labels/documents/invoice
     server: label
   - method: GET
