@@ -623,6 +623,9 @@ operations:
     path: /:organization/marketing/gateway/feeds/:feed/downloads/:format
     server: marketing-gateway
   - method: GET
+    path: /:organization/marketing/gateway/feeds/suggested
+    server: marketing-gateway
+  - method: GET
     path: /:organization/marketing/gateway/google/accounts/:account
     server: marketing-gateway
   - method: GET
