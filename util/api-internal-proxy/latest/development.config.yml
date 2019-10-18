@@ -604,6 +604,9 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/feeds
     server: marketing-gateway
+  - method: POST
+    path: /:organization/marketing/gateway/feeds/bulk
+    server: marketing-gateway
   - method: DELETE
     path: /:organization/marketing/gateway/feeds/:feed
     server: marketing-gateway
@@ -618,6 +621,9 @@ operations:
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/gateway/feeds/:feed/downloads/:format
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/gateway/feed/suggestions
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/gateway/google/accounts/:account
