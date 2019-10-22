@@ -57,6 +57,7 @@ func main() {
 	commands = addCommand(commands, selection, "util")
 	commands = addCommand(commands, selection, "email")
 	commands = addCommand(commands, selection, "policies")
+	commands = addCommand(commands, selection, "console")
 
 	commands.Run()
 }
