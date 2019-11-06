@@ -708,6 +708,9 @@ operations:
     path: /:organization/experiences/:experience_key/settings/logistics
     server: experience
   - method: GET
+    path: /:organization/experiences/:experience_key/conversions/price/facet
+    server: experience
+  - method: GET
     path: /:organization/countries
     server: experience
   - method: GET
