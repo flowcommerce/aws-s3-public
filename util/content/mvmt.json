@@ -42,7 +42,7 @@
       },
       "location": {
         "type": "html",
-        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/privacy-policy.html"
+        "url": "https://link.flow.io/policies/privacy"
       }
     },
     "terms": {
@@ -53,7 +53,7 @@
       },
       "location": {
         "type": "html",
-        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
+        "url": "https://www.flow.io/policies/consumer-terms"
       }
     },
     "contact_us": {
@@ -92,7 +92,7 @@
       },
       "location": {
         "type": "html",
-        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/privacy-policy.html"
+        "url": "https://link.flow.io/policies/privacy"
       }
     },
     {
@@ -108,7 +108,7 @@
       },
       "location": {
         "type": "html",
-        "url": "https://s3.amazonaws.com/io.flow.aws-s3-public/util/content/mvmt/consumer-terms.html"
+        "url": "https://www.flow.io/policies/consumer-terms"
       }
     }
   ]
