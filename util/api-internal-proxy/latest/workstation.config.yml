@@ -582,6 +582,9 @@ operations:
   - method: POST
     path: /:organization/bundles/browser
     server: bundle-browser
+  - method: GET
+    path: /:organization/bundles/browser
+    server: bundle-browser
   - method: POST
     path: /:organization/marketing/:platform/accounts
     server: marketing-gateway
