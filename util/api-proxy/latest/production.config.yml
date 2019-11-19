@@ -933,6 +933,15 @@ operations:
     path: /:organization/exclusion/rules/:id/deletion
     server: catalog-exclusion
   - method: GET
+    path: /organizations/:organization_id/country/picker
+    server: organization
+  - method: PUT
+    path: /organizations/:organization_id/country/picker
+    server: organization
+  - method: GET
+    path: /organizations/:organization_id/ecommerce/platform
+    server: organization
+  - method: PUT
     path: /organizations/:organization_id/ecommerce/platform
     server: organization
   - method: GET
