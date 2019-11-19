@@ -1185,6 +1185,9 @@ operations:
     path: /:organization/virtual/card/refunds/:virtual_card_id
     server: payment
   - method: GET
+    path: /:organization/shopify/price/rules/discount/:code
+    server: shopify
+  - method: GET
     path: /shopify/carts/:id.html
     server: shopify
   - method: GET
