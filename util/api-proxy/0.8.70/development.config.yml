@@ -1047,7 +1047,7 @@ operations:
     path: /:organization/authorizations/:key
     server: payment
   - method: POST
-    path: /:organization/authorizations/:key/payment/details/adyen
+    path: /:organization/authorizations/:key/details
     server: payment
   - method: GET
     path: /:organization/captures
