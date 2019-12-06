@@ -535,6 +535,9 @@ operations:
     path: /:organization/authorizations/parameters
     server: payment-internal
   - method: POST
+    path: /:organization/authorizations/:key/payment/details/adyen
+    server: payment-internal
+  - method: POST
     path: /payment/callbacks/stripe
     server: payment-internal
   - method: POST
