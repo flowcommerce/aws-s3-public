@@ -755,9 +755,6 @@ operations:
   - method: POST
     path: /:organization/orders/:number/authorizations
     server: experience
-  - method: POST
-    path: /:organization/orders/:number/installment/plan/authorizations
-    server: experience
   - method: GET
     path: /:organization/orders/:number/allocations
     server: experience
