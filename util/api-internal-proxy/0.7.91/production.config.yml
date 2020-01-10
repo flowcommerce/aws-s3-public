@@ -646,6 +646,12 @@ operations:
   - method: DELETE
     path: /:organization/marketing/gateway/google
     server: marketing-gateway
+  - method: POST
+    path: /:organization/marketing/gateway/google/accounts/:account/feeds
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/gateway/google/accounts/:account/feeds/forms
+    server: marketing-gateway
   - method: GET
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id/products
     server: marketing-gateway
