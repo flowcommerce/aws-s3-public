@@ -757,13 +757,13 @@ operations:
     path: /:organization/ratecard/standard/configurations
     server: ratecard-internal
   - method: GET
-    path: /:organization/ratecard/standard/configurations/:flow_ratecard_number
+    path: /:organization/ratecard/standard/configurations/:key
     server: ratecard-internal
   - method: PUT
-    path: /:organization/ratecard/standard/configurations/:flow_ratecard_number
+    path: /:organization/ratecard/standard/configurations/:key
     server: ratecard-internal
   - method: DELETE
-    path: /:organization/ratecard/standard/configurations/:flow_ratecard_number
+    path: /:organization/ratecard/standard/configurations/:key
     server: ratecard-internal
   - method: GET
     path: /:organization/orders/:number/status/charges
@@ -1002,11 +1002,11 @@ operations:
   - method: POST
     path: /:organization/harmonization/item-harmonization-summaries
     server: harmonization-internal
+  - method: POST
+    path: /:organization/harmonization/levies
+    server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/codes/hs6
-    server: harmonization-internal
-  - method: POST
-    path: /:organization/harmonization/tax-duty
     server: harmonization-internal
   - method: GET
     path: /tax/registration
