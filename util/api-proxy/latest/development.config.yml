@@ -749,6 +749,9 @@ operations:
   - method: DELETE
     path: /:organization/orders/:number
     server: experience
+  - method: POST
+    path: /:organization/orders/submissions
+    server: experience
   - method: PUT
     path: /:organization/orders/:number/submissions
     server: experience
