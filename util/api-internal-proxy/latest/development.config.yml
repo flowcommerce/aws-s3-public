@@ -600,6 +600,9 @@ operations:
   - method: GET
     path: /:organization/marketing/:platform/accounts/:account_id/localizations
     server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/gateway/accounts
+    server: marketing-gateway
   - method: POST
     path: /:organization/marketing/:platform/accounts/:account_id/markets
     server: marketing-gateway
