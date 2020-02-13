@@ -321,12 +321,6 @@ operations:
   - method: POST
     path: /:organization/shopify/orders/ensure
     server: shopify-internal
-  - method: POST
-    path: /:organization/shopify/orders/:number/authorizations
-    server: shopify-internal
-  - method: POST
-    path: /:organization/shopify/orders/:number/submissions
-    server: shopify-internal
   - method: GET
     path: /:organization/shopify/orders/:number/checks/inventory
     server: shopify-internal
