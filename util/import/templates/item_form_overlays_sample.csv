@@ -1,2 +1,2 @@
-number,price,currency,attributes[country_of_origin]
-sku-123456,100,EUR,CHN
+number,price,currency,attributes[country_of_origin],images
+sku-123456,100,EUR,CHN,[{"url":"example.com/image", "tags":["foo","bar"]}]
