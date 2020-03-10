@@ -841,6 +841,9 @@ operations:
     path: /internal/currency/settings/:id
     server: currency-internal
   - method: GET
+    path: /:organization/currency/rates/internal
+    server: currency-internal
+  - method: GET
     path: /internal/currency/spot-rates
     server: currency-internal
   - method: GET
