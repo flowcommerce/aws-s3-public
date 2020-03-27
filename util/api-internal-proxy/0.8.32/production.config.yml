@@ -648,8 +648,11 @@ operations:
   - method: GET
     path: /:organization/marketing/gateway/feeds/:feed/downloads/:format
     server: marketing-gateway
-  - method: GET
+  - method: POST
     path: /:organization/marketing/gateway/feed/forms
+    server: marketing-gateway
+  - method: POST
+    path: /:organization/marketing/gateway/feed/sources
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/gateway/google/accounts/:account
