@@ -715,6 +715,12 @@ operations:
     path: /:organization/experiments/:key/end
     server: experiment-internal
   - method: GET
+    path: /:organization/experiment/form/values/:discriminator
+    server: experiment-internal
+  - method: GET
+    path: /:organization/experiment/form/values/:discriminator/:value
+    server: experiment-internal
+  - method: GET
     path: /:organization/experiment/:key/results/cumulative
     server: experiment-internal
   - method: GET
