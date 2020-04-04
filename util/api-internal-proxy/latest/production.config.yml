@@ -708,6 +708,9 @@ operations:
   - method: PUT
     path: /:organization/experiments/:key
     server: experiment-internal
+  - method: DELETE
+    path: /:organization/experiments/:key
+    server: experiment-internal
   - method: POST
     path: /:organization/experiments/:key/start
     server: experiment-internal
