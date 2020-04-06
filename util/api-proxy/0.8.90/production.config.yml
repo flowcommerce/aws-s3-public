@@ -132,6 +132,21 @@ operations:
     path: /sessions/shopify/:session
     server: shopify-session
   - method: GET
+    path: /contexts
+    server: session
+  - method: GET
+    path: /contexts/:id
+    server: session
+  - method: POST
+    path: /contexts
+    server: session
+  - method: PUT
+    path: /contexts/:id
+    server: session
+  - method: DELETE
+    path: /contexts/:id
+    server: session
+  - method: GET
     path: /sessions/:session
     server: session
   - method: POST
