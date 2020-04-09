@@ -1035,8 +1035,20 @@ operations:
   - method: POST
     path: /:organization/harmonization/item-harmonization-summaries
     server: harmonization-internal
+  - method: GET
+    path: /label_taxonomy
+    server: harmonization-internal
   - method: POST
     path: /:organization/harmonization/levies
+    server: harmonization-internal
+  - method: GET
+    path: /product_classifications/organization/:organization_id/product/:product_id
+    server: harmonization-internal
+  - method: POST
+    path: /product_classifications/organization/:organization_id/product/:product_id
+    server: harmonization-internal
+  - method: POST
+    path: /product_classifications/harmonize_labels
     server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/codes/hs6
