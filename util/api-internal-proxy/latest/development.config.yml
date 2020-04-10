@@ -198,9 +198,6 @@ operations:
   - method: POST
     path: /contexts
     server: session-internal
-  - method: PUT
-    path: /contexts/:id
-    server: session-internal
   - method: DELETE
     path: /contexts/:id
     server: session-internal
