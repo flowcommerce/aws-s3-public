@@ -190,9 +190,6 @@ operations:
     path: /:organization/orders/:number/tax/calculation
     server: tax-internal
   - method: GET
-    path: /contexts
-    server: session-internal
-  - method: GET
     path: /contexts/:id
     server: session-internal
   - method: POST
