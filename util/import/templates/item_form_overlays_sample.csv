@@ -1,7 +1,2 @@
-<<<<<<< HEAD
 number,sku,product_id,price,currency,attributes[country_of_origin],images
 123456,AJ1761_Black,1121734913,100,EUR,CHN,[{"url":"example.com/image", "tags":["foo","bar"]}]
-=======
-number,price,currency,attributes[country_of_origin],images
-sku-123456,100,EUR,CHN,[{"url":"example.com/image", "tags":["foo","bar"]}]
->>>>>>> parent of c806463d... changed item_form_overlays_sample file
