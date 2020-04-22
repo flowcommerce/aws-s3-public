@@ -1051,6 +1051,9 @@ operations:
     path: /product_classifications/harmonize_labels
     server: harmonization-internal
   - method: GET
+    path: /product_classifications/refresh_default_hs6
+    server: harmonization-internal
+  - method: GET
     path: /:organization/harmonization/codes/hs6
     server: harmonization-internal
   - method: GET
