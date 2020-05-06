@@ -645,6 +645,9 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/feeds/bulk
     server: marketing-gateway
+  - method: POST
+    path: /:organization/marketing/gateway/feeds/export
+    server: marketing-gateway
   - method: DELETE
     path: /:organization/marketing/gateway/feeds/:feed
     server: marketing-gateway
