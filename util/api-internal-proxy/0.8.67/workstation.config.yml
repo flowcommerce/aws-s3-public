@@ -462,6 +462,15 @@ operations:
   - method: GET
     path: /:organization/checkout/configurations/:id
     server: checkout-configuration
+  - method: POST
+    path: /:organization/checkout/configurations
+    server: checkout-configuration
+  - method: PUT
+    path: /:organization/checkout/configurations/:id
+    server: checkout-configuration
+  - method: DELETE
+    path: /:organization/checkout/configurations/:id
+    server: checkout-configuration
   - method: GET
     path: /internal/partners/:id
     server: partner-internal
