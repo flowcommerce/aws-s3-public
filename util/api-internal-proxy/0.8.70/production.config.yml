@@ -69,8 +69,6 @@ servers:
     host: https://search.api.flow.io
   - name: export-internal
     host: https://export.api.flow.io
-  - name: duty-internal
-    host: https://duty.api.flow.io
   - name: billing
     host: https://billing.api.flow.io
   - name: catalog-internal
@@ -948,15 +946,6 @@ operations:
   - method: POST
     path: /:organization/search_provider_export/experience/:experience_key
     server: export-internal
-  - method: GET
-    path: /duty/:destination/:origin/:code
-    server: duty-internal
-  - method: GET
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
-  - method: POST
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
   - method: GET
     path: /:organization/accounts
     server: billing

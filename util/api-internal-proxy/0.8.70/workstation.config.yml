@@ -69,8 +69,6 @@ servers:
     host: http://172.17.0.1:6331
   - name: export-internal
     host: http://172.17.0.1:7051
-  - name: duty-internal
-    host: http://172.17.0.1:7371
   - name: billing
     host: http://172.17.0.1:7121
   - name: catalog-internal
@@ -948,15 +946,6 @@ operations:
   - method: POST
     path: /:organization/search_provider_export/experience/:experience_key
     server: export-internal
-  - method: GET
-    path: /duty/:destination/:origin/:code
-    server: duty-internal
-  - method: GET
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
-  - method: POST
-    path: /duty/:destination/:origin/:code/raw
-    server: duty-internal
   - method: GET
     path: /:organization/accounts
     server: billing
