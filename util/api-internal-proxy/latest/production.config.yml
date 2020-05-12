@@ -81,8 +81,6 @@ servers:
     host: https://tracking.api.flow.io
   - name: experiment-engine-internal
     host: https://experiment-engine.api.flow.io
-  - name: feed
-    host: https://feed.api.flow.io
 
 operations:
   - method: GET
@@ -1093,15 +1091,3 @@ operations:
   - method: PUT
     path: /experiment-engine/backfill/totals/daily
     server: experiment-engine-internal
-  - method: GET
-    path: /:organization/feeds
-    server: feed
-  - method: POST
-    path: /:organization/feeds/catalog
-    server: feed
-  - method: PUT
-    path: /:organization/feeds/catalog/:id
-    server: feed
-  - method: DELETE
-    path: /:organization/feeds/:id
-    server: feed

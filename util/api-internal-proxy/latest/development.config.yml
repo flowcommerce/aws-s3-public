@@ -81,8 +81,6 @@ servers:
     host: http://localhost:6221
   - name: experiment-engine-internal
     host: http://localhost:7560
-  - name: feed
-    host: http://localhost:7221
 
 operations:
   - method: GET
@@ -1093,15 +1091,3 @@ operations:
   - method: PUT
     path: /experiment-engine/backfill/totals/daily
     server: experiment-engine-internal
-  - method: GET
-    path: /:organization/feeds
-    server: feed
-  - method: POST
-    path: /:organization/feeds/catalog
-    server: feed
-  - method: PUT
-    path: /:organization/feeds/catalog/:id
-    server: feed
-  - method: DELETE
-    path: /:organization/feeds/:id
-    server: feed
