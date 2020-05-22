@@ -608,14 +608,26 @@ operations:
   - method: GET
     path: /:organization/bundles/browser
     server: bundle-browser
+  - method: POST
+    path: /:organization/marketing/google/accounts
+    server: marketing-gateway
   - method: DELETE
     path: /:organization/marketing/google/accounts
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/:platform/accounts/:account_id/localizations
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/gateway/accounts
     server: marketing-gateway
   - method: PUT
     path: /:organization/marketing/gateway/accounts
+    server: marketing-gateway
+  - method: POST
+    path: /:organization/marketing/:platform/accounts/:account_id/markets
+    server: marketing-gateway
+  - method: PUT
+    path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id
     server: marketing-gateway
   - method: DELETE
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id
@@ -624,13 +636,25 @@ operations:
     path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id.tsv
     server: marketing-gateway
   - method: POST
+    path: /:organization/marketing/gateway/feeds
+    server: marketing-gateway
+  - method: POST
     path: /:organization/marketing/gateway/feeds/bulk
     server: marketing-gateway
   - method: POST
     path: /:organization/marketing/gateway/feeds/export
     server: marketing-gateway
+  - method: DELETE
+    path: /:organization/marketing/gateway/feeds/:feed
+    server: marketing-gateway
+  - method: PUT
+    path: /:organization/marketing/gateway/feeds/:feed
+    server: marketing-gateway
   - method: GET
     path: /:organization/marketing/gateway/feeds
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/gateway/feeds/:feed
     server: marketing-gateway
   - method: GET
     path: /:organization/marketing/gateway/feeds/:feed/downloads/:format
@@ -661,6 +685,12 @@ operations:
     server: marketing-gateway
   - method: POST
     path: /:organization/marketing/gateway/items/random
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id/products
+    server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/:platform/accounts/:account_id/markets/:market_id/products/:product_id
     server: marketing-gateway
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id
