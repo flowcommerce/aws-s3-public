@@ -1,4 +1,4 @@
-version: 0.9.10
+version: 0.9.12
 
 servers:
   - name: consumer-invoice
@@ -592,16 +592,16 @@ operations:
     path: /:organization/sync/record/failures
     server: sync
   - method: GET
-    path: /:organization/sync/record/failures/:key
+    path: /:organization/sync/record/failures/:id
     server: sync
   - method: DELETE
-    path: /:organization/sync/record/failures/:key
+    path: /:organization/sync/record/failures/:id
     server: sync
   - method: POST
     path: /:organization/sync/record/failures
     server: sync
   - method: PUT
-    path: /:organization/sync/record/failures/:key
+    path: /:organization/sync/record/failures/:id
     server: sync
   - method: GET
     path: /:organization/sync/streams
@@ -617,12 +617,6 @@ operations:
     server: sync
   - method: PUT
     path: /:organization/sync/streams/:key
-    server: sync
-  - method: PUT
-    path: /:organization/sync/streams/:key/systems/:system/values/:value/failure
-    server: sync
-  - method: DELETE
-    path: /:organization/sync/streams/:key/systems/:system/values/:value/failure
     server: sync
   - method: GET
     path: /:organization/address/configurations
