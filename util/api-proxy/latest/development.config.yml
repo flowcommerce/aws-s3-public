@@ -33,6 +33,8 @@ servers:
     host: http://localhost:6081
   - name: checkout
     host: http://localhost:6251
+  - name: sync
+    host: http://localhost:7821
   - name: experience
     host: http://localhost:6251
   - name: reference
@@ -562,6 +564,66 @@ operations:
   - method: POST
     path: /:organization/checkout/tokens
     server: checkout
+  - method: GET
+    path: /:organization/sync/pending/records
+    server: sync
+  - method: GET
+    path: /:organization/sync/records
+    server: sync
+  - method: GET
+    path: /:organization/sync/records/:id
+    server: sync
+  - method: POST
+    path: /:organization/sync/records
+    server: sync
+  - method: PUT
+    path: /:organization/sync/records/:id
+    server: sync
+  - method: DELETE
+    path: /:organization/sync/records/:id
+    server: sync
+  - method: PUT
+    path: /:organization/sync/records/streams/:stream_key/systems/:system/values/:value
+    server: sync
+  - method: DELETE
+    path: /:organization/sync/records/streams/:stream_key/systems/:system/values/:value
+    server: sync
+  - method: GET
+    path: /:organization/sync/record/failures
+    server: sync
+  - method: GET
+    path: /:organization/sync/record/failures/:key
+    server: sync
+  - method: DELETE
+    path: /:organization/sync/record/failures/:key
+    server: sync
+  - method: POST
+    path: /:organization/sync/record/failures
+    server: sync
+  - method: PUT
+    path: /:organization/sync/record/failures/:key
+    server: sync
+  - method: GET
+    path: /:organization/sync/streams
+    server: sync
+  - method: GET
+    path: /:organization/sync/streams/:key
+    server: sync
+  - method: DELETE
+    path: /:organization/sync/streams/:key
+    server: sync
+  - method: POST
+    path: /:organization/sync/streams
+    server: sync
+  - method: PUT
+    path: /:organization/sync/streams/:key
+    server: sync
+  - method: PUT
+    path: /:organization/sync/streams/:key/systems/:system/values/:value/failure
+    server: sync
+  - method: DELETE
+    path: /:organization/sync/streams/:key/systems/:system/values/:value/failure
+    server: sync
   - method: GET
     path: /:organization/address/configurations
     server: experience
