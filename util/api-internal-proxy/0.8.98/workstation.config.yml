@@ -595,14 +595,26 @@ operations:
   - method: POST
     path: /:organization/passphrases/:id/authentications
     server: payment-internal
-  - method: POST
-    path: /internal/payment/accounts
-    server: payment-internal
   - method: GET
     path: /payment/redirects/:id
     server: payment-internal
   - method: POST
     path: /payment/redirects/:id
+    server: payment-internal
+  - method: GET
+    path: /processors/:processor/accounts/:organization/:key
+    server: payment-internal
+  - method: PUT
+    path: /processors/:processor/accounts/:organization/:key
+    server: payment-internal
+  - method: POST
+    path: /processors/:processor/accounts/:id/merchants
+    server: payment-internal
+  - method: GET
+    path: /processors/:processor/accounts/:id/merchants/:key
+    server: payment-internal
+  - method: PUT
+    path: /processors/:processor/accounts/:id/merchants/:key
     server: payment-internal
   - method: GET
     path: /:organization/tribes
