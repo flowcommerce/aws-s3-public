@@ -673,6 +673,9 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/feed/forms
     server: marketing-gateway
+  - method: GET
+    path: /:organization/marketing/gateway/feed/sources
+    server: marketing-gateway
   - method: POST
     path: /:organization/marketing/gateway/feed/sources
     server: marketing-gateway
