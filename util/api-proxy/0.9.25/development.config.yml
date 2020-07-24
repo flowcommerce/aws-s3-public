@@ -1389,8 +1389,8 @@ operations:
   - method: GET
     path: /:organization/customers/:number
     server: customer
-  - method: GET
-    path: /:organization/customers/:client_token/customer
+  - method: POST
+    path: /:organization/customers/client/tokens
     server: customer
   - method: POST
     path: /:organization/customers
