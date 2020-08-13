@@ -1,2 +1,2 @@
-number,sku,product_id,price,currency,attributes[country_of_origin],images
-123456,AJ1761_Black,1121734913,100,EUR,CHN,[{"url":"example.com/image", "tags":["foo","bar"]}]
+number,price,currency,attributes[country_of_origin],attributes[sku],images
+123456,100,EUR,CHN,23427281,[{"url":"example.com/image", "tags":["foo","bar"]}]
