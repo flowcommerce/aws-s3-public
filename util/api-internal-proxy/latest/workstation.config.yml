@@ -1,10 +1,12 @@
-version: 0.9.19
+version: 0.9.20
 
 servers:
   - name: alert-internal
     host: http://172.17.0.1:7321
   - name: demandware-internal
     host: http://172.17.0.1:7211
+  - name: harmonization-engine-internal
+    host: http://172.17.0.1:6162
   - name: feature
     host: http://172.17.0.1:7621
   - name: screen
@@ -130,6 +132,9 @@ operations:
   - method: DELETE
     path: /sfcc/sessions/:session
     server: demandware-internal
+  - method: POST
+    path: /classification_requeue_requests/organization/:organization_id/requeue/request
+    server: harmonization-engine-internal
   - method: GET
     path: /:organization/features
     server: feature

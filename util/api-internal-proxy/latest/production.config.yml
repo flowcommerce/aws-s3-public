@@ -1,10 +1,12 @@
-version: 0.9.19
+version: 0.9.20
 
 servers:
   - name: alert-internal
     host: https://alert.api.flow.io
   - name: demandware-internal
     host: https://demandware.api.flow.io
+  - name: harmonization-engine-internal
+    host: https://harmonization-engine.api.flow.io
   - name: feature
     host: https://feature.api.flow.io
   - name: screen
@@ -130,6 +132,9 @@ operations:
   - method: DELETE
     path: /sfcc/sessions/:session
     server: demandware-internal
+  - method: POST
+    path: /classification_requeue_requests/organization/:organization_id/requeue/request
+    server: harmonization-engine-internal
   - method: GET
     path: /:organization/features
     server: feature
