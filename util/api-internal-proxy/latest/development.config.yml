@@ -133,7 +133,7 @@ operations:
     path: /sfcc/sessions/:session
     server: demandware-internal
   - method: POST
-    path: /:organization_id/classification/requeue/request
+    path: /:organization/classification/requeue/request
     server: harmonization-engine-internal
   - method: GET
     path: /:organization/features
