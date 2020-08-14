@@ -1,4 +1,4 @@
-version: 0.9.21
+version: 0.9.22
 
 servers:
   - name: alert-internal
@@ -133,7 +133,7 @@ operations:
     path: /sfcc/sessions/:session
     server: demandware-internal
   - method: POST
-    path: /classification_requeue_requests/organization/:organization_id/requeue/request
+    path: /:organization_id/classification/requeue/request
     server: harmonization-engine-internal
   - method: GET
     path: /:organization/features
