@@ -1,4 +1,4 @@
-version: 0.9.25
+version: 0.9.26
 
 servers:
   - name: alert-internal
@@ -136,7 +136,7 @@ operations:
     path: /:organization/classification/requeue/request
     server: harmonization-engine-internal
   - method: POST
-    path: /unclassified_products_purge_requests
+    path: /classification/unclassified/products/purge/request
     server: harmonization-engine-internal
   - method: GET
     path: /:organization/features
