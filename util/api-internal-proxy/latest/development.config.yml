@@ -1032,6 +1032,18 @@ operations:
   - method: POST
     path: /classification/products
     server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/compliance
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/harmonization/compliance/type/:type/destination/:destination
+    server: harmonization-internal
+  - method: PUT
+    path: /:organization/harmonization/compliance/type/:type/destination/:destination
+    server: harmonization-internal
+  - method: DELETE
+    path: /:organization/harmonization/compliance/type/:type/destination/:destination
+    server: harmonization-internal
   - method: POST
     path: /:organization/harmonization/customs/details
     server: harmonization-internal
