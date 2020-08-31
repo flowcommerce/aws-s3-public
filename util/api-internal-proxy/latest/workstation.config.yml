@@ -1,4 +1,4 @@
-version: 0.9.28
+version: 0.9.29
 
 servers:
   - name: alert-internal
@@ -1100,6 +1100,9 @@ operations:
     server: harmonization-internal
   - method: DELETE
     path: /:organization/harmonization/tariff/eligibilities/:type
+    server: harmonization-internal
+  - method: GET
+    path: /classification/unclassified/products/summary
     server: harmonization-internal
   - method: GET
     path: /tax/registration
