@@ -1,4 +1,4 @@
-version: 0.9.31
+version: 0.9.32
 
 servers:
   - name: alert-internal
@@ -136,6 +136,9 @@ operations:
     server: demandware-internal
   - method: POST
     path: /:organization/classification/requeue/request
+    server: harmonization-engine-internal
+  - method: GET
+    path: /haromonization/statistics/:type
     server: harmonization-engine-internal
   - method: POST
     path: /classification/unclassified/products/purge/request
