@@ -138,7 +138,7 @@ operations:
     path: /:organization/classification/requeue/request
     server: harmonization-engine-internal
   - method: GET
-    path: /haromonization/statistics/:type
+    path: /harmonization/statistics/:type
     server: harmonization-engine-internal
   - method: POST
     path: /classification/unclassified/products/purge/request
