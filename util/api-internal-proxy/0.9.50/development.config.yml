@@ -185,6 +185,9 @@ operations:
   - method: GET
     path: /lines/:id
     server: checkout-backend
+  - method: POST
+    path: /lines/:id
+    server: checkout-backend
   - method: PUT
     path: /lines/:id
     server: checkout-backend
@@ -196,12 +199,6 @@ operations:
     server: checkout-backend
   - method: POST
     path: /v2/checkouts/session/:session_id
-    server: checkout-backend
-  - method: POST
-    path: /v2/checkouts/:id/lines
-    server: checkout-backend
-  - method: PUT
-    path: /v2/checkouts/:id/lines
     server: checkout-backend
   - method: PUT
     path: /screens/:key
