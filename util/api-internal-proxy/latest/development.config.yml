@@ -1,4 +1,4 @@
-version: 0.9.55
+version: 0.9.56
 
 servers:
   - name: alert-internal
@@ -186,7 +186,7 @@ operations:
     path: /lines/:id
     server: checkout-backend
   - method: POST
-    path: /lines/:id
+    path: /lines
     server: checkout-backend
   - method: PUT
     path: /lines/:id
