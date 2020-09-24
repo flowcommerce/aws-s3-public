@@ -189,7 +189,7 @@ operations:
     path: /lines
     server: checkout-backend
   - method: PUT
-    path: /lines/:id
+    path: /lines/:id/quantity
     server: checkout-backend
   - method: DELETE
     path: /lines/:id
