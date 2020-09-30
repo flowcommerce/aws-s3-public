@@ -1,4 +1,4 @@
-version: 0.9.68
+version: 0.9.69
 
 servers:
   - name: alert-internal
@@ -403,9 +403,6 @@ operations:
   - method: POST
     path: /shopify/webhook/events/:topic/:action
     server: shopify-internal
-  - method: GET
-    path: /:organization/experiences/:key/preference/display/shipping/duty/options
-    server: experience-internal
   - method: GET
     path: /:organization/experiences/:key/preference/display/shipping/duty/options/v2
     server: experience-internal
