@@ -1,4 +1,4 @@
-version: 0.9.70
+version: 0.9.71
 
 servers:
   - name: alert-internal
@@ -47,8 +47,6 @@ servers:
     host: https://bundle-browser.api.flow.io
   - name: marketing-gateway
     host: https://marketing-gateway.api.flow.io
-  - name: checkout-modification
-    host: https://checkout-backend.api.flow.io
   - name: ftp-internal
     host: https://ftp.api.flow.io
   - name: fraud-internal
@@ -85,6 +83,8 @@ servers:
     host: https://harmonization.api.flow.io
   - name: magento-internal
     host: https://magento.api.flow.io
+  - name: checkout-protocol
+    host: https://checkout-backend.api.flow.io
   - name: tracking-internal
     host: https://tracking.api.flow.io
   - name: experiment-engine-internal
@@ -724,15 +724,6 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/items/random
     server: marketing-gateway
-  - method: PUT
-    path: /v2/checkouts/:checkout_id/modifications/:sequence_number
-    server: checkout-modification
-  - method: GET
-    path: /v2/checkouts/:checkout_id/modifications/:sequence_number
-    server: checkout-modification
-  - method: GET
-    path: /v2/checkouts/:checkout_id/modifications/:sequence_number/response
-    server: checkout-modification
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp-internal
@@ -1147,6 +1138,15 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
+  - method: PUT
+    path: /v2/checkouts/:checkout_id/requests/:sequence_number
+    server: checkout-protocol
+  - method: GET
+    path: /v2/checkouts/:checkout_id/requests/:sequence_number
+    server: checkout-protocol
+  - method: GET
+    path: /v2/checkouts/:checkout_id/requests/:sequence_number/response
+    server: checkout-protocol
   - method: POST
     path: /flexe/webhook/receipt
     server: tracking-internal

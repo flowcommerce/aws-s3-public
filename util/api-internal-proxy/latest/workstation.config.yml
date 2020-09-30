@@ -1,4 +1,4 @@
-version: 0.9.70
+version: 0.9.71
 
 servers:
   - name: alert-internal
@@ -47,8 +47,6 @@ servers:
     host: http://172.17.0.1:7672
   - name: marketing-gateway
     host: http://172.17.0.1:7681
-  - name: checkout-modification
-    host: http://172.17.0.1:7471
   - name: ftp-internal
     host: http://172.17.0.1:7511
   - name: fraud-internal
@@ -85,6 +83,8 @@ servers:
     host: http://172.17.0.1:6161
   - name: magento-internal
     host: http://172.17.0.1:7551
+  - name: checkout-protocol
+    host: http://172.17.0.1:7471
   - name: tracking-internal
     host: http://172.17.0.1:6221
   - name: experiment-engine-internal
@@ -724,15 +724,6 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/items/random
     server: marketing-gateway
-  - method: PUT
-    path: /v2/checkouts/:checkout_id/modifications/:sequence_number
-    server: checkout-modification
-  - method: GET
-    path: /v2/checkouts/:checkout_id/modifications/:sequence_number
-    server: checkout-modification
-  - method: GET
-    path: /v2/checkouts/:checkout_id/modifications/:sequence_number/response
-    server: checkout-modification
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp-internal
@@ -1147,6 +1138,15 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
+  - method: PUT
+    path: /v2/checkouts/:checkout_id/requests/:sequence_number
+    server: checkout-protocol
+  - method: GET
+    path: /v2/checkouts/:checkout_id/requests/:sequence_number
+    server: checkout-protocol
+  - method: GET
+    path: /v2/checkouts/:checkout_id/requests/:sequence_number/response
+    server: checkout-protocol
   - method: POST
     path: /flexe/webhook/receipt
     server: tracking-internal
