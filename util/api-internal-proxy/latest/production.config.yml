@@ -1,4 +1,4 @@
-version: 0.9.67
+version: 0.9.68
 
 servers:
   - name: alert-internal
@@ -47,6 +47,8 @@ servers:
     host: https://bundle-browser.api.flow.io
   - name: marketing-gateway
     host: https://marketing-gateway.api.flow.io
+  - name: checkout-modification
+    host: https://checkout-backend.api.flow.io
   - name: ftp-internal
     host: https://ftp.api.flow.io
   - name: fraud-internal
@@ -193,9 +195,6 @@ operations:
     server: checkout-backend
   - method: DELETE
     path: /lines/:id
-    server: checkout-backend
-  - method: POST
-    path: /v2/checkouts/:checkout_id/modifications
     server: checkout-backend
   - method: GET
     path: /v2/checkouts/:id
@@ -728,6 +727,15 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/items/random
     server: marketing-gateway
+  - method: PUT
+    path: /v2/checkouts/:checkout_id/modifications/:sequence_number
+    server: checkout-modification
+  - method: GET
+    path: /v2/checkouts/:checkout_id/modifications/:sequence_number
+    server: checkout-modification
+  - method: GET
+    path: /v2/checkouts/:checkout_id/modifications/:sequence_number/response
+    server: checkout-modification
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp-internal
