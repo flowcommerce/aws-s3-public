@@ -1,4 +1,4 @@
-version: 0.9.88
+version: 0.9.89
 
 servers:
   - name: alert-internal
@@ -188,7 +188,7 @@ operations:
     path: /lines/:id
     server: checkout-backend
   - method: POST
-    path: /lines
+    path: /lines/checkouts/:checkout_id
     server: checkout-backend
   - method: PUT
     path: /lines/:id/quantity
