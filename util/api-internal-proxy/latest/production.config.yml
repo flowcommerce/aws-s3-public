@@ -1138,14 +1138,14 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
-  - method: PUT
-    path: /v2/checkouts/:checkout_id/requests/:sequence_number
+  - method: GET
+    path: /v2/checkout/requests/:id
+    server: checkout-protocol
+  - method: POST
+    path: /v2/checkout/requests
     server: checkout-protocol
   - method: GET
-    path: /v2/checkouts/:checkout_id/requests/:sequence_number
-    server: checkout-protocol
-  - method: GET
-    path: /v2/checkouts/:checkout_id/requests/:sequence_number/response
+    path: /v2/checkout/responses
     server: checkout-protocol
   - method: POST
     path: /flexe/webhook/receipt
