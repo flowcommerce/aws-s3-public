@@ -1,4 +1,4 @@
-version: 0.10.4
+version: 0.10.5
 
 servers:
   - name: alert-internal
@@ -1136,13 +1136,13 @@ operations:
     path: /magento/stores/:domain
     server: magento-internal
   - method: GET
-    path: /v2/checkout/requests/:id
+    path: /v2/checkout/sequenced/requests/:id
     server: checkout-protocol
   - method: POST
-    path: /v2/checkout/requests
+    path: /v2/checkout/sequenced/requests
     server: checkout-protocol
   - method: GET
-    path: /v2/checkout/responses
+    path: /v2/checkout/sequenced/responses
     server: checkout-protocol
   - method: POST
     path: /flexe/webhook/receipt
