@@ -1,4 +1,4 @@
-version: 0.10.10
+version: 0.10.11
 
 servers:
   - name: alert-internal
@@ -184,18 +184,6 @@ operations:
   - method: POST
     path: /:organization/feature/values
     server: feature
-  - method: GET
-    path: /lines/:id
-    server: checkout-backend
-  - method: POST
-    path: /lines/checkouts/:checkout_id
-    server: checkout-backend
-  - method: PUT
-    path: /lines/:id/quantity
-    server: checkout-backend
-  - method: DELETE
-    path: /lines/:id
-    server: checkout-backend
   - method: GET
     path: /v2/checkouts/:id
     server: checkout-backend
