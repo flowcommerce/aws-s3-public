@@ -1,4 +1,4 @@
-version: 0.10.23
+version: 0.10.24
 
 servers:
   - name: alert-internal
