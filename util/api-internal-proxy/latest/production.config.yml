@@ -187,6 +187,9 @@ operations:
   - method: GET
     path: /v2/checkouts/:id
     server: checkout-backend
+  - method: GET
+    path: /v2/checkouts/:id/order/views
+    server: checkout-backend
   - method: POST
     path: /v2/checkouts/session/:session_id
     server: checkout-backend
@@ -285,6 +288,9 @@ operations:
     server: bundle-checkout
   - method: PUT
     path: /checkouts/:id/submissions
+    server: bundle-checkout
+  - method: GET
+    path: /checkouts/v2/:v2_checkout_id
     server: bundle-checkout
   - method: POST
     path: /:organization/checkout/references
