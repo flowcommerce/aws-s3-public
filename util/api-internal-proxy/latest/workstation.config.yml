@@ -1,4 +1,4 @@
-version: 0.10.40
+version: 0.10.41
 
 servers:
   - name: alert-internal
@@ -290,7 +290,7 @@ operations:
     path: /checkouts/:id/submissions
     server: bundle-checkout
   - method: GET
-    path: /checkouts/v2/:v2_checkout_id
+    path: /checkouts/v1/:v2_checkout_id
     server: bundle-checkout
   - method: POST
     path: /:organization/checkout/references
