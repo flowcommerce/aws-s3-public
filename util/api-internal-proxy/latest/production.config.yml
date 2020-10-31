@@ -1,4 +1,4 @@
-version: 0.10.42
+version: 0.10.43
 
 servers:
   - name: alert-internal
@@ -9,8 +9,6 @@ servers:
     host: https://harmonization-engine.api.flow.io
   - name: feature
     host: https://feature.api.flow.io
-  - name: checkout-backend
-    host: https://checkout-backend.api.flow.io
   - name: screen
     host: https://screen.api.flow.io
   - name: item-classification-api
@@ -61,6 +59,8 @@ servers:
     host: https://ratecard.api.flow.io
   - name: order-management-internal
     host: https://order-management.api.flow.io
+  - name: checkout-http
+    host: https://checkout-backend.api.flow.io
   - name: optin-internal
     host: https://content.api.flow.io
   - name: currency-internal
@@ -83,8 +83,6 @@ servers:
     host: https://harmonization.api.flow.io
   - name: magento-internal
     host: https://magento.api.flow.io
-  - name: checkout-protocol
-    host: https://checkout-backend.api.flow.io
   - name: tracking-internal
     host: https://tracking.api.flow.io
   - name: experiment-engine-internal
@@ -184,15 +182,6 @@ operations:
   - method: POST
     path: /:organization/feature/values
     server: feature
-  - method: GET
-    path: /v2/checkouts/:id
-    server: checkout-backend
-  - method: GET
-    path: /v2/checkouts/:id/order/views
-    server: checkout-backend
-  - method: POST
-    path: /v2/checkouts/session/:session_id
-    server: checkout-backend
   - method: PUT
     path: /screens/:key
     server: screen
@@ -841,6 +830,24 @@ operations:
   - method: POST
     path: /:organization/orders/:number/status/actions
     server: order-management-internal
+  - method: GET
+    path: /v2/checkout/sequenced/requests/:id
+    server: checkout-http
+  - method: POST
+    path: /v2/checkout/sequenced/requests
+    server: checkout-http
+  - method: GET
+    path: /v2/checkouts/:id
+    server: checkout-http
+  - method: GET
+    path: /v2/checkouts/:id/order/views
+    server: checkout-http
+  - method: POST
+    path: /v2/checkouts/session/:session_id
+    server: checkout-http
+  - method: GET
+    path: /v2/checkout/sequenced/responses
+    server: checkout-http
   - method: POST
     path: /:organization/optin/activities
     server: optin-internal
@@ -1129,15 +1136,6 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
-  - method: GET
-    path: /v2/checkout/sequenced/requests/:id
-    server: checkout-protocol
-  - method: POST
-    path: /v2/checkout/sequenced/requests
-    server: checkout-protocol
-  - method: GET
-    path: /v2/checkout/sequenced/responses
-    server: checkout-protocol
   - method: POST
     path: /flexe/webhook/receipt
     server: tracking-internal
