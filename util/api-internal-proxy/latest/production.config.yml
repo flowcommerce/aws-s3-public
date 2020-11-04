@@ -1,4 +1,4 @@
-version: 0.10.57
+version: 0.10.58
 
 servers:
   - name: alert-internal
@@ -661,6 +661,9 @@ operations:
     server: marketing-gateway
   - method: DELETE
     path: /:organization/marketing/gateway/facebook
+    server: marketing-gateway
+  - method: GET
+    path: /marketing/gateway/facebook/deauth
     server: marketing-gateway
   - method: POST
     path: /marketing/gateway/facebook/deauth
