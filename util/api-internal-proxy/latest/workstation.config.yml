@@ -726,6 +726,9 @@ operations:
     path: /:organization/fraud/reviews/:id/decision
     server: fraud-internal
   - method: POST
+    path: /dispute/notifications/paypal
+    server: fraud-internal
+  - method: POST
     path: /fraud/notifications/riskified
     server: fraud-internal
   - method: GET
