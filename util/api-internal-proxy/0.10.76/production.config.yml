@@ -1,4 +1,4 @@
-version: 0.10.76
+version: 0.10.77
 
 servers:
   - name: alert-internal
@@ -43,6 +43,8 @@ servers:
     host: https://fulfillment.api.flow.io
   - name: bundle-browser
     host: https://bundle-browser.api.flow.io
+  - name: return-internal
+    host: https://return.api.flow.io
   - name: marketing-gateway
     host: https://marketing-gateway.api.flow.io
   - name: ftp-internal
@@ -647,6 +649,15 @@ operations:
   - method: GET
     path: /:organization/bundles/browser
     server: bundle-browser
+  - method: GET
+    path: /:organization/rebound/credentials
+    server: return-internal
+  - method: PUT
+    path: /:organization/rebound/credentials
+    server: return-internal
+  - method: DELETE
+    path: /:organization/rebound/credentials
+    server: return-internal
   - method: GET
     path: /:organization/marketing/gateway/accounts
     server: marketing-gateway

@@ -1,4 +1,4 @@
-version: 0.10.76
+version: 0.10.77
 
 servers:
   - name: alert-internal
@@ -43,6 +43,8 @@ servers:
     host: http://localhost:6061
   - name: bundle-browser
     host: http://localhost:7672
+  - name: return-internal
+    host: http://localhost:7111
   - name: marketing-gateway
     host: http://localhost:7681
   - name: ftp-internal
@@ -647,6 +649,15 @@ operations:
   - method: GET
     path: /:organization/bundles/browser
     server: bundle-browser
+  - method: GET
+    path: /:organization/rebound/credentials
+    server: return-internal
+  - method: PUT
+    path: /:organization/rebound/credentials
+    server: return-internal
+  - method: DELETE
+    path: /:organization/rebound/credentials
+    server: return-internal
   - method: GET
     path: /:organization/marketing/gateway/accounts
     server: marketing-gateway
