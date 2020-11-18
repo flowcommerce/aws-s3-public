@@ -1,4 +1,4 @@
-version: 0.11.10
+version: 0.11.11
 
 servers:
   - name: alert-internal
@@ -1113,6 +1113,9 @@ operations:
     server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/summaries
+    server: harmonization-internal
+  - method: GET
+    path: /:organization/classification/item/summary
     server: harmonization-internal
   - method: GET
     path: /:organization/harmonization/results/items
