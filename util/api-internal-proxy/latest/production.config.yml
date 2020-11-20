@@ -85,6 +85,8 @@ servers:
     host: https://harmonization.api.flow.io
   - name: magento-internal
     host: https://magento.api.flow.io
+  - name: labs-internal
+    host: https://feature.api.flow.io
   - name: tracking-internal
     host: https://tracking.api.flow.io
   - name: experiment-engine-internal
@@ -1180,6 +1182,33 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
+  - method: GET
+    path: /lab/projects
+    server: labs-internal
+  - method: GET
+    path: /lab/projects/:key
+    server: labs-internal
+  - method: POST
+    path: /lab/projects
+    server: labs-internal
+  - method: PUT
+    path: /lab/projects/:key
+    server: labs-internal
+  - method: DELETE
+    path: /lab/projects/:key
+    server: labs-internal
+  - method: GET
+    path: /:organization/lab/project/settings
+    server: labs-internal
+  - method: GET
+    path: /:organization/lab/project/settings/:flow_lab_project_key
+    server: labs-internal
+  - method: PUT
+    path: /:organization/lab/project/settings/:flow_lab_project_key
+    server: labs-internal
+  - method: DELETE
+    path: /:organization/lab/project/settings/:flow_lab_project_key
+    server: labs-internal
   - method: POST
     path: /flexe/webhook/receipt
     server: tracking-internal

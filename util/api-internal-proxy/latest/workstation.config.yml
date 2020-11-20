@@ -85,6 +85,8 @@ servers:
     host: http://172.17.0.1:6161
   - name: magento-internal
     host: http://172.17.0.1:7551
+  - name: labs-internal
+    host: http://172.17.0.1:7621
   - name: tracking-internal
     host: http://172.17.0.1:6221
   - name: experiment-engine-internal
@@ -1180,6 +1182,33 @@ operations:
   - method: DELETE
     path: /magento/stores/:domain
     server: magento-internal
+  - method: GET
+    path: /lab/projects
+    server: labs-internal
+  - method: GET
+    path: /lab/projects/:key
+    server: labs-internal
+  - method: POST
+    path: /lab/projects
+    server: labs-internal
+  - method: PUT
+    path: /lab/projects/:key
+    server: labs-internal
+  - method: DELETE
+    path: /lab/projects/:key
+    server: labs-internal
+  - method: GET
+    path: /:organization/lab/project/settings
+    server: labs-internal
+  - method: GET
+    path: /:organization/lab/project/settings/:flow_lab_project_key
+    server: labs-internal
+  - method: PUT
+    path: /:organization/lab/project/settings/:flow_lab_project_key
+    server: labs-internal
+  - method: DELETE
+    path: /:organization/lab/project/settings/:flow_lab_project_key
+    server: labs-internal
   - method: POST
     path: /flexe/webhook/receipt
     server: tracking-internal
