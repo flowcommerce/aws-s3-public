@@ -1,4 +1,4 @@
-version: 0.11.19
+version: 0.11.20
 
 servers:
   - name: alert-internal
@@ -721,9 +721,6 @@ operations:
     path: /:organization/marketing/gateway/feed/forms
     server: marketing-gateway
   - method: GET
-    path: /:organization/marketing/gateway/feed/sources
-    server: marketing-gateway
-  - method: POST
     path: /:organization/marketing/gateway/feed/sources
     server: marketing-gateway
   - method: GET
