@@ -1,4 +1,4 @@
-version: 0.11.20
+version: 0.11.21
 
 servers:
   - name: alert-internal
@@ -1204,9 +1204,6 @@ operations:
     path: /:organization/lab/project/settings/:flow_lab_project_key
     server: labs-internal
   - method: PUT
-    path: /:organization/lab/project/settings/:flow_lab_project_key
-    server: labs-internal
-  - method: DELETE
     path: /:organization/lab/project/settings/:flow_lab_project_key
     server: labs-internal
   - method: POST
