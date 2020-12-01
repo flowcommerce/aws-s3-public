@@ -1,4 +1,4 @@
-version: 0.11.24
+version: 0.11.25
 
 servers:
   - name: alert-internal
@@ -652,13 +652,13 @@ operations:
     path: /:organization/bundles/browser
     server: bundle-browser
   - method: GET
-    path: /:organization/rebound/credentials
+    path: /:organization/rebound/configuration
     server: return-internal
   - method: PUT
-    path: /:organization/rebound/credentials
+    path: /:organization/rebound/configuration
     server: return-internal
   - method: DELETE
-    path: /:organization/rebound/credentials
+    path: /:organization/rebound/configuration
     server: return-internal
   - method: GET
     path: /:organization/marketing/gateway/channels
