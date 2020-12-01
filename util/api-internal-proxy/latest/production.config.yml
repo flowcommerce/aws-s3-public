@@ -871,22 +871,28 @@ operations:
     path: /:organization/orders/:number/status/actions
     server: order-management-internal
   - method: GET
+    path: /v2/checkout/sequenced/requests
+    server: checkout-http
+  - method: GET
     path: /v2/checkout/sequenced/requests/:id
     server: checkout-http
   - method: POST
     path: /v2/checkout/sequenced/requests
     server: checkout-http
   - method: GET
+    path: /v2/checkout/sequenced/responses
+    server: checkout-http
+  - method: GET
     path: /v2/checkouts/:id
+    server: checkout-http
+  - method: GET
+    path: /v2/checkouts/:id/response
     server: checkout-http
   - method: GET
     path: /v2/checkouts/:id/order/views
     server: checkout-http
   - method: POST
     path: /v2/checkouts/session/:session_id
-    server: checkout-http
-  - method: GET
-    path: /v2/checkout/sequenced/responses
     server: checkout-http
   - method: POST
     path: /:organization/optin/activities
