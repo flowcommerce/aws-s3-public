@@ -1,4 +1,4 @@
-version: 0.9.73
+version: 0.9.74
 
 servers:
   - name: consumer-invoice
@@ -860,6 +860,9 @@ operations:
     server: experience
   - method: DELETE
     path: /:organization/orders/:number/tax/registration/:key
+    server: experience
+  - method: POST
+    path: /:organization/orders/:number/payments
     server: experience
   - method: POST
     path: /:organization/order/builders
