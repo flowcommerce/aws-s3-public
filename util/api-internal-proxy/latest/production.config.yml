@@ -1,4 +1,4 @@
-version: 0.11.63
+version: 0.11.64
 
 servers:
   - name: alert-internal
@@ -637,22 +637,22 @@ operations:
     path: /processors/:processor/accounts/:organization/:key/modifications/status
     server: payment-internal
   - method: GET
-    path: /processors/:processor/accounts/:account_id/merchants
+    path: /processors/:processor/accounts/:account_organization/:account_key/merchants
     server: payment-internal
   - method: POST
-    path: /processors/:processor/accounts/:account_id/merchants
+    path: /processors/:processor/accounts/:account_organization/:account_key/merchants
     server: payment-internal
   - method: GET
-    path: /processors/:processor/accounts/:account_id/merchants/:key
+    path: /processors/:processor/accounts/:account_organization/:account_key/merchants/:key
     server: payment-internal
   - method: PUT
-    path: /processors/:processor/accounts/:account_id/merchants/:key
+    path: /processors/:processor/accounts/:account_organization/:account_key/merchants/:key
     server: payment-internal
   - method: PUT
-    path: /processors/:processor/accounts/:account_id/merchants/:key/modifications
+    path: /processors/:processor/accounts/:account_organization/:account_key/merchants/:key/modifications
     server: payment-internal
   - method: PUT
-    path: /processors/:processor/accounts/:account_id/merchants/:key/modifications/status
+    path: /processors/:processor/accounts/:account_organization/:account_key/merchants/:key/modifications/status
     server: payment-internal
   - method: GET
     path: /routing/entities
