@@ -1,4 +1,4 @@
-version: 0.11.65
+version: 0.11.66
 
 servers:
   - name: alert-internal
