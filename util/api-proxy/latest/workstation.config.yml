@@ -1,4 +1,4 @@
-version: 0.9.87
+version: 0.9.88
 
 servers:
   - name: consumer-invoice
@@ -287,6 +287,9 @@ operations:
     server: ratecard
   - method: POST
     path: /:organization/dimension-estimates
+    server: ratecard
+  - method: PUT
+    path: /:organization/dimension-estimates/:id
     server: ratecard
   - method: DELETE
     path: /:organization/dimension-estimates/:id
