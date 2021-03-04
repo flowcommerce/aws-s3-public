@@ -1,4 +1,4 @@
-version: 0.11.89
+version: 0.11.90
 
 servers:
   - name: alert-internal
@@ -1030,9 +1030,6 @@ operations:
     path: /internal/label/settings/:id
     server: label-internal
   - method: GET
-    path: /:organization/label/generation/settings
-    server: label-internal
-  - method: POST
     path: /:organization/label/generation/settings
     server: label-internal
   - method: PUT
