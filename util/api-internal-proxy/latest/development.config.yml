@@ -1,4 +1,4 @@
-version: 0.11.95
+version: 0.11.96
 
 servers:
   - name: alert-internal
@@ -1157,12 +1157,6 @@ operations:
     server: catalog-internal
   - method: GET
     path: /classification/details
-    server: harmonization-internal
-  - method: GET
-    path: /:organization/classification/product/:id
-    server: harmonization-internal
-  - method: PUT
-    path: /:organization/classification/product/:id
     server: harmonization-internal
   - method: GET
     path: /classification/products
