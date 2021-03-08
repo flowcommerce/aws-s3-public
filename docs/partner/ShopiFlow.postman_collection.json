@@ -1,0 +1,815 @@
+{
+	"info": {
+		"_postman_id": "6799f4b4-ec9e-4d93-85b2-15ce4a689492",
+		"name": "ShopiFlow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET: Flow Active Experience",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences?status=active",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "active"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: USD to EUR based on France Settings",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences/{{france_key}}/conversions/price?amount={{base_amount}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences",
+						"{{france_key}}",
+						"conversions",
+						"price"
+					],
+					"query": [
+						{
+							"key": "amount",
+							"value": "{{base_amount}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST: Duties Paid Order Summary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n  \"variables\": {\n    \"org\": \"{{organization}}\",\n    \"orderNumber\": \"{{paid_order}}\"\n  },\n  \"query\": \"query($org: String!, $orderNumber: String!) { orderSummary(organization:$org, number:$orderNumber) {number lines { quantity item {name } discount {label} tax { value {label} rateLabel } duty { value {label} rateLabel } total { label } } subtotal { price { label } } tax { name rateLabel price { label } } duty { name rateLabel price { label } } discount { name price { label } } total { price { label } } } }\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graphql.flow.io",
+					"protocol": "https",
+					"host": [
+						"graphql",
+						"flow",
+						"io"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST: Duties Unpaid Order Summary",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{  \n  \"variables\": {\n    \"org\": \"{{organization}}\",\n    \"orderNumber\": \"{{unpaid_order}}\"\n  },\n  \"query\": \"query($org: String!, $orderNumber: String!) { orderSummary(organization:$org, number:$orderNumber) {number lines { quantity item {name } discount {label} tax { value {label} rateLabel } duty { value {label} rateLabel } total { label } } subtotal { price { label } } tax { name rateLabel price { label } } duty { name rateLabel price { label } } discount { name price { label } } total { price { label } } } }\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graphql.flow.io",
+					"protocol": "https",
+					"host": [
+						"graphql",
+						"flow",
+						"io"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Order Allocation Duties Paid Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/orders/allocations/{{paid_order}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"orders",
+						"allocations",
+						"{{paid_order}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST: Landed Costs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": {\n            \"name\": {\n                \"first\": \"Jeff\",\n                \"last\": \"Knoch\"\n            },\n            \"streets\": [\n                \"2 Rue de la Butte Verte\"\n            ],\n            \"city\": \"Noisy-le-Grand\",\n            \"postal\": \"93160\",\n            \"country\": \"FRA\",\n            \"company\": \"Flow.io\"\n        },\n        \"item_numbers\":[\"34528974340253\",\"34528969195677\",\"34528968016029\"]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/harmonization/landed-costs",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"harmonization",
+						"landed-costs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Order Allocation Duties Unpaid Order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/orders/allocations/{{unpaid_order}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"orders",
+						"allocations",
+						"{{unpaid_order}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Item Pricebook Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/price/books/{{price_book_key}}/items?number={{item_1}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"price",
+						"books",
+						"{{price_book_key}}",
+						"items"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "{{item_1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Flow Order Estimate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = pm.response.json();",
+							"var deliveries = jsonData.deliveries[0].options; ",
+							"",
+							"",
+							"",
+							"var cost=deliveries[0].cost.amount",
+							"pm.test(cost, function () {});",
+							"",
+							"var serviceID=deliveries[0].service.id",
+							"pm.test(serviceID, function () {});",
+							"",
+							"var serviceName=deliveries[0].service.name",
+							"pm.test(serviceName, function () {});",
+							"",
+							"var estimateDate=deliveries[0].tier.display.estimate.label",
+							"pm.test(estimateDate, function () {});",
+							"",
+							"",
+							"",
+							"var serviceID=deliveries[1].service.id",
+							"pm.test(serviceID, function () {});",
+							"",
+							"var serviceName=deliveries[1].service.name",
+							"pm.test(serviceName, function () {});",
+							"",
+							"var estimateDate=deliveries[1].tier.display.estimate.label",
+							"pm.test(estimateDate, function () {});",
+							"",
+							"",
+							"",
+							"var serviceID=deliveries[2].service.id",
+							"pm.test(serviceID, function () {});",
+							"",
+							"var serviceName=deliveries[2].service.name",
+							"pm.test(serviceName, function () {});",
+							"",
+							"var estimateDate=deliveries[2].tier.display.estimate.label",
+							"pm.test(estimateDate, function () {});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/order-estimates/{{example_order_1}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"order-estimates",
+						"{{example_order_1}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET:  France Prices (Pricebook)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences/items?number={{product_id_1}}&number={{product_id_2}}&number={{product_id_3}}&number={{product_id_4}}&experience={{france_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences",
+						"items"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "{{product_id_1}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_2}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_3}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_4}}"
+						},
+						{
+							"key": "experience",
+							"value": "{{france_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Germany Prices (Margin)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences/items?number={{product_id_1}}&number={{product_id_2}}&number={{product_id_3}}&number={{product_id_4}}&experience={{germany_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences",
+						"items"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "{{product_id_1}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_2}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_3}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_4}}"
+						},
+						{
+							"key": "experience",
+							"value": "{{germany_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Spain Prices (Dynamic)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences/items?number={{product_id_1}}&number={{product_id_2}}&number={{product_id_3}}&number={{product_id_4}}&experience={{spain_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences",
+						"items"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "{{product_id_1}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_2}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_3}}"
+						},
+						{
+							"key": "number",
+							"value": "{{product_id_4}}"
+						},
+						{
+							"key": "experience",
+							"value": "{{spain_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Shopify World Pricing",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/shopify-dev-sandbox/shopify/localized/variants/experience/world/map?country=SEN&limit=100&currency=XOF&variant_id[0]=13211228930148&variant_id[1]=13211228995684&variant_id[2]=13211229093988&variant_id[3]=13211229159524&variant_id[4]=13211229225060&variant_id[5]=13211229323364",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"shopify-dev-sandbox",
+						"shopify",
+						"localized",
+						"variants",
+						"experience",
+						"world",
+						"map"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "SEN"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "currency",
+							"value": "XOF"
+						},
+						{
+							"key": "variant_id[0]",
+							"value": "13211228930148"
+						},
+						{
+							"key": "variant_id[1]",
+							"value": "13211228995684"
+						},
+						{
+							"key": "variant_id[2]",
+							"value": "13211229093988"
+						},
+						{
+							"key": "variant_id[3]",
+							"value": "13211229159524"
+						},
+						{
+							"key": "variant_id[4]",
+							"value": "13211229225060"
+						},
+						{
+							"key": "variant_id[5]",
+							"value": "13211229323364"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Ledger World Prices",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/ledger/shopify/localized/variants/experience/world/map?country=SEN&limit=100&currency=XOF&variant_id[0]=13546753687594&variant_id[1]=14229909340202&variant_id[2]=14229909372970&variant_id[3]=14229909405738&variant_id[4]=14229909438506&variant_id[5]=14229909471274",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"ledger",
+						"shopify",
+						"localized",
+						"variants",
+						"experience",
+						"world",
+						"map"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "SEN"
+						},
+						{
+							"key": "limit",
+							"value": "100"
+						},
+						{
+							"key": "currency",
+							"value": "XOF"
+						},
+						{
+							"key": "variant_id[0]",
+							"value": "13546753687594"
+						},
+						{
+							"key": "variant_id[1]",
+							"value": "14229909340202"
+						},
+						{
+							"key": "variant_id[2]",
+							"value": "14229909372970"
+						},
+						{
+							"key": "variant_id[3]",
+							"value": "14229909405738"
+						},
+						{
+							"key": "variant_id[4]",
+							"value": "14229909438506"
+						},
+						{
+							"key": "variant_id[5]",
+							"value": "14229909471274"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Shipping Window",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/delivery-windows/summary?destination={{france_iso_3}}&origin={{usa_key}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"delivery-windows",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "destination",
+							"value": "{{france_iso_3}}"
+						},
+						{
+							"key": "origin",
+							"value": "{{usa_key}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Payments Methods",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences/{{france_key}}/payment/method/rules?tags=display",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences",
+						"{{france_key}}",
+						"payment",
+						"method",
+						"rules"
+					],
+					"query": [
+						{
+							"key": "tags",
+							"value": "display"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET: Shipping Quote",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"experience\": \"{{world_key}}\",\n\t\"destination\": {\n\t\t\"contact\": {\n\t\t\t\"name\": {}\n\t\t},\n\t\t\"location\": {\n\t\t\t\"country\": \"{{canada_key}}\"\n\t\t}\n\t},\n\t\"items\": [{\n\t\t\"number\": \"{{product_id_1}}\",\n\t\t\"quantity\": 1,\n\t\t\"price\": {\n\t\t\t\"amount\": 10,\n\t\t\t\"currency\": \"USD\",\n\t\t\t\"base\": {\n\t\t\t\t\"amount\": 10,\n\t\t\t\t\"currency\": \"USD\"\n\t\t\t}\n\t\t}\n\t}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.flow.io/{{organization}}/experiences/{{kor_key}}/logistics/summary?number={{product_id_1}}",
+					"protocol": "https",
+					"host": [
+						"api",
+						"flow",
+						"io"
+					],
+					"path": [
+						"{{organization}}",
+						"experiences",
+						"{{kor_key}}",
+						"logistics",
+						"summary"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "{{product_id_1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "username",
+				"value": "{{api_token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_token",
+			"value": "leXUBImfq3B5lvj7HYWLb4OHTCV8T2xJfGY0YauvDwhaEPQZPMoIjVfI9PUYr6IWksLRmTTUCTwt7UmDQk0JObsSsi5FvUwekuzKm42g6j86m08iPuIgC0PuYSn51ZcZ"
+		},
+		{
+			"key": "organization",
+			"value": "shopiflow-sandbox"
+		},
+		{
+			"key": "france_key",
+			"value": "france"
+		},
+		{
+			"key": "example_order_1",
+			"value": "F10000029"
+		},
+		{
+			"key": "item_1",
+			"value": "34528972701853"
+		},
+		{
+			"key": "base_amount",
+			"value": "10"
+		},
+		{
+			"key": "price_book_key",
+			"value": "eur"
+		},
+		{
+			"key": "eur_currency",
+			"value": "eur"
+		},
+		{
+			"key": "france_iso_3",
+			"value": "fra"
+		},
+		{
+			"key": "product_id_1",
+			"value": "34528972701853"
+		},
+		{
+			"key": "product_id_2",
+			"value": "34528969195677"
+		},
+		{
+			"key": "product_id_3",
+			"value": "34528969031837"
+		},
+		{
+			"key": "product_id_4",
+			"value": "34528966967453"
+		},
+		{
+			"key": "germany_key",
+			"value": "germany\n"
+		},
+		{
+			"key": "australia_key",
+			"value": "australia"
+		},
+		{
+			"key": "spain_key",
+			"value": "spain"
+		},
+		{
+			"key": "unpaid_order",
+			"value": "F10000031"
+		},
+		{
+			"key": "paid_order",
+			"value": "F10000029"
+		},
+		{
+			"key": "world_key",
+			"value": "world"
+		},
+		{
+			"key": "canada_key",
+			"value": "canada"
+		},
+		{
+			"key": "usa_key",
+			"value": "usa"
+		},
+		{
+			"key": "kor_key",
+			"value": "republic-of-korea"
+		}
+	]
+}
