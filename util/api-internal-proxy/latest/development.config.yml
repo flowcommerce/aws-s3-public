@@ -1,4 +1,4 @@
-version: 0.11.99
+version: 0.11.100
 
 servers:
   - name: alert-internal
@@ -1020,6 +1020,18 @@ operations:
   - method: POST
     path: /users/tokens
     server: user-internal
+  - method: GET
+    path: /:organization_id/short_id
+    server: organization-internal
+  - method: POST
+    path: /:organization_id/short_id
+    server: organization-internal
+  - method: PUT
+    path: /:organization_id/short_id
+    server: organization-internal
+  - method: DELETE
+    path: /:organization_id/short_id
+    server: organization-internal
   - method: POST
     path: /internal/organization/membership/copies
     server: organization-internal
