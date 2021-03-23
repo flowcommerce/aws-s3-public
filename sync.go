@@ -41,7 +41,7 @@ func main() {
 
 	commands := executor.Create(name + "-1")
 
-	commands = commands.Add("git checkout master")
+	commands = commands.Add("git checkout main")
 	commands = commands.Add("git pull --rebase")
 	commands = commands.Add(fmt.Sprintf("git status --porcelain > %s", tmp))
 	commands.Run()
