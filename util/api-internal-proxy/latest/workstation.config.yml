@@ -1,4 +1,4 @@
-version: 0.12.30
+version: 0.12.31
 
 servers:
   - name: alert-internal
@@ -389,6 +389,9 @@ operations:
     server: shopify-internal
   - method: DELETE
     path: /:organization/shopify/orders/:number/promotion
+    server: shopify-internal
+  - method: DELETE
+    path: /:organization/shopify/orders/:number/promotion/delete
     server: shopify-internal
   - method: GET
     path: /:organization/shopify/organization/settings
