@@ -19,7 +19,12 @@ or to sync a single folder:
 
 # View files online
 
-
     https://cdn.flow.io/util/environment-provider/environment-provider.jar
 
     https://cdn.flow.io/docs/implementation/overview.png
+
+# Delete old versions of files in this repo
+
+```
+    ~/code/flowcommerce/misc/scripts/delete-all-but-last-n.rb
+```
