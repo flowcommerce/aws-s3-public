@@ -3,6 +3,8 @@ version: 0.10.20
 servers:
   - name: consumer-invoice
     host: https://order-messenger.api.flow.io
+  - name: content
+    host: https://content.api.flow.io
   - name: shopify-session
     host: https://session.api.flow.io
   - name: session
@@ -114,6 +116,9 @@ operations:
   - method: GET
     path: /:organization/credit/memos
     server: consumer-invoice
+  - method: POST
+    path: /romanize
+    server: content
   - method: GET
     path: /sessions/shopify/:session
     server: shopify-session
