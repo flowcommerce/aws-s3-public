@@ -1,4 +1,4 @@
-version: 0.12.63
+version: 0.12.64
 
 servers:
   - name: alert-internal
@@ -906,10 +906,10 @@ operations:
     path: /internal/bank/payments/:id
     server: billing-internal
   - method: GET
-    path: /internal/:organization/processing_rates
+    path: /internal/:organization/billing_organization_processing_rates
     server: billing-internal
   - method: PUT
-    path: /internal/:organization/processing_rates
+    path: /internal/:organization/billing_organization_processing_rates
     server: billing-internal
   - method: GET
     path: /internal/account/statement/reviews/pending
