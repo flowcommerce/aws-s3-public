@@ -1742,22 +1742,22 @@ operations:
     path: /:organization/shipping-notifications/:key
     server: label
   - method: GET
-    path: /:organization/return/rules
+    path: /:organization/return/policies
     server: catalog-return
   - method: GET
-    path: /:organization/return/rules/versions
+    path: /:organization/return/policies/versions
     server: catalog-return
   - method: POST
-    path: /:organization/return/rules
+    path: /:organization/return/policies
     server: catalog-return
   - method: GET
-    path: /:organization/return/rules/:id
+    path: /:organization/return/policies/:id
     server: catalog-return
   - method: PUT
-    path: /:organization/return/rules/:id
+    path: /:organization/return/policies/:id
     server: catalog-return
   - method: PUT
-    path: /:organization/return/rules/:id/deletion
+    path: /:organization/return/policies/:id/deletion
     server: catalog-return
   - method: GET
     path: /:organization/tax/settings
