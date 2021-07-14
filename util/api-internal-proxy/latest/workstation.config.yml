@@ -1,4 +1,4 @@
-version: 0.12.80
+version: 0.12.81
 
 servers:
   - name: alert-internal
@@ -47,6 +47,8 @@ servers:
     host: http://172.17.0.1:7111
   - name: marketing-gateway
     host: http://172.17.0.1:7681
+  - name: shopify-xborder-gateway-internal
+    host: http://172.17.0.1:6040
   - name: ftp-internal
     host: http://172.17.0.1:7511
   - name: fraud-internal
@@ -818,6 +820,9 @@ operations:
   - method: POST
     path: /:organization/marketing/gateway/items/random
     server: marketing-gateway
+  - method: POST
+    path: /:organization/shopify/xborder/orders/:number
+    server: shopify-xborder-gateway-internal
   - method: GET
     path: /ftp/webhook/events/brickftp/:ftp_folder_id
     server: ftp-internal
